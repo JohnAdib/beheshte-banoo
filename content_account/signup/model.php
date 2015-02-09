@@ -22,9 +22,9 @@ class model extends \mvc\model
 		elseif($tmp_result->num() == 0 )
 		{
 			$qry      = $this->sql()->tableUsers ()
-							->setUser_type           ('storeadmin')
 							->setUser_mobile         ($mymobile)
-							->setUser_pass           ($mypass)
+							->setPermission_id       (4)
+							->setUser_password       ($mypass)
 							->setUser_createdate     (date('Y-m-d H:i:s'));
 			$sql      = $qry->insert();
 			

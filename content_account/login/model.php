@@ -14,11 +14,12 @@ class model extends \mvc\model
 		// check for mobile exist
 		$tmp_result =  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
 
+
 		// if exist
 		if($tmp_result->num() == 1)
 		{
 			$tmp_result       = $tmp_result->assoc();
-			$myhashedPassword = $tmp_result['user_pass'];
+			$myhashedPassword = $tmp_result['user_password'];
 			// if password is correct. go for login:)
 			if (isset($myhashedPassword) && utility::hasher($mypass, $myhashedPassword))
 			{
@@ -40,21 +41,10 @@ class model extends \mvc\model
 				// if query run without error means commit
 				$this->commit(function($_code)
 				{
-					$myreferer = utility\Cookie::read('referer');
-					utility\Cookie::delete('referer');
-
-
 					// create code for pass with get to service home page
-					debug::true(T_("login successfully").$myreferer);
+					debug::true(T_("login successfully"));
 
-					if($myreferer=='jibres')
-						$this->redirector()->set_domain('jibres.'.$this->url('tld'))->set_url('?dev=y&ssid='.$_code);
-
-					elseif($myreferer=='talambar')
-						$this->redirector()->set_domain('talambar.'.$this->url('tld'))->set_url('?dev=y&ssid='.$_code);
-
-					else
-						$this->redirector()->set_domain()->set_url('?dev=y&ssid='.$_code);
+					$this->redirector()->set_domain()->set_url('?dev=y&ssid='.$_code);
 
 				}, $mycode);
 
