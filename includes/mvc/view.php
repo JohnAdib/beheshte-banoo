@@ -7,32 +7,37 @@ class view extends \lib\mvc\view
 	{
 		// define default value for global
 
-		$this->data->site['title']   = T_("Ermile");
-		$this->data->site['desc']    = T_("Ermile is new");
-		$this->data->site['slogan']  = T_("Ermile is our company");
+		$this->data->site['title']   = T_("The Mystical City");
+		$this->data->site['desc']    = T_("The Mystical City");
+		$this->data->site['slogan']  = T_("The Mystical City");
 
-		$this->data->page['desc']    = T_("Ermile is Inteligent.");
+		$this->data->page['desc']    = T_("The Mystical City is good");
 
 		// add language list for use in display
 		$this->global->langlist		= array(
 												'fa_IR' => 'فارسی',
-												'en_US' => 'English',
-												'de_DE' => 'Deutsch'
+												'en_US' => 'English'
 												);
+		$this->include->fontawesome  = true;
 
 		// if you need to set a class for body element in html add in this value
 		// $this->data->bodyclass      = null;
 
-		if (!locale_emulation()) {
-			$this->include->gettext  = 'Translation use native gettext dll';
-		}
-		else {
-			$this->include->gettext  = 'Translation use PHP gettext class';
-		}
+		if (locale_emulation())
+			$this->include->phpgettext  = true;
+
 
 		if(method_exists($this, 'options')){
 			$this->options();
 		}
+		
+		$this->data->display['account'] = "content_account/main/layout.html";
+	}
+
+	function pushState()
+	{
+		$this->data->display['account'] = "content_account/main/xhr-layout.html";
+		$this->data->display['cp']      = "content_cp/main/xhr-layout.html";
 	}
 }
 ?>

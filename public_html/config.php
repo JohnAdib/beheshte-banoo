@@ -7,7 +7,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
  /** The name of the database */
- define("db_name", 'ermile');
+ define("db_name", 'city');
 
  /** MySQL database username */
  define("db_user", 'ermile');

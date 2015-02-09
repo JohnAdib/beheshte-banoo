@@ -11,6 +11,8 @@ class account extends \lib\form
 		}
 		else
 		{
+			// if(DEBUG)
+			// 	var_dump('Please pass correct function name as parameter');
 			return;
 		}
 	}
@@ -20,7 +22,38 @@ class account extends \lib\form
 		$this->mobile	 = $this->make('#mobile')->label(null)->desc(T_("Enter your registered mobile"))
 							 ->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
 		$this->password = $this->make('#password')->name('password')->label(null)->pl(T_('Password'))->desc(T_("Enter your password"));
-		$this->submit	 = $this->make('submit')->title(T_('Login'));
+		$this->submit	 = $this->make('submit')->value(T_('Login'))->title(T_('Login'));
+	}
+
+	private function signup()
+	{
+		$this->mobile	 = $this->make('#mobile')->label(null)
+							 ->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
+		$this->password = $this->make('#password')->name('password')->label(null)->pl(T_('Password'));
+		$this->submit	 = $this->make('submit')->value(T_('Create an account'))->title(T_('Create an account'));
+	}
+
+	private function verification()
+	{
+		$this->mobile	= $this->make('#mobile')->label(null)->readonly('readonly')->tabindex('-1')
+							->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
+		$this->code		= $this->make('code')->label(null)->pl(T_('Code'))->maxlength(4)->autofocus()->autocomplete('off')
+							->required()->pattern('[0-9]{4}')->title(T_('input 4 number'))
+							->pos('hint--bottom')->desc(T_("Check your mobile and enter the code"));
+		$this->submit	= $this->make('submit')->value(T_('Verification'))->title(T_('Verification'));
+	}
+
+	private function recovery()
+	{
+		$this->mobile	= $this->make('#mobile')->label(null)
+							->value(((isset($_GET["mobile"]))?htmlspecialchars('+'.$_GET["mobile"]):null));
+		$this->submit	= $this->make('submit')->value(T_('Recovery'))->title(T_('Recovery'));
+	}
+
+	private function changepass()
+	{
+		$this->password = $this->make('#password')->name('password')->label(null)->pl(T_('Password'));
+		$this->submit	 = $this->make('submit')->title(T_('Change my password'));
 	}
 }
 ?>
