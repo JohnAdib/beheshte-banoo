@@ -21,6 +21,10 @@ $connect     = mysqli_connect("localhost", db_user, db_pass, db_name);
 $qTables     = $connect->query("SHOW TABLES FROM ".db_name);
 $translation = array();
 
+if (!file_exists(__DIR__.'/'.db_name))
+	mkdir(__DIR__.'/'.db_name, 0777, true);
+
+
 function _type($type, $def,$_table  = null)
 {
 	global $translation;
@@ -37,7 +41,8 @@ function _type($type, $def,$_table  = null)
 				$enum_values = explode(",",$_length);
 				foreach ($enum_values as $key => $value)
 				{
-					$translation['Enum '.$value] = $value;
+					if($value)
+						$translation['Enum '.$value] = $value;
 				}
 			}
 			return ("'type' => '$_type@$_length{$def}'");
@@ -308,7 +313,7 @@ while ($row = $qTables->fetch_object())
 			$tmp_fields_name = $prefix . "_title";
 			if($table=="users")
 				$tmp_fields_name = $prefix."_nickname";
-			if($table=="receipts" || $table=="transactions" || $table=="papers")
+			if($table=="receipts" || $table=="transactions" || $table=="papers" || $table=="files")
 				$tmp_fields_name = "id";
 
 			$fields          .= $tmp_fields_name."'";
