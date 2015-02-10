@@ -8,28 +8,30 @@ class model extends \lib\mvc\model
 
 	}
 
-	function logger($_type, $_module = null, $_value = null, $_priority = null)
+	public function logger($_type, $_module = null, $_value = null, $_priority = null)
 	{
 		if($_priority === null)
 		{
 			switch ($_type)
 			{
+				case 'signup':
 				case 'select':
 				case 'insert':
-					$_priority = 'low'
+					$_priority = 'low';
 					break;
 
+				case 'login':
 				case 'delete':
-					$_priority = 'high'
+					$_priority = 'high';
 					break;
 
 				case 'error':
-					$_priority = 'critical'
+					$_priority = 'critical';
 					break;
 
 				case 'update':
 				default:
-					$_priority = 'medium'
+					$_priority = 'medium';
 					break;
 			}
 		}

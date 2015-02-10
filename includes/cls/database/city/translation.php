@@ -107,6 +107,9 @@ function transtext()
 	echo T_("update");              // Enum update
 	echo T_("select");              // Enum select
 	echo T_("error");               // Enum error
+	echo T_("login");               // Enum login
+	echo T_("signup");              // Enum signup
+	echo T_("changepass");          // Enum changepass
 	echo T_("high");                // Enum high
 	echo T_("medium");              // Enum medium
 	echo T_("low");                 // Enum low

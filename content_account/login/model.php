@@ -20,33 +20,30 @@ class model extends \mvc\model
 		{
 			$tmp_result       = $tmp_result->assoc();
 			$myhashedPassword = $tmp_result['user_password'];
+
 			// if password is correct. go for login:)
 			if (isset($myhashedPassword) && utility::hasher($mypass, $myhashedPassword))
 			{
-				// Create Token and add to db for cross login ****************************************************
 				// you can change the code way easily at any time!
-				$mycode	= md5('^_^'.$tmp_result['id'].'_*Ermile*_'.date('Y-m-d H:i:s').'^_^');
-				$qry		= $this->sql()->tableUsermetas ()
-								->setUser_id                ($tmp_result['id'])
-								->setUsermeta_cat           ('cookie_token')
-								->setUsermeta_name          (ip2long($_SERVER['REMOTE_ADDR']))
-								->setUsermeta_value         ($mycode);
-				$sql		= $qry->insert();
+				$qry		= $this->sql()->tableUsers ()
+								->setUser_logincounter  ($tmp_result['user_logincounter'] +1)
+								->whereId               ($tmp_result['id']);
+				$sql		= $qry->update();
 
-				$_SESSION['ssid'] = $mycode;
 
 				// ======================================================
 				// you can manage next event with one of these variables,
 				// commit for successfull and rollback for failed
 				// if query run without error means commit
-				$this->commit(function($_code)
+				$this->commit(function()
 				{
+					$this->logger('login');
 					// create code for pass with get to service home page
 					debug::true(T_("login successfully"));
 
-					$this->redirector()->set_domain()->set_url('?dev=y&ssid='.$_code);
+					$this->redirector()->set_domain()->set_url();
 
-				}, $mycode);
+				});
 
 				$this->rollback(function() { debug::error(T_("login failed!")); });
 			}
