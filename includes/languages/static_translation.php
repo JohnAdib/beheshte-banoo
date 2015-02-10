@@ -53,6 +53,11 @@ function transtext()
 	echo T_('Signup');
 	echo T_('Add new');
 	echo T_('Add New');
+	echo T_('Admin');
+	echo T_('Visitor');
+	echo T_('boother');
+	echo T_('registerer');
+	
 	
 }
 ?>

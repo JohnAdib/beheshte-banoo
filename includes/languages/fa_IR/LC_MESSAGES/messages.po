@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-02-10 20:15+0330\n"
-"PO-Revision-Date: 2015-02-10 20:16+0330\n"
+"POT-Creation-Date: 2015-02-10 22:17+0330\n"
+"PO-Revision-Date: 2015-02-10 22:17+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -145,9 +145,9 @@ msgstr "اعتبارسنجی ناموفق بود!"
 msgid "this data is incorrect"
 msgstr "این اطلاعات اشتباه است"
 
-#: ../../../.././content_cp/home/controller.php:12
-msgid "first of all, you must login to system!"
-msgstr "شما ابتدا باید وارد سیستم شوید!"
+#: ../../../.././content_cp/home/controller.php:14
+msgid "Access Denied!"
+msgstr "عدم دسترسی!"
 
 #: ../../../.././content_cp/home/controller.php:24
 msgid "Not found!"
@@ -858,6 +858,22 @@ msgstr "افزودن"
 msgid "Add New"
 msgstr "افزودن"
 
+#: ../../../.././includes/languages/static_translation.php:56
+msgid "Admin"
+msgstr "مدیریت"
+
+#: ../../../.././includes/languages/static_translation.php:57
+msgid "Visitor"
+msgstr "بازدیدکننده"
+
+#: ../../../.././includes/languages/static_translation.php:58
+msgid "boother"
+msgstr "غرفه دار"
+
+#: ../../../.././includes/languages/static_translation.php:59
+msgid "registerer"
+msgstr "مسئول ثبت نام"
+
 #: ../../../.././includes/languages/twig_translation.php:8
 msgid "Don't have an account?"
 msgstr "اکانت ندارید؟"
@@ -965,6 +981,9 @@ msgstr "شهرک معارفی"
 msgid "The Mystical City is good"
 msgstr "شهرک معارفی را تجربه کنید"
 
+#~ msgid "first of all, you must login to system!"
+#~ msgstr "شما ابتدا باید وارد سیستم شوید!"
+
 #~ msgid "Click here for recovery your password"
 #~ msgstr "برای بازیابی کلمه عبور کلیک کنید"
 
@@ -979,9 +998,6 @@ msgstr "شهرک معارفی را تجربه کنید"
 
 #~ msgid "by signing up, you agree to the"
 #~ msgstr "با ثبت نام شما موافق هستید با"
-
-#~ msgid "Admin"
-#~ msgstr "مدیریت"
 
 #~ msgid "you must first logined to system!"
 #~ msgstr "قبل از هرکاری شما ابتدا باید وارد سیستم شوید!"
@@ -1150,9 +1166,6 @@ msgstr "شهرک معارفی را تجربه کنید"
 
 #~ msgid "Content"
 #~ msgstr "محتوا"
-
-#~ msgid "Visitor"
-#~ msgstr "بازدیدکننده"
 
 #~ msgid "income"
 #~ msgstr "ورودی"
@@ -1576,9 +1589,6 @@ msgstr "شهرک معارفی را تجربه کنید"
 
 #~ msgid "Credit"
 #~ msgstr "اعتبار"
-
-#~ msgid "emailregister"
-#~ msgstr "رایانامه ثبت نام"
 
 #~ msgid "emailchange"
 #~ msgstr "تغییر رایانامه"

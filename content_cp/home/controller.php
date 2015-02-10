@@ -8,10 +8,10 @@ class controller extends \mvc\controller
 		// if user dont login or dont admin then redirect to root
 		if(!$this->login() || $this->login('permission_id') != 1)
 		{
-			$this->logger('access');
-			\lib\debug::warn(T_("first of all, you must login to system!"));
-			$this->redirector()->set_domain()->set_url()->redirect();
-			exit();
+			$this->model()->logger('access');
+			$this->model()->_processor();
+			// $this->redirector()->set_domain()->set_url();
+			\lib\http::access(T_("Access Denied!"));
 		}
 
 		$mymodule = $this->module();
