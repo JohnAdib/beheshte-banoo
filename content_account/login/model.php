@@ -14,13 +14,11 @@ class model extends \mvc\model
 		// check for mobile exist
 		$tmp_result =  $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
 
-
 		// if exist
 		if($tmp_result->num() == 1)
 		{
 			$tmp_result       = $tmp_result->assoc();
 			$myhashedPassword = $tmp_result['user_password'];
-
 			// if password is correct. go for login:)
 			if (isset($myhashedPassword) && utility::hasher($mypass, $myhashedPassword))
 			{
@@ -30,6 +28,17 @@ class model extends \mvc\model
 								->whereId               ($tmp_result['id']);
 				$sql		= $qry->update();
 
+
+				$myfields = array('id',
+										'user_gender',
+										'user_firstname',
+										'user_lastname',
+										'user_mobile',
+										'user_status',
+										'permission_id',
+										'booth_id'
+										);
+				$this->setLoginSession($tmp_result, $myfields);
 
 				// ======================================================
 				// you can manage next event with one of these variables,
