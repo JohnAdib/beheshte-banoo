@@ -479,10 +479,6 @@ form input, form select{
 
 }
 
-.rtl #main form label{
-  float:right;
-}
-
 #main form .label-textarea{width: 100%;float:none}
 .rtl #main form .label-textarea{width: 100%;float:none}
 
@@ -568,6 +564,10 @@ font-weight: 400;
 cursor: pointer;
 }
 
+
+
+.rtl .radio label{padding-right: 20px;}
+.rtl .radio input[type=radio],.rtl .radio-inline input[type=radio],.rtl .checkbox input[type=checkbox],.rtl .checkbox-inline input[type=checkbox] {margin-right: -20px;}
 
 
 

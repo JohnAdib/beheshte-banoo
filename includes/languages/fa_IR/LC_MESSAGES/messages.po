@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-02-10 22:17+0330\n"
-"PO-Revision-Date: 2015-02-10 22:17+0330\n"
+"POT-Creation-Date: 2015-02-10 22:19+0330\n"
+"PO-Revision-Date: 2015-02-10 22:19+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -867,11 +867,11 @@ msgid "Visitor"
 msgstr "بازدیدکننده"
 
 #: ../../../.././includes/languages/static_translation.php:58
-msgid "boother"
+msgid "Boother"
 msgstr "غرفه دار"
 
 #: ../../../.././includes/languages/static_translation.php:59
-msgid "registerer"
+msgid "Registerer"
 msgstr "مسئول ثبت نام"
 
 #: ../../../.././includes/languages/twig_translation.php:8

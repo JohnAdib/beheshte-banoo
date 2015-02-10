@@ -7,9 +7,9 @@
 
 .cover{padding-top: 80px;margin-top:-45px;}
 #header-back {height: 45px;}
-.rtl #main form label{
-  float:right;
-}
+
+
+
 
 #main form .label-textarea{width: 100%;float:none}
 .rtl #main form .label-textarea{width: 100%;float:none}

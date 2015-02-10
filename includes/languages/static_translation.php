@@ -55,8 +55,8 @@ function transtext()
 	echo T_('Add New');
 	echo T_('Admin');
 	echo T_('Visitor');
-	echo T_('boother');
-	echo T_('registerer');
+	echo T_('Boother');
+	echo T_('Registerer');
 	
 	
 }
