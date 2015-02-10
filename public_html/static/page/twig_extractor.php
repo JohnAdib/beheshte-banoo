@@ -1,0 +1,1 @@
+/home/javad/Desktop/city/includes/languages/twig_extractor.php

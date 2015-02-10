@@ -103,19 +103,26 @@ function transtext()
 	echo T_("Colors");              // token_colors
 	echo T_("Numbers");             // token_numbers
 	echo T_("Status");              // token_status
+	echo T_("insert");              // Enum insert
+	echo T_("update");              // Enum update
+	echo T_("select");              // Enum select
+	echo T_("error");               // Enum error
 	echo T_("high");                // Enum high
 	echo T_("medium");              // Enum medium
 	echo T_("low");                 // Enum low
-	echo T_("forgetpassword");      // Enum forgetpassword
+	echo T_("critical");            // Enum critical
 
 	// ------------------------------------------------------------------- Table userlogs
 	echo T_("userlogs");            // Table userlogs
 	echo T_("Userlogs");            // Userlogs
 	echo T_("userlog");             // userlogs
-	echo T_("Title");               // userlog_title
-	echo T_("Desc");                // userlog_desc
-	echo T_("Priority");            // userlog_priority
 	echo T_("Type");                // userlog_type
+	echo T_("Module");              // userlog_module
+	echo T_("Value");               // userlog_value
+	echo T_("Priority");            // userlog_priority
+	echo T_("Ip");                  // userlog_ip
+	echo T_("Time");                // userlog_time
+	echo T_("Status");              // userlog_status
 
 	// ------------------------------------------------------------------- Table usermetas
 	echo T_("usermetas");           // Table usermetas

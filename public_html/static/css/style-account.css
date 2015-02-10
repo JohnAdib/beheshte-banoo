@@ -15,7 +15,8 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 .account{direction:ltr;position:relative;padding:0;color: #aaa;-webkit-border-radius: 10px;border-radius: 10px;margin-right:22px;margin-left:5px}
 .account button{position:relative;width:100%;background-color:#4B8DF8;color:#fff; width:100%;margin-top:20px;font-size:1.6em;height:40px;padding-right: 30px;transition: all .3s ease;}
 .account button:after{font-family:FontAwesome;content: "\f0a9";padding:0 5px;position:absolute;top:0;right:5px;font-size:25px;line-height:40px}
-.account button:active{background-color:#094BB6}
+.account button:hover{background-color:#2E73E2}
+.account button:active, .account button:focus{background-color:#094BB6}
 .account input{background-color:#fff;border-radius:5px;border:none;width:100%;transition: color .3s ease;height: 40px; margin:2px 0;padding: 6px 12px;}
 .form-element span{width:100%;}
 
