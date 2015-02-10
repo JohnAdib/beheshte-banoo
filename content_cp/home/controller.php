@@ -5,10 +5,12 @@ class controller extends \mvc\controller
 {
 	function _route()
 	{
-		if(!$this->login())
+		// if user dont login or dont admin then redirect to root
+		if(!$this->login() || $this->login('permission_id') != 1)
 		{
+			$this->logger('access');
 			\lib\debug::warn(T_("first of all, you must login to system!"));
-			$this->redirector()->set_domain($this->url('AccountService'))->set_url('login?dev=y')->redirect();
+			$this->redirector()->set_domain()->set_url()->redirect();
 			exit();
 		}
 

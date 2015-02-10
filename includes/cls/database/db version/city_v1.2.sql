@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 10, 2015 at 08:14 PM
+-- Generation Time: Feb 10, 2015 at 08:10 PM
 -- Server version: 5.5.41-0ubuntu0.14.04.1
 -- PHP Version: 5.6.5-1+deb.sury.org~trusty+1
 
@@ -285,7 +285,7 @@ INSERT INTO `tokens` (`id`, `token_colors`, `token_numbers`, `token_status`, `da
 
 CREATE TABLE IF NOT EXISTS `userlogs` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `userlog_type` enum('insert','update','delete','select','error','login','signup','changepass','access','logout') NOT NULL,
+  `userlog_type` enum('insert','update','delete','select','error','login','signup','changepass') NOT NULL,
   `userlog_module` varchar(50) NOT NULL,
   `userlog_value` varchar(200) DEFAULT NULL,
   `userlog_priority` enum('high','medium','low','critical') NOT NULL DEFAULT 'medium',

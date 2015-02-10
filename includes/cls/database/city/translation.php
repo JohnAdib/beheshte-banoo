@@ -110,6 +110,8 @@ function transtext()
 	echo T_("login");               // Enum login
 	echo T_("signup");              // Enum signup
 	echo T_("changepass");          // Enum changepass
+	echo T_("access");              // Enum access
+	echo T_("logout");              // Enum logout
 	echo T_("high");                // Enum high
 	echo T_("medium");              // Enum medium
 	echo T_("low");                 // Enum low

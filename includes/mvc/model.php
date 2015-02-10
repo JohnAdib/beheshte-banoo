@@ -14,17 +14,18 @@ class model extends \lib\mvc\model
 		{
 			switch ($_type)
 			{
-				case 'signup':
+				case 'login':
 				case 'select':
 				case 'insert':
 					$_priority = 'low';
 					break;
 
-				case 'login':
 				case 'delete':
+				case 'access':
 					$_priority = 'high';
 					break;
 
+				case 'signup':
 				case 'error':
 					$_priority = 'critical';
 					break;
