@@ -14,15 +14,13 @@ class model extends \mvc\model
 		return 2;
 	}
 
-	public function put_test($object)
-	{
-		return 3;
-	}
+// webcam example ********************************************************888
+//     $encoded_data = $_POST['mydata'];
+//     $binary_data = base64_decode( $encoded_data );
 
-	public function delete_test($object)
-	{
-		return 4;
-	}
+//     // save to server (beware of permissions)
+//     $result = file_put_contents( 'webcam.jpg', $binary_data );
+//     if (!$result) die("Could not save image!  Check file permissions.");
 
 }
 ?>

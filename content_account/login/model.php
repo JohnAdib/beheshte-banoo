@@ -44,15 +44,35 @@ class model extends \mvc\model
 				// you can manage next event with one of these variables,
 				// commit for successfull and rollback for failed
 				// if query run without error means commit
-				$this->commit(function()
+				$this->commit(function($_pid)
 				{
 					$this->logger('login');
 					// create code for pass with get to service home page
 					debug::true(T_("login successfully"));
 
-					$this->redirector()->set_domain()->set_url();
+					switch ($_pid)
+					{
+						// admin
+						case '1':
+							$this->redirector()->set_domain('cp.'.Service)->set_url();
+							break;
 
-				});
+						// Registerer
+						case '2':
+							$this->redirector()->set_domain()->set_url('register');
+							break;
+
+						// Boother
+						case '3':
+							$this->redirector()->set_domain()->set_url('game');
+							break;
+
+						// Visitor and other!
+						default:
+							$this->redirector()->set_domain()->set_url();
+							break;
+					}
+				},$tmp_result['permission_id']);
 
 				$this->rollback(function() { debug::error(T_("login failed!")); });
 			}

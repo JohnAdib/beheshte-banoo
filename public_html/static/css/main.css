@@ -677,6 +677,74 @@ cursor: pointer;
 }
 
 
+/*---------------
+    Positive
+----------------*/
+
+.positive.buttons .button,
+.positive.button {
+  background-color: #5bbd72 !important;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+.positive.buttons .button:hover,
+.positive.button:hover,
+.positive.buttons .active.button,
+.positive.active.button {
+  background-color: #66c17b !important;
+  color: #ffffff;
+  text-shadow: none;
+}
+.positive.buttons .button:active,
+.positive.button:active {
+  background-color: #46ae5f !important;
+  color: #ffffff;
+  text-shadow: none;
+}
+.positive.buttons .active.button,
+.positive.buttons .active.button:active,
+.positive.active.button,
+.positive.button .active.button:active {
+  background-color: #49b562;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/*---------------
+     Negative
+----------------*/
+
+.negative.buttons .button,
+.negative.button {
+  background-color: #d95c5c !important;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+.negative.buttons .button:hover,
+.negative.button:hover,
+.negative.buttons .active.button,
+.negative.active.button {
+  background-color: #dc6868 !important;
+  color: #ffffff;
+  text-shadow: none;
+}
+.negative.buttons .button:active,
+.negative.button:active {
+  background-color: #d23f3f !important;
+  color: #ffffff;
+  text-shadow: none;
+}
+.negative.buttons .active.button,
+.negative.buttons .active.button:active,
+.negative.active.button,
+.negative.button .active.button:active {
+  background-color: #d44747;
+  color: #ffffff;
+  text-shadow: none;
+}
+
 /*******************************
             States
 *******************************/
@@ -977,75 +1045,6 @@ cursor: pointer;
   color: #ffffff;
   text-shadow: none;
 }
-
-/*---------------
-    Positive
-----------------*/
-
-.positive.buttons .button,
-.positive.button {
-  background-color: #5bbd72 !important;
-  color: #ffffff;
-  text-shadow: none;
-  background-image: none;
-}
-.positive.buttons .button:hover,
-.positive.button:hover,
-.positive.buttons .active.button,
-.positive.active.button {
-  background-color: #66c17b !important;
-  color: #ffffff;
-  text-shadow: none;
-}
-.positive.buttons .button:active,
-.positive.button:active {
-  background-color: #46ae5f !important;
-  color: #ffffff;
-  text-shadow: none;
-}
-.positive.buttons .active.button,
-.positive.buttons .active.button:active,
-.positive.active.button,
-.positive.button .active.button:active {
-  background-color: #49b562;
-  color: #ffffff;
-  text-shadow: none;
-}
-
-/*---------------
-     Negative
-----------------*/
-
-.negative.buttons .button,
-.negative.button {
-  background-color: #d95c5c !important;
-  color: #ffffff;
-  text-shadow: none;
-  background-image: none;
-}
-.negative.buttons .button:hover,
-.negative.button:hover,
-.negative.buttons .active.button,
-.negative.active.button {
-  background-color: #dc6868 !important;
-  color: #ffffff;
-  text-shadow: none;
-}
-.negative.buttons .button:active,
-.negative.button:active {
-  background-color: #d23f3f !important;
-  color: #ffffff;
-  text-shadow: none;
-}
-.negative.buttons .active.button,
-.negative.buttons .active.button:active,
-.negative.active.button,
-.negative.button .active.button:active {
-  background-color: #d44747;
-  color: #ffffff;
-  text-shadow: none;
-}
-
 
 /*******************************
             Groups
