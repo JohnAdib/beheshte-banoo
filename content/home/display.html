@@ -3,7 +3,28 @@
 
 
 {%block content_def%}
+<div class="center">
+ <header>{%spaceless%}
+  <a target="_blank" href="{{url.root}}" title="{{site.slogan}}" tabindex="-1" id='logo'>
+   <img src="{{url.static}}images/logo.svg" alt='{%trans "masoomeh holy shine"%}' />
+  </a>
+ </header>{%endspaceless%}
 
-<div id="baloon"></div>
+ <div data-xhr="content" class="content">
+  <h1>{{site.title}}</h1>
 
+<div class="desc">
+{%if global.login%}
+   <a href="http://account.{{url.raw}}/logout" class='btnlogin button negative' tabindex="1">{%trans "Logout"%}</a>
+{%else%}
+   <a href="http://account.{{url.raw}}/login" class='btnlogin button positive' tabindex="1">{%trans "Login"%}</a>
+{%endif%}
+</div>
+
+  <footer>
+{%block content%}{%endblock%}
+  </footer>
+ </div>
+
+</div>
 {%endblock%}

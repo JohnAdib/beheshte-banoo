@@ -12,19 +12,19 @@ class view extends \lib\mvc\view
 		$this->data->site['slogan']  = T_("The Mystical City");
 
 		$this->data->page['desc']    = T_("The Mystical City is good");
-
 		// add language list for use in display
-		$this->global->langlist		= array(
+		$this->global->langlist		  = array(
 												'fa_IR' => 'فارسی',
 												'en_US' => 'English'
 												);
 		$this->include->fontawesome  = true;
+		$this->data->bodyclass       = 'unselectable';
 
 		// if you need to set a class for body element in html add in this value
 		// $this->data->bodyclass      = null;
 
 		if (locale_emulation())
-			$this->include->phpgettext  = true;
+			$this->include->phpgettext = true;
 
 
 		if(method_exists($this, 'options')){
