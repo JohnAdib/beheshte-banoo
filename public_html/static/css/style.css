@@ -48,7 +48,21 @@ input {font-family:'Roboto Slab',serif;font-size: 18px;}
 
 
 #register{color:#000;}
+.radio2 input[type="radio"] {
+    display:none; 
+}
 
+.radio2 label {
+    display:inline-block;
+    background-color:#ddd;
+    padding:4px 11px;
+    font-family:Arial;
+    font-size:16px;
+}
+
+.radio2 input[type="radio"]:checked + label { 
+    background-color:#bbb;
+}
 
 
 

@@ -27,11 +27,12 @@
 
 {% macro radio(array) %}
  {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
- <div class="row-clear radio">
+ <div class="radio">
  {% for child in array.child %}
-  <label class="label-custom label-radio">
-  <input type="radio" name="{{array.attr.name}}" {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}
-  </label>
+  <div class="field">
+   <input type="radio" name="{{array.attr.name}}" {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>
+   <label for="{{child.attr.id}}" class="label-radio">{{child.label}}</label>
+  </div>
  {% endfor %}
  </div>
 {% endmacro %}
