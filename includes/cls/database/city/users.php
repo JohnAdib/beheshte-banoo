@@ -33,7 +33,7 @@ class users
 	//------------------------------------------------------------------ radio button
 	public function user_gender() 
 	{
-		$this->form("select")->name("gender")->type("select");
+		$this->form("radio")->name("gender")->type("radio");
 		$this->setChild();
 	}
 	public function user_firstname() 

@@ -1,7 +1,11 @@
 /*******************************
             Forms
 *******************************/
-.form {position: relative;max-width: 100%;padding: 1em;}
+input, select, textarea {font-family:'Roboto Slab',serif;}
+.rtl input, .rtl select, .rtl textarea {font-family:'IRANSans',serif;}
+
+.form {position: relative;max-width: 100%;padding: 1em;font-size:16px;font-size:1.6rem;}
+.rtl .form {font-size:12px;font-size: 1.2rem;}
 .form > p {margin: 1em 0em;}
 .form .field {clear: both;margin: 0em 0em 1em;}
 .form .field label {
@@ -131,7 +135,6 @@
   border-color: rgba(39, 41, 43, 0.3);
   border-radius: 0em 0.2857rem 0.2857rem 0em;
   background: #ffffff;
-  box-shadow: 1px 0em 0em 0em rgba(39, 41, 43, 0.3) inset;
 }
 
 /*--------------------

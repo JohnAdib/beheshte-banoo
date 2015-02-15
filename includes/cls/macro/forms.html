@@ -68,7 +68,7 @@
 
 
 {% macro submit(array) %}
- <button {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>{{array.attr.value}}</button>
+ <button class="button primary" {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>{{array.attr.value}}</button>
 {% endmacro %}
 
 

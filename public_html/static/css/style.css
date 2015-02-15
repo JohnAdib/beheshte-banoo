@@ -42,12 +42,11 @@ input:-webkit-autofill:focus {-webkit-box-shadow: /*your box-shadow*/,0 0 0 50px
 
 #footer{position:fixed}
 
-input {font-family:'Roboto Slab',serif;font-size: 18px;}
-.rtl input {font-family:'IRANSans',serif;font-size: 16px;}
 
 
 
-#register{color:#000;}
+#register{color:#000;margin-bottom:80px}
+
 .radio2 input[type="radio"] {
     display:none; 
 }
