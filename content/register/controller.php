@@ -17,7 +17,7 @@ class controller extends \mvc\controller
 		{
 			$this->model()->logger('access');
 			$this->model()->_processor();
-			\lib\http::access(T_("Access Denied!"));
+			\lib\error::access();
 			$this->redirector()->set_domain()->set_url();
 		}
 	}

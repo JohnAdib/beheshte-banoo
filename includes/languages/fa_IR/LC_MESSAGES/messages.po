@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-02-10 22:19+0330\n"
-"PO-Revision-Date: 2015-02-10 22:19+0330\n"
+"POT-Creation-Date: 2015-02-15 22:42+0330\n"
+"PO-Revision-Date: 2015-02-15 22:42+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -26,7 +26,7 @@ msgstr "شما اجازه دسترسی به این صفحه را ندارید!"
 
 #: ../../../.././content_account/home/view.php:23
 #: ../../../.././includes/cls/form/account.php:25
-#: ../../../.././includes/languages/twig_translation.php:63
+#: ../../../.././includes/languages/twig_translation.php:35
 msgid "Login"
 msgstr "ورود به سیستم"
 
@@ -66,16 +66,16 @@ msgstr "ارمایل"
 msgid "login successfully"
 msgstr "ورود موفقیت آمیز"
 
-#: ../../../.././content_account/login/model.php:57
+#: ../../../.././content_account/login/model.php:77
 msgid "login failed!"
 msgstr "ثبت نام ناموفق!"
 
-#: ../../../.././content_account/login/model.php:61
-#: ../../../.././content_account/login/model.php:65
+#: ../../../.././content_account/login/model.php:81
+#: ../../../.././content_account/login/model.php:85
 msgid "mobile or password is incorrect"
 msgstr "شماره موبایل یا کلمه عبور اشتباه است"
 
-#: ../../../.././content_account/login/model.php:69
+#: ../../../.././content_account/login/model.php:89
 #: ../../../.././content_account/signup/model.php:52
 #: ../../../.././content_account/recovery/model.php:55
 #: ../../../.././content_account/verification/model.php:73
@@ -107,7 +107,7 @@ msgid "error on verify your code!"
 msgstr "خطا در تایید اعتبار کد!"
 
 #: ../../../.././content_account/recovery/model.php:40
-#: ../../../.././includes/languages/twig_translation.php:30
+#: ../../../.././includes/languages/twig_translation.php:29
 msgid "we send a verification code for you"
 msgstr "ما کد اعتبارسنجی را برای شما ارسال خواهیم کرد"
 
@@ -144,10 +144,6 @@ msgstr "اعتبارسنجی ناموفق بود!"
 #: ../../../.././content_account/verification/model.php:69
 msgid "this data is incorrect"
 msgstr "این اطلاعات اشتباه است"
-
-#: ../../../.././content_cp/home/controller.php:14
-msgid "Access Denied!"
-msgstr "عدم دسترسی!"
 
 #: ../../../.././content_cp/home/controller.php:24
 msgid "Not found!"
@@ -345,7 +341,7 @@ msgstr "تنظیمات"
 
 #: ../../../.././includes/cls/database/city/translation.php:63
 #: ../../../.././includes/languages/static_translation.php:37
-#: ../../../.././includes/languages/twig_translation.php:42
+#: ../../../.././includes/languages/twig_translation.php:44
 msgid "Options"
 msgstr "تنظیمات"
 
@@ -409,13 +405,13 @@ msgstr "افزودن"
 
 #: ../../../.././includes/cls/database/city/translation.php:80
 #: ../../../.././includes/languages/static_translation.php:42
-#: ../../../.././includes/languages/twig_translation.php:46
+#: ../../../.././includes/languages/twig_translation.php:48
 msgid "Edit"
 msgstr "ویرایش"
 
 #: ../../../.././includes/cls/database/city/translation.php:81
 #: ../../../.././includes/languages/static_translation.php:43
-#: ../../../.././includes/languages/twig_translation.php:47
+#: ../../../.././includes/languages/twig_translation.php:49
 msgid "Delete"
 msgstr "حذف"
 
@@ -681,6 +677,7 @@ msgid "Createdate"
 msgstr "تاریخ ایجاد"
 
 #: ../../../.././includes/cls/form/account.php:22
+#: ../../../.././includes/cls/form/register.php:12
 msgid "Enter your registered mobile"
 msgstr "موبایل ثبت شده را وارد کنید"
 
@@ -708,6 +705,10 @@ msgstr "اعتبارسنجی"
 msgid "Change my password"
 msgstr "کلمه عبور"
 
+#: ../../../.././includes/cls/form/register.php:16
+msgid "Register"
+msgstr "ثبت نام"
+
 #: ../../../.././includes/cls/form/symbol.php:15
 msgid "Tel"
 msgstr "تلفن"
@@ -725,7 +726,6 @@ msgid "between 5-40 character. be tricky!"
 msgstr "بین ۵ تا ۴۰ کاراکتر. در انتخاب کلمه عبور دقت به خرج دهید"
 
 #: ../../../.././includes/languages/static_translation.php:6
-#: ../../../.././includes/languages/twig_translation.php:35
 msgid "Saloos"
 msgstr "سالوس"
 
@@ -806,17 +806,17 @@ msgid "made in iran"
 msgstr "ساخت ایران"
 
 #: ../../../.././includes/languages/static_translation.php:33
-#: ../../../.././includes/languages/twig_translation.php:38
+#: ../../../.././includes/languages/twig_translation.php:34
 msgid "Logout"
 msgstr "خروج از سیستم"
 
 #: ../../../.././includes/languages/static_translation.php:34
-#: ../../../.././includes/languages/twig_translation.php:39
+#: ../../../.././includes/languages/twig_translation.php:41
 msgid "Home"
 msgstr "صفحه نخست"
 
 #: ../../../.././includes/languages/static_translation.php:38
-#: ../../../.././includes/languages/twig_translation.php:43
+#: ../../../.././includes/languages/twig_translation.php:45
 msgid "Go to"
 msgstr "برو به"
 
@@ -825,12 +825,12 @@ msgid "Does not exist"
 msgstr "هیچ داده ای موجود نیست"
 
 #: ../../../.././includes/languages/static_translation.php:40
-#: ../../../.././includes/languages/twig_translation.php:44
+#: ../../../.././includes/languages/twig_translation.php:46
 msgid "Add New Record"
 msgstr "افزودن رکورد جدید"
 
 #: ../../../.././includes/languages/static_translation.php:41
-#: ../../../.././includes/languages/twig_translation.php:45
+#: ../../../.././includes/languages/twig_translation.php:47
 msgid "Actions"
 msgstr "عملیات"
 
@@ -916,60 +916,64 @@ msgid "are you remember your password!?"
 msgstr "آیا کلمه عبور خود را به خاطر آوردید!؟"
 
 #: ../../../.././includes/languages/twig_translation.php:26
-msgid "for childrens"
-msgstr "برای کودکان"
+msgid "masoomeh holy shine"
+msgstr "حرم حضرت معصومه"
 
-#: ../../../.././includes/languages/twig_translation.php:27
-msgid "Experience our service in your language"
-msgstr "سرویس ما را با زبان مادری خودتان تجربه کنید"
-
-#: ../../../.././includes/languages/twig_translation.php:31
+#: ../../../.././includes/languages/twig_translation.php:30
 msgid "please check your mobile and enter the code"
 msgstr "پس از بررسی موبایل خود کد را وارد کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:32
+#: ../../../.././includes/languages/twig_translation.php:31
 msgid "don't receive message?"
 msgstr "هنوز پیامک ما را دریافت نکردید؟"
 
-#: ../../../.././includes/languages/twig_translation.php:48
+#: ../../../.././includes/languages/twig_translation.php:38
+msgid "Take Snapshot"
+msgstr "دخیره موقت"
+
+#: ../../../.././includes/languages/twig_translation.php:50
 msgid "delete record"
 msgstr "حذف رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:49
+#: ../../../.././includes/languages/twig_translation.php:51
 msgid "seriously, are you sure? There's no coming back."
 msgstr "مطمئنید؟ بازگشتی وجود ندارد"
 
-#: ../../../.././includes/languages/twig_translation.php:50
+#: ../../../.././includes/languages/twig_translation.php:52
 msgid "Cancel"
 msgstr "انصراف"
 
-#: ../../../.././includes/languages/twig_translation.php:51
+#: ../../../.././includes/languages/twig_translation.php:53
 msgid "or"
 msgstr "یا"
 
-#: ../../../.././includes/languages/twig_translation.php:54
+#: ../../../.././includes/languages/twig_translation.php:56
 msgid "Edit this record"
 msgstr "ویرایش این رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:55
+#: ../../../.././includes/languages/twig_translation.php:57
 msgid "Delete this record"
 msgstr "حذف این رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:58
+#: ../../../.././includes/languages/twig_translation.php:60
 msgid "Please select one item"
 msgstr "لطفا یک گزینه را انتخاب کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:61
+#: ../../../.././includes/languages/twig_translation.php:63
 msgid "Home Page"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/twig_translation.php:62
+#: ../../../.././includes/languages/twig_translation.php:64
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
-#: ../../../.././includes/languages/twig_translation.php:64
+#: ../../../.././includes/languages/twig_translation.php:65
 msgid "Ermile is our brand"
 msgstr "ارمایل نام برند ماست"
+
+#: ../../../.././includes/languages/twig_translation.php:66
+msgid "Experience our service in your language"
+msgstr "سرویس ما را با زبان مادری خودتان تجربه کنید"
 
 #: ../../../.././includes/mvc/view.php:10
 #: ../../../.././includes/mvc/view.php:11
@@ -980,6 +984,27 @@ msgstr "شهرک معارفی"
 #: ../../../.././includes/mvc/view.php:14
 msgid "The Mystical City is good"
 msgstr "شهرک معارفی را تجربه کنید"
+
+#~ msgid "Access Denied!"
+#~ msgstr "عدم دسترسی!"
+
+#~ msgid "PAGE NOT FOUND"
+#~ msgstr "صفحه یافت نشد"
+
+#~ msgid "CORE"
+#~ msgstr "هسته"
+
+#~ msgid "ACCESS DENIED"
+#~ msgstr "عدم دسترسی"
+
+#~ msgid "BAD REQUEST"
+#~ msgstr "درخواست نامناسب"
+
+#~ msgid "INTERNAL ERROR"
+#~ msgstr "خطای داخلی"
+
+#~ msgid "for childrens"
+#~ msgstr "برای کودکان"
 
 #~ msgid "first of all, you must login to system!"
 #~ msgstr "شما ابتدا باید وارد سیستم شوید!"

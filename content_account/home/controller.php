@@ -35,7 +35,7 @@ class controller extends \mvc\controller
 			case 'changepass':
 				if(!$islogin)
 				{
-					\lib\http::access(T_("you can't access to this page!"));
+					\lib\error::access(T_("you can't access to this page!"));
 				}
 
 			case 'verification':
@@ -54,7 +54,7 @@ class controller extends \mvc\controller
 
 			// if user add another address show 404
 			default:
-				\lib\http::page();
+				\lib\error::page();
 				break;
 		}
 	}

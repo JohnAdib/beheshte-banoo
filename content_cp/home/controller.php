@@ -11,7 +11,7 @@ class controller extends \mvc\controller
 			$this->model()->logger('access');
 			$this->model()->_processor();
 			// $this->redirector()->set_domain()->set_url();
-			\lib\http::access(T_("Access Denied!"));
+			\lib\error::access();
 		}
 
 		$mymodule = $this->module();
@@ -21,7 +21,7 @@ class controller extends \mvc\controller
 		if($mychild && !($mychild=='add' || $mychild=='edit' || $mychild=='delete' || $mychild=='options')
 			 || !$this->cpModlueList()
 			)
-			\lib\http::page(T_("Not found!"));
+			\lib\error::page(T_("Not found!"));
 
 
 		if( is_file(root.'content_cp/'.$mymodule.'/display.html') )

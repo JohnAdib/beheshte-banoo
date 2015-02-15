@@ -1,10 +1,12 @@
 /*******************************
             Forms
 *******************************/
-input, select, textarea {font-family:'Roboto Slab',serif;}
-.rtl input, .rtl select, .rtl textarea {font-family:'IRANSans',serif;}
+input, select, textarea, button {font-family:'Roboto Slab',serif;}
+.rtl input, .rtl select, .rtl textarea, .rtl button {font-family:'IRANSans',serif;}
+input:focus,select:focus,textarea:focus,button:focus{outline:none;}
 
-.form {position: relative;max-width: 100%;padding: 1em;font-size:16px;font-size:1.6rem;}
+.form {position: relative;max-width: 100%;padding: 1em;font-size:16px;font-size:1.6rem;color:#000;}
+.form.black{color:#fff;}
 .rtl .form {font-size:12px;font-size: 1.2rem;}
 .form > p {margin: 1em 0em;}
 .form .field {clear: both;margin: 0em 0em 1em;}
@@ -12,7 +14,7 @@ input, select, textarea {font-family:'Roboto Slab',serif;}
   display: inline-block;
   vertical-align: middle;
   margin:0 0 0.2em 0;
-  color: rgba(0, 0, 0, 0.8);
+  opacity: 0.8;
   font-size: 0.9em;
   font-weight: bold;
   text-transform: none;
@@ -22,6 +24,17 @@ input, select, textarea {font-family:'Roboto Slab',serif;}
 .form .radio .element{display: inline-block;margin:0 0.5em 0 0;}
 .rtl .form .radio .element{display: inline-block;margin:0 0 0 0.5em;}
 .form.block .radio .element{display: block;}
+
+.gender .radio input{/*display:none; */}
+.gender .radio label {display:inline-block;vertical-align: middle;background-color:#eee;opacity: 0.5;padding:4px 11px;border-radius: 3px;}
+.gender .radio label:hover{opacity: 0.7}
+.gender .radio label:focus{opacity: 0.75}
+.gender .radio label:active{opacity: 0.8}
+.gender .radio .female label:after{font-family:FontAwesome;font-size:2em;content: " \f182"}
+.gender .radio .male label:after{font-family:FontAwesome;font-size:2em;content: " \f183"}
+.gender .radio input:checked + label { opacity: 1;}
+
+
 /*--------------------
     Standard Inputs
 ---------------------*/
@@ -46,7 +59,7 @@ input, select, textarea {font-family:'Roboto Slab',serif;}
   font-size: 1em;
   background: #ffffff;
   border: none;
-  color: rgba(0, 0, 0, 0.8);
+  opacity: 0.8;
   border-radius: 3px;
 }
 .form textarea, .editor {
@@ -84,55 +97,13 @@ input, select, textarea {font-family:'Roboto Slab',serif;}
 *******************************/
 
 /*--------------------
-      Placeholder
----------------------*/
-
-/* browsers require these rules separate */
-.form ::-webkit-input-placeholder {
-  color: rgba(140, 140, 140, 0.8);
-}
-.form ::-moz-placeholder {
-  color: rgba(140, 140, 140, 0.8);
-}
-.form :focus::-webkit-input-placeholder {
-  color: rgba(89, 89, 89, 0.8);
-}
-.form :focus::-moz-placeholder {
-  color: rgba(89, 89, 89, 0.8);
-}
-
-/* Error Placeholder */
-.form .error ::-webkit-input-placeholder {
-  color: #e38585;
-}
-.form .error ::-moz-placeholder {
-  color: #e38585;
-}
-.form .error :focus::-webkit-input-placeholder {
-  color: #de7171;
-}
-.form .error :focus::-moz-placeholder {
-  color: #de7171;
-}
-
-/*--------------------
         Focus
 ---------------------*/
 
-.form input:not([type]):focus,
-.form input[type="text"]:focus,
-.form input[type="email"]:focus,
-.form input[type="date"]:focus,
-.form input[type="datetime-local"]:focus,
-.form input[type="password"]:focus,
-.form input[type="number"]:focus,
-.form input[type="url"]:focus,
-.form input[type="tel"]:focus,
+.form select:focus,
+.form input:focus,
 .form textarea:focus{
-  color: rgba(0, 0, 0, 0.85);
-  border-color: rgba(39, 41, 43, 0.3);
-  border-radius: 0em 0.2857rem 0.2857rem 0em;
-  background: #ffffff;
+  opacity: 0.85;
 }
 
 /*--------------------
@@ -148,7 +119,6 @@ input, select, textarea {font-family:'Roboto Slab',serif;}
 }
 .form .field.error .corner.label {
   border-color: #d95c5c;
-  color: #ffffff;
 }
 .form .field.error textarea,
 .form .field.error input:not([type]),
@@ -551,47 +521,34 @@ input, select, textarea {font-family:'Roboto Slab',serif;}
     Inline Fields
 ---------------------*/
 
-.form .inline.fields {
-  margin: 0em 0em 1em;
-}
-.form .inline.fields .field {
+.form.inline .field {
   display: inline-block;
-  float: none;
-  margin: 0em 1em 0em 0em;
-  padding: 0em;
+  margin: 0em 1em 1em 0em;
 }
-.form .inline.fields .field > label,
-.form .inline.fields .field > p,
-.form .inline.fields .field > input,
-.form .inline.fields .field > .input,
-.form .inline.field > label,
-.form .inline.field > p,
-.form .inline.field > input,
-.form .inline.field > .input {
-  display: inline-block;
+.form.inline .field > label,
+.form.inline .field > p,
+.form.inline .field > input,
+.form.inline .field > .input {
+  /*display: inline-block;*/
   width: auto;
   margin-top: 0em;
   margin-bottom: 0em;
   vertical-align: middle;
-  font-size: 0.9285em;
+  font-size: 0.9em;
 }
-.form .inline.fields .field > input,
-.form .inline.fields .field > .input,
-.form .inline.field > input,
-.form .inline.field > .input {
-  font-size: 0.9285em;
+.form.inline .field > input,
+.form.inline .field > .input {
+  font-size: 0.9em;
 }
-.form .inline.fields .field > .checkbox label {
+.form.inline .fields .field > .checkbox label {
   padding-left: 1.75em;
 }
 
 /* Label */
-.form .inline.fields .field > :first-child,
-.form .inline.field > :first-child {
-  margin: 0em 0.2857rem 0em 0em;
+.form.inline .field > :first-child {
+  margin: 0em 0.28rem 0em 0em;
 }
-.form .inline.fields .field > :only-child,
-.form .inline.field > :only-child {
+.form.inline .field > :only-child {
   margin: 0em;
 }
 

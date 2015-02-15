@@ -5,9 +5,9 @@
  {% for input in array%}
 
 {%if input.attr.required is not null%}
- <div class="field required">
+ <div class="field {{input.attr.id}} required">
 {%else%}
- <div class="field">
+ <div class="field {{input.attr.id}}">
 {%endif%}
 
   {% if input.attr.pos %}{% set tippos=input.attr.pos %}{%else%}{% set tippos='hint--top' %}{% endif %}
@@ -35,7 +35,7 @@
 {%if array.label %} <label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
  <div class="radio">
  {% for child in array.child %}
-  <div class="element">
+  <div class="element {{child.attr.value}}">
    <input type="radio" name="{{array.attr.name}}" {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>
    <label for="{{child.attr.id}}" class="label-radio">{{child.label}}</label>
   </div>
