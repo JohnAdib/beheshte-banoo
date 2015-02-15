@@ -70,13 +70,11 @@ input, select, textarea {font-family:'Roboto Slab',serif;}
 /*--------------------
      Required Field
 ---------------------*/
-.form .required.field > label:after,
-.form .required.field > .checkbox:after {
+.form .required.field label:after,
+.form .required.field .checkbox:after {
   margin: -0.2em 0em 0em 0.2em;
   content: '*';
   color: #d95c5c;
-}
-.form .required.field > label:after {
   display: inline-block;
   vertical-align: top;
 }
