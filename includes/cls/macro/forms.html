@@ -3,7 +3,13 @@
 {% import _self as form%}
 
  {% for input in array%}
+
+{%if input.attr.required is not null%}
+ <div class="field required">
+{%else%}
  <div class="field">
+{%endif%}
+
   {% if input.attr.pos %}{% set tippos=input.attr.pos %}{%else%}{% set tippos='hint--top' %}{% endif %}
   {% if input.attr.desc %}<span class="hint--info {{tippos}}" data-hint="{{input.attr.desc}}">{% endif %}
 
@@ -26,7 +32,7 @@
 
 
 {% macro radio(array) %}
- {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
+{%if array.label %} <label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
  <div class="radio">
  {% for child in array.child %}
   <div class="element">
@@ -39,8 +45,8 @@
 
 
 {% macro checkbox(array) %}
- {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
   <input name="{{array.attr.name}}" {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
+{%if array.label %} <label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
 {% endmacro %}
 
 
