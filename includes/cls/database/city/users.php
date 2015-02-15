@@ -76,7 +76,7 @@ class users
 	}
 	public function user_codemelli() 
 	{
-		$this->form("text")->name("codemelli")->max(999999999)->type('number');
+		$this->form("text")->name("codemelli")->min(0)->max(999999999)->type('number');
 	}
 	public function user_passport() 
 	{
@@ -92,11 +92,11 @@ class users
 	}
 	public function user_refinecounter() 
 	{
-		$this->form("text")->name("refinecounter")->max(9)->type('number');
+		$this->form("text")->name("refinecounter")->min(0)->max(9)->type('number');
 	}
 	public function user_parent() 
 	{
-		$this->form("text")->name("parent")->max(99999)->type('number');
+		$this->form("text")->name("parent")->min(0)->max(99999)->type('number');
 	}
 
 	//------------------------------------------------------------------ id - foreign key

@@ -9,13 +9,13 @@
 {%block content_def%}
 <div class="row auto">
  <div class="container content">
-  <div class="span4">
+  <div class="span6">
    <div id="my_camera" style="width:320px; height:240px;"></div>
    <a href="javascript:void(take_snapshot())">{%trans "Take Snapshot"%}</a>
    <div id="my_result" ></div>
   </div>
-  <div class="span8">
-   <form class="ajx" method="post">
+  <div class="span6">
+   <form class="ajx form" method="post">
   	 <input id="webcam" type="hidden" name="webcam" value=""/>
 {{forms.make(form['users'])}}
     </form>

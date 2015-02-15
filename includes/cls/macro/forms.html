@@ -3,7 +3,7 @@
 {% import _self as form%}
 
  {% for input in array%}
- <div class="form-element {{input.attr.id}}">
+ <div class="field">
   {% if input.attr.pos %}{% set tippos=input.attr.pos %}{%else%}{% set tippos='hint--top' %}{% endif %}
   {% if input.attr.desc %}<span class="hint--info {{tippos}}" data-hint="{{input.attr.desc}}">{% endif %}
 
@@ -29,7 +29,7 @@
  {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
  <div class="radio">
  {% for child in array.child %}
-  <div class="field">
+  <div class="element">
    <input type="radio" name="{{array.attr.name}}" {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>
    <label for="{{child.attr.id}}" class="label-radio">{{child.label}}</label>
   </div>
