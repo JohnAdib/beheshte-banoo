@@ -24,6 +24,23 @@ function transtext()
 	echo T_('you account is verified successfully');
 	echo T_('thanks for using our service');
 	echo T_('made in iran');
+
+	// countries
+	echo T_('Iran (Islamic Republic of)');
+	echo T_('India');
+	echo T_('Iraq');
+	echo T_('Lebanon');
+	echo T_('Afghanistan');
+	echo T_('Azerbaijan');
+	echo T_('Bahrain');
+	echo T_('United Arab Emirates');
+	echo T_('Uzbekistan');
+	echo T_('Turkey');
+	echo T_('Saudi Arabia');
+	echo T_('Singapore');
+	echo T_('Pakistan');
+	echo T_('Qatar');
+	echo T_('United States');
 	
 	
 

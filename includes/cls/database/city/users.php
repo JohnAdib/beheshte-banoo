@@ -11,7 +11,7 @@ class users
 	public $user_password      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Password',      'type' => 'varchar@64',                                               );
 	public $user_birthday      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Birthday',      'type' => 'datetime@',                                                );
 	public $user_degree        = array('null' =>'YES', 'show' =>'YES', 'label'=>'Degree',        'type' => 'varchar@50',                                               );
-	public $user_country       = array('null' =>'YES', 'show' =>'YES', 'label'=>'Country',       'type' => 'varchar@50',                                               );
+	public $country_id         = array('null' =>'YES', 'show' =>'YES', 'label'=>'Country',       'type' => 'smallint@3!101',                                           'foreign'=>'countrys@id!country_name');
 	public $user_province      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Province',      'type' => 'varchar@50',                                               );
 	public $user_codemelli     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Codemelli',     'type' => 'bigint@10',                                                );
 	public $user_passport      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Passport',      'type' => 'varchar@50',                                               );
@@ -38,17 +38,17 @@ class users
 	}
 	public function user_firstname() 
 	{
-		$this->form("text")->name("firstname")->maxlength(15)->required()->type('text')->class('span5');
+		$this->form("text")->name("firstname")->maxlength(15)->required()->type('text')->class('span3');
 	}
 	public function user_lastname() 
 	{
-		$this->form("text")->name("lastname")->maxlength(30)->required()->type('text')->class('span7 endline');
+		$this->form("text")->name("lastname")->maxlength(30)->required()->type('text')->class('span6');
 	}
 
 	//------------------------------------------------------------------ mobile
 	public function user_mobile() 
 	{
-		$this->form("#mobile")->maxlength(15)->type('text');
+		$this->form("#mobile")->maxlength(15)->type('text')->class('span3 endline');
 	}
 	public function user_mobile2() 
 	{
@@ -60,27 +60,30 @@ class users
 	}
 	public function user_birthday() 
 	{
-		$this->form("text")->name("birthday");
+		$this->form("text")->name("birthday")->class('span3');
 	}
 	public function user_degree() 
 	{
-		$this->form("text")->name("degree")->maxlength(50)->type('text');
+		$this->form("text")->name("degree")->maxlength(50)->type('text')->class('span3');
 	}
-	public function user_country() 
+
+	//------------------------------------------------------------------ id - foreign key
+	public function country_id() 
 	{
-		$this->form("text")->name("country")->maxlength(50)->type('text');
+		$this->form("select")->name("country_")->min(0)->max(99)->type("select")->class('span3')->validate()->id();
+		$this->setChild();
 	}
 	public function user_province() 
 	{
-		$this->form("text")->name("province")->maxlength(50)->type('text');
+		$this->form("text")->name("province")->maxlength(50)->type('text')->class('span3');
 	}
 	public function user_codemelli() 
 	{
-		$this->form("text")->name("codemelli")->min(0)->max(999999999)->type('number');
+		$this->form("text")->name("codemelli")->min(0)->max(999999999)->type('number')->class('span3 endline');
 	}
 	public function user_passport() 
 	{
-		$this->form("text")->name("passport")->maxlength(50)->type('text');
+		$this->form("text")->name("passport")->maxlength(50)->type('text')->class('span3 endline');
 	}
 	public function user_imageaddr() 
 	{

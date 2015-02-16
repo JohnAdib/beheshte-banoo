@@ -1,7 +1,7 @@
 body {color:#eee;background: url('../images/bg.jpg') #72C0D6 no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
 a{color:#9DD7FA}
 .center{position: relative;min-width:280px;max-width:360px;width:320px;margin: 0 auto;margin-bottom: 80px;}
-.content{padding: 30px;padding-top: 20px;padding-bottom: 15px;-webkit-border-radius: 7px;-moz-border-radius: 7px;-ms-border-radius: 7px;-o-border-radius: 7px;border-radius: 7px;background: url('../images/bg-white-lock.png') repeat;}
+.content{margin: 10px auto;padding: 30px;padding-top: 20px;padding-bottom: 15px;-webkit-border-radius: 7px;-moz-border-radius: 7px;-ms-border-radius: 7px;-o-border-radius: 7px;border-radius: 7px;background: url('../images/bg-white-lock.png') repeat;}
 h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;font-weight: 700;margin:0;margin-bottom: 20px}
 #logo{display: block;margin:0 auto;width:160px;height:auto;border:none}
 #logo img:focus, #logo:focus{border:none;outline: none;}
@@ -25,8 +25,8 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 
 #footer{position:fixed}
 #register{color:#000;margin-bottom:80px}
-
-
+#register #my_camera{width:240px;height:180px;}
+#register #my_camera video{border-radius: 3px;}
 
 
 

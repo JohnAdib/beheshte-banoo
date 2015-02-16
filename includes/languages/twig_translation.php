@@ -35,7 +35,7 @@ function transtext()
 	echo T_("Login");                                                                 // Line 48
 
 	//---------------------------------------------------content/register/display.html
-	echo T_("Take Snapshot");                                                         // Line 14
+	echo T_("Take Snapshot");                                                         // Line 21
 
 	//----------------------------------------------------content_cp/home/display.html
 	echo T_("Home");                                                                  // Line 40
@@ -57,7 +57,7 @@ function transtext()
 	echo T_("Delete this record");                                                    // Line 73
 
 	//---------------------------------------------------includes/cls/macro/forms.html
-	echo T_("Please select one item");                                                // Line 50 Seperate
+	echo T_("Please select one item");                                                // Line 56 Seperate
 
 	//-------------------------------------------------------includes/mvc/display.html
 	echo T_("Home Page");                                                             // Line 43

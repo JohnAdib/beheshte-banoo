@@ -26,6 +26,20 @@ function transtext()
 	echo T_("Status");              // booth_status
 	echo T_("Gametime");            // booth_gametime
 	echo T_("Section");             // section_id
+
+	// ------------------------------------------------------------------- Table citys
+	echo T_("citys");               // Table citys
+	echo T_("Citys");               // Citys
+	echo T_("city");                // citys
+	echo T_("Province");            // province_id
+	echo T_("Name");                // city_name
+
+	// ------------------------------------------------------------------- Table countrys
+	echo T_("countrys");            // Table countrys
+	echo T_("Countrys");            // Countrys
+	echo T_("country");             // countrys
+	echo T_("Code");                // country_code
+	echo T_("Name");                // country_name
 	echo T_("time");                // Enum time
 	echo T_("start");               // Enum start
 	echo T_("win");                 // Enum win
@@ -87,6 +101,13 @@ function transtext()
 	echo T_("permission");          // permissions
 	echo T_("Title");               // permission_title
 	echo T_("Status");              // permission_status
+
+	// ------------------------------------------------------------------- Table provinces
+	echo T_("provinces");           // Table provinces
+	echo T_("Provinces");           // Provinces
+	echo T_("province");            // provinces
+	echo T_("Country");             // country_id
+	echo T_("Name");                // provinces_name
 
 	// ------------------------------------------------------------------- Table sections
 	echo T_("sections");            // Table sections
@@ -158,7 +179,6 @@ function transtext()
 	echo T_("Password");            // user_password
 	echo T_("Birthday");            // user_birthday
 	echo T_("Degree");              // user_degree
-	echo T_("Country");             // user_country
 	echo T_("Province");            // user_province
 	echo T_("Codemelli");           // user_codemelli
 	echo T_("Passport");            // user_passport
