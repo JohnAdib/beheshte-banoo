@@ -5,9 +5,9 @@
  {% for input in array%}
 
 {%if input.attr.required is not null%}
- <div class="field {{input.attr.id}} required">
+ <div class="field {{input.attr.id}} {{input.attr.class}} required">
 {%else%}
- <div class="field {{input.attr.id}}">
+ <div class="field {{input.attr.id}} {{input.attr.class}}">
 {%endif%}
 
   {% if input.attr.pos %}{% set tippos=input.attr.pos %}{%else%}{% set tippos='hint--top' %}{% endif %}

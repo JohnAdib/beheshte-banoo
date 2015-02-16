@@ -10,6 +10,7 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
 .rtl .form {font-size:12px;font-size: 1.2rem;}
 .form > p {margin: 1em 0em;}
 .form .field {clear: both;margin: 0em 0em 1em;}
+.form.row .field{clear:none;}
 .form .field label {
   display: inline-block;
   vertical-align: middle;
@@ -309,16 +310,16 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
 
 
 /* Grouped Vertically */
-.form .grouped.fields {
+.form .grouped.field {
   margin: 0em 0em 1em;
 }
-.form .grouped.fields:last-child {
+.form .grouped.field:last-child {
   margin-bottom: 0em;
 }
-.form .grouped.fields > label {
+.form .grouped.field > label {
   font-size: 0.9285em;
 }
-.form .grouped.fields .field {
+.form .grouped.field .field {
   display: block;
   float: none;
   margin: 0.5em 0em;
@@ -354,162 +355,86 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
 }
 
 /* Other Combinations */
-.form .two.fields > .fields,
-.form .two.fields > .field {
-  width: 50%;
-}
-.form .three.fields > .fields,
-.form .three.fields > .field {
-  width: 33.33333333%;
-}
-.form .four.fields > .fields,
-.form .four.fields > .field {
-  width: 25%;
-}
-.form .five.fields > .fields,
-.form .five.fields > .field {
-  width: 20%;
-}
-.form .six.fields > .fields,
-.form .six.fields > .field {
-  width: 16.66666667%;
-}
-.form .seven.fields > .fields,
-.form .seven.fields > .field {
-  width: 14.28571429%;
-}
-.form .eight.fields > .fields,
-.form .eight.fields > .field {
-  width: 12.5%;
-}
-.form .nine.fields > .fields,
-.form .nine.fields > .field {
-  width: 11.11111111%;
-}
-.form .ten.fields > .fields,
-.form .ten.fields > .field {
-  width: 10%;
-}
+.form .two.field{width: 50%;}
+.form .three.field{width: 33.33333333%;}
+.form .four.field{width: 25%;}
+.form .five.field{width: 20%;}
+.form .six.field{width: 16.66666667%;}
+.form .seven.field{width: 14.28571429%;}
+.form .eight.field{width: 12.5%;}
+.form .nine.field{width: 11.11111111%;}
+.form .ten.field{width: 10%;}
+
 
 /* Swap to full width on mobile */
 @media only screen and (max-width: 767px) {
-  .form .two.fields > .fields,
-  .form .two.fields > .field,
-  .form .three.fields > .fields,
-  .form .three.fields > .field,
-  .form .four.fields > .fields,
-  .form .four.fields > .field,
-  .form .five.fields > .fields,
-  .form .five.fields > .field,
-  .form .six.fields > .fields,
-  .form .six.fields > .field,
-  .form .seven.fields > .fields,
-  .form .seven.fields > .field,
-  .form .eight.fields > .fields,
-  .form .eight.fields > .field,
-  .form .nine.fields > .fields,
-  .form .nine.fields > .field,
-  .form .ten.fields > .fields,
-  .form .ten.fields > .field {
+  .form .two.field,
+  .form .three.field,
+  .form .four.field,
+  .form .five.field,
+  .form .six.field,
+  .form .seven.field,
+  .form .eight.field,
+  .form .nine.field,
+  .form .ten.field {
     width: 100% !important;
     margin: 0em 0em 1em;
     padding-left: 0%;
     padding-right: 0%;
   }
 }
-.form .fields .field:first-child {
+.form .field:first-child {
   padding-left: 0%;
 }
-.form .fields .field:last-child {
+.form .field:last-child {
   padding-right: 0%;
 }
 
 /* Sizing Combinations */
-.form .fields .wide.field {
-  width: 6.25%;
-  padding-left: 0.5em;
+.form .wide.field {width: 6.25%;
+  padding-left: 05em;
   padding-right: 0.5em;
 }
-.form .fields .wide.field:first-child {
-  padding-left: 0%;
-}
-.form .fields .wide.field:last-child {
-  padding-right: 0%;
-}
-.form .one.wide.field {
-  width: 6.25% !important;
-}
-.form .two.wide.field {
-  width: 12.5% !important;
-}
-.form .three.wide.field {
-  width: 18.75% !important;
-}
-.form .four.wide.field {
-  width: 25% !important;
-}
-.form .five.wide.field {
-  width: 31.25% !important;
-}
-.form .six.wide.field {
-  width: 37.5% !important;
-}
-.form .seven.wide.field {
-  width: 43.75% !important;
-}
-.form .eight.wide.field {
-  width: 50% !important;
-}
-.form .nine.wide.field {
-  width: 56.25% !important;
-}
-.form .ten.wide.field {
-  width: 62.5% !important;
-}
-.form .eleven.wide.field {
-  width: 68.75% !important;
-}
-.form .twelve.wide.field {
-  width: 75% !important;
-}
-.form .thirteen.wide.field {
-  width: 81.25% !important;
-}
-.form .fourteen.wide.field {
-  width: 87.5% !important;
-}
-.form .fifteen.wide.field {
-  width: 93.75% !important;
-}
-.form .sixteen.wide.field {
-  width: 100% !important;
-}
+.form .wide.field:first-child {padding-left: 0%;}
+.form .wide.field:last-child {padding-right: 0%;}
+.form .one.wide.field {width: 6.25% !important;}
+.form .two.wide.field {width: 12.5% !important;}
+.form .three.wide.field {width: 18.75% !important;}
+.form .four.wide.field {width: 25% !important;}
+.form .five.wide.field {width: 31.25% !important;}
+.form .six.wide.field {width: 37.5% !important;}
+.form .seven.wide.field {width: 43.75% !important;}
+.form .eight.wide.field {width: 50% !important;}
+.form .nine.wide.field {width: 56.25% !important;}
+.form .ten.wide.field {width: 62.5% !important;}
+.form .eleven.wide.field {width: 68.75% !important;}
+.form .twelve.wide.field {width: 75% !important;}
+.form .thirteen.wide.field {width: 81.25% !important;}
+.form .fourteen.wide.field {width: 87.5% !important;}
+.form .fifteen.wide.field {width: 93.75% !important;}
+.form .sixteen.wide.field {width: 100% !important;}
 
 /* Swap to full width on mobile */
 @media only screen and (max-width: 767px) {
-  .form .two.fields > .fields,
-  .form .two.fields > .field,
-  .form .three.fields > .fields,
-  .form .three.fields > .field,
-  .form .four.fields > .fields,
-  .form .four.fields > .field,
-  .form .five.fields > .fields,
-  .form .five.fields > .field,
-  .form .fields > .two.wide.field,
-  .form .fields > .three.wide.field,
-  .form .fields > .four.wide.field,
-  .form .fields > .five.wide.field,
-  .form .fields > .six.wide.field,
-  .form .fields > .seven.wide.field,
-  .form .fields > .eight.wide.field,
-  .form .fields > .nine.wide.field,
-  .form .fields > .ten.wide.field,
-  .form .fields > .eleven.wide.field,
-  .form .fields > .twelve.wide.field,
-  .form .fields > .thirteen.wide.field,
-  .form .fields > .fourteen.wide.field,
-  .form .fields > .fifteen.wide.field,
-  .form .fields > .sixteen.wide.field {
+  .form .two.field,
+  .form .three.field,
+  .form .four.field,
+  .form .five.field,
+  .form .two.wide.field,
+  .form .three.wide.field,
+  .form .four.wide.field,
+  .form .five.wide.field,
+  .form .six.wide.field,
+  .form .seven.wide.field,
+  .form .eight.wide.field,
+  .form .nine.wide.field,
+  .form .ten.wide.field,
+  .form .eleven.wide.field,
+  .form .twelve.wide.field,
+  .form .thirteen.wide.field,
+  .form .fourteen.wide.field,
+  .form .fifteen.wide.field,
+  .form .sixteen.wide.field {
     width: 100% !important;
     margin: 0em 0em 1em;
     padding-left: 0%;
@@ -518,9 +443,47 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
 }
 
 /*--------------------
-    Inline Fields
+    Inline Field
 ---------------------*/
 
+/*
+.form.inline .field > label,
+.form.inline .field > p,
+.form.inline .field > input,
+.form.inline .field > .input {
+  display: inline-block;
+  width: auto;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  vertical-align: middle;
+  font-size: 0.9em;
+}
+
+/*
+.form.inline .field > input,
+.form.inline .field > .input {
+  font-size: 0.9em;
+}
+.form.inline .fields .field > .checkbox label {
+  padding-left: 1.75em;
+}
+
+
+.form.inline .field > :first-child {
+  margin: 0em 0.28rem 0em 0em;
+}
+.form.inline .field > :only-child {
+  margin: 0em;
+}
+
+*/
+
+
+
+
+
+
+/*
 .form.inline .field {
   display: inline-block;
   margin: 0em 1em 1em 0em;
@@ -529,7 +492,7 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
 .form.inline .field > p,
 .form.inline .field > input,
 .form.inline .field > .input {
-  /*display: inline-block;*/
+  display: inline-block;
   width: auto;
   margin-top: 0em;
   margin-bottom: 0em;
@@ -544,7 +507,7 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
   padding-left: 1.75em;
 }
 
-/* Label */
+
 .form.inline .field > :first-child {
   margin: 0em 0.28rem 0em 0em;
 }
@@ -552,6 +515,7 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
   margin: 0em;
 }
 
+*/
 /*--------------------
         Sizes
 ---------------------*/

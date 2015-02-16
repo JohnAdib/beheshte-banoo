@@ -38,11 +38,11 @@ class users
 	}
 	public function user_firstname() 
 	{
-		$this->form("text")->name("firstname")->maxlength(15)->required()->type('text')->class('two');
+		$this->form("text")->name("firstname")->maxlength(15)->required()->type('text')->class('span5');
 	}
 	public function user_lastname() 
 	{
-		$this->form("text")->name("lastname")->maxlength(30)->required()->type('text')->class('two');
+		$this->form("text")->name("lastname")->maxlength(30)->required()->type('text')->class('span7 endline');
 	}
 
 	//------------------------------------------------------------------ mobile

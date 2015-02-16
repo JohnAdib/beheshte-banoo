@@ -86,16 +86,10 @@ code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em;margin: 10px 5%;
 /* Grid Element Sizing
    ========================================================================== */
 .row{display:block;padding:10px 0;margin:0;width:100%}
-.row-padding-small{padding:5px 0;}
-.row-padding-small2{padding:20px 0;}
-.row-padding-medium{padding:50px 0;}
-.row-padding-large{padding:100px 0;}
-.row-padding-xlarge{padding:150px 0;}
-.row-padding-xxlarge{padding:200px 0;}
 .row:before,.row:after{display:table;content:""}
 .row:after{clear:both}
-.row [class*=span]{float:right;min-height:1px;margin-right:20px}
-.row [class*=span]:first-child{margin-right:0}
+.row > [class*=span]{float:left;min-height:1px;margin-right: 2.127659%;}
+.row > [class*=span]:last-child, .row .endline{margin-right:0}
 
 .row .span1{width: 6.382978%;}
 .row .span2{width: 14.893614999999999%;}
@@ -109,8 +103,7 @@ code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em;margin: 10px 5%;
 .row .span10{width: 82.978711%;}
 .row .span11{width: 91.48934799999999%;}
 .row .span12{width: 99.99998499999998%;}
-.row [class*="span"]{margin-right: 2.127659%;}
-.row [class*="span"]:first-child{margin-right: 0;}
+
 .row .offset1{margin-right: 8.510637%;}
 .row .offset1:not(:first-child){margin-right: 10.638296%;}
 .row .offset2{margin-right: 17.021274%;}
@@ -141,11 +134,16 @@ code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em;margin: 10px 5%;
 
 
 
-.rtl .row [class*=span]{float:left;margin-left:20px;margin-right:0}
-.rtl .row [class*=span]:first-child{margin-left:0;margin-right:0;}
-.rtl .row [class*="span"]{margin-left: 2.127659%;margin-right: 0;}
-.rtl .row [class*="span"]:first-child{margin-left: 0;margin-right: 0;}
+.rtl .row > [class*=span]{float:right;margin-left:2.127659%;margin-right:0}
+.rtl .row > [class*=span]:last-child, .rtl .row .endline{margin-right:0;margin-left:0}
 
+
+.row-padding-small{padding:5px 0;}
+.row-padding-small2{padding:20px 0;}
+.row-padding-medium{padding:50px 0;}
+.row-padding-large{padding:100px 0;}
+.row-padding-xlarge{padding:150px 0;}
+.row-padding-xxlarge{padding:200px 0;}
 
 
 

@@ -10,15 +10,15 @@
 <div class="row auto">
  <div class="container content">
   <div class="span6">
-   <div id="my_camera" style="width:320px; height:240px;"></div>
-   <a href="javascript:void(take_snapshot())">{%trans "Take Snapshot"%}</a>
-   <div id="my_result" ></div>
-  </div>
-  <div class="span6">
-   <form class="ajx form inline" method="post">
+   <form class="ajx form row inline" method="post">
   	 <input id="webcam" type="hidden" name="webcam" value=""/>
 {{forms.make(form['users'])}}
     </form>
+  </div>
+  <div class="span6">
+   <div id="my_camera" style="width:320px; height:240px;"></div>
+   <a href="javascript:void(take_snapshot())">{%trans "Take Snapshot"%}</a>
+   <div id="my_result" ></div>
   </div>
 </div>
 
