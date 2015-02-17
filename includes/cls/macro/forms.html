@@ -16,6 +16,7 @@
   {% if input.attr.type     == 'radio'%}                                 {{ form.radio(input)    }}
   {% elseif input.attr.type == 'checkbox'%}                              {{ form.checkbox(input) }}
   {% elseif input.attr.type == 'select'%}                                {{ form.select(input)   }}
+  {% elseif input.attr.type == 'datalist'%}                              {{ form.datalist(input) }}
   {% elseif input.attr.type == 'textarea'%}                              {{ form.textarea(input) }}
   {% elseif input.attr.type == 'submit' or input.attr.type == 'button'%} {{ form.submit(input)   }}
   {% else %}                                                             {{ form.input(input)    }}
@@ -53,11 +54,22 @@
 {% macro select(array) %}
  {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
  <select {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
-  <option value="" disabled="disabled">{%trans%}Please select one item{%endtrans%}</option>
+  <option value="" disabled="disabled" selected>{%trans "Select"%} {{array.label}}</option>
   {% for child in array.child%}
-  <option {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
+  <option {% for attr,value in child.attr if attr not in ['type','name','placeholder','id']%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
   {% endfor %}
  </select>
+{% endmacro %}
+
+
+{% macro datalist(array) %}
+ {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
+ <input list="{{array.attr.name}}" {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
+ <datalist id="{{array.attr.name}}">
+  {% for child in array.child%}
+  <option {% for attr,value in child.attr if attr not in ['type','name','placeholder','id']%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
+  {% endfor %}
+ </datalist>
 {% endmacro %}
 
 
@@ -75,15 +87,4 @@
 {% macro input(array) %}
  {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
   <input {% for attr,value in array.attr if attr != 'desc' and attr != 'pos'%}{{attr}}="{{value}}" {% endfor %}>
-{% endmacro %}
-
-
-{% macro datalist(array) %}
- {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
- <input list="{{array.attr.name}}" {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
- <datalist id="{{array.attr.name}}">
-  {% for child in array.childs%}
-  <option {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
-  {% endfor %}
- </datalist>
 {% endmacro %}

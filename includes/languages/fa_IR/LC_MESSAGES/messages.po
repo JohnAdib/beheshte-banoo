@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-02-16 19:48+0330\n"
-"PO-Revision-Date: 2015-02-16 19:49+0330\n"
+"POT-Creation-Date: 2015-02-17 10:56+0330\n"
+"PO-Revision-Date: 2015-02-17 10:56+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -26,7 +26,7 @@ msgstr "شما اجازه دسترسی به این صفحه را ندارید!"
 
 #: ../../../.././content_account/home/view.php:23
 #: ../../../.././includes/cls/form/account.php:25
-#: ../../../.././includes/languages/twig_translation.php:35
+#: ../../../.././includes/languages/twig_translation.php:36
 msgid "Login"
 msgstr "ورود به سیستم"
 
@@ -383,7 +383,7 @@ msgstr "تنظیمات"
 
 #: ../../../.././includes/cls/database/city/translation.php:77
 #: ../../../.././includes/languages/static_translation.php:54
-#: ../../../.././includes/languages/twig_translation.php:44
+#: ../../../.././includes/languages/twig_translation.php:45
 msgid "Options"
 msgstr "تنظیمات"
 
@@ -442,13 +442,13 @@ msgstr "افزودن"
 
 #: ../../../.././includes/cls/database/city/translation.php:94
 #: ../../../.././includes/languages/static_translation.php:59
-#: ../../../.././includes/languages/twig_translation.php:48
+#: ../../../.././includes/languages/twig_translation.php:49
 msgid "Edit"
 msgstr "ویرایش"
 
 #: ../../../.././includes/cls/database/city/translation.php:95
 #: ../../../.././includes/languages/static_translation.php:60
-#: ../../../.././includes/languages/twig_translation.php:49
+#: ../../../.././includes/languages/twig_translation.php:50
 msgid "Delete"
 msgstr "حذف"
 
@@ -912,12 +912,12 @@ msgid "Logout"
 msgstr "خروج از سیستم"
 
 #: ../../../.././includes/languages/static_translation.php:51
-#: ../../../.././includes/languages/twig_translation.php:41
+#: ../../../.././includes/languages/twig_translation.php:42
 msgid "Home"
 msgstr "صفحه نخست"
 
 #: ../../../.././includes/languages/static_translation.php:55
-#: ../../../.././includes/languages/twig_translation.php:45
+#: ../../../.././includes/languages/twig_translation.php:46
 msgid "Go to"
 msgstr "برو به"
 
@@ -926,12 +926,12 @@ msgid "Does not exist"
 msgstr "هیچ داده ای موجود نیست"
 
 #: ../../../.././includes/languages/static_translation.php:57
-#: ../../../.././includes/languages/twig_translation.php:46
+#: ../../../.././includes/languages/twig_translation.php:47
 msgid "Add New Record"
 msgstr "افزودن رکورد جدید"
 
 #: ../../../.././includes/languages/static_translation.php:58
-#: ../../../.././includes/languages/twig_translation.php:47
+#: ../../../.././includes/languages/twig_translation.php:48
 msgid "Actions"
 msgstr "عملیات"
 
@@ -1028,51 +1028,55 @@ msgstr "پس از بررسی موبایل خود کد را وارد کنید"
 msgid "don't receive message?"
 msgstr "هنوز پیامک ما را دریافت نکردید؟"
 
-#: ../../../.././includes/languages/twig_translation.php:38
+#: ../../../.././includes/languages/twig_translation.php:35
+msgid "Register Visitors"
+msgstr "ثبت نام بازدیدکنندگان"
+
+#: ../../../.././includes/languages/twig_translation.php:39
 msgid "Take Snapshot"
 msgstr "ذخیره موقت"
 
-#: ../../../.././includes/languages/twig_translation.php:50
+#: ../../../.././includes/languages/twig_translation.php:51
 msgid "delete record"
 msgstr "حذف رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:51
+#: ../../../.././includes/languages/twig_translation.php:52
 msgid "seriously, are you sure? There's no coming back."
 msgstr "مطمئنید؟ بازگشتی وجود ندارد"
 
-#: ../../../.././includes/languages/twig_translation.php:52
+#: ../../../.././includes/languages/twig_translation.php:53
 msgid "Cancel"
 msgstr "انصراف"
 
-#: ../../../.././includes/languages/twig_translation.php:53
+#: ../../../.././includes/languages/twig_translation.php:54
 msgid "or"
 msgstr "یا"
 
-#: ../../../.././includes/languages/twig_translation.php:56
+#: ../../../.././includes/languages/twig_translation.php:57
 msgid "Edit this record"
 msgstr "ویرایش این رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:57
+#: ../../../.././includes/languages/twig_translation.php:58
 msgid "Delete this record"
 msgstr "حذف این رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:60
-msgid "Please select one item"
-msgstr "لطفا یک گزینه را انتخاب کنید"
+#: ../../../.././includes/languages/twig_translation.php:61
+msgid "Select"
+msgstr "انتخاب"
 
-#: ../../../.././includes/languages/twig_translation.php:63
+#: ../../../.././includes/languages/twig_translation.php:64
 msgid "Home Page"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/twig_translation.php:64
+#: ../../../.././includes/languages/twig_translation.php:65
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
-#: ../../../.././includes/languages/twig_translation.php:65
+#: ../../../.././includes/languages/twig_translation.php:66
 msgid "Ermile is our brand"
 msgstr "ارمایل نام برند ماست"
 
-#: ../../../.././includes/languages/twig_translation.php:66
+#: ../../../.././includes/languages/twig_translation.php:67
 msgid "Experience our service in your language"
 msgstr "سرویس ما را با زبان مادری خودتان تجربه کنید"
 
@@ -1085,6 +1089,9 @@ msgstr "شهرک معارفی"
 #: ../../../.././includes/mvc/view.php:14
 msgid "The Mystical City is good"
 msgstr "شهرک معارفی را تجربه کنید"
+
+#~ msgid "Please select one item"
+#~ msgstr "لطفا یک گزینه را انتخاب کنید"
 
 #~ msgid "Access Denied!"
 #~ msgstr "عدم دسترسی!"

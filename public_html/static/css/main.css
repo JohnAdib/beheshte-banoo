@@ -190,6 +190,9 @@ code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em;margin: 10px 5%;
 #formError ul li{margin-top: 10px;padding:3% 5%;border-radius: 4px;}
 .visible{visibility: visible;opacity: 1;transition: opacity 0.5s linear;}
 .hidden{visibility: hidden;opacity: 0;transition: visibility 0s 0.5s, opacity 0.5s linear;}
+.hide{display:none;}
+
+
 
 form .error{background: #fff0f0;border-color: #dbb1b1;color: #d95c5c;border-radius: 0 .2857em .2857em 0;box-shadow: 2px 0 0 0 #d95c5c inset;}
 

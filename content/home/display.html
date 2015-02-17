@@ -14,7 +14,8 @@
   <h1>{{site.title}}</h1>
   <div class="desc">
 {%if global.login%}
-   <a href="http://account.{{url.raw}}/logout" class='btnlogin button negative' tabindex="1">{%trans "Logout"%}</a>
+   <a href="http://account.{{url.raw}}/logout" class='btnlogin button negative' tabindex="1">{%trans "Logout"%}</a><br />
+   <a href="http://{{url.raw}}/register" data-action class='button' tabindex="1">{%trans "Register Visitors"%}</a>
 {%else%}
    <a href="http://account.{{url.raw}}/login" class='btnlogin button positive' tabindex="1">{%trans "Login"%}</a>
 {%endif%}

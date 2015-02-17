@@ -3,6 +3,28 @@
 
 {%block foot_js%}
  <script src="{{url.static}}js/webcam.min.js"></script>
+ <script type="text/javascript">
+  $('.passport input').removeClass('hide');
+
+  $( "#country_" ).change(function() {
+    // if iran selected
+    if(this.value==101)
+    {
+      $('.codemelli').removeClass('hide');
+      $('.passport').addClass('hide');
+      $('.province').removeClass('disabled');
+      $('.province select').prop('disabled', false);
+    }
+    else
+    {
+      $('.passport').removeClass('hide');
+      $('.codemelli').addClass('hide');
+
+      $('.province').addClass('disabled');
+      $('.province select').prop('disabled', true);
+    }
+  });
+ </script>
 {%endblock%}
 
 

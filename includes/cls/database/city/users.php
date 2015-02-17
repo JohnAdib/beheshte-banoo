@@ -75,7 +75,8 @@ class users
 	}
 	public function user_province() 
 	{
-		$this->form("text")->name("province")->maxlength(50)->type('text')->class('span3');
+		$this->form("text")->name("province")->maxlength(50)->type('select')->class('span3');
+		$this->setChild('sql','provinces@id!province_name');
 	}
 	public function user_codemelli() 
 	{
@@ -83,7 +84,7 @@ class users
 	}
 	public function user_passport() 
 	{
-		$this->form("text")->name("passport")->maxlength(50)->type('text')->class('span3 endline');
+		$this->form("text")->name("passport")->maxlength(50)->type('text')->class('span3 endline hide');
 	}
 	public function user_imageaddr() 
 	{

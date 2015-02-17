@@ -107,7 +107,7 @@ function transtext()
 	echo T_("Provinces");           // Provinces
 	echo T_("province");            // provinces
 	echo T_("Country");             // country_id
-	echo T_("Name");                // provinces_name
+	echo T_("Name");                // province_name
 
 	// ------------------------------------------------------------------- Table sections
 	echo T_("sections");            // Table sections

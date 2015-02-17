@@ -59,8 +59,8 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
   padding: 0.4em 2%;
   font-size: 1em;
   background: #ffffff;
-  border: none;
-  opacity: 0.8;
+  border: 1px solid rgba(39, 41, 43, 0.15);
+  opacity: 0.6;
   border-radius: 3px;
 }
 .form textarea, .editor {
@@ -69,6 +69,9 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
   max-height: 24em;
   resize: vertical;
 }
+.form input,.form textarea,.form .editor,.form select{transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
+.form input:hover,.form textarea:hover,.form .editor:hover,.form select:hover{opacity: 0.7}
+.form input:focus,.form textarea:focus,.form .editor:focus,.form select:focus{opacity: 0.8}
 
 /*--------------------------
   Input w/ attached Button
@@ -208,10 +211,10 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
 
 .form .field :disabled,
 .form .field.disabled {
-  opacity: 0.5;
+  opacity: 0.4;cursor: not-allowed;
 }
 .form .field.disabled label {
-  opacity: 0.5;
+  opacity: 0.4;
 }
 .form .field.disabled :disabled {
   opacity: 1;
