@@ -9,11 +9,11 @@ class users
 	public $user_mobile        = array('null' =>'YES', 'show' =>'YES', 'label'=>'Mobile',        'type' => 'varchar@15',                                               );
 	public $user_mobile2       = array('null' =>'YES', 'show' =>'YES', 'label'=>'Mobile2',       'type' => 'varchar@15',                                               );
 	public $user_password      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Password',      'type' => 'varchar@64',                                               );
-	public $user_birthday      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Birthday',      'type' => 'datetime@',                                                );
+	public $user_birthdate     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Birthdate',      'type' => 'datetime@',                                               );
 	public $user_degree        = array('null' =>'YES', 'show' =>'YES', 'label'=>'Degree',        'type' => 'varchar@50',                                               );
 	public $country_id         = array('null' =>'YES', 'show' =>'YES', 'label'=>'Country',       'type' => 'smallint@3!101',                                           'foreign'=>'countrys@id!country_name');
 	public $user_province      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Province',      'type' => 'varchar@50',                                               );
-	public $user_codemelli     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Codemelli',     'type' => 'bigint@10',                                                );
+	public $user_codemelli     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Codemelli',     'type' => 'bigint@11',                                                );
 	public $user_passport      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Passport',      'type' => 'varchar@50',                                               );
 	public $user_imageaddr     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Imageaddr',     'type' => 'varchar@500',                                              );
 	public $user_logincounter  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Logincounter',  'type' => 'smallint@3',                                               );
@@ -58,9 +58,9 @@ class users
 	{
 		$this->form("text")->name("password")->maxlength(64)->type('text');
 	}
-	public function user_birthday() 
+	public function user_birthdate() 
 	{
-		$this->form("text")->name("birthday")->class('span3');
+		$this->form("text")->name("birthdate")->class('span3');
 	}
 	public function user_degree() 
 	{
@@ -80,7 +80,7 @@ class users
 	}
 	public function user_codemelli() 
 	{
-		$this->form("text")->name("codemelli")->min(0)->max(999999999)->type('number')->class('span3 endline');
+		$this->form("text")->name("codemelli")->min(0)->max(9999999999)->type('number')->class('span3 endline');
 	}
 	public function user_passport() 
 	{

@@ -36,7 +36,7 @@ function transtext()
 	echo T_("Login");                                                                 // Line 48
 
 	//---------------------------------------------------content/register/display.html
-	echo T_("Take Snapshot");                                                         // Line 41
+	echo T_("Take Snapshot");                                                         // Line 43
 
 	//----------------------------------------------------content_cp/home/display.html
 	echo T_("Home");                                                                  // Line 40
