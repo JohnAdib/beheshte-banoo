@@ -76,7 +76,7 @@ class users
 	public function user_province() 
 	{
 		$this->form("text")->name("province")->maxlength(50)->type('select')->class('span3');
-		$this->setChild('sql','provinces@id!province_name');
+		$this->setChild('provinces@id!province_name', '18');
 	}
 	public function user_codemelli() 
 	{

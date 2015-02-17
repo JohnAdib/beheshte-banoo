@@ -14,14 +14,15 @@
       $('.passport').addClass('hide');
       $('.province').removeClass('disabled');
       $('.province select').prop('disabled', false);
+      $('.province select').prop('value', '18');
     }
     else
     {
       $('.passport').removeClass('hide');
       $('.codemelli').addClass('hide');
-
       $('.province').addClass('disabled');
       $('.province select').prop('disabled', true);
+      $('.province select').prop('value', false);
     }
   });
  </script>
