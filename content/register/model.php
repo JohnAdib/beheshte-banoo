@@ -11,6 +11,16 @@ class model extends \mvc\model
 
 	public function post_register()
 	{
+		$name      = utility::post('name');
+		$family    = utility::post('family');
+		$mobile    = utility::post('mobile');
+		$birthdate = utility::post('birthdate');
+		$country   = utility::post('country');
+		$province  = utility::post('province');
+		$codemelli = utility::post('codemelli');
+		$passport  = utility::post('passport');
+
+		debug::true('Test');
 		return 2;
 	}
 

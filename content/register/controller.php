@@ -6,7 +6,7 @@ class controller extends \mvc\controller
 {
 	public function config()
 	{
-
+		$this->post('register')->ALL();
 	}
 
 	// for routing check
