@@ -33,11 +33,11 @@
 
 
 {% macro radio(array) %}
-{%if array.label %} <label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
+{%if array.label %} <label>{{array.label}}</label>{%endif%}
  <div class="radio">
  {% for child in array.child %}
   <div class="element {{child.attr.value}}">
-   <input type="radio" name="{{array.attr.name}}" {% for attr,value in child.attr%}{{attr}}="{{value}}" {% endfor %}>
+   <input type="radio" name="{{array.attr.name}}" {% for attr,value in child.attr if attr in ['value','checked', 'id']%}{{attr}}="{{value}}" {% endfor %}>
    <label for="{{child.attr.id}}" class="label-radio">{{child.label}}</label>
   </div>
  {% endfor %}
@@ -52,22 +52,22 @@
 
 
 {% macro select(array) %}
- {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
- <select {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
-  <option value="" disabled="disabled" selected>{%trans "Select"%} {{array.label}}</option>
+ {%if array.label %}<label>{{array.label}}</label>{%endif%}
+ <select {% for attr,value in array.attr if not attr in ['value','selected']%}{{attr}}="{{value}}" {% endfor %}>
+  <option value="" disabled="disabled">{%trans "Select"%} {{array.label}}</option>
   {% for child in array.child%}
-  <option {% for attr,value in child.attr if attr not in ['type','name','placeholder','id']%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
+  <option {% for attr,value in child.attr if attr in ['value','selected']%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
   {% endfor %}
  </select>
 {% endmacro %}
 
 
 {% macro datalist(array) %}
- {%if array.label %}<label for="{{array.attr.id}}">{{array.label}}</label>{%endif%}
+ {%if array.label %}<label>{{array.label}}</label>{%endif%}
  <input list="{{array.attr.name}}" {% for attr,value in array.attr%}{{attr}}="{{value}}" {% endfor %}>
  <datalist id="{{array.attr.name}}">
   {% for child in array.child%}
-  <option {% for attr,value in child.attr if attr not in ['type','name','placeholder','id']%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
+  <option {% for attr,value in child.attr  if attr in ['value','selected']%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
   {% endfor %}
  </datalist>
 {% endmacro %}

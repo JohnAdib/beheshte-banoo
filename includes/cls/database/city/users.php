@@ -70,7 +70,7 @@ class users
 	//------------------------------------------------------------------ id - foreign key
 	public function country_id() 
 	{
-		$this->form("select")->name("country_")->min(0)->max(99)->type("select")->class('span3')->validate()->id();
+		$this->form("select")->name("country_")->type("select")->class('span3')->validate()->id();
 		$this->setChild();
 	}
 	public function user_province() 

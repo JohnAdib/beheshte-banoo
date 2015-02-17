@@ -9,7 +9,7 @@ class model extends \mvc\model
 		return 1;
 	}
 
-	public function post_test($object)
+	public function post_register()
 	{
 		return 2;
 	}

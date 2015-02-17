@@ -34,9 +34,8 @@
  <div class="container content row">
   <div class="span9">
    <form class="ajx form row" method="post">
-  	 <input id="webcam" type="hidden" name="webcam" value=""/>
-{{forms.make(form['users'])}}
-    </form>
+  	<input type="hidden" name="webcam" value=""/>{{forms.make(form['users'])}}
+   </form>
   </div>
   <div class="span3">
    <div id='webcam'>
@@ -45,6 +44,7 @@
     <div id="my_result" ></div>
    </div>
   </div>
+ </div>
 </div>
 
 {%endblock%}
