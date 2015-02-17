@@ -29,6 +29,7 @@ class model extends \mvc\model
 			}
 		}
 		$qry     = $qry->setPermission_id(4)->setUser_createdate(date('Y-m-d H:i:s'));
+		$qry->insert();
 		
 		
 		$webcam = utility::post('webcam');
