@@ -22,11 +22,8 @@ class model extends \mvc\model
 		foreach ($fields as $value)
 		{
 			$post =  utility::post($value);
-			// if($post !== null && $post !== '')
-			{
-				$tmp_set = 'setUser_'.$value;
-				$qry     = $qry->$tmp_set($post);
-			}
+			$tmp_set = 'setUser_'.$value;
+			$qry     = $qry->$tmp_set($post);
 		}
 		$qry     = $qry->setPermission_id(4)->setUser_createdate(date('Y-m-d H:i:s'));
 		$qry->insert();

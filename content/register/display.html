@@ -31,17 +31,21 @@
 
 {%block content_def%}
 <div class="auto">
- <div class="container content row">
-  <div class="span9">
-   <form class="ajx form row" method="post">
-  	<input id='webcamimage' type="hidden" name="webcam" value=""/>{{forms.make(form['users'])}}
-   </form>
-  </div>
-  <div class="span3">
-   <div id='webcam'>
-    <div id="my_camera"></div>
-    <a href="javascript:void(take_snapshot())">{%trans "Take Snapshot"%}</a>
-    <div id="my_camera_result" ></div>
+ <div class="container">
+  <div class="content row">
+    
+   <div class="span9">
+    <form class="ajx form row" method="post">
+     <input id='webcamimage' type="hidden" name="webcam" value=""/>{{forms.make(form['users'])}}
+    </form>
+   </div>
+   <div class="span3">
+    <div id='webcambox'>
+     <a href="javascript:void(take_snapshot())" data-hint='{%trans "Click on picture to save webcam image"%}' class="hint--bottom">
+      <div id="my_camera"></div>
+     </a>
+     <div id="my_camera_result" ></div>
+    </div>
    </div>
   </div>
  </div>
