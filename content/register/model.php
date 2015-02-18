@@ -21,13 +21,12 @@ class model extends \mvc\model
 
 		foreach ($fields as $value)
 		{
-			$post =  utility::post($value);
+			$post    =  utility::post($value);
 			$tmp_set = 'setUser_'.$value;
 			$qry     = $qry->$tmp_set($post);
 		}
-		$qry     = $qry->setPermission_id(4)->setUser_createdate(date('Y-m-d H:i:s'));
-		$qry->insert();
-		
+		$qry    = $qry->setPermission_id(4)->setUser_createdate(date('Y-m-d H:i:s'));
+		$qry    = $qry->insert();
 		
 		$webcam = utility::post('webcam');
 		if(isset($webcam))
@@ -36,7 +35,7 @@ class model extends \mvc\model
 
 			// give max id from table ** tomarrow
 			// $qry = $this->sql()->tableUsers()->max('id')->select()->assoc();
-			$id          = 1;
+			$id          = $qry->LAST_INSERT_ID();
 			$folder_name = Upload . ceil($id/1000)*1000 . '/';
 			$file_ext    = '.jpg';
 
