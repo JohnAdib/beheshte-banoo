@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-02-19 16:20+0330\n"
-"PO-Revision-Date: 2015-02-19 16:21+0330\n"
+"POT-Creation-Date: 2015-02-19 17:22+0330\n"
+"PO-Revision-Date: 2015-02-19 17:22+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -87,12 +87,12 @@ msgid "mobile number exist!"
 msgstr "این شماره موبایل قبلا در سیستم ثبت شده است!"
 
 #: ../../../.././content_account/signup/model.php:40
-#: ../../../.././content/register/model.php:25
+#: ../../../.././content/register/model.php:23
 msgid "register successfully"
 msgstr "ثبت نام با موفقیت انجام شد"
 
 #: ../../../.././content_account/signup/model.php:47
-#: ../../../.././content/register/model.php:26
+#: ../../../.././content/register/model.php:24
 msgid "register failed!"
 msgstr "ثبت نام ناموفق بود!"
 
@@ -147,19 +147,19 @@ msgstr "اعتبارسنجی ناموفق بود!"
 msgid "this data is incorrect"
 msgstr "این اطلاعات اشتباه است"
 
-#: ../../../.././content/register/model.php:39
+#: ../../../.././content/register/camera/model.php:17
 msgid "You must fill all require fileds"
 msgstr "شما باید تمامی مقادیر مورد نیاز را تکمیل کنید"
 
-#: ../../../.././content/register/model.php:45
+#: ../../../.././content/register/camera/model.php:22
 msgid "this card number does not exist"
 msgstr "این کد در سیستم وجود ندارد!"
 
-#: ../../../.././content/register/model.php:84
+#: ../../../.././content/register/camera/model.php:60
 msgid "Your avatar register successfully"
 msgstr "عکس شما با موفقیت ثبت شد"
 
-#: ../../../.././content/register/model.php:86
+#: ../../../.././content/register/camera/model.php:62
 msgid "Error on write webcam picture to server"
 msgstr "خطا در هنگام ذخیره عکس در سرور"
 
@@ -723,13 +723,17 @@ msgstr "زمان ورود"
 msgid "Exitdatetime"
 msgstr "زمان خروج"
 
-#: ../../../.././includes/cls/form/barcode.php:11
+#: ../../../.././includes/cls/form/barcode.php:10
 msgid "Please Scan or enter barcode"
 msgstr "لطفا بارکد را اسکن کرده و یا دستی وارد کنید"
 
-#: ../../../.././includes/cls/form/barcode.php:14
+#: ../../../.././includes/cls/form/barcode.php:13
 msgid "Check"
 msgstr "بررسی"
+
+#: ../../../.././includes/cls/form/barcode.php:13
+msgid "Click to check"
+msgstr "برای چک کردن کلیک کنید"
 
 #: ../../../.././includes/cls/form/account.php:22
 msgid "Enter your registered mobile"

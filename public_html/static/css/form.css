@@ -241,8 +241,11 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
   content: '';
   top: 0%;
   left: 0%;
-  background: rgba(255, 255, 255, 0.8);
+  background-color:#fff;
+  border-radius:3px;
+  opacity: 0.3;
   width: 100%;
+  min-height: 34px;
   height: 100%;
   z-index: 100;
 }
