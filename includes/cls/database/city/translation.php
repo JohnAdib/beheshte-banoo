@@ -1,16 +1,6 @@
 <?php
 function transtext()
 {
-
-	// ------------------------------------------------------------------- Table barcodes
-	echo T_("barcodes");            // Table barcodes
-	echo T_("Barcodes");            // Barcodes
-	echo T_("barcode");             // barcodes
-	echo T_("Barcode");             // barcode_id
-	echo T_("User");                // user_id
-	echo T_("Enter");               // barcode_enter
-	echo T_("Exit");                // barcode_exit
-	echo T_("Modified");            // date_modified
 	echo T_("enable");              // Enum enable
 	echo T_("disable");             // Enum disable
 	echo T_("expire");              // Enum expire
@@ -26,6 +16,7 @@ function transtext()
 	echo T_("Status");              // booth_status
 	echo T_("Gametime");            // booth_gametime
 	echo T_("Section");             // section_id
+	echo T_("Modified");            // date_modified
 
 	// ------------------------------------------------------------------- Table citys
 	echo T_("citys");               // Table citys
@@ -49,6 +40,7 @@ function transtext()
 	echo T_("games");               // Table games
 	echo T_("Games");               // Games
 	echo T_("game");                // games
+	echo T_("User");                // user_id
 	echo T_("Booth");               // booth_id
 	echo T_("Prize");               // game_prize
 	echo T_("Date");                // game_date
@@ -177,7 +169,7 @@ function transtext()
 	echo T_("Mobile");              // user_mobile
 	echo T_("Mobile2");             // user_mobile2
 	echo T_("Password");            // user_password
-	echo T_("Birthday");            // user_birthday
+	echo T_("Birthdate");           // user_birthdate
 	echo T_("Degree");              // user_degree
 	echo T_("Province");            // user_province
 	echo T_("Codemelli");           // user_codemelli
@@ -188,7 +180,9 @@ function transtext()
 	echo T_("Parent");              // user_parent
 	echo T_("Feedback");            // user_feedback
 	echo T_("Status");              // user_status
-	echo T_("Createdate");          // user_createdate
+	echo T_("Barcode");             // user_barcode
+	echo T_("Enterdatetime");       // user_enterdatetime
+	echo T_("Exitdatetime");        // user_exitdatetime
 
 }
 ?>
