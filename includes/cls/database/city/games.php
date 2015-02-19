@@ -21,12 +21,12 @@ class games
 	//------------------------------------------------------------------ id - foreign key
 	public function booth_id() 
 	{
-		$this->form("select")->name("booth_")->min(0)->max(99)->required()->type("select")->validate()->id();
+		$this->form("select")->name("booth_")->min(0)->max(999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function game_prize() 
 	{
-		$this->form("text")->name("prize")->min(0)->max(9999)->required()->type('number');
+		$this->form("text")->name("prize")->min(0)->max(99999)->required()->type('number');
 	}
 	public function game_date() 
 	{

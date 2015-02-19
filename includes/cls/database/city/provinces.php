@@ -13,7 +13,7 @@ class provinces
 	//------------------------------------------------------------------ id - foreign key
 	public function country_id() 
 	{
-		$this->form("select")->name("country_")->min(0)->max(99)->required()->type("select")->validate()->id();
+		$this->form("select")->name("country_")->min(0)->max(999)->required()->class('span3')->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function province_name() 

@@ -13,7 +13,7 @@ class citys
 	//------------------------------------------------------------------ id - foreign key
 	public function province_id() 
 	{
-		$this->form("select")->name("province_")->min(0)->max(9999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("province_")->min(0)->max(99999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function city_name() 

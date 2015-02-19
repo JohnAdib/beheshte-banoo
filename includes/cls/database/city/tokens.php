@@ -17,7 +17,7 @@ class tokens
 	}
 	public function token_numbers() 
 	{
-		$this->form("text")->name("numbers")->max(99)->required()->type('number');
+		$this->form("text")->name("numbers")->max(999)->required()->type('number');
 	}
 
 	//------------------------------------------------------------------ select button

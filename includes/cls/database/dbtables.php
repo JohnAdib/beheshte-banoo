@@ -94,9 +94,16 @@ function setproperty($myparam)
 		case 'decimal':
 		case 'float':
 			$tmp[0] 	= "->type('number')";
-			if( substr($type, strlen($type)-8) == "unsigned" )
+			if($fieldname === 'barcode')
+			{
+				array_push($tmp, "->min(1".str_repeat("0",$mylen-1).")");
+				array_push($tmp, "->pattern('.{".$mylen.",}')");
+			}
+
+			elseif( substr($type, strlen($type)-8) == "unsigned")
 				array_push($tmp, "->min(0)");
-			array_push($tmp, "->max(".str_repeat("9",$mylen-1).")");
+
+			array_push($tmp, "->max(".str_repeat("9",$mylen).")");
 			return $tmp;
 			break;
 
@@ -192,6 +199,17 @@ while ($row = $qTables->fetch_object())
 		$txtcomment = "\n\t//------------------------------------------------------------------ ";
 		$txtstart   = "\tpublic function $myfield() \n\t{\n\t\t";
 		$txtend     = true;
+
+		if($myname === 'firstname')				$property  .= "->class('span3')";
+		elseif($myname  === 'lastname')			$property  .= "->class('span6')";
+		elseif($myname  === 'mobile')				$property  .= "->class('span3 endline')";
+		elseif($myname  === 'birthdate')			$property  .= "->class('span3')";
+		elseif($myname  === 'degree')				$property  .= "->class('span3')";
+		elseif($myfield === 'country_id')		$property  .= "->class('span3')";
+		elseif($myname  === 'province')			$property  .= "->class('span3')";
+		elseif($myname  === 'codemelli')			$property  .= "->class('span3 endline')";
+		elseif($myname  === 'passport')			$property  .= "->class('span3 endline hide')";
+
 
 		// --------------------------------------------------------------------------------- ID
 		if($myfield=="id")

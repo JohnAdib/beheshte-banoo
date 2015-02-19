@@ -22,11 +22,11 @@ class booths
 	}
 	public function booth_winpoint() 
 	{
-		$this->form("text")->name("winpoint")->min(0)->max(99)->required()->type('number');
+		$this->form("text")->name("winpoint")->min(0)->max(999)->required()->type('number');
 	}
 	public function booth_loosepoint() 
 	{
-		$this->form("text")->name("loosepoint")->min(0)->max(99)->required()->type('number');
+		$this->form("text")->name("loosepoint")->min(0)->max(999)->required()->type('number');
 	}
 
 	//------------------------------------------------------------------ select button
@@ -43,7 +43,7 @@ class booths
 	//------------------------------------------------------------------ id - foreign key
 	public function section_id() 
 	{
-		$this->form("select")->name("section_")->min(0)->max(9)->required()->type("select")->validate()->id();
+		$this->form("select")->name("section_")->min(0)->max(99)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function date_modified() {}

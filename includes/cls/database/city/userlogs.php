@@ -40,7 +40,7 @@ class userlogs
 	}
 	public function userlog_ip() 
 	{
-		$this->form("text")->name("ip")->max(999999999)->required()->type('number');
+		$this->form("text")->name("ip")->max(9999999999)->required()->type('number');
 	}
 	public function userlog_time() 
 	{

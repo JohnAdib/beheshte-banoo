@@ -49,7 +49,7 @@ class permissiondetails
 	//------------------------------------------------------------------ id - foreign key
 	public function permission_id() 
 	{
-		$this->form("select")->name("permission_")->min(0)->max(9999)->required()->type("select")->validate()->id();
+		$this->form("select")->name("permission_")->min(0)->max(99999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 }

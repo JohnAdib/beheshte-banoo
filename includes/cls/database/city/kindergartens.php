@@ -19,7 +19,7 @@ class kindergartens
 	//------------------------------------------------------------------ id - foreign key
 	public function token_id() 
 	{
-		$this->form("select")->name("token_")->min(0)->max(99)->required()->type("select")->validate()->id();
+		$this->form("select")->name("token_")->min(0)->max(999)->required()->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function kindergarten_date() 

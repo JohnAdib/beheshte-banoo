@@ -19,7 +19,7 @@ class sections
 	}
 	public function section_maxpoint() 
 	{
-		$this->form("text")->name("maxpoint")->max(99)->required()->type('number');
+		$this->form("text")->name("maxpoint")->max(999)->required()->type('number');
 	}
 
 	//------------------------------------------------------------------ select button
