@@ -7,7 +7,7 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 #logo img:focus, #logo:focus{border:none;outline: none;}
 
 
-#desc,.desc{text-align:center;font-size:1em;margin-top: 15px;}
+#desc,.desc{text-align:center;font-size:1.5em;margin-top: 15px;}
 #desc p{margin:3px 0;}
 .hide{opacity: 0;}
 .show{opacity: 1;}
@@ -25,14 +25,17 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 
 #footer{position:fixed}
 #register{color:#000;margin-bottom:80px}
-
-#webcambox{margin:0 1%;width:98%;}
+#description{font-size:1em;color:#000;margin-top:0;}
+#webcambox{margin:0 1%;width:98%;position:relative;}
+#webcambox:focus,#webcambox a:focus, #my_camera:focus{outline:none}
 #my_camera{width:240px;height:180px;}
 #my_camera video{border-radius: 3px;overflow:hidden;}
-#my_camera_result {position: absolute;top: 86px;right:-40px;width: 100px;height: 100px;border-radius: 50%;}
-#my_camera_result img{width:100px; height:100px;border-radius:50%}
+#my_camera_result {position: absolute;top:0;right:-80px;}
+#my_camera_result img{width:160px; height:160px;border-radius:50%}
 
+#counter{font-size: 3em;position: absolute;left: 20px;z-index: 2;}
 
+#form-barcode{margin:0;padding:0}
 #form-barcode button{width:100%}
 .loading-form .form#form-barcode{min-height: 46px;}
 .loading-form #webcambox{opacity: 0.3}

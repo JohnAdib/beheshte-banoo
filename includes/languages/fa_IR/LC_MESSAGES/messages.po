@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-02-19 06:39+0330\n"
-"PO-Revision-Date: 2015-02-19 06:40+0330\n"
+"POT-Creation-Date: 2015-02-19 16:20+0330\n"
+"PO-Revision-Date: 2015-02-19 16:21+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -147,13 +147,21 @@ msgstr "اعتبارسنجی ناموفق بود!"
 msgid "this data is incorrect"
 msgstr "این اطلاعات اشتباه است"
 
-#: ../../../.././content/register/model.php:73
-msgid "Error on write webcam picture to server"
-msgstr "خطا در هنگام ذخیره عکس در سرور"
-
-#: ../../../.././content/register/model.php:76
+#: ../../../.././content/register/model.php:39
 msgid "You must fill all require fileds"
 msgstr "شما باید تمامی مقادیر مورد نیاز را تکمیل کنید"
+
+#: ../../../.././content/register/model.php:45
+msgid "this card number does not exist"
+msgstr "این کد در سیستم وجود ندارد!"
+
+#: ../../../.././content/register/model.php:84
+msgid "Your avatar register successfully"
+msgstr "عکس شما با موفقیت ثبت شد"
+
+#: ../../../.././content/register/model.php:86
+msgid "Error on write webcam picture to server"
+msgstr "خطا در هنگام ذخیره عکس در سرور"
 
 #: ../../../.././content_cp/home/controller.php:24
 msgid "Not found!"
@@ -369,7 +377,7 @@ msgstr "تنظیمات"
 
 #: ../../../.././includes/cls/database/city/translation.php:69
 #: ../../../.././includes/languages/static_translation.php:54
-#: ../../../.././includes/languages/twig_translation.php:48
+#: ../../../.././includes/languages/twig_translation.php:47
 msgid "Options"
 msgstr "تنظیمات"
 
@@ -428,13 +436,13 @@ msgstr "افزودن"
 
 #: ../../../.././includes/cls/database/city/translation.php:86
 #: ../../../.././includes/languages/static_translation.php:59
-#: ../../../.././includes/languages/twig_translation.php:52
+#: ../../../.././includes/languages/twig_translation.php:51
 msgid "Edit"
 msgstr "ویرایش"
 
 #: ../../../.././includes/cls/database/city/translation.php:87
 #: ../../../.././includes/languages/static_translation.php:60
-#: ../../../.././includes/languages/twig_translation.php:53
+#: ../../../.././includes/languages/twig_translation.php:52
 msgid "Delete"
 msgstr "حذف"
 
@@ -909,12 +917,12 @@ msgid "Logout"
 msgstr "خروج از سیستم"
 
 #: ../../../.././includes/languages/static_translation.php:51
-#: ../../../.././includes/languages/twig_translation.php:45
+#: ../../../.././includes/languages/twig_translation.php:44
 msgid "Home"
 msgstr "صفحه نخست"
 
 #: ../../../.././includes/languages/static_translation.php:55
-#: ../../../.././includes/languages/twig_translation.php:49
+#: ../../../.././includes/languages/twig_translation.php:48
 msgid "Go to"
 msgstr "برو به"
 
@@ -923,12 +931,12 @@ msgid "Does not exist"
 msgstr "هیچ داده ای موجود نیست"
 
 #: ../../../.././includes/languages/static_translation.php:57
-#: ../../../.././includes/languages/twig_translation.php:50
+#: ../../../.././includes/languages/twig_translation.php:49
 msgid "Add New Record"
 msgstr "افزودن رکورد جدید"
 
 #: ../../../.././includes/languages/static_translation.php:58
-#: ../../../.././includes/languages/twig_translation.php:51
+#: ../../../.././includes/languages/twig_translation.php:50
 msgid "Actions"
 msgstr "عملیات"
 
@@ -1030,54 +1038,62 @@ msgid "Register Visitors"
 msgstr "ثبت نام بازدیدکنندگان"
 
 #: ../../../.././includes/languages/twig_translation.php:39
-msgid "Click on picture to save webcam image"
-msgstr "برای ذخیره تصویر بر روی عکس کلیک کنید"
+msgid ""
+"First of all, scan barcode then camera take a picture form you and show it "
+"for 3 second."
+msgstr ""
+"ابتدا در جلوی دوربین آماده شوید. سپس با اسکن بارکد روی کارت، عکس شما ذخیره "
+"شده و به مدت ۳ ثانیه نمایش داده خواهد شد."
 
-#: ../../../.././includes/languages/twig_translation.php:42
-msgid "Please place in center of box"
-msgstr "لطفا در مرکز کادر قرار بگیرید"
+#: ../../../.././includes/languages/twig_translation.php:40
+msgid "if it looks good you successful else try again with scan a barcode"
+msgstr "اگر مشکلی در عکس وجود داشت دوباره بارکد را اسکن کنید."
 
-#: ../../../.././includes/languages/twig_translation.php:54
+#: ../../../.././includes/languages/twig_translation.php:41
+msgid "Please place in center of box and smile:)"
+msgstr "لطفا در مرکز کادر قرار گرفته و لبخند بزنید :)"
+
+#: ../../../.././includes/languages/twig_translation.php:53
 msgid "delete record"
 msgstr "حذف رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:55
+#: ../../../.././includes/languages/twig_translation.php:54
 msgid "seriously, are you sure? There's no coming back."
 msgstr "مطمئنید؟ بازگشتی وجود ندارد"
 
-#: ../../../.././includes/languages/twig_translation.php:56
+#: ../../../.././includes/languages/twig_translation.php:55
 msgid "Cancel"
 msgstr "انصراف"
 
-#: ../../../.././includes/languages/twig_translation.php:57
+#: ../../../.././includes/languages/twig_translation.php:56
 msgid "or"
 msgstr "یا"
 
-#: ../../../.././includes/languages/twig_translation.php:60
+#: ../../../.././includes/languages/twig_translation.php:59
 msgid "Edit this record"
 msgstr "ویرایش این رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:61
+#: ../../../.././includes/languages/twig_translation.php:60
 msgid "Delete this record"
 msgstr "حذف این رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:64
+#: ../../../.././includes/languages/twig_translation.php:63
 msgid "Select"
 msgstr "انتخاب"
 
-#: ../../../.././includes/languages/twig_translation.php:67
+#: ../../../.././includes/languages/twig_translation.php:66
 msgid "Home Page"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/twig_translation.php:68
+#: ../../../.././includes/languages/twig_translation.php:67
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
-#: ../../../.././includes/languages/twig_translation.php:69
+#: ../../../.././includes/languages/twig_translation.php:68
 msgid "Ermile is our brand"
 msgstr "ارمایل نام برند ماست"
 
-#: ../../../.././includes/languages/twig_translation.php:70
+#: ../../../.././includes/languages/twig_translation.php:69
 msgid "Experience our service in your language"
 msgstr "سرویس ما را با زبان مادری خودتان تجربه کنید"
 
@@ -1090,6 +1106,9 @@ msgstr "شهرک معارفی"
 #: ../../../.././includes/mvc/view.php:14
 msgid "The Mystical City is good"
 msgstr "شهرک معارفی را تجربه کنید"
+
+#~ msgid "Click on picture to save webcam image"
+#~ msgstr "برای ذخیره تصویر بر روی عکس کلیک کنید"
 
 #~ msgid "We must have a picture form camera!"
 #~ msgstr "ما باید عکسی از دوربین برای ذخیره سازی داشته باشیم!"

@@ -35,11 +35,10 @@ function transtext()
 	echo T_("Register Visitors");                                                     // Line 18
 	echo T_("Login");                                                                 // Line 48
 
-	//---------------------------------------------------content/register/display.html
-	echo T_("Click on picture to save webcam image");                                 // Line 44
-
 	//--------------------------------------------content/register/camera/display.html
-	echo T_("Please place in center of box");                                         // Line 17
+	echo T_("First of all, scan barcode then camera take a picture form you and show it for 3 second.");// Line 12 Seperate
+	echo T_("if it looks good you successful else try again with scan a barcode");    // Line 12 Seperate
+	echo T_("Please place in center of box and smile:)");                             // Line 18
 
 	//----------------------------------------------------content_cp/home/display.html
 	echo T_("Home");                                                                  // Line 40

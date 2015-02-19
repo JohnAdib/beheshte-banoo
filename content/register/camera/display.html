@@ -7,14 +7,15 @@
 
 
 {%block content_def%}
-
 <div class="center">
  <div class="content">
+ <p id="description">{%trans%}First of all, scan barcode then camera take a picture form you and show it for 3 second.{%endtrans%} {%trans%}if it looks good you successful else try again with scan a barcode{%endtrans%}</p>
    <form class="ajx form row" method="post" id="form-barcode">
     <input id='webcamimage' type="hidden" name="webcam" value=""/>{{forms.make(form['barcode'])}}
    </form>
+   <div id="counter"><span id="timer"></span></div>
   <div id='webcambox'>
-   <a href="javascript:void(take_snapshot())" data-hint='{%trans "Please place in center of box"%}' class="hint--bottom hint--always" tabindex="-1">
+   <a href="javascript:void(take_snapshot())" data-hint='{%trans "Please place in center of box and smile:)"%}' class="hint--bottom hint--always" tabindex="-1">
     <div id="my_camera"></div>
    </a>
    <div id="my_camera_result" ></div>
