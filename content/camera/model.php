@@ -19,7 +19,7 @@ class model extends \mvc\model
 		}
 		if(!$id)
 		{
-			debug::error(T_("this card number does not exist"));
+			debug::error(T_("This card number does not exist"));
 			return;
 		}
 		

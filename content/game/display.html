@@ -10,9 +10,7 @@
 <div class="center">
  <div class="content">
  <p id="description">{%trans%}Swipe to left for delete.{%endtrans%} {%trans%}swipe to right to win the game.{%endtrans%}</p>
-   <form class="ajx form row" method="post" id="form-barcode">
-    <input id='webcamimage' type="hidden" name="webcam" value=""/>{{forms.make(form['barcode'])}}
-   </form>
+   <form class="ajx form row" method="post" id="form-barcode">{{forms.make(form['barcode'])}}</form>
 
  </div>
 </div>

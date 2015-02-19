@@ -7,6 +7,7 @@ class model extends \mvc\model
 {
 	public function post_register()
 	{
+		// read barcode and check it
 		$barcode =  utility::post('barcode');
 		$id      = $this->checkBarcode($barcode);
 		if($id)

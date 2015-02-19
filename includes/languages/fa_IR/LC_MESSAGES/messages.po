@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-02-19 19:22+0330\n"
-"PO-Revision-Date: 2015-02-19 19:22+0330\n"
+"POT-Creation-Date: 2015-02-19 20:05+0330\n"
+"PO-Revision-Date: 2015-02-19 20:05+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -87,12 +87,12 @@ msgid "mobile number exist!"
 msgstr "این شماره موبایل قبلا در سیستم ثبت شده است!"
 
 #: ../../../.././content_account/signup/model.php:40
-#: ../../../.././content/register/model.php:32
+#: ../../../.././content/register/model.php:33
 msgid "register successfully"
 msgstr "ثبت نام با موفقیت انجام شد"
 
 #: ../../../.././content_account/signup/model.php:47
-#: ../../../.././content/register/model.php:33
+#: ../../../.././content/register/model.php:34
 msgid "register failed!"
 msgstr "ثبت نام ناموفق بود!"
 
@@ -147,29 +147,26 @@ msgstr "اعتبارسنجی ناموفق بود!"
 msgid "this data is incorrect"
 msgstr "این اطلاعات اشتباه است"
 
-#: ../../../.././content/game/model.php:17
+#: ../../../.././content/game/model.php:16
+#: ../../../.././content/camera/model.php:22
+msgid "This card number does not exist"
+msgstr "این کد در سیستم وجود ندارد!"
+
+#: ../../../.././content/register/model.php:15
+msgid "This card number in use!"
+msgstr "این کد در حال استفاده است!"
+
 #: ../../../.././content/camera/model.php:17
 msgid "You must fill all require fileds"
 msgstr "شما باید تمامی مقادیر مورد نیاز را تکمیل کنید"
 
-#: ../../../.././content/game/model.php:22
-#: ../../../.././content/camera/model.php:22
-msgid "this card number does not exist"
-msgstr "این کد در سیستم وجود ندارد!"
-
-#: ../../../.././content/game/model.php:60
 #: ../../../.././content/camera/model.php:60
 msgid "Your avatar register successfully"
 msgstr "عکس شما با موفقیت ثبت شد"
 
-#: ../../../.././content/game/model.php:62
 #: ../../../.././content/camera/model.php:62
 msgid "Error on write webcam picture to server"
 msgstr "خطا در هنگام ذخیره عکس در سرور"
-
-#: ../../../.././content/register/model.php:14
-msgid "This card number in use!"
-msgstr "این کد در حال استفاده است!"
 
 #: ../../../.././content_cp/home/controller.php:24
 msgid "Not found!"
