@@ -10,16 +10,16 @@ class model extends \mvc\model
 	{
 		$webcam  = utility::post('webcam');
 		$barcode = utility::post('barcode');
-		$id      = $this->sql()->tableUsers()->whereUser_barcode($barcode)->select()->assoc('id');
+		$id      = $this->checkBarcode($barcode);
 
 		if(!isset($webcam) || empty($webcam) || empty($barcode))
 		{
 			debug::warn(T_("You must fill all require fileds"));
 			return;
 		}
-		if(empty($id))
+		if(!$id)
 		{
-			debug::error(T_("this card number does not exist").$id);
+			debug::error(T_("this card number does not exist"));
 			return;
 		}
 		

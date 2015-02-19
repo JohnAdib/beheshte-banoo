@@ -54,5 +54,28 @@ class model extends \lib\mvc\model
 		$this->commit();
 		$this->rollback();
 	}
+
+	public function checkBarcode($_barcode)
+	{
+		if(!is_numeric($_barcode))
+			return null;
+
+		$qry = $this->sql()->tableUsers()
+					->whereUser_barcode($_barcode)->andUser_exitdatetime('#NULL')->select();
+		
+		$datatable = $qry->allassoc();
+		$myuser_id = null;
+		foreach ($datatable as $key => $value)
+		{
+			$mydate = strtotime($value['user_enterdatetime']);
+			$mydate = date('Y-m-d',$mydate);
+			if($mydate === date('Y-m-d'))
+				$myuser_id = $value['id'];
+
+		}
+
+
+		return $myuser_id;
+	}
 }
 ?>

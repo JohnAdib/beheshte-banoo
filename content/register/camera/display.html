@@ -14,10 +14,8 @@
     <input id='webcamimage' type="hidden" name="webcam" value=""/>{{forms.make(form['barcode'])}}
    </form>
    <div id="counter"><span id="timer"></span></div>
-  <div id='webcambox'>
-   <a href="javascript:void(take_snapshot())" data-hint='{%trans "Please place in center of box and smile:)"%}' class="hint--bottom hint--always" tabindex="-1">
-    <div id="my_camera"></div>
-   </a>
+  <div id='webcambox' data-hint='{%trans "Please place in center of box and smile:)"%}' class="hint--bottom hint--always">
+   <div id="my_camera" ></div>
    <div id="my_camera_result" ></div>
   </div>
  </div>
