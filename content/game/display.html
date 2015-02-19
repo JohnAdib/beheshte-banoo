@@ -1,0 +1,20 @@
+{%extends display.mvc%}
+{%block header_def%}{%endblock%}
+
+{%block foot_js%}
+ <script></script>
+{%endblock%}
+
+
+{%block content_def%}
+<div class="center">
+ <div class="content">
+ <p id="description">{%trans%}Swipe to left for delete.{%endtrans%} {%trans%}swipe to right to win the game.{%endtrans%}</p>
+   <form class="ajx form row" method="post" id="form-barcode">
+    <input id='webcamimage' type="hidden" name="webcam" value=""/>{{forms.make(form['barcode'])}}
+   </form>
+
+ </div>
+</div>
+
+{%endblock%}

@@ -1,12 +1,13 @@
 <?php
-namespace content\register;
+namespace content\game;
 
 
 class controller extends \content\home\controller
 {
 	public function config()
 	{
-		$this->post('register')->ALL();
+		$this->post('game')->ALL();
+
 	}
 }
 ?>

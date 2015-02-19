@@ -30,15 +30,21 @@ function transtext()
 	echo T_("please check your mobile and enter the code");                           // Line 7
 	echo T_("don't receive message?");                                                // Line 8
 
+	//-------------------------------------------------------content/game/display.html
+	echo T_("Swipe to left for delete.");                                             // Line 12 Seperate
+	echo T_("swipe to right to win the game.");                                       // Line 12 Seperate
+
 	//-------------------------------------------------------content/home/display.html
 	echo T_("Logout");                                                                // Line 46
 	echo T_("Register Visitors");                                                     // Line 18
+	echo T_("Register Visitors Avatar");                                              // Line 19
+	echo T_("Game");                                                                  // Line 20
 	echo T_("Login");                                                                 // Line 48
 
-	//--------------------------------------------content/register/camera/display.html
+	//-----------------------------------------------------content/camera/display.html
 	echo T_("First of all, scan barcode then camera take a picture form you and show it for 3 second.");// Line 12 Seperate
 	echo T_("if it looks good you successful else try again with scan a barcode");    // Line 12 Seperate
-	echo T_("Please place in center of box and smile:)");                             // Line 18
+	echo T_("Please place in center of box and smile:)");                             // Line 17
 
 	//----------------------------------------------------content_cp/home/display.html
 	echo T_("Home");                                                                  // Line 40

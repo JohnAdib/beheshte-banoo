@@ -491,7 +491,7 @@ ul.list li a{padding:0.3em 0.5em;}
   vertical-align: baseline;
   background-color: #e0e0e0;
   color: rgba(0, 0, 0, 0.6);
-  margin: 0em auto;
+  margin: 0.3em auto;
   padding: 0.78571em 1.5em 0.78571em;
   text-transform: none;
   text-shadow: none;
@@ -870,7 +870,6 @@ ul.list li a{padding:0.3em 0.5em;}
 
 .button:hover {
   background-color: #e8e8e8;
-  background-image: none;
 }
 .button:hover .icon {
   opacity: 0.85;
@@ -881,7 +880,8 @@ ul.list li a{padding:0.3em 0.5em;}
 ---------------*/
 
 .button:focus {
-  background-color: #145389;
+  opacity: 0.9;
+  color:#000;
 }
 .button:focus .icon {
   opacity: 0.85;

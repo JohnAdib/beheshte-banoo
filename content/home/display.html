@@ -14,11 +14,12 @@
   <h1>{{site.title}}</h1>
   <div class="desc">
 {%if global.login%}
-   <a href="http://account.{{url.raw}}/logout" class='btnlogin button negative' tabindex="1">{%trans "Logout"%}</a><br />
-   <a href="http://{{url.raw}}/register" data-action class='button' tabindex="1">{%trans "Register Visitors"%}</a>
-   <a href="http://{{url.raw}}/camera" data-action class='button' tabindex="1">{%trans "Register Visitors Avatar"%}</a>
+   <a href="http://account.{{url.raw}}/logout" class='btnlogin button negative'>{%trans "Logout"%}</a><br />
+   <a href="http://{{url.raw}}/register" data-action class='button'>{%trans "Register Visitors"%}</a>
+   <a href="http://{{url.raw}}/camera" data-action class='button'>{%trans "Register Visitors Avatar"%}</a>
+   <a href="http://{{url.raw}}/game" data-action class='button'>{%trans "Game"%}</a>
 {%else%}
-   <a href="http://account.{{url.raw}}/login" class='btnlogin button positive' tabindex="1">{%trans "Login"%}</a>
+   <a href="http://account.{{url.raw}}/login" class='btnlogin button positive'>{%trans "Login"%}</a>
 {%endif%}
   </div>
  </div>

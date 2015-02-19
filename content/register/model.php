@@ -7,6 +7,15 @@ class model extends \mvc\model
 {
 	public function post_register()
 	{
+		$barcode =  utility::post('barcode');
+		$id      = $this->checkBarcode($barcode);
+		if($id)
+		{
+			debug::error(T_("This card number in use!"));
+			return;
+		}
+
+
 		$qry     = $this->sql()->tableUsers();
 		$fields  = array( 'gender','firstname','lastname','mobile',
 								'birthdate','codemelli','passport','country','province', 'barcode');
