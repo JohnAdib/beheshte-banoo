@@ -1,5 +1,5 @@
 <?php
-namespace content\register\camera;
+namespace content\camera;
 
 class view extends \mvc\view
 {

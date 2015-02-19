@@ -16,6 +16,7 @@
 {%if global.login%}
    <a href="http://account.{{url.raw}}/logout" class='btnlogin button negative' tabindex="1">{%trans "Logout"%}</a><br />
    <a href="http://{{url.raw}}/register" data-action class='button' tabindex="1">{%trans "Register Visitors"%}</a>
+   <a href="http://{{url.raw}}/camera" data-action class='button' tabindex="1">{%trans "Register Visitors Avatar"%}</a>
 {%else%}
    <a href="http://account.{{url.raw}}/login" class='btnlogin button positive' tabindex="1">{%trans "Login"%}</a>
 {%endif%}

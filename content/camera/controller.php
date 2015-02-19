@@ -1,5 +1,5 @@
 <?php
-namespace content\register\camera;
+namespace content\camera;
 use \lib\saloos;
 
 class controller extends \mvc\controller

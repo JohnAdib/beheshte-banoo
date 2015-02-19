@@ -1,5 +1,5 @@
 <?php
-namespace content\register\camera;
+namespace content\camera;
 use \lib\debug;
 use \lib\utility;
 use \lib\utility\File;
