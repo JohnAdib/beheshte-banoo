@@ -25,12 +25,17 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 
 #footer{position:fixed}
 #register{color:#000;margin-bottom:80px}
-#register #webcambox{margin:0 auto;width:210px;}
-#register #my_camera{width:240px;height:180px;}
-#register #my_camera video{border-radius: 3px;overflow:hidden;}
 
-#register #my_camera_result {position: absolute;top: 0;left: 0;width: 100px;height: 100px;border-radius: 50%;}
-#register #my_camera_result img{width:100px; height:100px;border-radius:50%}
+#webcambox{margin:0 1%;width:98%;}
+#my_camera{width:240px;height:180px;}
+#my_camera video{border-radius: 3px;overflow:hidden;}
+#my_camera_result {position: absolute;top: 86px;right:-40px;width: 100px;height: 100px;border-radius: 50%;}
+#my_camera_result img{width:100px; height:100px;border-radius:50%}
+
+
+#form-barcode button{width:100%}
+.loading-form .form#form-barcode{min-height: 46px;}
+.loading-form #webcambox{opacity: 0.3}
 
 /* #Mobile (Landscape) =================================== Design for a width of 480px*/
 @media only screen and (max-width: 767px){

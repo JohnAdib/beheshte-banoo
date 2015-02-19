@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-02-19 03:30+0330\n"
-"PO-Revision-Date: 2015-02-19 03:30+0330\n"
+"POT-Creation-Date: 2015-02-19 06:39+0330\n"
+"PO-Revision-Date: 2015-02-19 06:40+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -150,6 +150,10 @@ msgstr "این اطلاعات اشتباه است"
 #: ../../../.././content/register/model.php:73
 msgid "Error on write webcam picture to server"
 msgstr "خطا در هنگام ذخیره عکس در سرور"
+
+#: ../../../.././content/register/model.php:76
+msgid "You must fill all require fileds"
+msgstr "شما باید تمامی مقادیر مورد نیاز را تکمیل کنید"
 
 #: ../../../.././content_cp/home/controller.php:24
 msgid "Not found!"
@@ -365,7 +369,7 @@ msgstr "تنظیمات"
 
 #: ../../../.././includes/cls/database/city/translation.php:69
 #: ../../../.././includes/languages/static_translation.php:54
-#: ../../../.././includes/languages/twig_translation.php:45
+#: ../../../.././includes/languages/twig_translation.php:48
 msgid "Options"
 msgstr "تنظیمات"
 
@@ -424,13 +428,13 @@ msgstr "افزودن"
 
 #: ../../../.././includes/cls/database/city/translation.php:86
 #: ../../../.././includes/languages/static_translation.php:59
-#: ../../../.././includes/languages/twig_translation.php:49
+#: ../../../.././includes/languages/twig_translation.php:52
 msgid "Edit"
 msgstr "ویرایش"
 
 #: ../../../.././includes/cls/database/city/translation.php:87
 #: ../../../.././includes/languages/static_translation.php:60
-#: ../../../.././includes/languages/twig_translation.php:50
+#: ../../../.././includes/languages/twig_translation.php:53
 msgid "Delete"
 msgstr "حذف"
 
@@ -711,8 +715,15 @@ msgstr "زمان ورود"
 msgid "Exitdatetime"
 msgstr "زمان خروج"
 
+#: ../../../.././includes/cls/form/barcode.php:11
+msgid "Please Scan or enter barcode"
+msgstr "لطفا بارکد را اسکن کرده و یا دستی وارد کنید"
+
+#: ../../../.././includes/cls/form/barcode.php:14
+msgid "Check"
+msgstr "بررسی"
+
 #: ../../../.././includes/cls/form/account.php:22
-#: ../../../.././includes/cls/form/register.php:12
 msgid "Enter your registered mobile"
 msgstr "موبایل ثبت شده را وارد کنید"
 
@@ -735,10 +746,6 @@ msgstr "اعتبارسنجی"
 #: ../../../.././includes/cls/form/account.php:56
 msgid "Change my password"
 msgstr "کلمه عبور"
-
-#: ../../../.././includes/cls/form/register.php:16
-msgid "Register"
-msgstr "ثبت نام"
 
 #: ../../../.././includes/cls/form/symbol.php:15
 msgid "Tel"
@@ -902,12 +909,12 @@ msgid "Logout"
 msgstr "خروج از سیستم"
 
 #: ../../../.././includes/languages/static_translation.php:51
-#: ../../../.././includes/languages/twig_translation.php:42
+#: ../../../.././includes/languages/twig_translation.php:45
 msgid "Home"
 msgstr "صفحه نخست"
 
 #: ../../../.././includes/languages/static_translation.php:55
-#: ../../../.././includes/languages/twig_translation.php:46
+#: ../../../.././includes/languages/twig_translation.php:49
 msgid "Go to"
 msgstr "برو به"
 
@@ -916,12 +923,12 @@ msgid "Does not exist"
 msgstr "هیچ داده ای موجود نیست"
 
 #: ../../../.././includes/languages/static_translation.php:57
-#: ../../../.././includes/languages/twig_translation.php:47
+#: ../../../.././includes/languages/twig_translation.php:50
 msgid "Add New Record"
 msgstr "افزودن رکورد جدید"
 
 #: ../../../.././includes/languages/static_translation.php:58
-#: ../../../.././includes/languages/twig_translation.php:48
+#: ../../../.././includes/languages/twig_translation.php:51
 msgid "Actions"
 msgstr "عملیات"
 
@@ -1023,50 +1030,54 @@ msgid "Register Visitors"
 msgstr "ثبت نام بازدیدکنندگان"
 
 #: ../../../.././includes/languages/twig_translation.php:39
-msgid "Take Snapshot"
-msgstr "ذخیره موقت"
+msgid "Click on picture to save webcam image"
+msgstr "برای ذخیره تصویر بر روی عکس کلیک کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:51
+#: ../../../.././includes/languages/twig_translation.php:42
+msgid "Please place in center of box"
+msgstr "لطفا در مرکز کادر قرار بگیرید"
+
+#: ../../../.././includes/languages/twig_translation.php:54
 msgid "delete record"
 msgstr "حذف رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:52
+#: ../../../.././includes/languages/twig_translation.php:55
 msgid "seriously, are you sure? There's no coming back."
 msgstr "مطمئنید؟ بازگشتی وجود ندارد"
 
-#: ../../../.././includes/languages/twig_translation.php:53
+#: ../../../.././includes/languages/twig_translation.php:56
 msgid "Cancel"
 msgstr "انصراف"
 
-#: ../../../.././includes/languages/twig_translation.php:54
+#: ../../../.././includes/languages/twig_translation.php:57
 msgid "or"
 msgstr "یا"
 
-#: ../../../.././includes/languages/twig_translation.php:57
+#: ../../../.././includes/languages/twig_translation.php:60
 msgid "Edit this record"
 msgstr "ویرایش این رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:58
+#: ../../../.././includes/languages/twig_translation.php:61
 msgid "Delete this record"
 msgstr "حذف این رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:61
+#: ../../../.././includes/languages/twig_translation.php:64
 msgid "Select"
 msgstr "انتخاب"
 
-#: ../../../.././includes/languages/twig_translation.php:64
+#: ../../../.././includes/languages/twig_translation.php:67
 msgid "Home Page"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/twig_translation.php:65
+#: ../../../.././includes/languages/twig_translation.php:68
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
-#: ../../../.././includes/languages/twig_translation.php:66
+#: ../../../.././includes/languages/twig_translation.php:69
 msgid "Ermile is our brand"
 msgstr "ارمایل نام برند ماست"
 
-#: ../../../.././includes/languages/twig_translation.php:67
+#: ../../../.././includes/languages/twig_translation.php:70
 msgid "Experience our service in your language"
 msgstr "سرویس ما را با زبان مادری خودتان تجربه کنید"
 
@@ -1079,6 +1090,15 @@ msgstr "شهرک معارفی"
 #: ../../../.././includes/mvc/view.php:14
 msgid "The Mystical City is good"
 msgstr "شهرک معارفی را تجربه کنید"
+
+#~ msgid "We must have a picture form camera!"
+#~ msgstr "ما باید عکسی از دوربین برای ذخیره سازی داشته باشیم!"
+
+#~ msgid "Register"
+#~ msgstr "ثبت نام"
+
+#~ msgid "Take Snapshot"
+#~ msgstr "ذخیره موقت"
 
 #~ msgid "barcodes"
 #~ msgstr "بارکدها"

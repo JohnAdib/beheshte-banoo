@@ -66,11 +66,11 @@
   <div id="copyright">
    <div class='hint--right' data-hint='{%trans "Ermile is our brand"%}'>
     <span>&copy; {{'now'|date('Y')}}</span>
-    <a href="{{url.root}}" title="{{site.desc}}" tabindex="-1">{{site.title}}</a>
+    <a href="{{url.root}}" title="{{site.desc}}" tabindex='-1'>{{site.title}}</a>
    </div>
 
    <div id='languages' class='hint--left' data-hint='{%trans "Experience our service in your language"%}'>
-    <select id="langlist">
+    <select id="langlist" tabindex='-1'>
 {%for key, value in global.langlist%}{%if key == global.lang%}
      <option value="{{key}}" selected="selected">{{value}}</option>
 {%else%}

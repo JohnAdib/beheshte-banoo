@@ -6,7 +6,19 @@ class controller extends \mvc\controller
 {
 	public function config()
 	{
-		$this->post('register')->ALL();
+		$mychild	 = $this->child();
+		if($mychild === 'camera')
+		{
+			$this->display_name	= 'content\register\camera\display.html';
+			// $this->model_name	= 'content\register\camera\model';
+			$this->post('camera')->ALL();
+			$this->get(null, 'camera')->ALL();
+		}
+		else
+		{
+			$this->post('register')->ALL();
+		}
+
 	}
 
 	// for routing check

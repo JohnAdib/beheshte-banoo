@@ -94,12 +94,11 @@ function setproperty($myparam)
 		case 'decimal':
 		case 'float':
 			$tmp[0] 	= "->type('number')";
-			if($fieldname === 'barcode')
+			if($fieldname === 'barcode' || substr($type, strlen($type)-8) == "zerofill")
 			{
 				array_push($tmp, "->min(1".str_repeat("0",$mylen-1).")");
 				array_push($tmp, "->pattern('.{".$mylen.",}')");
 			}
-
 			elseif( substr($type, strlen($type)-8) == "unsigned")
 				array_push($tmp, "->min(0)");
 

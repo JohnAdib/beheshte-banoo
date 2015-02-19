@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 19, 2015 at 03:27 AM
+-- Generation Time: Feb 19, 2015 at 05:07 AM
 -- Server version: 5.5.41-0ubuntu0.14.04.1
 -- PHP Version: 5.6.5-1+deb.sury.org~trusty+1
 
@@ -1062,7 +1062,7 @@ CREATE TABLE IF NOT EXISTS `userlogs` (
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `userlogs_users_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=303 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=305 ;
 
 --
 -- Dumping data for table `userlogs`
@@ -1344,7 +1344,9 @@ INSERT INTO `userlogs` (`id`, `userlog_type`, `userlog_module`, `userlog_value`,
 (299, 'login', 'login', NULL, 'low', 2130706433, '2015-02-17 23:32:55', 5, 'enable', NULL),
 (300, 'login', 'login', NULL, 'low', 2130706433, '2015-02-18 13:59:10', 5, 'enable', NULL),
 (301, 'login', 'login', NULL, 'low', 2130706433, '2015-02-18 21:34:32', 5, 'enable', NULL),
-(302, 'login', 'login', NULL, 'low', 2130706433, '2015-02-19 01:14:04', 5, 'enable', NULL);
+(302, 'login', 'login', NULL, 'low', 2130706433, '2015-02-19 01:14:04', 5, 'enable', NULL),
+(303, 'access', 'register', NULL, 'high', 2130706433, '2015-02-19 03:31:32', NULL, 'enable', NULL),
+(304, 'login', 'login', NULL, 'low', 2130706433, '2015-02-19 03:31:38', 5, 'enable', NULL);
 
 -- --------------------------------------------------------
 
@@ -1392,9 +1394,9 @@ CREATE TABLE IF NOT EXISTS `users` (
   `permission_id` smallint(5) unsigned NOT NULL,
   `user_feedback` tinyint(3) unsigned DEFAULT NULL,
   `user_status` enum('active','awaiting','deactive','removed','filter','exit') NOT NULL DEFAULT 'active',
-  `user_barcode` int(5) unsigned NOT NULL,
+  `user_barcode` int(5) unsigned zerofill NOT NULL,
   `user_enterdatetime` datetime NOT NULL,
-  `user_exitdatetime` datetime NOT NULL,
+  `user_exitdatetime` datetime DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `booth_id` smallint(3) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -1408,8 +1410,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `user_gender`, `user_firstname`, `user_lastname`, `user_mobile`, `user_mobile2`, `user_password`, `user_birthdate`, `user_degree`, `country_id`, `user_province`, `user_codemelli`, `user_passport`, `user_imageaddr`, `user_logincounter`, `user_refinecounter`, `user_parent`, `permission_id`, `user_feedback`, `user_status`, `user_barcode`, `user_enterdatetime`, `user_exitdatetime`, `date_modified`, `booth_id`) VALUES
-(5, 'male', 'جواد', 'عوض زاده', '989357629759', NULL, '$2y$07$x889MdhsRxGcGshcrqdEc.mcx0e1o2PeIjJPKx0VdxK4LQ1xDnZUS', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 50, NULL, NULL, 1, NULL, 'active', 0, '2015-02-09 22:44:14', '0000-00-00 00:00:00', NULL, NULL),
-(6, 'male', 'رضا', 'محیطی', '989109610612', NULL, '$2y$07$8YHQXcb0TblkqgdtG/dAseC//MUscFTM5fSsga8.qJJSNog27CSMC', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, 4, NULL, 'active', 0, '2015-02-13 12:52:28', '0000-00-00 00:00:00', NULL, NULL);
+(5, 'male', 'جواد', 'عوض زاده', '989357629759', NULL, '$2y$07$x889MdhsRxGcGshcrqdEc.mcx0e1o2PeIjJPKx0VdxK4LQ1xDnZUS', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 51, NULL, NULL, 1, NULL, 'active', 00001, '2015-02-09 22:44:14', '0000-00-00 00:00:00', '2015-02-19 01:11:57', NULL),
+(6, 'male', 'رضا', 'محیطی', '989109610612', NULL, '$2y$07$8YHQXcb0TblkqgdtG/dAseC//MUscFTM5fSsga8.qJJSNog27CSMC', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, 4, NULL, 'active', 00002, '2015-02-13 12:52:28', '0000-00-00 00:00:00', '2015-02-19 01:12:00', NULL);
 
 --
 -- Constraints for dumped tables

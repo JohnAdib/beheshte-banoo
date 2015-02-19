@@ -36,7 +36,10 @@ function transtext()
 	echo T_("Login");                                                                 // Line 48
 
 	//---------------------------------------------------content/register/display.html
-	echo T_("Take Snapshot");                                                         // Line 43
+	echo T_("Click on picture to save webcam image");                                 // Line 44
+
+	//--------------------------------------------content/register/camera/display.html
+	echo T_("Please place in center of box");                                         // Line 17
 
 	//----------------------------------------------------content_cp/home/display.html
 	echo T_("Home");                                                                  // Line 40

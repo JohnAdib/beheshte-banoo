@@ -6,18 +6,12 @@ use \lib\utility\File;
 
 class model extends \mvc\model
 {
-	public function get_test($object)
-	{
-		return 1;
-	}
-
+	// ***************************************************************** Register Visitors
 	public function post_register()
 	{
-		$qry      = $this->sql()->tableUsers();
-
+		$qry     = $this->sql()->tableUsers();
 		$fields  = array( 'gender','firstname','lastname','mobile',
-								'birthdate','codemelli','passport','country','province'
-							 );
+								'birthdate','codemelli','passport','country','province', 'barcode');
 
 		foreach ($fields as $value)
 		{
@@ -25,17 +19,25 @@ class model extends \mvc\model
 			$tmp_set = 'setUser_'.$value;
 			$qry     = $qry->$tmp_set($post);
 		}
-		$qry    = $qry->setPermission_id(4)->setUser_createdate(date('Y-m-d H:i:s'));
+		$qry    = $qry->setPermission_id(4)->setUser_enterdatetime(date('Y-m-d H:i:s'));
 		$qry    = $qry->insert();
-		
-		$webcam = utility::post('webcam');
-		if(isset($webcam))
+
+		$this->commit(function()   { debug::true(T_("register successfully")); });
+		$this->rollback(function() { debug::error(T_("register failed!"));     });
+	}
+
+
+	// ***************************************************************** Register Visitor Pictures
+	public function post_camera()
+	{
+		sleep(1);
+		$webcam  = utility::post('webcam');
+		$barcode = utility::post('barcode');
+
+		if(isset($webcam) && !empty($webcam) && !empty($barcode))
 		{
 			define('Upload', root.'upload/');
-
-			// give max id from table ** tomarrow
-			// $qry = $this->sql()->tableUsers()->max('id')->select()->assoc();
-			$id          = $qry->LAST_INSERT_ID();
+			$id = $this->sql()->tableUsers()->whereUser_barcode($barcode)->select()->assoc('id');
 			$folder_name = Upload . ceil($id/1000)*1000 . '/';
 			$file_ext    = '.jpg';
 
@@ -70,9 +72,9 @@ class model extends \mvc\model
 			if(!$result)
 				debug::warn(T_("Error on write webcam picture to server"));
 		}
+		else
+			debug::warn(T_("You must fill all require fileds"));
 
-		$this->commit(function() { debug::true(T_("register successfully")); });
-		$this->rollback(function() { debug::error(T_("register failed!")); } );
 	}
 }
 ?>
