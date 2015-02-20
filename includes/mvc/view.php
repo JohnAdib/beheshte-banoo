@@ -38,6 +38,8 @@ class view extends \lib\mvc\view
 	{
 		$this->data->display['account'] = "content_account/main/xhr-layout.html";
 		$this->data->display['cp']      = "content_cp/main/xhr-layout.html";
+
+		$this->data->display['mvc']     = "inlcudes/mvc/xhr-layout.html";
 	}
 }
 ?>

@@ -3,21 +3,22 @@
 
 
 {%block content_def%}
-<div class="center">
+<div class="center" data-xhr="center">
  <header>{%spaceless%}
   <a href="{{url.root}}" title="{{site.slogan}}" tabindex="-1" id='logo'>
    <img src="{{url.static}}images/logo.svg" alt='{%trans "masoomeh holy shine"%}' />
   </a>
  </header>{%endspaceless%}
 
- <div data-xhr="content" class="content">
+ <div class="content">
   <h1>{{site.title}}</h1>
   <div class="desc">
 {%if global.login%}
    <a href="http://account.{{url.raw}}/logout" class='btnlogin button negative'>{%trans "Logout"%}</a><br />
-   <a href="http://{{url.raw}}/register" data-action class='button'>{%trans "Register Visitors"%}</a>
-   <a href="http://{{url.raw}}/camera" data-action class='button'>{%trans "Register Visitors Avatar"%}</a>
-   <a href="http://{{url.raw}}/game" data-action class='button'>{%trans "Game"%}</a>
+   <a href="http://{{url.raw}}/register" class='button'>{%trans "Register Visitors"%}</a>
+   <a href="http://{{url.raw}}/camera" class='button'>{%trans "Register Visitors Avatar"%}</a>
+   <a href="http://{{url.raw}}/game" class='button'>{%trans "Start Game"%}</a>
+   <a href="http://{{url.raw}}/point" class='button'>{%trans "Point Checker"%}</a>
 {%else%}
    <a href="http://account.{{url.raw}}/login" class='btnlogin button positive'>{%trans "Login"%}</a>
 {%endif%}

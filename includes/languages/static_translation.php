@@ -75,6 +75,9 @@ function transtext()
 	echo T_('Boother');
 	echo T_('Registerer');
 	
-	
+	echo T_('Register');
+	echo T_('Camera');
+	echo T_('Game');
+	echo T_('Point');
 }
 ?>

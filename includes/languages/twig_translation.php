@@ -38,13 +38,16 @@ function transtext()
 	echo T_("Logout");                                                                // Line 46
 	echo T_("Register Visitors");                                                     // Line 18
 	echo T_("Register Visitors Avatar");                                              // Line 19
-	echo T_("Game");                                                                  // Line 20
+	echo T_("Start Game");                                                            // Line 20
+	echo T_("Point Checker");                                                         // Line 21
 	echo T_("Login");                                                                 // Line 48
 
 	//-----------------------------------------------------content/camera/display.html
 	echo T_("First of all, scan barcode then camera take a picture form you and show it for 3 second.");// Line 12 Seperate
 	echo T_("if it looks good you successful else try again with scan a barcode");    // Line 12 Seperate
 	echo T_("Please place in center of box and smile:)");                             // Line 17
+
+	//------------------------------------------------------content/point/display.html
 
 	//----------------------------------------------------content_cp/home/display.html
 	echo T_("Home");                                                                  // Line 40
