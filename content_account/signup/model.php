@@ -24,7 +24,7 @@ class model extends \mvc\model
 							->setUser_mobile         ($mymobile)
 							->setPermission_id       (4)
 							->setUser_password       ($mypass)
-							->setUser_createdate     (date('Y-m-d H:i:s'));
+							->setUser_enterdatetime  (date('Y-m-d H:i:s'));
 			$sql      = $qry->insert();
 			
 

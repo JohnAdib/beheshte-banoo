@@ -15,12 +15,22 @@
   <div class="desc">
 {%if global.login%}
    <a href="http://account.{{url.raw}}/logout" class='btnlogin button negative'>{%trans "Logout"%}</a><br />
-   <a href="http://{{url.raw}}/register" class='button'>{%trans "Register Visitors"%}</a>
-   <a href="http://{{url.raw}}/camera" class='button'>{%trans "Register Visitors Avatar"%}</a>
-   <a href="http://{{url.raw}}/game" class='button'>{%trans "Start Game"%}</a>
-   <a href="http://{{url.raw}}/point" class='button'>{%trans "Point Checker"%}</a>
 {%else%}
    <a href="http://account.{{url.raw}}/login" class='btnlogin button positive'>{%trans "Login"%}</a>
+{%endif%}
+{%if permission == 1 %}
+   <a href="http://cp.{{url.raw}}" class='button'>{%trans "Control Panel"%}</a>
+   <a href="http://{{url.raw}}/register" class='button'>{%trans "Register Visitors"%}</a>
+   <a href="http://{{url.raw}}/camera" class='button'>{%trans "Register Visitors Avatar"%}</a>
+   <a href="http://{{url.raw}}/point" class='button'>{%trans "Point Checker"%}</a>
+   <a href="http://{{url.raw}}/game" class='button'>{%trans "Start Game"%}</a>
+{%elseif permission == 2 %}
+   <a href="http://{{url.raw}}/register" class='button'>{%trans "Register Visitors"%}</a>
+   <a href="http://{{url.raw}}/camera" class='button'>{%trans "Register Visitors Avatar"%}</a>
+{%elseif permission == 3 %}
+   <a href="http://{{url.raw}}/game" class='button'>{%trans "Start Game"%}</a>
+{%elseif permission%}
+   <a href="http://{{url.raw}}/point" class='button'>{%trans "Point Checker"%}</a>
 {%endif%}
   </div>
  </div>

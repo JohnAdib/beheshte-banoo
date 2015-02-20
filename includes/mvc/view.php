@@ -19,6 +19,7 @@ class view extends \lib\mvc\view
 												);
 		$this->include->fontawesome  = true;
 		$this->data->bodyclass       = 'unselectable';
+		$this->data->permission      = $this->login('permission_id');
 
 		// if you need to set a class for body element in html add in this value
 		// $this->data->bodyclass      = null;

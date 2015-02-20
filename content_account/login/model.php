@@ -51,11 +51,6 @@ class model extends \mvc\model
 
 					switch ($_pid)
 					{
-						// admin
-						case '1':
-							$this->redirector()->set_domain('cp.'.Service)->set_url();
-							break;
-
 						// Registerer
 						case '2':
 							$this->redirector()->set_domain()->set_url('register');
