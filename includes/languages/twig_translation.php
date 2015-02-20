@@ -31,6 +31,7 @@ function transtext()
 	echo T_("don't receive message?");                                                // Line 8
 
 	//-------------------------------------------------------content/game/display.html
+	echo T_("Scan barcode for going to queue.");                                      // Line 12 Seperate
 	echo T_("Swipe to left for delete.");                                             // Line 12 Seperate
 	echo T_("swipe to right to win the game.");                                       // Line 12 Seperate
 
@@ -48,6 +49,7 @@ function transtext()
 	echo T_("Please place in center of box and smile:)");                             // Line 17
 
 	//------------------------------------------------------content/point/display.html
+	echo T_("Scan your barcode and see your points");                                 // Line 12 Seperate
 
 	//----------------------------------------------------content_cp/home/display.html
 	echo T_("Home");                                                                  // Line 40
@@ -74,7 +76,6 @@ function transtext()
 	//-------------------------------------------------------includes/mvc/display.html
 	echo T_("Home Page");                                                             // Line 43
 	echo T_("Control Panel");                                                         // Line 44
-	echo T_("Ermile is our brand");                                                   // Line 67
 	echo T_("Experience our service in your language");                               // Line 72
 
 }
