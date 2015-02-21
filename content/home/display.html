@@ -19,19 +19,25 @@
    <a href="http://account.{{url.raw}}/login" class='btnlogin button positive'>{%trans "Login"%}</a>
 {%endif%}
 {%if permission == 1 %}
-   <a href="http://cp.{{url.raw}}" class='button'>{%trans "Control Panel"%}</a>
-   <a href="http://{{url.raw}}/register" class='button'>{%trans "Register Visitors"%}</a>
-   <a href="http://{{url.raw}}/camera" class='button'>{%trans "Register Visitors Avatar"%}</a>
-   <a href="http://{{url.raw}}/point" class='button'>{%trans "Point Checker"%}</a>
-   <a href="http://{{url.raw}}/game" class='button'>{%trans "Start Game"%}</a>
+   <a class='button' href="http://cp.{{url.raw}}">{%trans "Control Panel"%}</a>
+   <a class='button' href="http://{{url.raw}}/register">{%trans "Register Visitors"%}</a>
+   <a class='button' href="http://{{url.raw}}/camera">{%trans "Register Visitors Avatar"%}</a>
+   <a class='button' href="http://{{url.raw}}/point">{%trans "Point Checker"%}</a>
+   <a class='button' href="http://{{url.raw}}/game">{%trans "Start Game"%}</a>
 {%elseif permission == 2 %}
-   <a href="http://{{url.raw}}/register" class='button'>{%trans "Register Visitors"%}</a>
-   <a href="http://{{url.raw}}/camera" class='button'>{%trans "Register Visitors Avatar"%}</a>
+   <a class='button' href="http://{{url.raw}}/register">{%trans "Register Visitors"%}</a>
+   <a class='button' href="http://{{url.raw}}/camera">{%trans "Register Visitors Avatar"%}</a>
 {%elseif permission == 3 %}
-   <a href="http://{{url.raw}}/game" class='button'>{%trans "Start Game"%}</a>
+   <a class='button' href="http://{{url.raw}}/game">{%trans "Start Game"%}</a>
 {%elseif permission%}
-   <a href="http://{{url.raw}}/point" class='button'>{%trans "Point Checker"%}</a>
+   <a class='button' href="http://{{url.raw}}/point">{%trans "Point Checker"%}</a>
 {%endif%}
+   <br/>
+
+   <button onclick="launchFullscreen(document.documentElement);" class="button">Launch Fullscreen</button>
+   <button onclick="exitFullscreen();" class="button">Hide Fullscreen</button>
+   <button onclick="dumpFullscreen();" class="button">Dump Fullscreen Property Data</button>
+
   </div>
  </div>
 
