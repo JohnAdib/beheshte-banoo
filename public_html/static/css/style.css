@@ -1,4 +1,4 @@
-body {color:#eee;background: url('../images/bg.jpg') #72C0D6 no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}
+body {color:#eee;background: url('../images/bg.jpg') #E0E0E0 no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;min-height: 100%;min-width: 100%;}
 a{color:#9DD7FA}
 .center{position: relative;min-width:280px;max-width:360px;width:320px;margin: 0 auto;margin-bottom: 80px;}
 .content{margin: 10px auto;padding: 20px 2%;-webkit-border-radius: 7px;-moz-border-radius: 7px;-ms-border-radius: 7px;-o-border-radius: 7px;border-radius: 7px;background: url('../images/bg-white-lock.png') repeat;}
@@ -59,17 +59,15 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 
 
 ul.none{padding:0;margin:0}
-ul.none li{padding:0;margin:0}
 
 .panel {
-    /*width: 300px;*/
-    height: 50px;
-    margin: 10px auto;
+    height: 35px;
+    margin: 1em auto;
     position: relative;
     border:none;
 }
 
-.card {
+.panel .card {
 	border:none;
 	background-color: #777;
     width: 100%;
@@ -87,13 +85,14 @@ ul.none li{padding:0;margin:0}
     margin:0;
     top: 0px;
     left: 0px;
+    line-height: 35px;
 }
 
-.front {
+.panel .front {
     z-index: 2;
 }
 
-.back {
+.panel .back {
     z-index: 1;
     -webkit-transform: rotateX(-180deg);
     -ms-transform: rotateX(-180deg);
@@ -116,3 +115,6 @@ ul.none li{padding:0;margin:0}
     -moz-transform: rotateX(0deg);
     transform: rotateX(0deg);
 }
+
+.panel .c-name{float:right;}
+.panel .c-code{float:left;}

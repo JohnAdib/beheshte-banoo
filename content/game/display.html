@@ -2,7 +2,11 @@
 {%block header_def%}{%endblock%}
 
 {%block foot_js%}
- <script></script>
+ <script>
+	$(".card").click(function(){
+	  // $(this).toggle('aaa');
+	});
+ </script>
 {%endblock%}
 
 
@@ -12,6 +16,22 @@
  <p id="description">{%trans%}Scan barcode for going to queue.{%endtrans%} {%trans%}Swipe to left for delete.{%endtrans%} {%trans%}swipe to right to win the game.{%endtrans%}</p>
    <form class="ajx form row" method="post" id="form-barcode">{{forms.make(form['barcode'])}}</form>
 
+   <ul class="none">
+{% for i in list %}
+    <li class="panel">
+     <div class="card front">
+      <span class="c-name">{{i.firstname}} {{i.lastname}}</span>
+      <span class="c-code">{{i.barcode}}</span>
+     </div>
+
+     <div class="card back">
+      <span class="c-start">Start</span>
+      <span class="c-win">Win</span>
+      <span class="c-del">Delete</span>
+     </div>
+    </li>
+{% endfor %}
+   </ul>
  </div>
 </div>
 

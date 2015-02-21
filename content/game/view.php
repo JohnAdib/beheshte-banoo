@@ -8,6 +8,8 @@ class view extends \mvc\view
 		$this->include->barcode = true;
 		$myform                 = $this->createform('.barcode');
 		$myform->white("user_barcode, submit");
+
+		$this->data->list 	   = $this->model()->get_list();
 	}
 }
 ?>

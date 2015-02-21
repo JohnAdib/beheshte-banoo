@@ -20,13 +20,37 @@ class model extends \mvc\model
 		$qry       = $this->sql()->tableGames  ()
 									->setUser_id      ($id)
 									->setBooth_id     (1)
+									->setGame_date    (date('Y-m-d'))
 									->setGame_regtime (date('Y-m-d H:i:s'))
 									->setGame_status  ('time');
 
 		$qry = $qry->insert();
 
-		$this->commit(function()   { debug::true(T_("register successfully")); });
-		$this->rollback(function() { debug::error(T_("register failed!"));     });
+		$this->commit(function()   { debug::true(T_("register in queue successfully")); });
+		$this->rollback(function() { debug::error(T_("register in queue failed!"));     });
+	}
+
+
+	public function get_list()
+	{
+		// $qry       = $this->sql()->tableGames()->whereGame_date(date('Y-m-d'))->select();
+		// $qry = $this->sql()->tableGames()->whereGame_date(date('Y-m-d'));
+		// $qry->joinUsers()->whereId('#games.user_id')->fieldUser_mobile("mobile");
+		// $qry = $qry->select();
+
+		$qry = $this->sql()->tableGames()->whereGame_date(date('Y-m-d'));
+		$qry->joinUsers()->whereId('#games.user_id')
+								->fieldUser_firstname("firstname")
+								->fieldUser_lastname("lastname")
+								->fieldUser_barcode("barcode");
+		$qry = $qry->select();
+
+
+		$datatable = $qry->allassoc();
+
+		// var_dump($datatable);
+
+		return $datatable;
 	}
 }
 ?>

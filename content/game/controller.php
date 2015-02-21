@@ -7,7 +7,6 @@ class controller extends \content\home\controller
 	public function config()
 	{
 		$this->post('game')->ALL();
-
 	}
 
 	// for routing check

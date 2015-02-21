@@ -55,6 +55,7 @@ class model extends \lib\mvc\model
 		$this->rollback();
 	}
 
+
 	public function checkBarcode($_barcode)
 	{
 		if(!is_numeric($_barcode))
@@ -73,6 +74,9 @@ class model extends \lib\mvc\model
 				$myuser_id = $value['id'];
 
 		}
+
+		if(DEBUG)
+			$myuser_id = 5;
 
 
 		return $myuser_id;
