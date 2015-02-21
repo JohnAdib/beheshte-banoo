@@ -10,7 +10,7 @@ class model extends \mvc\model
 		// read barcode and check it
 		$barcode =  utility::post('barcode');
 		$id      = $this->checkBarcode($barcode);
-		if($id)
+		if(!$id)
 		{
 			debug::error(T_("This card number in use!"));
 			return;
