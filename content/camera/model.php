@@ -30,7 +30,7 @@ class model extends \mvc\model
 		$file_ext    = '.jpg';
 
 		if(!is_dir($folder_name))
-			File::makeDir($folder_name, 0777, true);
+			File::makeDir($folder_name, 0775, true);
 
 		$file_name = $folder_name.$id;
 
