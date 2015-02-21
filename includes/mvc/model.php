@@ -10,6 +10,9 @@ class model extends \lib\mvc\model
 
 	public function logger($_type, $_module = null, $_value = null, $_priority = null)
 	{
+		if($_module ==='favicon.ico')
+			var_dump(11111111);
+
 		if($_priority === null)
 		{
 			switch ($_type)
