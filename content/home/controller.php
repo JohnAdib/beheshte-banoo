@@ -4,9 +4,17 @@ namespace content\home;
 
 class controller extends \mvc\controller
 {
+	public function config()
+	{
+		$this->get('testupdate')->ALL('testupdate');
+	}
+
 	// for routing check
 	function _route()
 	{
+		if($this->module() ==='testupdate')
+			return;
+
 		if($this->login('permission_id') === '1')
 			return;
 
