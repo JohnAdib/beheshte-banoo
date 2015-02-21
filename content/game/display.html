@@ -3,9 +3,13 @@
 
 {%block foot_js%}
  <script>
-	$(".card").click(function(){
+	$(".game-cards li").click(function(){
+		// alert('salam');
 	  // $(this).toggle('aaa');
 	});
+
+	$(".game-cards .fa-reply").click(function(){ $("#barcode").focus(); });
+	
  </script>
 {%endblock%}
 
@@ -16,18 +20,27 @@
  <p id="description">{%trans%}Scan barcode for going to queue.{%endtrans%} {%trans%}Swipe to left for delete.{%endtrans%} {%trans%}swipe to right to win the game.{%endtrans%}</p>
    <form class="ajx form row" method="post" id="form-barcode">{{forms.make(form['barcode'])}}</form>
 
-   <ul class="none">
+   <ul class="none game-cards">
 {% for i in list %}
-    <li class="panel">
-     <div class="card front">
+    <li tabindex="2">
+     <div class="front">
       <span class="c-name">{{i.firstname}} {{i.lastname}}</span>
       <span class="c-code">{{i.barcode}}</span>
      </div>
 
-     <div class="card back">
-      <span class="c-start">Start</span>
-      <span class="c-win">Win</span>
-      <span class="c-del">Delete</span>
+     <div class="back">
+      <a data-method="post" data-ajaxify data-data='{"id": {{i.id}}}' href="/game/win" class="fa fa-thumbs-up">
+       <span>{%trans "Winner"%}</span>
+      </a>
+      <a data-method="post" data-ajaxify data-data='{"id": {{i.id}}}' href="/game/loose" class="fa fa-thumbs-down">
+       <span>{%trans "Looser"%}</span>
+      </a>
+      <a data-method="post" data-ajaxify data-data='{"id": {{i.id}}}' href="/game/absent" class="fa fa-times">
+       <span>{%trans "Absent"%}</span>
+      </a>
+      <i class="fa fa-reply">
+       <span>{%trans "Back"%}</span>
+      </i>
      </div>
     </li>
 {% endfor %}

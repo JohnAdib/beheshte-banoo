@@ -2,16 +2,16 @@
 namespace database\city;
 class games 
 {
-	public $id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                          );
-	public $user_id        = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'int@6',                           'foreign'=>'users@id!user_nickname');
-	public $booth_id       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Booth',         'type' => 'smallint@3',                      'foreign'=>'booths@id!booth_title');
-	public $game_prize     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Prize',         'type' => 'smallint@5',                      );
-	public $game_date      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Date',          'type' => 'date@',                           );
-	public $game_regtime   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Regtime',       'type' => 'datetime@',                       );
-	public $game_starttime = array('null' =>'YES', 'show' =>'YES', 'label'=>'Starttime',     'type' => 'datetime@',                       );
-	public $game_endtime   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Endtime',       'type' => 'datetime@',                       );
-	public $game_status    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@time,start,win,delete!time', );
-	public $date_modified  = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                      );
+	public $id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                                       );
+	public $user_id        = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'int@6',                                        'foreign'=>'users@id!user_nickname');
+	public $booth_id       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Booth',         'type' => 'smallint@3',                                   'foreign'=>'booths@id!booth_title');
+	public $game_prize     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Prize',         'type' => 'smallint@5',                                   );
+	public $game_date      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Date',          'type' => 'date@',                                        );
+	public $game_regtime   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Regtime',       'type' => 'datetime@',                                    );
+	public $game_starttime = array('null' =>'YES', 'show' =>'YES', 'label'=>'Starttime',     'type' => 'datetime@',                                    );
+	public $game_endtime   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Endtime',       'type' => 'datetime@',                                    );
+	public $game_status    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@time,start,win,loose,absent,delete!time', );
+	public $date_modified  = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                   );
 
 
 	//------------------------------------------------------------------ id - primary key

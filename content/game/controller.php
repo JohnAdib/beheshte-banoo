@@ -6,7 +6,11 @@ class controller extends \content\home\controller
 {
 	public function config()
 	{
-		$this->post('game')->ALL();
+		$this->post('game')->ALL('game');
+		$this->post('absent')->ALL('game/absent');
+		$this->post('start')->ALL('game/start');
+		$this->post('win')->ALL('game/win');
+		$this->post('loose')->ALL('game/loose');
 	}
 
 	// for routing check

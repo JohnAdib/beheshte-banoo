@@ -52,5 +52,42 @@ class model extends \mvc\model
 
 		return $datatable;
 	}
+
+
+	public function post_absent()
+	{
+		$myid =  utility::post('id');
+		$qry  = $this->sql()->tableGames()->setGame_status('absent')->whereId($myid)->update();
+
+		$this->commit(function()   { });
+		$this->rollback(function() { });
+	}
+
+	public function post_start()
+	{
+		$myid =  utility::post('id');
+		$qry  = $this->sql()->tableGames()->setGame_status('start')->whereId($myid)->update();
+
+		$this->commit(function()   { });
+		$this->rollback(function() { });
+	}
+
+	public function post_win()
+	{
+		$myid =  utility::post('id');
+		$qry  = $this->sql()->tableGames()->setGame_status('win')->whereId($myid)->update();
+
+		$this->commit(function()   { });
+		$this->rollback(function() { });
+	}
+
+	public function post_loose()
+	{
+		$myid =  utility::post('id');
+		$qry  = $this->sql()->tableGames()->setGame_status('loose')->whereId($myid)->update();
+
+		$this->commit(function()   { });
+		$this->rollback(function() { });
+	}
 }
 ?>

@@ -34,6 +34,8 @@ function transtext()
 	echo T_("time");                // Enum time
 	echo T_("start");               // Enum start
 	echo T_("win");                 // Enum win
+	echo T_("loose");               // Enum loose
+	echo T_("absent");              // Enum absent
 	echo T_("delete");              // Enum delete
 
 	// ------------------------------------------------------------------- Table games
