@@ -3,6 +3,7 @@ namespace content\camera;
 use \lib\debug;
 use \lib\utility;
 use \lib\utility\File;
+use \lib\utility\Image;
 
 class model extends \mvc\model
 {
@@ -24,7 +25,7 @@ class model extends \mvc\model
 		}
 		
 
-		define('Upload', root.'upload/');
+		define('Upload', root.'public_html/upload/');
 		$folder_name = Upload . ceil($id/1000)*1000 . '/';
 		$file_ext    = '.jpg';
 
@@ -57,7 +58,13 @@ class model extends \mvc\model
 		$result = File::write($file_name.$file_ext, base64_decode($webcam));
 		// on error show it for user
 		if($result)
+		{
+			Image::load($file_name.$file_ext);
+			Image::thumb(120, 120);
+			Image::save($file_name.'-thumb'.$file_ext);
+
 			debug::true(T_("Your avatar register successfully"));
+		}
 		else
 			debug::warn(T_("Error on write webcam picture to server"));
 

@@ -111,7 +111,7 @@ ul.none{padding:0;margin:0}
     transform: rotateX(-180deg);
 }
 
-.game-cards li:hover .front, .game-cards li:focus .front {
+ .game-cards li:focus .front {
     z-index: 1;
     -webkit-transform: rotateX(180deg);
     -ms-transform: rotateX(180deg);
@@ -119,7 +119,7 @@ ul.none{padding:0;margin:0}
     transform: rotateX(180deg);
 }
 
-.game-cards li:hover .back, .game-cards li:focus .back {
+ .game-cards li:focus .back {
     z-index: 2;   
     -webkit-transform: rotateX(0deg);
     -ms-transform: rotateX(0deg);
@@ -127,7 +127,27 @@ ul.none{padding:0;margin:0}
     transform: rotateX(0deg);
 }
 
-.game-cards li .c-name{float:right;}
-.game-cards li .c-code{float:left;}
+@media only screen and (min-width: 960px){
+ .game-cards li:hover .front {
+    z-index: 1;
+    -webkit-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
 
+ .game-cards li:hover .back {
+    z-index: 2;   
+    -webkit-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+}
+
+}
+
+.game-cards li .c-avatar{float:right;margin-top:-3px;margin-right:-8px; width:40px;height:40px;overflow:hidden;border-radius:50%}
+.game-cards li .c-avatar img{width:100%;height:100%;}
+.game-cards li .c-name{float:right;margin-right:10px;}
+.game-cards li .c-code{float:left;}
 .game-cards .back a{width:24%;margin:0 auto;}
