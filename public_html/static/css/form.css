@@ -47,7 +47,7 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
 .form input[type="password"],
 .form input[type="number"],
 .form input[type="url"],
-.form input[type="tel"] 
+.form input[type="tel"],
 .form input,
 .form textarea,
 .form .editor,

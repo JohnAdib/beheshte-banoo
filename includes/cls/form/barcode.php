@@ -8,7 +8,7 @@ class barcode extends \lib\form
 		$this->barcode = $this->make("number")->name("barcode")->required()
 						// ->type("number")
 						->type("tel")
-						// ->min(10000)->max(99999)
+						->min(10000)->max(99999)
 						->pattern('.{5,}')->class('span8')
 						->tabindex(1)->autofocus()->title(T_('Please Scan or enter barcode'));
 
