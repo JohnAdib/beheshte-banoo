@@ -40,17 +40,17 @@ class users
 	}
 	public function user_firstname() 
 	{
-		$this->form("text")->name("firstname")->maxlength(15)->required()->class('span3')->type('text');
+		$this->form("text")->name("firstname")->maxlength(15)->required()->type('text');
 	}
 	public function user_lastname() 
 	{
-		$this->form("text")->name("lastname")->maxlength(30)->required()->class('span6')->type('text');
+		$this->form("text")->name("lastname")->maxlength(30)->required()->type('text');
 	}
 
 	//------------------------------------------------------------------ mobile
 	public function user_mobile() 
 	{
-		$this->form("#mobile")->maxlength(15)->class('span3 endline')->type('text');
+		$this->form("#mobile")->maxlength(15)->type('text');
 	}
 	public function user_mobile2() 
 	{
@@ -62,31 +62,31 @@ class users
 	}
 	public function user_birthdate() 
 	{
-		$this->form("text")->name("birthdate")->class('span3');
+		$this->form("text")->name("birthdate");
 	}
 	public function user_degree() 
 	{
-		$this->form("text")->name("degree")->maxlength(50)->class('span3')->type('text');
+		$this->form("text")->name("degree")->maxlength(50)->type('text');
 	}
 
 	//------------------------------------------------------------------ id - foreign key
 	public function country_id() 
 	{
-		$this->form("select")->name("country_")->min(0)->max(999)->class('span3')->type("select")->validate()->id();
+		$this->form("select")->name("country_")->min(0)->max(999)->type("select")->validate()->id();
 		$this->setChild();
 	}
 	public function user_province() 
 	{
-		$this->form("text")->name("province")->maxlength(50)->class('span3')->type('select');
+		$this->form("text")->name("province")->maxlength(50)->type('select');
 		$this->setChild('provinces@id!province_name', '18');
 	}
 	public function user_codemelli() 
 	{
-		$this->form("text")->name("codemelli")->min(0)->max(99999999999)->class('span3 endline')->type('number');
+		$this->form("text")->name("codemelli")->min(0)->max(99999999999)->type('number');
 	}
 	public function user_passport() 
 	{
-		$this->form("text")->name("passport")->maxlength(50)->class('span3 endline hide')->type('text');
+		$this->form("text")->name("passport")->maxlength(50)->type('text');
 	}
 	public function user_imageaddr() 
 	{

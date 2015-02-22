@@ -83,7 +83,6 @@ class controller extends \mvc\controller
 	public function cpModlueList($_module = null)
 	{
 		$mylist		= array(
-						'barcodes',
 						'booths',
 						'games',
 						'kindergartens',

@@ -111,13 +111,13 @@ function setproperty($myparam)
 			if($mylen>100)
 				$tmp[0] 	= "->type('textarea')";
 			else
-				if($fieldname     == 'tel')					$tmp[0] 	= "->type('tel')";
-				elseif($fieldname == 'pass')					$tmp[0] 	= "->type('password')";
-				elseif($fieldname == 'password')				$tmp[0] 	= "->type('password')";
-				elseif($fieldname == 'website')				$tmp[0] 	= "->type('url')";
-				elseif($fieldname == 'email')					$tmp[0] 	= "->type('email')";
-				elseif($fieldname == 'province')				$tmp[0] 	= "->type('select')";
-				else													$tmp[0] = "->type('text')";
+				if($fieldname     == 'tel')       $tmp[0] = "->type('tel')";
+				elseif($fieldname == 'pass')      $tmp[0] = "->type('password')";
+				elseif($fieldname == 'password')  $tmp[0] = "->type('password')";
+				elseif($fieldname == 'website')   $tmp[0] = "->type('url')";
+				elseif($fieldname == 'email')     $tmp[0] = "->type('email')";
+				elseif($fieldname == 'province')  $tmp[0] = "->type('select')";
+				else                              $tmp[0] = "->type('text')";
 
 			array_push($tmp, "->maxlength(".$mylen.")");
 			return $tmp;
@@ -199,15 +199,17 @@ while ($row = $qTables->fetch_object())
 		$txtstart   = "\tpublic function $myfield() \n\t{\n\t\t";
 		$txtend     = true;
 
-		if($myname === 'firstname')				$property  .= "->class('span3')";
-		elseif($myname  === 'lastname')			$property  .= "->class('span6')";
-		elseif($myname  === 'mobile')				$property  .= "->class('span3 endline')";
-		elseif($myname  === 'birthdate')			$property  .= "->class('span3')";
-		elseif($myname  === 'degree')				$property  .= "->class('span3')";
-		elseif($myfield === 'country_id')		$property  .= "->class('span3')";
-		elseif($myname  === 'province')			$property  .= "->class('span3')";
-		elseif($myname  === 'codemelli')			$property  .= "->class('span3 endline')";
-		elseif($myname  === 'passport')			$property  .= "->class('span3 endline hide')";
+		// if($myname === 'gender')          $property .= "->class('span3')";
+		// elseif($myname === 'firstname')   $property .= "->class('span3')";
+		// elseif($myname  === 'lastname')   $property .= "->class('span6 endline')";
+		// elseif($myname  === 'mobile')     $property .= "->class('span3')";
+		// elseif($myname  === 'birthdate')  $property .= "->class('span3')";
+		// // elseif($myname  === 'degree')     $property .= "->class('span3')";
+		// elseif($myfield === 'country_id') $property .= "->class('span2')";
+		// elseif($myname  === 'province')   $property .= "->class('span2')";
+		// elseif($myname  === 'codemelli')  $property .= "->class('span2 endline')";
+		// elseif($myname  === 'passport')   $property .= "->class('span2 endline hide')";
+		// elseif($myname  === 'barcode')    $property .= "->class('span12 endline')";
 
 
 		// --------------------------------------------------------------------------------- ID
