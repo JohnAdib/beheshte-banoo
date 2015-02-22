@@ -8,7 +8,17 @@
 	  // $(this).toggle('aaa');
 	});
 
-	$(".game-cards .fa-reply").click(function(){ $("#barcode").focus(); });
+	$(".game-cards .fa-tty").click(function(){
+    $(this)
+      .addClass("hide")
+      .parent().find('.fa-times').addClass('hide')
+      .parent().find('.fa-thumbs-up').removeClass('hide')
+      .parent().find('.fa-thumbs-down').removeClass('hide');
+  });
+  $(".game-cards .fa-times").click(function(){$(this).parent().parent().remove();});
+  $(".game-cards .fa-thumbs-up").click(function(){$(this).parent().parent().remove();});
+  $(".game-cards .fa-thumbs-down").click(function(){$(this).parent().parent().remove();});
+  $(".game-cards .fa-reply").click(function(){ $("#barcode").focus(); });
 	
  </script>
 {%endblock%}
@@ -17,7 +27,7 @@
 {%block content_def%}
 <div class="center" data-xhr="center">
  <div class="content">
- <p id="description">{%trans%}Scan barcode for going to queue.{%endtrans%} {%trans%}Swipe to left for delete.{%endtrans%} {%trans%}swipe to right to win the game.{%endtrans%}</p>
+ <p id="description">{%trans%}Scan barcode for going to queue.{%endtrans%}</p>
    <form class="ajx form row" method="post" id="form-barcode">{{forms.make(form['barcode'])}}</form>
 
    <ul class="none game-cards">
@@ -30,18 +40,21 @@
      </div>
 
      <div class="back">
-      <a data-method="post" data-ajaxify data-data='{"id": {{i.id}}}' href="/game/win" class="fa fa-thumbs-up">
-       <span>{%trans "Winner"%}</span>
-      </a>
-      <a data-method="post" data-ajaxify data-data='{"id": {{i.id}}}' href="/game/loose" class="fa fa-thumbs-down">
-       <span>{%trans "Looser"%}</span>
-      </a>
-      <a data-method="post" data-ajaxify data-data='{"id": {{i.id}}}' href="/game/absent" class="fa fa-times">
-       <span>{%trans "Absent"%}</span>
-      </a>
-      <i class="fa fa-reply">
-       <span>{%trans "Back"%}</span>
-      </i>
+{%if i.game_status == 'start'%}
+      <a data-method="post" data-ajaxify data-data='{"id": {{i.id}}}' href="/game/win" class="fa fa-thumbs-up"> <span>{%trans "Winner"%}</span></a>
+
+      <a data-method="post" data-ajaxify data-data='{"id": {{i.id}}}' href="/game/loose" class="fa fa-thumbs-down"> <span>{%trans "Looser"%}</span></a>
+{%else%}
+      <a data-method="post" data-ajaxify data-data='{"id": {{i.id}}}' href="/game/start" class="fa fa-tty"> <span>{%trans "Start"%}</span></a>
+
+      <a data-method="post" data-ajaxify data-data='{"id": {{i.id}}}' href="/game/win" class="fa fa-thumbs-up hide"> <span>{%trans "Winner"%}</span></a>
+
+      <a data-method="post" data-ajaxify data-data='{"id": {{i.id}}}' href="/game/loose" class="fa fa-thumbs-down hide"> <span>{%trans "Looser"%}</span></a>
+
+      <a data-method="post" data-ajaxify data-data='{"id": {{i.id}}}' href="/game/absent" class="fa fa-times"> <span>{%trans "Absent"%}</span></a>
+{%endif%}
+
+      <i class="fa fa-reply"></i>
      </div>
     </li>
 {% endfor %}

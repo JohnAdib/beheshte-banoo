@@ -24,7 +24,7 @@ body.rtl{font-family:'IRANSans',serif;direction:rtl;}
 body {
   margin: 0;
 }
-
+*{outline:0}
 /* HTML5 display definitions
    ========================================================================== */
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
@@ -39,6 +39,7 @@ a{background:transparent;text-decoration:none;
   color:#54B4EF;
 }
 a:active,a:hover{outline:0; color:#0E97EA;}
+a:focus{outline:0;}
 
 a.note{border-bottom:3px solid #323232;padding:0px 4px 1px 4px;}
 a.note:hover{color:#FFFFFF;border-bottom:3px solid #A11E22;background-color:#262626;}

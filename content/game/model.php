@@ -38,7 +38,8 @@ class model extends \mvc\model
 		// $qry->joinUsers()->whereId('#games.user_id')->fieldUser_mobile("mobile");
 		// $qry = $qry->select();
 
-		$qry = $this->sql()->tableGames()->whereGame_date(date('Y-m-d'));
+		$qry = $this->sql()->tableGames()->whereGame_date(date('Y-m-d'))
+									->andGame_status('start')->orGame_status('time');
 		$qry->joinUsers()->whereId('#games.user_id')
 								->fieldUser_firstname("firstname")
 								->fieldUser_lastname("lastname")
