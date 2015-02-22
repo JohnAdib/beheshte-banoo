@@ -30,23 +30,25 @@ function transtext()
 	echo T_("please check your mobile and enter the code");                           // Line 7
 	echo T_("don't receive message?");                                                // Line 8
 
+	//-----------------------------------------------------content/change/display.html
+	echo T_("Scan your barcode and change your points to money!");                    // Line 12 Seperate
+
 	//-------------------------------------------------------content/game/display.html
-	echo T_("Scan barcode for going to queue.");                                      // Line 20 Seperate
-	echo T_("Swipe to left for delete.");                                             // Line 20 Seperate
-	echo T_("swipe to right to win the game.");                                       // Line 20 Seperate
-	echo T_("Winner");                                                                // Line 33
-	echo T_("Looser");                                                                // Line 36
-	echo T_("Absent");                                                                // Line 39
-	echo T_("Back");                                                                  // Line 42
+	echo T_("Scan barcode for going to queue.");                                      // Line 30 Seperate
+	echo T_("Winner");                                                                // Line 50
+	echo T_("Looser");                                                                // Line 52
+	echo T_("Start");                                                                 // Line 48
+	echo T_("Absent");                                                                // Line 54
 
 	//-------------------------------------------------------content/home/display.html
 	echo T_("Logout");                                                                // Line 46
 	echo T_("Login");                                                                 // Line 48
 	echo T_("Control Panel");                                                         // Line 44
-	echo T_("Register Visitors");                                                     // Line 28
-	echo T_("Register Visitors Avatar");                                              // Line 29
-	echo T_("Point Checker");                                                         // Line 33
-	echo T_("Start Game");                                                            // Line 31
+	echo T_("Register Visitors");                                                     // Line 27
+	echo T_("Register Visitors Avatar");                                              // Line 28
+	echo T_("Start Game");                                                            // Line 30
+	echo T_("Point Checker");                                                         // Line 34
+	echo T_("Change points to meney");                                                // Line 35
 
 	//-----------------------------------------------------content/camera/display.html
 	echo T_("First of all, scan barcode then camera take a picture form you and show it for 3 second.");// Line 12 Seperate
@@ -80,7 +82,7 @@ function transtext()
 
 	//-------------------------------------------------------includes/mvc/display.html
 	echo T_("Home Page");                                                             // Line 43
-	echo T_("Experience our service in your language");                               // Line 72
+	echo T_("Experience our service in your language");                               // Line 73
 
 }
 ?>

@@ -276,6 +276,7 @@ p{margin-bottom:1.5em;font-size:1.3em;line-height:1.5em;}
   .container{max-width:767px;min-width:480px;}
 
   #footer{position:relative;}
+  #formError{bottom:10px;}
 }
 
 
@@ -289,6 +290,7 @@ p{margin-bottom:1.5em;font-size:1.3em;line-height:1.5em;}
 
   html{font-size: 50%;}
   .container{max-width:480px;min-width:290px;}
+  #formError{bottom:10px;}
 
   [data-hint].hint--left:after,[data-hint].hint--left:before,[data-hint].hint--right:after,[data-hint].hint--right:before{display:none;}
 }

@@ -65,7 +65,9 @@ class model extends \lib\mvc\model
 			return null;
 
 		$qry = $this->sql()->tableUsers()
-					->whereUser_barcode($_barcode)->andUser_exitdatetime('#NULL')->select();
+					->whereUser_barcode($_barcode)
+					->andUser_status('active')
+					->andUser_exitdatetime('#NULL')->select();
 		
 		$datatable = $qry->allassoc();
 		$myuser_id = null;
@@ -78,8 +80,8 @@ class model extends \lib\mvc\model
 
 		}
 
-		if(DEBUG)
-			$myuser_id = 5;
+		// if(DEBUG)
+		// 	$myuser_id = 5;
 
 
 		return $myuser_id;
