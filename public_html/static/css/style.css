@@ -7,18 +7,18 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 #logo img:focus, #logo:focus{border:none;outline: none;}
 
 
-#desc,.desc{text-align:center;font-size:1.5em;margin-top: 15px;}
+#desc,.desc{text-align:center;margin-top: 15px;}
 #desc p{margin:3px 0;}
 .hide{opacity: 0;}
 .show{opacity: 1;}
 
 
 .account{direction:ltr;position:relative;padding:0;color: #aaa;-webkit-border-radius: 10px;border-radius: 10px;}
-.account button{position:relative;background-color:#4B8DF8;color:#fff;border-radius:3px; width:100%;margin-top:20px;font-size:1.6em;height:40px;padding-right: 30px;transition: all .3s ease;}
+.account button{position:relative;background-color:#4B8DF8;color:#fff;border-radius:3px; width:90%;margin-top:20px;font-size:1.6em;height:40px;padding-right: 30px;transition: all .3s ease;}
 .account button:after{font-family:FontAwesome;content: "\f0a9";padding:0 5px;position:absolute;top:0;right:5px;font-size:25px;line-height:40px}
 .account button:hover{background-color:#2E73E2}
 .account button:active, .account button:focus{background-color:#094BB6}
-.account input{background-color:#fff;border-radius:3px;border:none;width:90%;height: 25px; margin:2px 0;padding: 6px 5%;}
+.account input{background-color:#fff;border-radius:3px;border:none;width:90%;height: 25px; margin:2px 5%;padding: 1.5em 5%;}
 .field span{width:100%;}
 
 

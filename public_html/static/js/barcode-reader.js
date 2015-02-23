@@ -21,7 +21,7 @@
          len < barcodeOptions.max &&
          keys.slice(-5) === 'Enter') {
 
-        $('#barcode').val(keys.slice(0, -5));
+        $('#barcode').val(keys.slice(0, -5).toEnglish());
       }
       time = 0;
       timeout = 0;
