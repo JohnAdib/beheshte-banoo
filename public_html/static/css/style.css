@@ -39,10 +39,10 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 
 #form-barcode{margin:0;padding:0}
 #form-barcode .barcode{margin:0;padding:0}
-#form-barcode .submit{margin:0;padding:0}
+#form-barcode .submit{margin:0;padding:0;margin-bottom: 10px;}
 #form-barcode button{width:100%;margin: 0;padding:10px 0;}
-#form-barcode input{margin:0;padding:2px 0;width:100%;direction:ltr;text-align:center}
-.loading-form .form#form-barcode{min-height: 58px;}
+#form-barcode input{margin:0;padding:2px 0;width:100%;direction:ltr;text-align:center;height:25px;overflow:hidden;}
+.loading-form .form#form-barcode{min-height:68px;}
 .loading-form .container{opacity: 0.2}
 
 .loading-form #webcambox #my_camera{opacity: 0.2}
