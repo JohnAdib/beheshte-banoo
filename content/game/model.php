@@ -57,7 +57,7 @@ class model extends \mvc\model
 
 	public function post_absent()
 	{
-		sleep (10);
+		// sleep (3);
 		$myid =  utility::post('id');
 		$qry  = $this->sql()->tableGames()->setGame_status('absent')->whereId($myid)->update();
 
