@@ -10,21 +10,29 @@
 
  $(".game-cards .fa-tty").click(function(){
   $(this)
-   .addClass("hide")
-   .parent().find('.fa-times').addClass('hide')
-   .parent().find('.fa-thumbs-up').removeClass('hide')
-   .parent().find('.fa-thumbs-down').removeClass('hide');
- });
- $(".game-cards .fa-times").click(function(){$(this).parent().parent().remove();});
- $(".game-cards .fa-thumbs-up").click(function(){$(this).parent().parent().remove();});
- $(".game-cards .fa-thumbs-down").click(function(){$(this).parent().parent().remove();});
- $(".game-cards .fa-reply").click(function(){ $("#barcode").focus(); });
-
-
- $('#form-barcode').ajaxifyCallbacks({success: function() {
-      alert('aa');
-    }
+    .addClass("hide")
+    .parent().find('.fa-times').addClass('hide')
+    .parent().find('.fa-thumbs-up').removeClass('hide')
+    .parent().find('.fa-thumbs-down').removeClass('hide');
   });
+  $(".game-cards .fa-times").click(function(){
+    $(this).parent().parent().fadeOutAndRemove('normal'); });
+  $(".game-cards .fa-thumbs-up").click(function(){
+    $(this).parent().parent().fadeOutAndRemove('normal'); });
+  $(".game-cards .fa-thumbs-down").click(function(){
+    $(this).parent().parent().fadeOutAndRemove('normal'); });
+  $(".game-cards .fa-reply").click(function(){ $("#barcode").focus(); });
+
+
+  $('#form-barcode').ajaxifyCallbacks({success: function() {
+    console.log(1);
+    Navigate({
+      url: location.href,
+      replace: true
+    });
+  }
+});
+
  
  // $(document).bind('ajaxSuccess', function(e, promise, xhr) {
  //  if(xhr.url === "http://city.dev/game" && !xhr.processData) {

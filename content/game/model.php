@@ -39,7 +39,7 @@ class model extends \mvc\model
 		// $qry = $qry->select();
 
 		$qry = $this->sql()->tableGames()->whereGame_date(date('Y-m-d'))
-									->andGame_status('start')->orGame_status('time');
+									->andGame_status('start')->orGame_status('time')->orderGame_regtime('Asc');
 		$qry->joinUsers()->whereId('#games.user_id')
 								->fieldUser_firstname("firstname")
 								->fieldUser_lastname("lastname")
@@ -57,6 +57,7 @@ class model extends \mvc\model
 
 	public function post_absent()
 	{
+		sleep (10);
 		$myid =  utility::post('id');
 		$qry  = $this->sql()->tableGames()->setGame_status('absent')->whereId($myid)->update();
 

@@ -251,13 +251,7 @@ p{margin-bottom:1.5em;font-size:1.3em;line-height:1.5em;}
 @media only screen and (min-width: 768px) and (max-width: 959px){
   .hidden-desktop{display:inherit;}.hidden-tablet{display:none;}.hidden-phone{display:inherit;}.visible-desktop{display:none;}.visible-tablet{display:inherit;}.visible-phone{display:none;}
 
-  .row > [class*=span]{width:48%;margin-right:0;margin-bottom:20px;}
-  .rtl .row > [class*=span]{margin-left:0}
-  .row > [class*=span]:nth-child(even){margin-left:20px}
-  .rtl .row > [class*=span]:nth-child(even){margin-right:20px;margin-left:0}
 
-  .row > .span12,.row > .span7,.row > .span8,.row > .span9,.row > .span10,.row > .span11{width:100%}
-  .row > .span12:nth-child(even),.row > .span7:nth-child(even),.row > .span8:nth-child(even),.row > .span9:nth-child(even),.row > .span10:nth-child(even),.row > .span11:nth-child(even){margin-right:0!important}
   html{font-size: 60%;}
   .container{max-width:959px;min-width:720px;}
 
