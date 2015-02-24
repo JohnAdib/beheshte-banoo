@@ -1,9 +1,8 @@
-@import url("form.css");
 @font-face {
   font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 300;
-  src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url(../fonts/robotoslab.woff2) format('woff2'); 
+  src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url('../fonts/robotoslab.woff2') format('woff2'); 
 }
 @font-face {
   font-family: 'IRANSans';
@@ -1060,3 +1059,410 @@ ul.list li a{padding:0.3em 0.5em;}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************
+            Forms
+*******************************/
+label, input, select, textarea, button {font-family:'Roboto Slab',serif;box-sizing: border-box;}
+.rtl label, .rtl input, .rtl select, .rtl textarea, .rtl button {font-family:'IRANSans',serif;}
+input:focus,select:focus,textarea:focus,button:focus{outline:none;}
+
+.form {position: relative;max-width: 100%;padding: 1em;font-size:12px;font-size:1.2rem;color:#000;}
+.rtl .form {font-size:16px;font-size:1.6rem;}
+.form.black{color:#fff;}
+.rtl .form {font-size:12px;font-size: 1.2rem;}
+.form > p {margin: 1em 0em;}
+.form .field {clear: both;margin: 0em 0em 1em;}
+.form.row .field[class*=span]{clear:none;}
+.form .field label {
+  display: inline-block;
+  vertical-align: middle;
+  margin:0 0 0.2em 0;
+  opacity: 0.8;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: none;
+}
+
+.form .radio label{margin:0 0.2em 0 0;vertical-align:top;}
+.form .radio .element{display: inline-block;margin:0 1% 0 0;}
+.rtl .form .radio .element{display: inline-block;margin:0 0 0 1%;}
+.form.block .radio .element{display: block;}
+
+.gender .radio input{height:100%}
+.gender .radio label {opacity: 0.5;display:inline-block;vertical-align: middle;background-color:#eee;padding:0.4em 2em;border-radius: 3px;border: 1px solid rgba(39, 41, 43, 0.05);}
+.gender .radio label:hover{opacity: 0.6}
+.gender .radio label:focus{opacity: 0.7}
+.gender .radio label:active{opacity: 0.9}
+.gender .radio .female label:after{font-family:FontAwesome;font-size:16px;content: " \f182"}
+.gender .radio .male label:after{font-family:FontAwesome;font-size:16px;content: " \f183"}
+.gender .radio input:checked + label { opacity: 1;}
+
+
+/*--------------------
+    Standard Inputs
+---------------------*/
+.form input:not([type]),
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="date"],
+.form input[type="datetime-local"],
+.form input[type="password"],
+.form input[type="number"],
+.form input[type="url"],
+.form input[type="tel"],
+.form textarea,
+.form .editor,
+.form select{
+  width: 95%;
+  vertical-align: top;
+  margin: 0 auto;
+  outline: none;
+  padding: 0.7em 2%;
+  font-size: 1em;
+  background: #ffffff;
+  border: 1px solid rgba(39, 41, 43, 0.15);
+  opacity: 0.6;
+  border-radius: 3px;
+  display: block;
+}
+.form textarea, .editor {
+  height: 12em;
+  min-height: 8em;
+  max-height: 24em;
+  resize: vertical;
+}
+.form select{width:100%;}
+.form input,.form textarea,.form .editor,.form select{transition: all .2s ease-in;-webkit-transition: all .2s ease-in;-o-transition: all .2s ease-in;-moz-transition: all .2s ease-in;}
+.form input:hover,.form textarea:hover,.form .editor:hover,.form select:hover{opacity: 0.7}
+.form input:focus,.form textarea:focus,.form .editor:focus,.form select:focus{opacity: 0.8}
+
+/*--------------------------
+  Input w/ attached Button
+---------------------------*/
+.form input.attached {width: auto;}
+
+
+/*--------------------
+       Dividers
+---------------------*/
+.form .divider {clear: both;margin: 1em 0em;}
+
+/*--------------------
+     Required Field
+---------------------*/
+.form .required.field label:after,
+.form .required.field .checkbox:after {
+  margin: -0.2em 0em 0em 0.2em;
+  content: '*';
+  color: #d95c5c;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*******************************
+            States
+*******************************/
+
+/*--------------------
+        Focus
+---------------------*/
+
+.form select:focus,
+.form input:focus,
+.form textarea:focus{
+  opacity: 0.85;
+}
+
+/*--------------------
+        Warning
+---------------------*/
+
+
+
+/* On Field(s) */
+.form .field.error label,
+.form .field.error .input {
+  color: #d95c5c;
+}
+.form .field.error .corner.label {
+  border-color: #d95c5c;
+}
+.form .field.error textarea,
+.form .field.error input:not([type]),
+.form .field.error input[type="text"],
+.form .field.error input[type="email"],
+.form .field.error input[type="date"],
+.form .field.error input[type="datetime-local"],
+.form .field.error input[type="password"],
+.form .field.error input[type="number"],
+.form .field.error input[type="url"],
+.form .field.error input[type="tel"] {
+  background: #fff0f0;
+  border-color: #dbb1b1;
+  color: #d95c5c;
+  border-radius: 0em 0.2857rem 0.2857rem 0em;
+  box-shadow: 2px 0em 0em 0em #d95c5c inset;
+}
+.form .field.error textarea:focus,
+.form .field.error input:not([type]):focus,
+.form .field.error input[type="text"]:focus,
+.form .field.error input[type="email"]:focus,
+.form .field.error input[type="date"]:focus,
+.form .field.error input[type="datetime-local"]:focus,
+.form .field.error input[type="password"]:focus,
+.form .field.error input[type="number"]:focus,
+.form .field.error input[type="url"]:focus,
+.form .field.error input[type="tel"]:focus {
+  background: #fff0f0;
+  border-color: #dbb1b1;
+  color: #dc6868;
+  -webkit-appearance: none;
+  box-shadow: 2px 0em 0em 0em #dc6868 inset;
+}
+
+/*------------------
+    Dropdown Error
+--------------------*/
+.form .field.error .dropdown,
+.form .field.error .dropdown .text,
+.form .field.error .dropdown .item {
+  background: #fff0f0;
+  color: #d95c5c;
+}
+.form .field.error .dropdown {
+  border-color: #dbb1b1 !important;
+}
+.form .field.error .dropdown:hover {
+  border-color: #dbb1b1 !important;
+}
+.form .field.error .dropdown:hover .menu {
+  border-color: #dbb1b1;
+}
+
+/* Hover */
+.form .field.error .dropdown .menu .item:hover {
+  background-color: #fff2f2;
+}
+
+/* Active */
+.form .field.error .dropdown .menu .active.item {
+  background-color: #fdcfcf !important;
+}
+
+/*--------------------
+    Checkbox Error
+---------------------*/
+.form .field.error .checkbox:not(.toggle):not(.slider) label,
+.form .field.error .checkbox:not(.toggle):not(.slider) .box {
+  color: #d95c5c;
+}
+.form .field.error .checkbox:not(.toggle):not(.slider) label:before,
+.form .field.error .checkbox:not(.toggle):not(.slider) .box:before {
+  background: #fff0f0;
+  border-color: #dbb1b1;
+}
+.form .field.error .checkbox label:after,
+.form .field.error .checkbox .box:after {
+  color: #d95c5c;
+}
+
+/*--------------------
+       Disabled
+---------------------*/
+.form .field :disabled,
+.form .field.disabled {
+  opacity: 0.4;cursor: not-allowed;
+}
+.form .field.disabled label {
+  opacity: 0.4;
+}
+.form .field.disabled :disabled {
+  opacity: 1;
+}
+
+/*--------------
+    Loading
+---------------*/
+.loading-form .form {
+  position: relative;
+  cursor: default;
+  point-events: none;
+  text-shadow: none !important;
+  color: transparent !important;
+  -webkit-transition: all 0s linear;
+          transition: all 0s linear;
+  z-index: 100;
+}
+.loading-form .form:before {
+  position: absolute;
+  content: '';
+  top: 0%;
+  left: 0%;
+  background-color:#fff;
+  border-radius:3px;
+  opacity: 0.3;
+  width: 100%;
+  min-height: 34px;
+  height: 100%;
+  z-index: 100;
+}
+.loading-form .form:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  margin: -1.5em 0em 0em -1.5em;
+  width: 3em;
+  height: 3em;
+  -webkit-animation: form-spin 0.6s linear;
+          animation: form-spin 0.6s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  border-radius: 500rem;
+  border-color: #aaaaaa rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  border-width: 0.2em;
+  box-shadow: 0px 0px 0px 1px transparent;
+  visibility: visible;
+  z-index: 101;
+}
+@-webkit-keyframes form-spin {
+
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes form-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+
+
+/*******************************
+           Variations
+*******************************/
+/*--------------------
+    Inverted Colors
+---------------------*/
+
+.inverted.form label,
+.form .inverted.segment label,
+.form .inverted.segment .checkbox label,
+.form .inverted.segment .checkbox .box,
+.inverted.form .checkbox label,
+.inverted.form .checkbox .box {
+  color: #ffffff;
+}
+
+/*--------------------
+     Field Groups
+---------------------*/
+/* Grouped Vertically */
+.form .grouped.field {
+  margin: 0em 0em 1em;
+}
+.form .grouped.field:last-child {
+  margin-bottom: 0em;
+}
+.form .grouped.field > label {
+  font-size: 0.9285em;
+}
+.form .grouped.field .field {
+  display: block;
+  float: none;
+  margin: 0.5em 0em;
+  padding: 0em;
+}
+
+/*--------------------
+        Fields
+---------------------*/
+/* Split fields */
+.form .fields {
+  clear: both;
+}
+.form .fields:after {
+  content: ' ';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.form .fields > .field {
+  clear: none;
+  float: left;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.form .fields > .field:first-child {
+  border-left: none;
+  box-shadow: none;
+}
+
+.form .field:first-child {
+  padding-left: 0%;
+}
+.form .field:last-child {
+  padding-right: 0%;
+}
+
+/*--------------------
+    Inline Field
+---------------------*/
+
+.form.inline label{min-width:80px;width:10%;}
+.rtl .form.inline .field > label{text-align:left;padding-left:10px;}
+.form.inline .radio label{width: auto;}
+.form.inline input, .form.inline select, .form.inline .radio{display: inline-block;width:86%;font-size: 0.9em;padding-top:0.4em;padding-bottom:0.4em;}
+
+
+/*--------------------
+        Sizes
+---------------------*/
+
+
+/* Standard */
+.small.form {
+  font-size: 0.875em;
+}
+
+/* Large */
+.large.form {
+  font-size: 1.125em;
+}
+
+/* Huge */
+.huge.form {
+  font-size: 1.2em;
+}
