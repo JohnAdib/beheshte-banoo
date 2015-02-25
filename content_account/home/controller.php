@@ -5,54 +5,62 @@ class controller extends \mvc\controller
 {
 	function _route()
 	{
+		$referer  = \lib\router::urlParser('referer', 'domain');
+		$from     = \lib\utility\Cookie::read('from');
+		$islogin	= $this->login();
 		$mymodule = $this->module();
-		$islogin	 = $this->login();
-		switch ($mymodule) 
+		// set referrer in cookie
+		if($referer !== Domain)
+			\lib\utility\Cookie::write('referer', $referer, 60*15);
+		// check permission for changepass
+		if($mymodule === 'changepass' && $from !== 'verification' && !$islogin)
+			\lib\error::access(T_("you can't access to this page!"));
+
+		switch ($mymodule)
 		{
 			case 'home':
 				$this->redirector()->set_url("login")->redirect();
 				break;
 
+
+			case 'verification':
+			case 'verificationsms':
+				if($from !== 'recovery' && $from !== 'signup')
+					\lib\error::access(T_("you can't access to this page!"));
+
 			case 'login':
 			case 'signup':
 			case 'recovery':
-			case 'verificationsms':
-				if(!$islogin)
+				if($islogin)
 				{
-					$this->model_name	= 'content_account\\'.$mymodule.'\model';
-					$this->display_name	= 'content_account\\'.$mymodule.'\display.html';
-					$this->post($mymodule)->ALL($mymodule);
-					$this->get()->ALL($mymodule);
+					\lib\debug::true(T_("you are logined to system!"));
+					$myreferer = \lib\router::urlParser('referer', 'host');
+					$myssid    = isset($_SESSION['ssid'])? '?ssid='.$_SESSION['ssid']: null;
+					$this->redirector()->set_domain($myreferer)->set_url($myssid)->redirect();
+				}
+			case 'changepass':
+				$this->model_name   = 'content_account\\'.$mymodule.'\model';
+				$this->display_name = 'content_account\\'.$mymodule.'\display.html';
+				$this->post($mymodule)->ALL();
+				$this->get()          ->ALL();
+				break;
+
+
+			case 'smsdelivery':
+			case 'smscallback':
+				$uid = 201500001;
+				if(\lib\utility::get('uid') == $uid || \lib\utility\Cookie::read('uid') == $uid)
+				{
+					$this->model_name	= 'content_account\sms\model';
+					$this->display_name	= 'content_account\sms\display.html';
+					$this->post($mymodule)->ALL();
+					$this->get($mymodule) ->ALL();
 				}
 				else
-				{
-					$this->redirector()->set_domain()->set_url()->redirect();
-					\lib\debug::true(T_("you are logined to system!"));
-				}
+					\lib\error::access("SMS");
 				break;
 
 
-			case 'changepass':
-				if(!$islogin)
-				{
-					\lib\error::access(T_("you can't access to this page!"));
-				}
-
-			case 'verification':
-				$this->model_name	= 'content_account\\'.$mymodule.'\model';
-				$this->display_name	= 'content_account\\'.$mymodule.'\display.html';
-				$this->put($mymodule)->ALL($mymodule);
-				$this->get()->ALL($mymodule);
-				break;
-
-			// logout user from system then redirect to ermile
-			case 'logout':
-				$this->model_name	= 'mvc\model';
-				$this->model()->put_logout();
-				$this->redirector()->set_domain()->set_url()->redirect();
-				break;
-
-			// if user add another address show 404
 			default:
 				\lib\error::page();
 				break;
