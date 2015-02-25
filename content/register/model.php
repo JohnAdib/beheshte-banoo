@@ -10,12 +10,11 @@ class model extends \mvc\model
 		// read barcode and check it
 		$barcode =  utility::post('barcode');
 		$id      = $this->checkBarcode($barcode);
-		if(!$id)
+		if($id)
 		{
-			debug::error(T_("This card number in use!"));
+			debug::error(T_("This card number in use!").$id);
 			return;
 		}
-
 
 		$qry     = $this->sql()->tableUsers();
 		$fields  = array( 'gender','firstname','lastname','mobile',
@@ -30,7 +29,11 @@ class model extends \mvc\model
 		$qry    = $qry->setPermission_id(4)->setUser_enterdatetime(date('Y-m-d H:i:s'));
 		$qry    = $qry->insert();
 
-		$this->commit(function()   { debug::true(T_("register successfully")); });
+		$this->commit(function()
+		{
+			debug::true(T_("register successfully"));
+			$this->redirector()->set_domain()->set_url('camera');
+		});
 		$this->rollback(function() { debug::error(T_("register failed!"));     });
 	}
 }

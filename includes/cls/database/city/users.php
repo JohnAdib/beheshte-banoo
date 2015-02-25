@@ -86,7 +86,7 @@ class users
 	}
 	public function user_passport() 
 	{
-		$this->form("text")->name("passport")->maxlength(50)->type('text');
+		$this->form("text")->name("passport")->maxlength(50)->class('hide')->type('text');
 	}
 	public function user_imageaddr() 
 	{

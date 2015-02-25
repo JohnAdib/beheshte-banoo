@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-02-22 06:47+0330\n"
-"PO-Revision-Date: 2015-02-22 06:48+0330\n"
+"POT-Creation-Date: 2015-02-25 17:06+0330\n"
+"PO-Revision-Date: 2015-02-25 17:08+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -16,13 +16,14 @@ msgstr ""
 "X-Poedit-KeywordsList: __;T_\n"
 "X-Poedit-SearchPath-0: ../../../../.\n"
 
-#: ../../../.././content_account/home/controller.php:30
-msgid "you are logined to system!"
-msgstr "شما قبلا یک بار وارد سیستم شده اید!"
-
-#: ../../../.././content_account/home/controller.php:38
+#: ../../../.././content_account/home/controller.php:17
+#: ../../../.././content_account/home/controller.php:29
 msgid "you can't access to this page!"
 msgstr "شما اجازه دسترسی به این صفحه را ندارید!"
+
+#: ../../../.././content_account/home/controller.php:36
+msgid "you are logined to system!"
+msgstr "شما قبلا یک بار وارد سیستم شده اید!"
 
 #: ../../../.././content_account/home/view.php:23
 #: ../../../.././includes/cls/form/account.php:25
@@ -62,6 +63,14 @@ msgstr "پیامک های دریافتی"
 msgid "Ermile"
 msgstr "ارمایل"
 
+#: ../../../.././content_account/changepass/model.php:18
+msgid "change password successfully"
+msgstr "تغییر کلمه عبور با موفقیت انجام شد"
+
+#: ../../../.././content_account/changepass/model.php:23
+msgid "change password failed!"
+msgstr "تغییر کلمه عبور ناموفق بود!"
+
 #: ../../../.././content_account/login/model.php:50
 msgid "login successfully"
 msgstr "ورود موفقیت آمیز"
@@ -78,7 +87,7 @@ msgstr "شماره موبایل یا کلمه عبور اشتباه است"
 #: ../../../.././content_account/login/model.php:83
 #: ../../../.././content_account/signup/model.php:51
 #: ../../../.././content_account/recovery/model.php:54
-#: ../../../.././content_account/verification/model.php:72
+#: ../../../.././content_account/verification/model.php:78
 msgid "please forward this message to administrator"
 msgstr "لطفا این پیغام را برای مدیر سیستم ارسال کنید"
 
@@ -87,12 +96,12 @@ msgid "mobile number exist!"
 msgstr "این شماره موبایل قبلا در سیستم ثبت شده است!"
 
 #: ../../../.././content_account/signup/model.php:39
-#: ../../../.././content/register/model.php:33
+#: ../../../.././content/register/model.php:35
 msgid "register successfully"
 msgstr "ثبت نام با موفقیت انجام شد"
 
 #: ../../../.././content_account/signup/model.php:46
-#: ../../../.././content/register/model.php:34
+#: ../../../.././content/register/model.php:38
 msgid "register failed!"
 msgstr "ثبت نام ناموفق بود!"
 
@@ -121,29 +130,20 @@ msgstr "بازیابی ناموفق بود!"
 msgid "Mobile number is incorrect"
 msgstr "این شماره موبایل اشتباه است."
 
-#: ../../../.././content_account/verification/model.php:47
-#: ../../../.././content_account/verification/model.php:53
-#: ../../../.././content_account/verification/model.php:59
+#: ../../../.././content_account/verification/model.php:54
+#: ../../../.././content_account/verification/model.php:64
 msgid "verify successfully."
 msgstr "اعتبارسنجی موفقیت آمیز بود."
 
-#: ../../../.././content_account/verification/model.php:47
-msgid "now you can login and enjoy!"
-msgstr "حالا می توانید وارد سامانه شده و از آن استفاده کنید!"
-
-#: ../../../.././content_account/verification/model.php:53
+#: ../../../.././content_account/verification/model.php:64
 msgid "please Input your new password"
 msgstr "لطفا کلمه عبور جدید را وارد کنید"
 
-#: ../../../.././content_account/verification/model.php:59
-msgid "but you must reffer from one point!"
-msgstr "ولی شما باید از جایی معرفی می شدید!"
-
-#: ../../../.././content_account/verification/model.php:63
+#: ../../../.././content_account/verification/model.php:69
 msgid "verify failed!"
 msgstr "اعتبارسنجی ناموفق بود!"
 
-#: ../../../.././content_account/verification/model.php:68
+#: ../../../.././content_account/verification/model.php:74
 msgid "this data is incorrect"
 msgstr "این اطلاعات اشتباه است"
 
@@ -191,6 +191,15 @@ msgstr "ثبت در صف با موفقیت ناموفق بود!"
 #: ../../../.././content/register/model.php:15
 msgid "This card number in use!"
 msgstr "این کد در حال استفاده است!"
+
+#: ../../../.././content/register/view.php:8
+#: ../../../.././includes/languages/static_translation.php:78
+msgid "Register"
+msgstr "ثبت نام"
+
+#: ../../../.././content/register/view.php:10
+msgid "Next: Take Picture"
+msgstr "مرحله بعد: عکس گرفتن"
 
 #: ../../../.././content/camera/model.php:18
 msgid "You must fill all require fileds"
@@ -1029,10 +1038,6 @@ msgstr "غرفه دار"
 msgid "Registerer"
 msgstr "مسئول ثبت نام"
 
-#: ../../../.././includes/languages/static_translation.php:78
-msgid "Register"
-msgstr "ثبت نام"
-
 #: ../../../.././includes/languages/static_translation.php:79
 msgid "Camera"
 msgstr "ثبت تصویر"
@@ -1214,6 +1219,12 @@ msgstr "شهرک معارفی برای کودکان"
 #: ../../../.././includes/mvc/view.php:14
 msgid "The Mystical City is good"
 msgstr "شهرک معارفی را تجربه کنید"
+
+#~ msgid "now you can login and enjoy!"
+#~ msgstr "حالا می توانید وارد سامانه شده و از آن استفاده کنید!"
+
+#~ msgid "but you must reffer from one point!"
+#~ msgstr "ولی شما باید از جایی معرفی می شدید!"
 
 #~ msgid "we send a verification code to this number"
 #~ msgstr "کد اعتبارسنجی به این شماره ارسال خواهد شد"

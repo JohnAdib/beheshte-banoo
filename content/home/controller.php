@@ -22,7 +22,7 @@ class controller extends \mvc\controller
 			return;
 
 		// if user dont login redirect to root and don't show this page
-		if(!$this->login() || $this->login('permission_id') !== '2')
+		if(!$this->login() || $this->login('permission_id') === '3')
 		{
 			$this->model()->logger('access');
 			$this->model()->_processor();

@@ -211,6 +211,7 @@ while ($row = $qTables->fetch_object())
 		// elseif($myname  === 'passport')   $property .= "->class('span2 endline hide')";
 		// elseif($myname  === 'barcode')    $property .= "->class('span12 endline')";
 
+		if($myname  === 'passport')   $property .= "->class('hide')";
 
 		// --------------------------------------------------------------------------------- ID
 		if($myfield=="id")
