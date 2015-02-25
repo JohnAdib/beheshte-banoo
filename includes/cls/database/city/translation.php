@@ -50,6 +50,13 @@ function transtext()
 	echo T_("Starttime");           // game_starttime
 	echo T_("Endtime");             // game_endtime
 	echo T_("Status");              // game_status
+	echo T_("Red");                 // Enum Red
+	echo T_("Green");               // Enum Green
+	echo T_("Blue");                // Enum Blue
+	echo T_("Black");               // Enum Black
+	echo T_("White");               // Enum White
+	echo T_("Yellow");              // Enum Yellow
+	echo T_("Purple");              // Enum Purple
 	echo T_("in");                  // Enum in
 	echo T_("out");                 // Enum out
 	echo T_("babylost");            // Enum babylost
@@ -60,7 +67,8 @@ function transtext()
 	echo T_("kindergartens");       // Table kindergartens
 	echo T_("Kindergartens");       // Kindergartens
 	echo T_("kindergarten");        // kindergartens
-	echo T_("Token");               // token_id
+	echo T_("Color");               // kindergarten_color
+	echo T_("Number");              // kindergarten_number
 	echo T_("Date");                // kindergarten_date
 	echo T_("Starttime");           // kindergarten_starttime
 	echo T_("Endtime");             // kindergarten_endtime

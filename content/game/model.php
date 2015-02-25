@@ -16,10 +16,10 @@ class model extends \mvc\model
 			debug::error(T_("This card number does not exist"));
 			return;
 		}
-
+		$booth_id  = $this->login('booth_id');
 		$qry       = $this->sql()->tableGames  ()
 									->setUser_id      ($id)
-									->setBooth_id     (1)
+									->setBooth_id     ($booth_id)
 									->setGame_date    (date('Y-m-d'))
 									->setGame_regtime (date('Y-m-d H:i:s'))
 									->setGame_status  ('time');
@@ -38,13 +38,16 @@ class model extends \mvc\model
 		// $qry->joinUsers()->whereId('#games.user_id')->fieldUser_mobile("mobile");
 		// $qry = $qry->select();
 
-		$qry = $this->sql()->tableGames()->whereGame_date(date('Y-m-d'))
-									->andGame_status('start')->orGame_status('time')->orderGame_regtime('Asc');
+		$qry = $this->sql()->tableGames()->whereGame_date(date('Y-m-d'))->groupOpen('start')
+									->andGame_status('start')->orGame_status('time')->groupClose('close')
+									->orderGame_regtime('Asc');
+
 		$qry->joinUsers()->whereId('#games.user_id')
 								->fieldUser_firstname("firstname")
 								->fieldUser_lastname("lastname")
 								->fieldUser_barcode("barcode");
 		$qry = $qry->select();
+		var_dump($qry->string());
 
 
 		$datatable = $qry->allassoc();
@@ -68,7 +71,9 @@ class model extends \mvc\model
 	public function post_start()
 	{
 		$myid =  utility::post('id');
-		$qry  = $this->sql()->tableGames()->setGame_status('start')->whereId($myid)->update();
+		$qry  = $this->sql()->tableGames()->setGame_status('start')
+																				->setGame_starttime(date('Y-m-d H:i:s'))
+																				->whereId($myid)->update();
 
 		$this->commit(function()   { });
 		$this->rollback(function() { });
@@ -77,7 +82,9 @@ class model extends \mvc\model
 	public function post_win()
 	{
 		$myid =  utility::post('id');
-		$qry  = $this->sql()->tableGames()->setGame_status('win')->whereId($myid)->update();
+		$qry  = $this->sql()->tableGames()->setGame_status('win')
+																				->setGame_endtime(date('Y-m-d H:i:s'))
+																				->whereId($myid)->update();
 
 		$this->commit(function()   { });
 		$this->rollback(function() { });
@@ -86,7 +93,9 @@ class model extends \mvc\model
 	public function post_loose()
 	{
 		$myid =  utility::post('id');
-		$qry  = $this->sql()->tableGames()->setGame_status('loose')->whereId($myid)->update();
+		$qry  = $this->sql()->tableGames()->setGame_status('loose')
+																				->setGame_endtime(date('Y-m-d H:i:s'))
+																				->whereId($myid)->update();
 
 		$this->commit(function()   { });
 		$this->rollback(function() { });
