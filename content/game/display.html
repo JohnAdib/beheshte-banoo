@@ -55,7 +55,7 @@
  <p id="description">{%trans%}Scan barcode for going to queue.{%endtrans%}</p>
   <form class="ajx form row" method="post" id="form-barcode">{{forms.make(form['barcode'])}}</form>
 
-  <ul class="none game-cards">
+  <ul class="none game-cards" data-xhr="game-cards">
 {% for i in list %}
   <li tabindex="2">
    <div class="front">

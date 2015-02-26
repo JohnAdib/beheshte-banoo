@@ -45,10 +45,11 @@ function transtext()
 	echo T_("Login");                                                                 // Line 48
 	echo T_("Control Panel");                                                         // Line 44
 	echo T_("Register Visitors");                                                     // Line 32
-	echo T_("Register Visitors Avatar");                                              // Line 28
+	echo T_("Register Visitors Avatar");                                              // Line 33
 	echo T_("Start Game");                                                            // Line 30
-	echo T_("Point Checker");                                                         // Line 34
-	echo T_("Change points to meney");                                                // Line 35
+	echo T_("Register Kids");                                                         // Line 34
+	echo T_("Point Checker");                                                         // Line 36
+	echo T_("Change points to meney");                                                // Line 37
 
 	//-----------------------------------------------------content/camera/display.html
 	echo T_("First of all, scan barcode then camera take a picture form you and show it for 3 second.");// Line 12 Seperate
