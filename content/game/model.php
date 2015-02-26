@@ -33,11 +33,6 @@ class model extends \mvc\model
 
 	public function get_list()
 	{
-		// $qry       = $this->sql()->tableGames()->whereGame_date(date('Y-m-d'))->select();
-		// $qry = $this->sql()->tableGames()->whereGame_date(date('Y-m-d'));
-		// $qry->joinUsers()->whereId('#games.user_id')->fieldUser_mobile("mobile");
-		// $qry = $qry->select();
-
 		$qry = $this->sql()->tableGames()->whereGame_date(date('Y-m-d'))->groupOpen('start')
 									->andGame_status('start')->orGame_status('time')->groupClose('close')
 									->orderGame_regtime('Asc');
@@ -47,14 +42,9 @@ class model extends \mvc\model
 								->fieldUser_lastname("lastname")
 								->fieldUser_barcode("barcode");
 		$qry = $qry->select();
-		var_dump($qry->string());
+		// var_dump($qry->string());
 
-
-		$datatable = $qry->allassoc();
-
-		// var_dump($datatable);
-
-		return $datatable;
+		return $qry->allassoc();
 	}
 
 

@@ -25,8 +25,7 @@ class model extends \mvc\model
 		}
 		
 
-		define('Upload', root.'public_html/s-up/');
-		$folder_name = Upload . ceil($id/1000)*1000 . '/';
+		$folder_name = root.'public_html/s-up/' . ceil($id/1000)*1000 . '/';
 		$file_ext    = '.jpg';
 
 		if(!is_dir($folder_name))

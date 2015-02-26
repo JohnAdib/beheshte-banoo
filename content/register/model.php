@@ -2,6 +2,7 @@
 namespace content\register;
 use \lib\debug;
 use \lib\utility;
+use \lib\utility\File;
 
 class model extends \mvc\model
 {
@@ -22,17 +23,25 @@ class model extends \mvc\model
 
 		foreach ($fields as $value)
 		{
-			$post    =  utility::post($value);
+			$post    = utility::post($value);
 			$tmp_set = 'setUser_'.$value;
 			$qry     = $qry->$tmp_set($post);
 		}
 		$qry    = $qry->setPermission_id(4)->setUser_enterdatetime(date('Y-m-d H:i:s'));
 		$qry    = $qry->insert();
 
+		// copy one image as default image for each user
+		$id   = $qry->LAST_INSERT_ID();
+		$to   = root.'public_html/s-up/' . ceil($id/1000)*1000 . '/'.$id.'-thumb.jpg';
+		$from = root.'public_html/static/images/face/'.utility::post('gender').'-'.mt_rand(1,8).'.jpg';
+		$a    = File::copy($from , $to);
+		// var_dump($a);
+
 		$this->commit(function()
 		{
 			debug::true(T_("register successfully"));
-			$this->redirector()->set_domain()->set_url('camera');
+			if($this->login('permission_id') == 5 )
+				$this->redirector()->set_domain()->set_url('camera');
 		});
 		$this->rollback(function() { debug::error(T_("register failed!"));     });
 	}
