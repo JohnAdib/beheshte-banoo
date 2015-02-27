@@ -24,15 +24,13 @@
   $(".game-cards .fa-reply").click(function(){ $("#barcode").focus(); });
 
 
-  $('#form-barcode').ajaxifyCallbacks({success: function() {
-    console.log(1);
+  $('#form-barcode').on('ajaxify:success', function() {
     Navigate({
       url: location.href,
       replace: true,
       filter: 'game-cards'
     });
-  }
-});
+  });
 
  
  // $(document).bind('ajaxSuccess', function(e, promise, xhr) {
