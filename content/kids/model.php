@@ -12,15 +12,44 @@ class model extends \mvc\model
 		$mybarcode =  utility::post('barcode');
 		$mycolor   =  utility::post('color');
 		$mynumber  =  utility::post('number');
-		$id        = $this->checkBarcode($mybarcode);
-		if(!$id)
+		$myid        = $this->checkBarcode($mybarcode);
+		// **************************** check for barcode of user exist in this day
+		if(!$myid)
 		{
 			debug::error(T_("This card number does not exist"));
 			return;
 		}
-		$booth_id  = $this->login('booth_id');
+
+		// **************************** disallow register duplicate color and number
 		$qry       = $this->sql()->tableKids  ()
-												->setUser_id      ($id)
+												->andKid_color    ($mycolor)
+												->andKid_number   ($mynumber)
+												->andKid_date     (date('Y-m-d'))
+												->andKid_exittime ('#NULL')
+												->select();
+		if($qry->num()>0)
+		{
+			debug::error(T_("This color is in use!"));
+			return;
+		}
+
+		// **************************** disallow register user duplicate in kids
+		$qry       = $this->sql()->tableKids  ()
+												->whereUser_id    ($myid)
+												->andKid_date     (date('Y-m-d'))
+												->andKid_exittime ('#NULL')
+												->select();
+		if($qry->num()>0)
+		{
+			debug::error(T_("This user kid is in kindergartens!"));
+			return;
+		}
+		// var_dump($qry->string());
+
+		// $booth_id  = $this->login('booth_id');
+		// **************************** Register user in kids
+		$qry       = $this->sql()->tableKids  ()
+												->setUser_id      ($myid)
 												->setKid_color    ($mycolor)
 												->setKid_number   ($mynumber)
 												->setKid_date     (date('Y-m-d'))

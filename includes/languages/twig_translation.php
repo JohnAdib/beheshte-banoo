@@ -34,11 +34,11 @@ function transtext()
 	echo T_("Scan your barcode and change your points to money!");                    // Line 12 Seperate
 
 	//-------------------------------------------------------content/game/display.html
-	echo T_("Scan barcode for going to queue.");                                      // Line 36 Seperate
-	echo T_("Winner");                                                                // Line 50
-	echo T_("Looser");                                                                // Line 51
-	echo T_("Start");                                                                 // Line 49
-	echo T_("Absent");                                                                // Line 52
+	echo T_("Scan barcode for going to queue.");                                      // Line 8 Seperate
+	echo T_("Winner");                                                                // Line 22
+	echo T_("Looser");                                                                // Line 23
+	echo T_("Start");                                                                 // Line 21
+	echo T_("Absent");                                                                // Line 24
 
 	//-------------------------------------------------------content/home/display.html
 	echo T_("Logout");                                                                // Line 46
@@ -60,10 +60,10 @@ function transtext()
 	echo T_("Scan your barcode and see your points");                                 // Line 12 Seperate
 
 	//-------------------------------------------------------content/kids/display.html
-	echo T_("Kindergartens");                                                         // Line 29 Seperate
-	echo T_("barcode");                                                               // Line 33
-	echo T_("Delivery");                                                              // Line 48
-	echo T_("Call");                                                                  // Line 47
+	echo T_("Kindergartens");                                                         // Line 8 Seperate
+	echo T_("barcode");                                                               // Line 12
+	echo T_("Delivery");                                                              // Line 27
+	echo T_("Call");                                                                  // Line 26
 
 	//----------------------------------------------------content_cp/home/display.html
 	echo T_("Home");                                                                  // Line 40

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-02-28 17:11+0330\n"
-"PO-Revision-Date: 2015-02-28 17:12+0330\n"
+"POT-Creation-Date: 2015-03-01 00:59+0330\n"
+"PO-Revision-Date: 2015-03-01 01:01+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -151,7 +151,7 @@ msgstr "این اطلاعات اشتباه است"
 #: ../../../.././content/game/model.php:16
 #: ../../../.././content/camera/model.php:23
 #: ../../../.././content/point/model.php:16
-#: ../../../.././content/kids/model.php:16
+#: ../../../.././content/kids/model.php:19
 msgid "This card number does not exist"
 msgstr "این کد در سیستم وجود ندارد!"
 
@@ -182,12 +182,12 @@ msgid "Change to money failed!"
 msgstr "نقد کردن امتیازات ناموفق بود!"
 
 #: ../../../.././content/game/model.php:29
-#: ../../../.././content/kids/model.php:29
+#: ../../../.././content/kids/model.php:61
 msgid "register in queue successfully"
 msgstr "ثبت در صف با موفقیت انجام شد"
 
 #: ../../../.././content/game/model.php:30
-#: ../../../.././content/kids/model.php:30
+#: ../../../.././content/kids/model.php:62
 msgid "register in queue failed!"
 msgstr "ثبت در صف با موفقیت ناموفق بود!"
 
@@ -211,6 +211,14 @@ msgstr "عکس شما با موفقیت ثبت شد"
 #: ../../../.././content/camera/model.php:68
 msgid "Error on write webcam picture to server"
 msgstr "خطا در هنگام ذخیره عکس در سرور"
+
+#: ../../../.././content/kids/model.php:32
+msgid "This color is in use!"
+msgstr "این شماره و رنگ در حال استفاده است!"
+
+#: ../../../.././content/kids/model.php:44
+msgid "This user kid is in kindergartens!"
+msgstr "این کودک در حال حاضر در کودکستان است!"
 
 #: ../../../.././content/kids/view.php:9
 msgid "Register kid"
@@ -445,17 +453,16 @@ msgid "awaiting"
 msgstr "در حال انتظار"
 
 #: ../../../.././includes/cls/database/city/translation.php:67
-msgid "kindergartens"
-msgstr "مهدکودک"
+msgid "kids"
+msgstr "کودکستان"
 
 #: ../../../.././includes/cls/database/city/translation.php:68
-#: ../../../.././includes/languages/twig_translation.php:63
-msgid "Kindergartens"
-msgstr "مهدکودک"
+msgid "Kids"
+msgstr "کودکستان"
 
 #: ../../../.././includes/cls/database/city/translation.php:69
-msgid "kindergarten"
-msgstr "مهدکودک"
+msgid "kid"
+msgstr "کودک"
 
 #: ../../../.././includes/cls/database/city/translation.php:70
 msgid "Color"
@@ -1211,6 +1218,10 @@ msgstr "لطفا در مرکز کادر قرار گرفته و لبخند بزن
 msgid "Scan your barcode and see your points"
 msgstr "با اسکن کردن بارکد، امتیاز خود را مشاهده کنید"
 
+#: ../../../.././includes/languages/twig_translation.php:63
+msgid "Kindergartens"
+msgstr "مهدکودک"
+
 #: ../../../.././includes/languages/twig_translation.php:64
 msgid "barcode"
 msgstr "بارکد"
@@ -1271,6 +1282,12 @@ msgstr "شهرک معارفی برای کودکان"
 #: ../../../.././includes/mvc/view.php:14
 msgid "The Mystical City is good"
 msgstr "شهرک معارفی را تجربه کنید"
+
+#~ msgid "kindergartens"
+#~ msgstr "مهدکودک"
+
+#~ msgid "kindergarten"
+#~ msgstr "مهدکودک"
 
 #~ msgid "Next: Take Picture"
 #~ msgstr "مرحله بعد: عکس گرفتن"
