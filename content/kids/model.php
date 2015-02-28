@@ -22,7 +22,7 @@ class model extends \mvc\model
 
 		// **************************** disallow register duplicate color and number
 		$qry       = $this->sql()->tableKids  ()
-												->andKid_color    ($mycolor)
+												->whereKid_color  ($mycolor)
 												->andKid_number   ($mynumber)
 												->andKid_date     (date('Y-m-d'))
 												->andKid_exittime ('#NULL')
@@ -44,7 +44,6 @@ class model extends \mvc\model
 			debug::error(T_("This user kid is in kindergartens!"));
 			return;
 		}
-		// var_dump($qry->string());
 
 		// $booth_id  = $this->login('booth_id');
 		// **************************** Register user in kids

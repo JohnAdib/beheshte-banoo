@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-03-01 00:59+0330\n"
-"PO-Revision-Date: 2015-03-01 01:01+0330\n"
+"POT-Creation-Date: 2015-03-01 01:13+0330\n"
+"PO-Revision-Date: 2015-03-01 01:13+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -148,7 +148,7 @@ msgid "this data is incorrect"
 msgstr "این اطلاعات اشتباه است"
 
 #: ../../../.././content/change/model.php:16
-#: ../../../.././content/game/model.php:16
+#: ../../../.././content/game/model.php:17
 #: ../../../.././content/camera/model.php:23
 #: ../../../.././content/point/model.php:16
 #: ../../../.././content/kids/model.php:19
@@ -181,13 +181,17 @@ msgstr "امیدواریم دوباره شما را ملاقات کنیم!"
 msgid "Change to money failed!"
 msgstr "نقد کردن امتیازات ناموفق بود!"
 
-#: ../../../.././content/game/model.php:29
-#: ../../../.././content/kids/model.php:61
+#: ../../../.././content/game/model.php:31
+msgid "This kid  is already in Time!"
+msgstr "این کودک در حال حاضر در نوبت در حال انتظار است!"
+
+#: ../../../.././content/game/model.php:46
+#: ../../../.././content/kids/model.php:60
 msgid "register in queue successfully"
 msgstr "ثبت در صف با موفقیت انجام شد"
 
-#: ../../../.././content/game/model.php:30
-#: ../../../.././content/kids/model.php:62
+#: ../../../.././content/game/model.php:47
+#: ../../../.././content/kids/model.php:61
 msgid "register in queue failed!"
 msgstr "ثبت در صف با موفقیت ناموفق بود!"
 
