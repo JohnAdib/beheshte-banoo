@@ -1,37 +1,6 @@
 {%extends display.mvc%}
 {%block header_def%}{%endblock%}
 
-{%block foot_js%}
- <script type="text/javascript">
-  $('.passport input').removeClass('hide');
-
-  $( "#country_" ).change(function() {
-    // if iran selected
-    if(this.value==101)
-    {
-      $('.codemelli').removeClass('hide');
-      $('.passport').addClass('hide');
-      $('.province').removeClass('disabled');
-      $('.province select').prop('disabled', false);
-      $('.province select').prop('value', '18');
-    }
-    else
-    {
-      $('.passport').removeClass('hide');
-      $('.codemelli').addClass('hide');
-      $('.province').addClass('disabled');
-      $('.province select').prop('disabled', true);
-      $('.province select').prop('value', false);
-    }
-  });
-
-    $('.form').ajaxifyCallbacks({complete: function(data){
-      if(data.status == 1){ $('.form')[0].reset(); }
-    } });
-
- </script>
-{%endblock%}
-
 
 {%block content_def%}
  <div class="container content" data-xhr="center">

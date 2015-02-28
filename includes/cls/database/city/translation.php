@@ -70,8 +70,9 @@ function transtext()
 	echo T_("Color");               // kid_color
 	echo T_("Number");              // kid_number
 	echo T_("Date");                // kid_date
-	echo T_("Starttime");           // kid_starttime
-	echo T_("Endtime");             // kid_endtime
+	echo T_("Regtime");             // kid_regtime
+	echo T_("Returntime");          // kid_returntime
+	echo T_("Exittime");            // kid_exittime
 	echo T_("Status");              // kid_status
 
 	// ------------------------------------------------------------------- Table options

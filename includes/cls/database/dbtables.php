@@ -300,7 +300,11 @@ while ($row = $qTables->fetch_object())
 			$fn    .= $txtcomment. "select button\n";
 			$fn    .= $txtstart. '$this->form("select")->name("'. $myname.'")->type("select")'.$property.'->validate();';
 			// $fn .= "\n\t\t".'$this->setChild($this->form);';
-			$fn    .= "\n\t\t".'$this->setChild();';
+			if($myname === 'province' )
+				$fn .= "\n\t\t".'$this->setChild'."('provinces@id!province_name', '18');";
+			else
+				$fn .= "\n\t\t".'$this->setChild();';
+				
 		}
 
 		else

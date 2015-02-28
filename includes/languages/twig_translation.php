@@ -31,7 +31,7 @@ function transtext()
 	echo T_("don't receive message?");                                                // Line 8
 
 	//-----------------------------------------------------content/change/display.html
-	echo T_("Scan your barcode and change your points to money!");                    // Line 12 Seperate
+	echo T_("Scan your barcode and change your points to money!");                    // Line 8 Seperate
 
 	//-------------------------------------------------------content/game/display.html
 	echo T_("Scan barcode for going to queue.");                                      // Line 8 Seperate
@@ -57,7 +57,7 @@ function transtext()
 	echo T_("Please place in center of box and smile:)");                             // Line 17
 
 	//------------------------------------------------------content/point/display.html
-	echo T_("Scan your barcode and see your points");                                 // Line 12 Seperate
+	echo T_("Scan your barcode and see your points");                                 // Line 8 Seperate
 
 	//-------------------------------------------------------content/kids/display.html
 	echo T_("Kindergartens");                                                         // Line 8 Seperate

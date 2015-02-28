@@ -50,9 +50,7 @@ bindBarcode();
 
 
 route('*', function() {
-  // ***************************************************** Kids
-  // $(document).on('click', '.list-cards .fa-bullhorn', ...);
-
+  // ********************************************************************** Kids
   $(".list-cards").on( "click", ".fa-bullhorn", function( event ) {
     $(this)
       .addClass("hide")
@@ -62,7 +60,8 @@ route('*', function() {
     $(this).parent().fadeOutAndRemove('fast');
   });
 
-  // ***************************************************** Games
+
+  // ********************************************************************** Games
   $(".list-cards").on( "click", ".fa-tty", function( event ) {
     $(this)
       .addClass("hide")
@@ -82,5 +81,31 @@ route('*', function() {
   $(".list-cards").on( "click", ".fa-reply", function( event ) {
     $("#barcode").focus();
   });
+
+
+  // ********************************************************************** Register
+  $( "#country_" ).change(function() {
+    // if iran selected
+    if(this.value==101)
+    {
+      $('.codemelli').removeClass('hide');
+      $('.passport').addClass('hide');
+      $('.province').removeClass('disabled');
+      $('.province select').prop('disabled', false);
+      $('.province select').prop('value', '18');
+    }
+    else
+    {
+      $('.passport').removeClass('hide');
+      $('.codemelli').addClass('hide');
+      $('.province').addClass('disabled');
+      $('.province select').prop('disabled', true);
+      $('.province select').prop('value', false);
+    }
+  });
+  $('.form').ajaxifyCallbacks({complete: function(data){
+    if(data.status == 1){ $('.form')[0].reset(); }
+  } });
+
 
 });

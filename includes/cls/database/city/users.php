@@ -80,7 +80,7 @@ class users
 	public function user_province() 
 	{
 		$this->form("select")->name("province")->type("select")->maxlength(50)->validate();
-		$this->setChild();
+		$this->setChild('provinces@id!province_name', '18');
 	}
 	public function user_codemelli() 
 	{
