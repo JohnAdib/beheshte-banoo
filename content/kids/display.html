@@ -9,7 +9,7 @@
   <form class="ajx form row auto" method="post" id="form-kids">
    <div class="field barcode span4 required">
     <label>{%trans "barcode"%}</label>
-    <input type="number" name="barcode" required="" min="10000" max="99999" value="" pattern=".{5,}" class="row" tabindex="1" autofocus="" placeholder='{%trans "barcode"%}' id="barcode" >
+    <input type="number" name="barcode" required="" min="10000" max="99999" value="" pattern=".{5,}" class="row" autofocus="" placeholder='{%trans "barcode"%}' id="barcode" >
    </div>
 {{forms.make(form['kids'])}}
   </form>
