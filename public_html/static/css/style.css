@@ -1,4 +1,4 @@
-body {color:#eee;background: url('../images/bg.jpg') #E0E0E0 no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;min-height: 100%;min-width: 100%;}
+body {color:#eee;background-color: #E0E0E0;background-image: url('../images/bg.jpg');background-attachment: fixed;background-position: center center;background-repeat: no-repeat;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;min-height: 100%;min-width: 100%;width:100%;height:auto;-webkit-transition: background-image 0.2s ease-in-out;transition: background-image 0.2s ease-in-out;}
 a{color:#9DD7FA}
 .center{position: relative;min-width:280px;max-width:360px;width:320px;margin: 0 auto;}
 .content{margin: 0 auto;padding: 20px 2%;-webkit-border-radius: 7px;-moz-border-radius: 7px;-ms-border-radius: 7px;-o-border-radius: 7px;border-radius: 7px;background: url('../images/bg-white-lock.png') repeat;margin-bottom: 80px;}
@@ -38,7 +38,8 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 #counter{font-size: 3em;position: absolute;left: 20px;z-index: 2;}
 
 #form-kids button{width:100%;}
-#form-kids select{height: 41px;}
+#form-kids select{text-align:center;height: 41px;}
+#form-kids input{text-align:center;}
 #form-kids .field > label{display:none}
 
 #form-barcode{margin:0;padding:0}

@@ -9,16 +9,25 @@ function launchFullscreen(element) {
 
 jQuery.fn.fadeOutAndRemove = function(speed){$(this).fadeOut(speed,function(){$(this).remove();})};
 
-function barcodeCallback() {
- Navigate({
+// function barcodeCallback() {
+//  Navigate({
+//  url: location.href,
+//  replace: true,
+//  filter: 'list-cards'
+//  }).then(function() {
+//  $('#form-barcode').on('ajaxify:success', barcodeCallback);
+//  })
+// }
+// $('#form-barcode').on('ajaxify:success', barcodeCallback);
+
+$('#form-barcode').on('ajaxify:success', function() {
+Navigate({
  url: location.href,
  replace: true,
  filter: 'list-cards'
- }).then(function() {
- $('#form-barcode').on('ajaxify:success', barcodeCallback);
  })
-}
-$('#form-barcode').on('ajaxify:success', barcodeCallback);
+});
+
 
 
 function kidsCallback() {
