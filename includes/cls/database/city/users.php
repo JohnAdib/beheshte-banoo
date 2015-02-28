@@ -25,8 +25,8 @@ class users
 	public $user_barcode       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Barcode',       'type' => 'int@5',                                                    );
 	public $user_enterdatetime = array('null' =>'NO',  'show' =>'YES', 'label'=>'Enterdatetime', 'type' => 'datetime@',                                                );
 	public $user_exitdatetime  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Exitdatetime',  'type' => 'datetime@',                                                );
-	public $date_modified      = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                               );
 	public $booth_id           = array('null' =>'YES', 'show' =>'YES', 'label'=>'Booth',         'type' => 'smallint@3',                                               'foreign'=>'booths@id!booth_title');
+	public $date_modified      = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                               );
 
 
 	//------------------------------------------------------------------ id - primary key
@@ -75,10 +75,12 @@ class users
 		$this->form("select")->name("country_")->min(0)->max(999)->type("select")->validate()->id();
 		$this->setChild();
 	}
+
+	//------------------------------------------------------------------ select button
 	public function user_province() 
 	{
-		$this->form("text")->name("province")->maxlength(50)->type('select');
-		$this->setChild('provinces@id!province_name', '18');
+		$this->form("select")->name("province")->type("select")->maxlength(50)->validate();
+		$this->setChild();
 	}
 	public function user_codemelli() 
 	{
@@ -134,7 +136,6 @@ class users
 	{
 		$this->form("text")->name("exitdatetime");
 	}
-	public function date_modified() {}
 
 	//------------------------------------------------------------------ id - foreign key
 	public function booth_id() 
@@ -142,5 +143,6 @@ class users
 		$this->form("select")->name("booth_")->min(0)->max(999)->type("select")->validate()->id();
 		$this->setChild();
 	}
+	public function date_modified() {}
 }
 ?>

@@ -40,8 +40,8 @@ class model extends \mvc\model
 		$this->commit(function()
 		{
 			debug::true(T_("register successfully"));
-			if($this->login('permission_id') == 5 )
-				$this->redirector()->set_domain()->set_url('camera');
+			// if($this->login('permission_id') == 5 )
+				// $this->redirector()->set_domain()->set_url('camera');
 		});
 		$this->rollback(function() { debug::error(T_("register failed!"));     });
 	}

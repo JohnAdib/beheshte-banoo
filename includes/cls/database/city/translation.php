@@ -63,16 +63,16 @@ function transtext()
 	echo T_("parentlost");          // Enum parentlost
 	echo T_("awaiting");            // Enum awaiting
 
-	// ------------------------------------------------------------------- Table kindergartens
-	echo T_("kindergartens");       // Table kindergartens
-	echo T_("Kindergartens");       // Kindergartens
-	echo T_("kindergarten");        // kindergartens
-	echo T_("Color");               // kindergarten_color
-	echo T_("Number");              // kindergarten_number
-	echo T_("Date");                // kindergarten_date
-	echo T_("Starttime");           // kindergarten_starttime
-	echo T_("Endtime");             // kindergarten_endtime
-	echo T_("Status");              // kindergarten_status
+	// ------------------------------------------------------------------- Table kids
+	echo T_("kids");                // Table kids
+	echo T_("Kids");                // Kids
+	echo T_("kid");                 // kids
+	echo T_("Color");               // kid_color
+	echo T_("Number");              // kid_number
+	echo T_("Date");                // kid_date
+	echo T_("Starttime");           // kid_starttime
+	echo T_("Endtime");             // kid_endtime
+	echo T_("Status");              // kid_status
 
 	// ------------------------------------------------------------------- Table options
 	echo T_("options");             // Table options

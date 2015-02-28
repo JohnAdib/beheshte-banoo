@@ -9,7 +9,7 @@ class model extends \mvc\model
 	public function post_game()
 	{
 		// read barcode and check it
-		$barcode =  utility::post('barcode');
+		$barcode = utility::post('barcode');
 		$id      = $this->checkBarcode($barcode);
 		if(!$id)
 		{
@@ -51,7 +51,7 @@ class model extends \mvc\model
 	public function post_absent()
 	{
 		// sleep (3);
-		$myid =  utility::post('id');
+		$myid = utility::post('id');
 		$qry  = $this->sql()->tableGames()->setGame_status('absent')->whereId($myid)->update();
 
 		$this->commit(function()   { });
@@ -60,7 +60,7 @@ class model extends \mvc\model
 
 	public function post_start()
 	{
-		$myid =  utility::post('id');
+		$myid = utility::post('id');
 		$qry  = $this->sql()->tableGames()->setGame_status('start')
 																				->setGame_starttime(date('Y-m-d H:i:s'))
 																				->whereId($myid)->update();
@@ -71,7 +71,7 @@ class model extends \mvc\model
 
 	public function post_win()
 	{
-		$myid =  utility::post('id');
+		$myid = utility::post('id');
 		$qry  = $this->sql()->tableGames()->setGame_status('win')
 																				->setGame_endtime(date('Y-m-d H:i:s'))
 																				->whereId($myid)->update();
@@ -82,7 +82,7 @@ class model extends \mvc\model
 
 	public function post_loose()
 	{
-		$myid =  utility::post('id');
+		$myid = utility::post('id');
 		$qry  = $this->sql()->tableGames()->setGame_status('loose')
 																				->setGame_endtime(date('Y-m-d H:i:s'))
 																				->whereId($myid)->update();

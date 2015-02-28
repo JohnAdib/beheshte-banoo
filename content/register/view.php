@@ -6,8 +6,8 @@ class view extends \mvc\view
 	function config()
 	{
 		$submit_value = T_('Register');
-		if($this->login('permission_id') == 5)
-			$submit_value = T_('Next: Take Picture');
+		// if($this->login('permission_id') == 5)
+			// $submit_value = T_('Next: Take Picture');
 
 		$this->include->barcode = true;
 		$myform                 = $this->createform('@'.db_name.'.users','add', $submit_value);

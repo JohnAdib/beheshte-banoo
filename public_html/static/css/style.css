@@ -37,6 +37,10 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 
 #counter{font-size: 3em;position: absolute;left: 20px;z-index: 2;}
 
+#form-kids button{width:100%;}
+#form-kids select{height: 41px;}
+#form-kids .field > label{display:none}
+
 #form-barcode{margin:0;padding:0}
 #form-barcode .barcode{margin:0;padding:0}
 #form-barcode .submit{margin:0;padding:0;margin-bottom: 10px;}
@@ -64,103 +68,25 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 
 
 
-ul.none{padding:0;margin:0}
+.list-cards{list-style: none;position: relative;padding:0;margin:0}
+.list-cards li{height: 45px;width: 96%;padding:0 2%;margin: 1em 0;line-height: 45px;position: relative;border:none;background-color: #eee;color:#000;opacity: 0.9;border-radius: 3px;transition: all .1s ease;}
+.list-cards li:hover{background-color:#fff;}
 
-.game-cards li{
-    height: 35px;
-    margin: 1em auto;
-    position: relative;
-    border:none;
-	
-}
+.list-cards li .c-avatar{float:right;margin-top:-3px;margin-right:-8px; width:50px;height:50px;overflow:hidden;border-radius:50%}
+.list-cards li .c-avatar img{width:100%;height:100%;}
+.list-cards li .c-name{float:right;margin-right:10px;width:100px;}
+.list-cards li .c-code{float:left;}
 
-.game-cards li > div {
-	border:none;
-	background-color: #eee;
-	color:#000;
-	opacity: 0.9;
-    width: 96%;
-    padding:0 2%;
-    height: 100%;
-    -o-transition: all .4s;
-    -ms-transition: all .4s;
-    -moz-transition: all .4s;
-    -webkit-transition: all .4s;
-    transition: all .4s;
-    -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    margin:0;
-    top: 0px;
-    left: 0px;
-    line-height: 35px;
-    border-radius: 3px;
-}
+.list-cards .fa{line-height:45px;font-size:20px;opacity:0.7;vertical-align: middle;width:50px;padding:0 2px;}
+.list-cards .fa:hover{background-color:#eee;opacity:1;}
+.list-cards .fa:before{float:left;}
+.list-cards .fa span{font-size:10px;font-family:'IRANSans',serif;margin:0 auto;vertical-align: top;color:#333;}
+.list-cards .fa-thumbs-up{color:#82B246;}
+.list-cards .fa-thumbs-down{color:#066CAB;}
+.list-cards .fa-times{color:#D30303;}
 
-.game-cards li .front {
-    z-index: 2;
-}
-
-.game-cards li .back {
-    z-index: 1;
-    -webkit-transform: rotateX(-180deg);
-    -ms-transform: rotateX(-180deg);
-    -moz-transform: rotateX(-180deg);  
-    transform: rotateX(-180deg);
-}
-
- .game-cards li:focus .front {
-    z-index: 1;
-    -webkit-transform: rotateX(180deg);
-    -ms-transform: rotateX(180deg);
-    -moz-transform: rotateX(180deg);
-    transform: rotateX(180deg);
-}
-
- .game-cards li:focus .back {
-    z-index: 2;   
-    -webkit-transform: rotateX(0deg);
-    -ms-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-}
-
-@media only screen and (min-width: 960px){
- .game-cards li:hover .front {
-    z-index: 1;
-    -webkit-transform: rotateX(180deg);
-    -ms-transform: rotateX(180deg);
-    -moz-transform: rotateX(180deg);
-    transform: rotateX(180deg);
-}
-
- .game-cards li:hover .back {
-    z-index: 2;   
-    -webkit-transform: rotateX(0deg);
-    -ms-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    transform: rotateX(0deg);
-}
-
-}
-
-.game-cards li .c-avatar{float:right;margin-top:-3px;margin-right:-8px; width:40px;height:40px;overflow:hidden;border-radius:50%}
-.game-cards li .c-avatar img{width:100%;height:100%;}
-.game-cards li .c-name{float:right;margin-right:10px;}
-.game-cards li .c-code{float:left;}
-.game-cards .back a{width:24%;margin:0 auto;}
-
-.game-cards .fa{line-height:35px;font-size:20px;opacity:0.7}
-.game-cards .fa:hover{opacity:1}
-.game-cards .fa span{font-size:10px;font-family:'IRANSans',serif;margin:0 auto;vertical-align: top;color:#333;}
-/*.game-cards .back a.fa-tty{width:48%;}*/
-.game-cards .fa-thumbs-up{color:#82B246;}
-.game-cards .fa-thumbs-down{color:#066CAB;}
-.game-cards .fa-times{color:#D30303;}
-.game-cards .fa-reply{color:#A4BECF;cursor:pointer;float:left;}
-
+.list-cards .fa-bullhorn{color:#1397A1;width:80px;}
+.list-cards .fa-child{color:#EC1E9B;width:80px;}
 
 
 

@@ -204,14 +204,16 @@ while ($row = $qTables->fetch_object())
 		// elseif($myname  === 'lastname')   $property .= "->class('span6 endline')";
 		// elseif($myname  === 'mobile')     $property .= "->class('span3')";
 		// elseif($myname  === 'birthdate')  $property .= "->class('span3')";
-		// // elseif($myname  === 'degree')     $property .= "->class('span3')";
+		// elseif($myname  === 'degree')     $property .= "->class('span3')";
 		// elseif($myfield === 'country_id') $property .= "->class('span2')";
 		// elseif($myname  === 'province')   $property .= "->class('span2')";
 		// elseif($myname  === 'codemelli')  $property .= "->class('span2 endline')";
 		// elseif($myname  === 'passport')   $property .= "->class('span2 endline hide')";
 		// elseif($myname  === 'barcode')    $property .= "->class('span12 endline')";
 
-		if($myname  === 'passport')   $property .= "->class('hide')";
+		if($myname  === 'passport')       $property .= "->class('hide')";
+		elseif($myname  === 'color')      $property .= "->class('span4')";
+		elseif($myname  === 'number')     $property .= "->class('span4 endline')";
 
 		// --------------------------------------------------------------------------------- ID
 		if($myfield=="id")
@@ -292,7 +294,7 @@ while ($row = $qTables->fetch_object())
 		// --------------------------------------------------------------------------------- select
 		elseif ($myname=="status" 	|| $myname=="model" 		|| $myname=="priority"
 			|| $myname=="sellin"		|| $myname=="priority" 	|| $myname=='method'
-			|| $myname=="type"		|| $myname=="paperstatus"
+			|| $myname=="type"		|| $myname=="paperstatus" || $property_type =="->type('select')"
 			)
 		{
 			$fn    .= $txtcomment. "select button\n";
