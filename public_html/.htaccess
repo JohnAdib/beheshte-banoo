@@ -42,29 +42,29 @@ Header set Access-Control-Allow-Headers "origin, x-requested-with, content-type"
 
 
 
-<IfModule mod_expires.c>
-  Header set cache-control: public
-  ExpiresActive on
+# <IfModule mod_expires.c>
+#   Header set cache-control: public
+#   ExpiresActive on
 
-  ExpiresByType font/ttf      "access plus 1 month"
-  ExpiresByType font/woff     "access plus 1 month"
-  ExpiresByType font/eot      "access plus 1 month"
-  ExpiresByType image/svg+xml "access plus 1 month"
+#   ExpiresByType font/ttf      "access plus 1 month"
+#   ExpiresByType font/woff     "access plus 1 month"
+#   ExpiresByType font/eot      "access plus 1 month"
+#   ExpiresByType image/svg+xml "access plus 1 month"
 
-# Webfonts
-  ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
-  ExpiresByType application/x-font-ttf    "access plus 1 month"
-  ExpiresByType application/x-font-woff   "access plus 1 month"
-  ExpiresByType font/opentype             "access plus 1 month"
-  ExpiresByType image/svg+xml             "access plus 1 month"
+# # Webfonts
+#   ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+#   ExpiresByType application/x-font-ttf    "access plus 1 month"
+#   ExpiresByType application/x-font-woff   "access plus 1 month"
+#   ExpiresByType font/opentype             "access plus 1 month"
+#   ExpiresByType image/svg+xml             "access plus 1 month"
 
-</IfModule>
+# </IfModule>
 
-<ifModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/xml text/css text/plain
-  AddOutputFilterByType DEFLATE image/svg+xml application/xhtml+xml application/xml
-  AddOutputFilterByType DEFLATE application/rdf+xml application/rss+xml application/atom+xml
-  AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript application/json
-  AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-otf
-  AddOutputFilterByType DEFLATE font/truetype font/opentype
-</ifModule>
+# <ifModule mod_deflate.c>
+#   AddOutputFilterByType DEFLATE text/html text/xml text/css text/plain
+#   AddOutputFilterByType DEFLATE image/svg+xml application/xhtml+xml application/xml
+#   AddOutputFilterByType DEFLATE application/rdf+xml application/rss+xml application/atom+xml
+#   AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript application/json
+#   AddOutputFilterByType DEFLATE application/x-font-ttf application/x-font-otf
+#   AddOutputFilterByType DEFLATE font/truetype font/opentype
+# </ifModule>
