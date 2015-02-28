@@ -25,7 +25,7 @@ class model extends \mvc\model
 												->whereKid_color  ($mycolor)
 												->andKid_number   ($mynumber)
 												->andKid_date     (date('Y-m-d'))
-												->andKid_exittime ('#NULL')
+												->andKid_endtime  ('#NULL')
 												->select();
 		if($qry->num()>0)
 		{
@@ -37,7 +37,7 @@ class model extends \mvc\model
 		$qry       = $this->sql()->tableKids  ()
 												->whereUser_id    ($myid)
 												->andKid_date     (date('Y-m-d'))
-												->andKid_exittime ('#NULL')
+												->andKid_endtime  ('#NULL')
 												->select();
 		if($qry->num()>0)
 		{
@@ -95,7 +95,7 @@ class model extends \mvc\model
 	{
 		$myid = utility::post('id');
 		$qry  = $this->sql()->tableKids()->setKid_status('out')
-																				->setKid_exittime(date('Y-m-d H:i:s'))
+																				->setKid_endtime(date('Y-m-d H:i:s'))
 																				->whereId($myid)->update();
 
 		$this->commit(function()   { });
