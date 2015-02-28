@@ -19,20 +19,20 @@ class model extends \lib\mvc\model
 			{
 				case 'login':
 				case 'select':
-				case 'insert':
 					$_priority = 'low';
 					break;
 
+				case 'signup':
 				case 'delete':
-				case 'access':
 					$_priority = 'high';
 					break;
 
-				case 'signup':
 				case 'error':
 					$_priority = 'critical';
 					break;
 
+				case 'access':
+				case 'insert':
 				case 'update':
 				default:
 					$_priority = 'medium';

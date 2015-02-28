@@ -20,13 +20,34 @@ jQuery.fn.fadeOutAndRemove = function(speed){$(this).fadeOut(speed,function(){$(
 // }
 // $('#form-barcode').on('ajaxify:success', barcodeCallback);
 
-$('#form-barcode').on('ajaxify:success', function() {
-Navigate({
+// $('#form-barcode').on('ajaxify:success', function() {
+// Navigate({
+//  url: location.href,
+//  replace: true,
+//  filter: 'list-cards'
+//  })
+// });
+
+
+function bindBarcode() {
+ $('#form-barcode').on('ajaxify:success', function() {
+ Navigate({
  url: location.href,
  replace: true,
  filter: 'list-cards'
  })
-});
+ });
+}
+
+$(window).on('statechange', function() {
+ if(history.state && history.url.indexOf('game') > -1 && !history.state.replace) {
+ bindBarcode();
+ }
+})
+
+
+
+
 
 
 
