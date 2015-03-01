@@ -111,6 +111,8 @@
 {%if include.barcode   %} <script src="{{url.static}}js/barcode-reader.js"></script>{{include.newline}}{%endif%}
 {%if include.js        %} <script src="{{url.static}}js/script.js"></script>{{include.newline}}{%endif%}
 
+<div data-xhr='foot_js' class="foot_js">
 {%block foot_js        %}{%endblock%}
+</div>
 </body>
 </html>

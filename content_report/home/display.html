@@ -5,27 +5,13 @@
 {%block content_def%}
 <div class="center" data-xhr="center">
  <div class="content">
-  <div class="black">
-   <a href="/date/all">All</a>
-   | <a href="/date/visitors">Visitors</a>
-   | <a href="/date/visitors_gender">visitors_gender</a>
-   | <a href="/date/gender">Gender</a>
-  </div>
-
-  <ul class="data-list">
-   <li>
-    <span class='data-key'>{%trans "Date"%}</span>
-    <span class='data-value'>{%trans "Value"%}</span>
-   </li>
-{%for i in list%}
-
-   <li>
-    <span class='data-key'>{{i.date|date("m/d")}}</span>
-    <span class='data-value'>{{i.value}}</span>
-   </li>
-{%endfor%}
-  </ul>
-  <div class="ct-chart ct-perfect-fourth"></div>
+ <div class="black">
+  <a href="/date/all">All</a>
+  | <a href="/date/visitors">Visitors</a>
+  | <a href="/date/visitors_gender">visitors_gender</a>
+  | <a href="/date/gender">Gender</a>
+ </div>
+ <div class="ct-chart ct-perfect-fourth"></div>
  </div>
 </div>
 {%endblock%}
@@ -35,30 +21,25 @@
 
 
 
+ 
 {%block foot_js%}
-
-{%for i in list%}
-
+{%if list%}
+ <script type="text/javascript">
+  var data = 
+  {
+   labels: [ {%for d in list%}'{{d.date|date("m/d")}}', {%endfor%} ],
+   series:
+   [
+{%for key,value in list.0 if key != 'date'%}
+    {
+     name: '{{key | capitalize}}',
+     data: [{%for d in list%}'{{d.value}}', {%endfor%}],
+    },
 {%endfor%}
-
-<script type="text/javascript">
-  var data = {
-    // A labels array that can contain any sort of values
-    labels: [ {%for i in list%}'{{i.date|date("m/d")}}', {%endfor%} ],
-    // Our series array that contains series objects or in this case series data arrays
-    series:
-    [
-      [{%for i in list%}'{{i.value}}', {%endfor%}],
-      [{%for i in list%}'{{i.value+2}}', {%endfor%}]
-    ]
-
+   ]
   };
 
-  // Create a new line chart object where as first parameter we pass in a selector
-  // that is resolving to our chart container element. The Second parameter
-  // is the actual data object.
   new Chartist.Line('.ct-chart', data, {low: 0, showArea: true} );
-</script>
-
-
+ </script>
+{%endif%}
 {%endblock%}
