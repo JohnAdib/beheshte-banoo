@@ -103,9 +103,9 @@ route('*', function() {
       $('.province select').prop('value', false);
     }
   });
-  $('.form').ajaxifyCallbacks({complete: function(data){
-    if(data.status == 1){ $('.form')[0].reset(); }
-  } });
+  // $('.form').ajaxifyCallbacks({complete: function(data){
+  //   if(data.status == 1){ $('.form')[0].reset(); }
+  // } });
 
 
 });
