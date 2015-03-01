@@ -1,12 +1,12 @@
 <?php
-namespace content\kids;
+namespace content\kid;
 use \lib\debug;
 use \lib\utility;
 use \lib\utility\File;
 
 class model extends \mvc\model
 {
-	public function post_kids()
+	public function post_kid()
 	{
 		// read barcode and check it
 		$mybarcode =  utility::post('barcode');

@@ -79,5 +79,7 @@ function transtext()
 	echo T_('Camera');
 	echo T_('Game');
 	echo T_('Point');
+	echo T_('Kid');
+	echo T_('Report');
 }
 ?>

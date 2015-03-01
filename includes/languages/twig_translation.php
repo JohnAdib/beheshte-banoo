@@ -40,6 +40,12 @@ function transtext()
 	echo T_("Start");                                                                 // Line 21
 	echo T_("Absent");                                                                // Line 24
 
+	//--------------------------------------------------------content/kid/display.html
+	echo T_("Kindergartens");                                                         // Line 8 Seperate
+	echo T_("barcode");                                                               // Line 12
+	echo T_("Delivery");                                                              // Line 27
+	echo T_("Call");                                                                  // Line 26
+
 	//-------------------------------------------------------content/home/display.html
 	echo T_("Logout");                                                                // Line 46
 	echo T_("Login");                                                                 // Line 48
@@ -51,6 +57,8 @@ function transtext()
 	echo T_("Point Checker");                                                         // Line 37
 	echo T_("Change points to meney");                                                // Line 38
 
+	//-----------------------------------------------------content/report/display.html
+
 	//-----------------------------------------------------content/camera/display.html
 	echo T_("First of all, scan barcode then camera take a picture form you and show it for 3 second.");// Line 12 Seperate
 	echo T_("if it looks good you successful else try again with scan a barcode");    // Line 12 Seperate
@@ -58,12 +66,6 @@ function transtext()
 
 	//------------------------------------------------------content/point/display.html
 	echo T_("Scan your barcode and see your points");                                 // Line 8 Seperate
-
-	//-------------------------------------------------------content/kids/display.html
-	echo T_("Kindergartens");                                                         // Line 8 Seperate
-	echo T_("barcode");                                                               // Line 12
-	echo T_("Delivery");                                                              // Line 27
-	echo T_("Call");                                                                  // Line 26
 
 	//----------------------------------------------------content_cp/home/display.html
 	echo T_("Home");                                                                  // Line 40

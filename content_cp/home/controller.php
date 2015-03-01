@@ -85,7 +85,7 @@ class controller extends \mvc\controller
 		$mylist		= array(
 						'booths',
 						'games',
-						'kindergartens',
+						'kids',
 						'options',
 						'permissiondetails',
 						'permissions',

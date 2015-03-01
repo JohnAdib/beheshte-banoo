@@ -72,7 +72,7 @@ function transtext()
 	echo T_("Date");                // kid_date
 	echo T_("Regtime");             // kid_regtime
 	echo T_("Returntime");          // kid_returntime
-	echo T_("Exittime");            // kid_exittime
+	echo T_("Endtime");             // kid_endtime
 	echo T_("Status");              // kid_status
 
 	// ------------------------------------------------------------------- Table options

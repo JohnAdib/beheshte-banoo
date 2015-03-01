@@ -1,5 +1,5 @@
 <?php
-namespace content\kids;
+namespace content\kid;
 
 class view extends \mvc\view
 {

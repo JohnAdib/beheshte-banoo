@@ -9,7 +9,7 @@ class kids
 	public $kid_date       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Date',          'type' => 'date@',                                         );
 	public $kid_regtime    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Regtime',       'type' => 'datetime@',                                     );
 	public $kid_returntime = array('null' =>'YES', 'show' =>'YES', 'label'=>'Returntime',    'type' => 'datetime@',                                     );
-	public $kid_exittime   = array('null' =>'YES', 'show' =>'YES', 'label'=>'Exittime',      'type' => 'datetime@',                                     );
+	public $kid_endtime    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Endtime',       'type' => 'datetime@',                                     );
 	public $kid_status     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@in,out,babylost,parentlost,awaiting!in',   );
 	public $date_modified  = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                    );
 
@@ -40,9 +40,9 @@ class kids
 	{
 		$this->form("text")->name("returntime");
 	}
-	public function kid_exittime() 
+	public function kid_endtime() 
 	{
-		$this->form("text")->name("exittime");
+		$this->form("text")->name("endtime");
 	}
 
 	//------------------------------------------------------------------ select button
