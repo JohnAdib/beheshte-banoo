@@ -9,7 +9,7 @@ class view extends \mvc\view
 		$myform                 = $this->createform('.barcode');
 		$myform->white("user_barcode, submit");
 
-		$this->data->list 	   = $this->model()->get_list();
+		$this->data->list       = $this->model()->get_list();
 	}
 }
 ?>

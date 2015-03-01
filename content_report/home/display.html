@@ -1,0 +1,31 @@
+{%extends display.mvc%}
+{%block header_def%}{%endblock%}
+
+
+{%block content_def%}
+<div class="center" data-xhr="center">
+ <div class="content">
+  <p id="description">{%trans%}Scan your barcode and change your points to money!{%endtrans%}</p>
+  <div class="gray">
+   <a href="/date/all">All</a>
+   <a href="/date/visitors">Visitors</a>
+   <a href="/date/visitors_gender">visitors_gender</a>
+   <a href="/date/gender">Gender</a>
+  </div>
+
+  <ul class="data-list">
+   <li>
+    <span class='data-key'>{%trans "Date"%}</span>
+    <span class='data-value'>{%trans "Value"%}</span>
+   </li>
+  {%for i in list%}
+   <li>
+    <span class='data-key'>{{i.date|date("m/d")}}</span>
+    <span class='data-value'>{{i.value}}</span>
+   </li>
+  {%endfor%}
+  </ul>
+ </div>
+</div>
+
+{%endblock%}

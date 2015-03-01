@@ -1,12 +1,14 @@
 <?php
-namespace content\report;
+namespace content_report\home;
 
 
-class controller extends \content\home\controller
+class controller extends \mvc\controller
 {
 	public function config()
 	{
-		$this->post('report')->ALL();
+		// $mymodule = $this->module();
+		// $this->post('report')->ALL();
+		$this->get()->ALL();
 	}
 
 	// for routing check
