@@ -33,7 +33,7 @@
 {%for key,value in list.0 if key != 'date'%}
     {
      name: '{{key | capitalize}}',
-     data: [{%for d in list%}'{{d.value}}', {%endfor%}],
+     data: [{%for d in list%}'{{d.visitors}}', {%endfor%}],
     },
 {%endfor%}
    ]

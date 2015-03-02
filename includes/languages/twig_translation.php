@@ -4,6 +4,8 @@ function transtext()
 
 	//--------------------------------public_html/static/js/datatable-langs/index.html
 
+	//---------------------------------public_html/static/js/chartist/test/runner.html
+
 	//----------------------------------------------content_account/login/display.html
 	echo T_("Don't have an account?");                                                // Line 6
 	echo T_("Click here to create an account");                                       // Line 6
@@ -49,15 +51,14 @@ function transtext()
 	//-------------------------------------------------------content/home/display.html
 	echo T_("Logout");                                                                // Line 46
 	echo T_("Login");                                                                 // Line 48
+	echo T_("Reports");                                                               // Line 22
 	echo T_("Control Panel");                                                         // Line 44
-	echo T_("Register Visitors");                                                     // Line 33
-	echo T_("Register Kids");                                                         // Line 35
-	echo T_("Register Visitors Avatar");                                              // Line 34
-	echo T_("Start Game");                                                            // Line 31
-	echo T_("Point Checker");                                                         // Line 37
-	echo T_("Change points to meney");                                                // Line 38
-
-	//-----------------------------------------------------content/report/display.html
+	echo T_("Register Visitors");                                                     // Line 34
+	echo T_("Register Kids");                                                         // Line 36
+	echo T_("Register Visitors Avatar");                                              // Line 35
+	echo T_("Start Game");                                                            // Line 32
+	echo T_("Point Checker");                                                         // Line 38
+	echo T_("Change points to meney");                                                // Line 39
 
 	//-----------------------------------------------------content/camera/display.html
 	echo T_("First of all, scan barcode then camera take a picture form you and show it for 3 second.");// Line 12 Seperate

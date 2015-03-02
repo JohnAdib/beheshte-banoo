@@ -1,6 +1,6 @@
 body {color:#eee;background-color: #E0E0E0;background-image: url('../images/bg.jpg');background-attachment: fixed;background-position: center center;background-repeat: no-repeat;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;min-height: 100%;min-width: 100%;width:100%;height:auto;-webkit-transition: background-image 0.2s ease-in-out;transition: background-image 0.2s ease-in-out;}
 a{color:#9DD7FA}
-.center{position: relative;min-width:280px;max-width:360px;width:320px;margin: 0 auto;}
+.center{position: relative;min-width:280px;max-width:600px;width:450px;margin: 0 auto;}
 .content{margin: 0 auto;padding: 20px 2%;-webkit-border-radius: 7px;-moz-border-radius: 7px;-ms-border-radius: 7px;-o-border-radius: 7px;border-radius: 7px;background: url('../images/bg-white-lock.png') repeat;margin-bottom: 80px;}
 h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;font-weight: 700;margin:0;margin-bottom: 20px}
 #logo{display: block;margin:0 auto;width:160px;height:auto;border:none}
@@ -42,7 +42,7 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 #form-kids input{text-align:center;}
 #form-kids .field > label{display:none}
 
-#form-barcode{margin:0;padding:0}
+#form-barcode{margin:0 auto;padding:0}
 #form-barcode .barcode{margin:0;padding:0}
 #form-barcode .submit{margin:0;padding:0;margin-bottom: 10px;}
 #form-barcode button{width:100%;margin: 0;padding:10px 0;}
@@ -53,19 +53,26 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 .loading-form #webcambox #my_camera{opacity: 0.2}
 .loading-form #webcambox #my_camera_result{opacity:1}
 
-/* #Mobile (Landscape) =================================== Design for a width of 480px*/
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 900px){
 	#logo{margin-top:0;}
 	h1{margin:0 auto 10px;}
 	#footer{position: relative;bottom: 0;margin-top:80px;}
   #formError{position:absolute;}
+  .center{width: 100%;}
+}
+@media only screen and (max-width: 650px){
+  .center{width: 90%;margin:0 5%;}
 }
 
-@media only screen and (max-width: 320px){
-	.center{width: 100%;}
+@media only screen and (max-width: 480px){
+	.center{width: 96%;margin:0 2%;}
   #formError{top:10px;right:0px;}
 }
 
+@media only screen and (max-width: 290px){
+	body{display:none;}
+	html::before{content:"!";position:absolute;top:10%;left: 35%;font-size:100vw;}
+}
 
 
 
