@@ -3,15 +3,17 @@
 
 
 {%block content_def%}
-<div class="center" data-xhr="center">
+<div class="center report" data-xhr="center">
  <div class="content">
- <div class="black">
-  <a href="/date/all">All</a>
-  | <a href="/date/visitors">Visitors</a>
-  | <a href="/date/visitors_gender">visitors_gender</a>
-  | <a href="/date/gender">Gender</a>
- </div>
- <div class="ct-chart ct-perfect-fourth"></div>
+  <h1>{%trans "Visitor report by"%} {{child}}</h1>
+  <div class="ct-chart ct-perfect-fourth"></div>
+ 
+  <div class="black">
+   <a href="/date">All</a>
+   | <a href="/date/birthdate">Birth date</a>
+   | <a href="/date/province">province</a>
+   | <a href="/date/gender">Gender</a>
+  </div>
  </div>
 </div>
 {%endblock%}
@@ -23,23 +25,29 @@
 
  
 {%block foot_js%}
-{%if list%}
+{%if chart_labels%}
+
+
+
+
+
  <script type="text/javascript">
+
   var data = 
   {
-   labels: [ {%for d in list%}'{{d.date|date("m/d")}}', {%endfor%} ],
+   labels: [ {%for date in chart_labels%}'{{date|date("m/d")}}', {%endfor%} ],
    series:
    [
-{%for key,value in list.0 if key != 'date'%}
+{%for name, datarow in chart_series%}
     {
-     name: '{{key | capitalize}}',
-     data: [{%for d in list%}'{{d.visitors}}', {%endfor%}],
+      name: '{{name}}',
+      data: [ {%for value in datarow%}'{{value}}',{%endfor%} ],
     },
 {%endfor%}
    ]
-  };
 
-  new Chartist.Line('.ct-chart', data, {low: 0, showArea: true} );
+  };
+  new Chartist.Line('.ct-chart', data, {low: 0, showArea: true,fullWidth: true} );
  </script>
 {%endif%}
 {%endblock%}

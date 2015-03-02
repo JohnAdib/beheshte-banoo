@@ -12,17 +12,47 @@ class model extends \mvc\model
 	// `date`,`user_gender` AS 'value', count(*) from `users` 
 	// group by `users`.`user_enterdatetime`, `user_gender`
 
-	public function get_list()
+	// get a list of data for create a chart
+	public function mylist()
 	{
-		$mymodule = $this->module();
-		$mychild  = $this->child();
-		if(!$mychild)
-			\lib\error::access();
+		$mymodule  = $this->module();
+		$mychild   = $this->child();
+		$qry       = $this->sql()->tableUsers();
 
-		$mytable  = 'tableRpt_'.$mymodule.'_'.$mychild;
-		$qry      = $this->sql()->$mytable()->select();
+		if($mymodule === 'date')
+		{
+			// $qry = $qry->field('#user_enterdatetime as date','#count(*) as value');
+			$qry = $qry->groupbyUser_enterdatetime();
+		}
+		if($mychild)
+		{
+			$groupbychild = 'groupbyUser_'.$mychild;
+			$qry          = $qry->$groupbychild();
+
+			$qry = $qry->field("#date_format(user_enterdatetime,'%d/%m/%Y') as date",
+													'#count(*) as value',
+													"#user_$mychild as $mychild"
+												);
+		}
+		else
+		{
+ 			$qry = $qry->field("#date_format(user_enterdatetime,'%d/%m/%Y') as date",
+ 													'#count(*) as value'
+ 												);
+		}
+
+		$qry = $qry->select();
+		$datatable = $qry->allassoc();
+		// var_dump($datatable);
 
 		return $qry->allassoc();
+	}
+
+	// return count of the days in table
+	public function mydateCount()
+	{
+		$qry = $this->sql()->tableUsers()->groupbyUser_enterdatetime()->select('id');
+		return $qry->num();
 	}
 }
 ?>

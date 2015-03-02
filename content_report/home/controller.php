@@ -14,6 +14,9 @@ class controller extends \mvc\controller
 	// for routing check
 	function _route()
 	{
+		$mymodule = $this->module();
+		$mychild  = $this->child();
+
 		// if user dont login redirect to root and don't show this page
 		if(!$this->login() || $this->login('permission_id') !== '1')
 		{
