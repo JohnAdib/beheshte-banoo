@@ -21,8 +21,8 @@ function bindKids() {
   });
 }
 $(window).on('statechange', function() {
-  history.state.url.indexOf('kids')
-  if(history.state && history.state.url.indexOf('kids') > -1 && !history.state.replace) {
+  history.state.url.indexOf('kid')
+  if(history.state && history.state.url.indexOf('kid') > -1 && !history.state.replace) {
     bindKids();
   }
 });
