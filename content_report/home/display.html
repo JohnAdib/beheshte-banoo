@@ -52,13 +52,15 @@
    ]
 
   };
-  new Chartist.Line('.ct-chart', data, 
-    {
-      low: 0, showArea: true, {%if error%}fullWidth:false{%else%}fullWidth:true{%endif%}
-    } 
-  );
 
+  var options = {
+    low: 0,
+    showArea: true,
+    {%if error%}fullWidth:false{%else%}fullWidth:true{%endif%},
+    
+  };
 
+  new Chartist.Line('.ct-chart', data, options);
 
 
   var $chart = $('.ct-chart');

@@ -37,7 +37,7 @@ class view extends \mvc\view
 					if($mychild === 'province')
 						$myname = T_('Foreign');
 					else
-						$myname = T_('Other');
+						$myname = T_('Unknown');
 				}
 				else
 				{
