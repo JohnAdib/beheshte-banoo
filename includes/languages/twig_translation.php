@@ -3,13 +3,13 @@ function transtext()
 {
 
 	//------------------------------------------------content_report/home/display.html
-	echo T_("summary reports");                                                       // Line 98
-	echo T_("show all visitors groupby date");                                        // Line 99
-	echo T_("by");                                                                    // Line 103
-	echo T_("birthdate");                                                             // Line 100
-	echo T_("province");                                                              // Line 101
-	echo T_("gender");                                                                // Line 102
-	echo T_("booth");                                                                 // Line 103
+	echo T_("summary reports");                                                       // Line 97
+	echo T_("popular booths");                                                        // Line 17
+	echo T_("show all visitors groupby date");                                        // Line 98
+	echo T_("by");                                                                    // Line 102
+	echo T_("birthdate");                                                             // Line 99
+	echo T_("province");                                                              // Line 100
+	echo T_("gender");                                                                // Line 101
 
 	//---------------------------------------------content_report/summary/display.html
 	echo T_("Total Admin User");                                                      // Line 19
@@ -20,13 +20,14 @@ function transtext()
 	echo T_("Total Sections");                                                        // Line 40
 	echo T_("Total Booths");                                                          // Line 44
 	echo T_("Work days");                                                             // Line 48
-	echo T_("Total Game Prizes");                                                     // Line 58
-	echo T_("Average Points By Users");                                               // Line 62
-	echo T_("Point per days (Average)");                                              // Line 66
-	echo T_("Top Player");                                                            // Line 70
-	echo T_("Top Player Point");                                                      // Line 74
-	echo T_("Total visitors");                                                        // Line 88
-	echo T_("Visit per days (Average)");                                              // Line 92
+	echo T_("Total Game Prizes");                                                     // Line 57
+	echo T_("Average Points By Users");                                               // Line 61
+	echo T_("Point per days (Average)");                                              // Line 65
+	echo T_("Top Player");                                                            // Line 69
+	echo T_("Top Player Point");                                                      // Line 73
+	echo T_("Total visitors");                                                        // Line 87
+	echo T_("Visit per days (Average)");                                              // Line 91
+	echo T_("booth");                                                                 // Line 102
 
 	//--------------------------------public_html/static/js/datatable-langs/index.html
 

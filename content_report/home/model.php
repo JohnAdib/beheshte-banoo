@@ -13,7 +13,7 @@ class model extends \mvc\model
 	// group by `users`.`user_enterdatetime`, `user_gender`
 
 	// get a list of data for create a chart
-	public function mylist()
+	public function mylist_users()
 	{
 		$mymodule  = $this->module();
 		$mychild   = $this->child();
@@ -40,9 +40,7 @@ class model extends \mvc\model
  													'#count(*) as value'
  												);
 		}
-
 		$qry = $qry->select();
-		$datatable = $qry->allassoc();
 
 		return $qry->allassoc();
 	}
@@ -59,6 +57,25 @@ class model extends \mvc\model
 	{
 		$qry = $this->sql()->tableProvinces()->whereId($id)->select();
 		return $qry->assoc('province_name');
+	}
+
+	public function mylist_booths()
+	{
+		$mymodule  = $this->module();
+		$mychild   = $this->child();
+		$qry       = $this->sql()->tableGames()
+								->field("#game_date as date",'#count(*) as value',"#".$mychild."_id as $mychild")
+								->groupbyGame_date()->groupbyBooth_id()->select();
+
+		// var_dump($qry->string());
+		return $qry->allassoc();
+	}
+
+	// return the name of province
+	public function myboothName($id)
+	{
+		$qry = $this->sql()->tableBooths()->whereId($id)->select();
+		return $qry->assoc('booth_title');
 	}
 }
 ?>

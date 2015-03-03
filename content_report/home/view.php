@@ -7,9 +7,15 @@ class view extends \mvc\view
 	{
 		$this->include->chart = true;
 		$mychild              = $this->child();
-		$mylist               = $this->model()->mylist();
+
+		if($mychild === 'booth')
+			$mylist             = $this->model()->mylist_booths();
+		else
+			$mylist             = $this->model()->mylist_users();
+
 		$mydateCount          = $this->model()->mydateCount();
-		$this->global->title  = T_('Visitor report').($mychild? (' '.T_('by').' '.T_($mychild)):'');
+		$chartby              = ($mychild? (' '.T_('by').' '.T_($mychild)):'');
+		$this->global->title  = T_('Visitor report').$chartby;
 		$chart_labels         = array();
 		$chart_series         = array();
 		$counter              = 0;
@@ -55,6 +61,11 @@ class view extends \mvc\view
 					// return the name of provinces
 					elseif($mychild === 'province')
 						$myname = $this->model()->myprovinceName($value[$mychild]);
+					elseif($mychild === 'booth')
+					{
+						$myname = $this->model()->myboothName($value[$mychild]);
+						$this->global->title  = T_('popular booths');
+					}
 					else
 						$myname = T_($value[$mychild]);
 				}
