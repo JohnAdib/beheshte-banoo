@@ -81,5 +81,7 @@ function transtext()
 	echo T_('Point');
 	echo T_('Kid');
 	echo T_('Report');
+	echo T_('birthdate');
+	echo T_('gender');
 }
 ?>

@@ -2,6 +2,14 @@
 function transtext()
 {
 
+	//------------------------------------------------content_report/home/display.html
+	echo T_("Visitor report");                                                        // Line 8
+	echo T_("by");                                                                    // Line 8
+	echo T_("show all");                                                              // Line 12
+	echo T_("birthdate");                                                             // Line 13
+	echo T_("province");                                                              // Line 14
+	echo T_("gender");                                                                // Line 15
+
 	//--------------------------------public_html/static/js/datatable-langs/index.html
 
 	//---------------------------------public_html/static/js/chartist/test/runner.html

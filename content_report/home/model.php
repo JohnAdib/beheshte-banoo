@@ -54,5 +54,12 @@ class model extends \mvc\model
 		$qry = $this->sql()->tableUsers()->groupbyUser_enterdatetime()->select('id');
 		return $qry->num();
 	}
+
+	// return the name of province
+	public function myprovinceName($id)
+	{
+		$qry = $this->sql()->tableProvinces()->whereId($id)->select();
+		return $qry->assoc('province_name');
+	}
 }
 ?>

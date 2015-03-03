@@ -6,10 +6,10 @@ class view extends \mvc\view
 	function config()
 	{
 		$this->include->chart = true;
-		$this->global->title  = T_('Reports');
 		$mychild              = $this->child();
 		$mylist               = $this->model()->mylist();
 		$mydateCount          = $this->model()->mydateCount();
+		$this->global->title  = T_('Visitor report').($mychild? (' '.T_('by').' '.T_($mychild)):'');
 		$chart_labels         = array();
 		$chart_series         = array();
 		$counter              = 0;
@@ -25,9 +25,37 @@ class view extends \mvc\view
 			}
 
 			if($mychild)
-				$myname = $value[$mychild];
+			{
+				if(empty($value[$mychild]))
+				{
+					if($mychild === 'province')
+						$myname = T_('Foreign');
+					else
+						$myname = T_('Other');
+				}
+				else
+				{
+					if($mychild === 'birthdate')
+					{
+						if($value[$mychild] == 0)
+							$myname   = T_('Empty');
+						else
+						{
+							$from     = new \DateTime($value[$mychild]);
+							$to       = new \DateTime('today');
+							$myname   = $from->diff($to)->y .' '.T_('years old');
+						}
+					}
+					// return the name of provinces
+					elseif($mychild === 'province')
+						$myname = $this->model()->myprovinceName($value[$mychild]);
+					else
+						$myname = T_($value[$mychild]);
+				}
+			}
 			else
-				$myname = 'All';
+				$myname = T_('Visitors');
+
 			// if type not exits add it to array and fill with zero
 			if(!array_key_exists($myname, $chart_series))
 			{

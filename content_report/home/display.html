@@ -5,14 +5,15 @@
 {%block content_def%}
 <div class="center report" data-xhr="center">
  <div class="content">
-  <h1>{%trans "Visitor report by"%} {{child}}</h1>
+  <h1>{{global.title}}</h1>
   <div class="ct-chart ct-perfect-fourth"></div>
  
   <div class="black">
-   <a href="/date">All</a>
-   | <a href="/date/birthdate">Birth date</a>
-   | <a href="/date/province">province</a>
-   | <a href="/date/gender">Gender</a>
+   <a href="/date">{%trans "show all"%}</a>
+   | <a href="/date/birthdate">{%trans "birthdate"%}</a>
+   | <a href="/date/province">{%trans "province"%}</a>
+   | <a href="/date/gender">{%trans "gender"%}</a>
+   | <a href="/date/booth">{%trans "booth"%}</a>
   </div>
  </div>
 </div>
@@ -48,6 +49,36 @@
 
   };
   new Chartist.Line('.ct-chart', data, {low: 0, showArea: true,fullWidth: true} );
+
+
+
+
+  var $chart = $('.ct-chart');
+
+  var $toolTip = $chart
+    .append('<div class="tooltip"></div>')
+    .find('.tooltip')
+    .hide();
+
+  $chart.on('mouseenter', '.ct-point', function() {
+    var $point = $(this),
+      value = $point.attr('ct:value'),
+      seriesName = $point.parent().attr('ct:series-name');
+    $toolTip.html(seriesName + '<br>' + value).show();
+  });
+
+  $chart.on('mouseleave', '.ct-point', function() {
+    $toolTip.hide();
+  });
+
+  $chart.on('mousemove', function(event) {
+    $toolTip.css({
+      left: (event.offsetX || event.originalEvent.layerX) - $toolTip.width() / 2 - 10,
+      top: (event.offsetY || event.originalEvent.layerY) - $toolTip.height() - 40
+    });
+  });
+
+
  </script>
 {%endif%}
 {%endblock%}
