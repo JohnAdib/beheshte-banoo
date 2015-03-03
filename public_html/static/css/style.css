@@ -104,6 +104,11 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 .tooltip{position:absolute;display:inline-block;min-width:5em;padding:.5em;background:#F4C63D;color:#453D3F;font-weight:700;text-align:center;pointer-events:none;z-index:1}.tooltip:after{content:"";position:absolute;top:100%;left:50%;width:0;height:0;margin-left:-15px;border:15px solid transparent;border-top-color:#F4C63D}
 .ct-chart.ct-perfect-fourth{height:450px}
 #chart-error{color:#000;font-size:2em;text-align:center;margin-top:100px;position:absolute;width:96%;opacity:0.5;background-color:#eee}
+#report-nav{background-color:#bbb;}
+#report-nav a{color:#000;padding:2px 10px;margin-left:5px;}
+#report-nav a:hover{background-color:#eee}
+#report-summary{height:450px}
+
 
 @media only screen and (max-width: 900px){
 	#logo{margin-top:0;}

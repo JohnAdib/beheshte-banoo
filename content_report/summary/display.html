@@ -1,0 +1,106 @@
+{%extends display.mvc%}
+{%block header_def%}{%endblock%}
+
+
+{%block content_def%}
+<div class="center report" data-xhr="center">
+ <div class="content">
+  <h1>{{global.title}}</h1>
+{%if error%}
+  <div id="chart-error">{{error}}</div>
+{%else%}
+{%endif%}
+
+  <div id="report-summary">
+
+   <div class="statistics">
+    <div class="statistic">
+     <div class="value">{{user.admin}}</div>
+     <div class="label">{%trans "Total Admin User"%}</div>
+    </div>
+    <div class="statistic">
+     <div class="value">{{user.register}}</div>
+     <div class="label">{%trans "Total Register User"%}</div>
+    </div>
+    <div class="statistic">
+     <div class="value">{{user.booth}}</div>
+     <div class="label">{%trans "Total Booth User"%}</div>
+    </div>
+    <div class="statistic">
+     <div class="value">{{user.visitor}}</div>
+     <div class="label">{%trans "Total Visitor User"%}</div>
+    </div>
+    <div class="statistic">
+     <div class="value">{{user.kid}}</div>
+     <div class="label">{%trans "Total kid User"%}</div>
+    </div>
+
+    <div class="statistic">
+     <div class="value">{{section.total}}</div>
+     <div class="label">{%trans "Total Sections"%}</div>
+    </div>
+    <div class="statistic">
+     <div class="value">{{booth.total}}</div>
+     <div class="label">{%trans "Total Booths"%}</div>
+    </div>
+    <div class="statistic">
+     <div class="value">{{user.days}}</div>
+     <div class="label">{%trans "Work days"%}</div>
+    </div>
+   </div>
+   
+   <hr/>
+
+   <div class="statistics">
+    <div class="statistic">
+     <div class="value">{{game.prizes}}</div>
+     <div class="label">{%trans "Total Game Prizes"%}</div>
+    </div>
+    <div class="statistic">
+     <div class="value">{{game.averagepoint|round(1)}}</div>
+     <div class="label">{%trans "Average Points By Users"%}</div>
+    </div>
+    <div class="statistic">
+     <div class="value">{{game.prizes / user.days}}</div>
+     <div class="label">{%trans "Point per days (Average)"%}</div>
+    </div>
+    <div class="statistic purple txt">
+     <div class="value">{{game.maxpoint.firstname}} {{game.maxpoint.lastname}}</div>
+     <div class="label">{%trans "Top Player"%}<br/><b></b></div>
+    </div>
+    <div class="statistic">
+     <div class="value">{{game.maxpoint.prizes}}</div>
+     <div class="label">{%trans "Top Player Point"%}<br/><b></b></div>
+    </div>
+   </div>
+
+   <hr/>
+
+
+
+
+
+
+   <div class="statistics">
+    <div class="statistic yellow">
+     <div class="value">{{user.visitor}}</div>
+     <div class="label">{%trans "Total visitors"%}</div>
+    </div>
+    <div class="statistic">
+     <div class="value">{{user.visitor / user.days}}</div>
+     <div class="label">{%trans "Visit per days (Average)"%}</div>
+    </div>
+   </div>
+  </div>
+
+  <div id="report-nav">
+   <a href="/summary">{%trans "summary reports"%}</a> |
+   <a href="/date">{%trans "show all visitors groupby date"%}</a>(
+   <a href="/date/birthdate">{%trans "by"%} {%trans "birthdate"%}</a>
+   <a href="/date/province">{%trans "by"%} {%trans "province"%}</a>
+   <a href="/date/gender">{%trans "by"%} {%trans "gender"%}</a>
+   <a href="/date/booth">{%trans "by"%} {%trans "booth"%}</a>)
+  </div>
+ </div>
+</div>
+{%endblock%}

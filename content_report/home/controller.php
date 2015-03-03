@@ -6,8 +6,6 @@ class controller extends \mvc\controller
 {
 	public function config()
 	{
-		// $mymodule = $this->module();
-		// $this->post('report')->ALL();
 		$this->get()->ALL();
 	}
 

@@ -15,10 +15,10 @@ class view extends \mvc\view
 		$counter              = 0;
 
 
-		if($mydateCount <= 1)
+		if($mydateCount <= 1 || count($mylist) <= 1)
 		{
 			$this->data->error = T_("Chart must be contain at least 2 column!");
-			// return;
+			return;
 		}
 
 		foreach ($mylist as $value)

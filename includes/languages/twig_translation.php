@@ -3,12 +3,30 @@ function transtext()
 {
 
 	//------------------------------------------------content_report/home/display.html
-	echo T_("Chart must be contain at least 2 column!");                              // Line 9
-	echo T_("show all");                                                              // Line 13
-	echo T_("birthdate");                                                             // Line 14
-	echo T_("province");                                                              // Line 15
-	echo T_("gender");                                                                // Line 16
-	echo T_("booth");                                                                 // Line 17
+	echo T_("summary reports");                                                       // Line 98
+	echo T_("show all visitors groupby date");                                        // Line 99
+	echo T_("by");                                                                    // Line 103
+	echo T_("birthdate");                                                             // Line 100
+	echo T_("province");                                                              // Line 101
+	echo T_("gender");                                                                // Line 102
+	echo T_("booth");                                                                 // Line 103
+
+	//---------------------------------------------content_report/summary/display.html
+	echo T_("Total Admin User");                                                      // Line 19
+	echo T_("Total Register User");                                                   // Line 23
+	echo T_("Total Booth User");                                                      // Line 27
+	echo T_("Total Visitor User");                                                    // Line 31
+	echo T_("Total kid User");                                                        // Line 35
+	echo T_("Total Sections");                                                        // Line 40
+	echo T_("Total Booths");                                                          // Line 44
+	echo T_("Work days");                                                             // Line 48
+	echo T_("Total Game Prizes");                                                     // Line 58
+	echo T_("Average Points By Users");                                               // Line 62
+	echo T_("Point per days (Average)");                                              // Line 66
+	echo T_("Top Player");                                                            // Line 70
+	echo T_("Top Player Point");                                                      // Line 74
+	echo T_("Total visitors");                                                        // Line 88
+	echo T_("Visit per days (Average)");                                              // Line 92
 
 	//--------------------------------public_html/static/js/datatable-langs/index.html
 
