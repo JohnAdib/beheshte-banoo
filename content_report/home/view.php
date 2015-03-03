@@ -15,6 +15,12 @@ class view extends \mvc\view
 		$counter              = 0;
 
 
+		if($mydateCount <= 1)
+		{
+			$this->data->error = T_("Chart must be contain at least 2 column!");
+			// return;
+		}
+
 		foreach ($mylist as $value)
 		{
 			// if date not exist in labels add it and add counter

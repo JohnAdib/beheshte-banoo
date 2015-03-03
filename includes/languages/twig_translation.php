@@ -3,12 +3,12 @@ function transtext()
 {
 
 	//------------------------------------------------content_report/home/display.html
-	echo T_("Visitor report");                                                        // Line 8
-	echo T_("by");                                                                    // Line 8
-	echo T_("show all");                                                              // Line 12
-	echo T_("birthdate");                                                             // Line 13
-	echo T_("province");                                                              // Line 14
-	echo T_("gender");                                                                // Line 15
+	echo T_("Chart must be contain at least 2 column!");                              // Line 9
+	echo T_("show all");                                                              // Line 13
+	echo T_("birthdate");                                                             // Line 14
+	echo T_("province");                                                              // Line 15
+	echo T_("gender");                                                                // Line 16
+	echo T_("booth");                                                                 // Line 17
 
 	//--------------------------------public_html/static/js/datatable-langs/index.html
 
@@ -53,8 +53,8 @@ function transtext()
 	//--------------------------------------------------------content/kid/display.html
 	echo T_("Kindergartens");                                                         // Line 8 Seperate
 	echo T_("barcode");                                                               // Line 12
-	echo T_("Delivery");                                                              // Line 27
-	echo T_("Call");                                                                  // Line 26
+	echo T_("Delivery");                                                              // Line 28
+	echo T_("Call");                                                                  // Line 27
 
 	//-------------------------------------------------------content/home/display.html
 	echo T_("Logout");                                                                // Line 46

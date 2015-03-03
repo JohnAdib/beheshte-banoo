@@ -22,7 +22,7 @@ class model extends \mvc\model
 		if($mymodule === 'date')
 		{
 			// $qry = $qry->field('#user_enterdatetime as date','#count(*) as value');
-			$qry = $qry->groupbyUser_enterdatetime();
+			$qry = $qry->groupbyUser_enterdatetime('@DAY');
 		}
 		if($mychild)
 		{
@@ -43,7 +43,6 @@ class model extends \mvc\model
 
 		$qry = $qry->select();
 		$datatable = $qry->allassoc();
-		// var_dump($datatable);
 
 		return $qry->allassoc();
 	}
@@ -51,7 +50,7 @@ class model extends \mvc\model
 	// return count of the days in table
 	public function mydateCount()
 	{
-		$qry = $this->sql()->tableUsers()->groupbyUser_enterdatetime()->select('id');
+		$qry = $this->sql()->tableUsers()->groupbyUser_enterdatetime('@DAY')->select();
 		return $qry->num();
 	}
 

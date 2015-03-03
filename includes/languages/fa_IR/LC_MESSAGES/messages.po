@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-03-03 05:11+0330\n"
-"PO-Revision-Date: 2015-03-03 05:12+0330\n"
+"POT-Creation-Date: 2015-03-03 06:46+0330\n"
+"PO-Revision-Date: 2015-03-03 06:46+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -16,28 +16,31 @@ msgstr ""
 "X-Poedit-KeywordsList: __;T_\n"
 "X-Poedit-SearchPath-0: ../../../../.\n"
 
-#: ../../../.././content_report/home/view.php:9
-#: ../../../.././includes/languages/twig_translation.php:62
-msgid "Reports"
-msgstr "گزارش ها"
+#: ../../../.././content_report/home/view.php:12
+msgid "Visitor report"
+msgstr "گزارش بازدیدکنندگان"
 
-#: ../../../.././content_report/home/view.php:32
+#: ../../../.././content_report/home/view.php:12
+msgid "by"
+msgstr "به تفکیک"
+
+#: ../../../.././content_report/home/view.php:38
 msgid "Foreign"
 msgstr "خارجی"
 
-#: ../../../.././content_report/home/view.php:34
+#: ../../../.././content_report/home/view.php:40
 msgid "Other"
 msgstr "سایر"
 
-#: ../../../.././content_report/home/view.php:41
+#: ../../../.././content_report/home/view.php:47
 msgid "Empty"
 msgstr "بدون مقدار"
 
-#: ../../../.././content_report/home/view.php:46
+#: ../../../.././content_report/home/view.php:52
 msgid "years old"
 msgstr "ساله"
 
-#: ../../../.././content_report/home/view.php:57
+#: ../../../.././content_report/home/view.php:63
 msgid "Visitors"
 msgstr "بازدیدکنندگان"
 
@@ -278,6 +281,7 @@ msgid "Booths"
 msgstr "غرفه ها"
 
 #: ../../../.././includes/cls/database/city/translation.php:11
+#: ../../../.././includes/languages/twig_translation.php:11
 msgid "booth"
 msgstr "غرفه"
 
@@ -605,7 +609,7 @@ msgid "Provinces"
 msgstr "استان ها"
 
 #: ../../../.././includes/cls/database/city/translation.php:111
-#: ../../../.././includes/languages/twig_translation.php:10
+#: ../../../.././includes/languages/twig_translation.php:9
 msgid "province"
 msgstr "استان"
 
@@ -1136,24 +1140,20 @@ msgid "Report"
 msgstr "گزارش"
 
 #: ../../../.././includes/languages/static_translation.php:84
-#: ../../../.././includes/languages/twig_translation.php:9
+#: ../../../.././includes/languages/twig_translation.php:8
 msgid "birthdate"
 msgstr "تاریخ تولد"
 
 #: ../../../.././includes/languages/static_translation.php:85
-#: ../../../.././includes/languages/twig_translation.php:11
+#: ../../../.././includes/languages/twig_translation.php:10
 msgid "gender"
 msgstr "جنسیت"
 
 #: ../../../.././includes/languages/twig_translation.php:6
-msgid "Visitor report"
-msgstr "گزارش بازدیدکنندگان"
+msgid "Chart must be contain at least 2 column!"
+msgstr "نمودار باید حداقل شامل دو ستون داده ای باشد!"
 
 #: ../../../.././includes/languages/twig_translation.php:7
-msgid "by"
-msgstr "به تفکیک"
-
-#: ../../../.././includes/languages/twig_translation.php:8
 msgid "show all"
 msgstr "نمایش همه"
 
@@ -1249,6 +1249,10 @@ msgstr "تحویل دادن"
 #: ../../../.././includes/languages/twig_translation.php:57
 msgid "Call"
 msgstr "صدا کردن"
+
+#: ../../../.././includes/languages/twig_translation.php:62
+msgid "Reports"
+msgstr "گزارش ها"
 
 #: ../../../.././includes/languages/twig_translation.php:63
 msgid "Control Panel"

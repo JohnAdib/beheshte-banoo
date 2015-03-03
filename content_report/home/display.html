@@ -6,6 +6,10 @@
 <div class="center report" data-xhr="center">
  <div class="content">
   <h1>{{global.title}}</h1>
+{%if error%}
+  <div id="chart-error">{{error}}</div>
+{%else%}
+{%endif%}
   <div class="ct-chart ct-perfect-fourth"></div>
  
   <div class="black">
@@ -48,7 +52,11 @@
    ]
 
   };
-  new Chartist.Line('.ct-chart', data, {low: 0, showArea: true,fullWidth: true} );
+  new Chartist.Line('.ct-chart', data, 
+    {
+      low: 0, showArea: true, {%if error%}fullWidth:false{%else%}fullWidth:true{%endif%}
+    } 
+  );
 
 
 
