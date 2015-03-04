@@ -13,7 +13,7 @@ class model extends \mvc\model
 		$id      = $this->checkBarcode($barcode);
 		if($id)
 		{
-			debug::error(T_("This card number in use!").$id);
+			debug::error(T_("This card number in use!"));
 			return;
 		}
 
@@ -24,25 +24,29 @@ class model extends \mvc\model
 		foreach ($fields as $value)
 		{
 			$post    = utility::post($value);
+			// if($value === 'birthdate')
+			// {
+			// 	$post    = utility::post($value, 'filter');
+			// }
 			$tmp_set = 'setUser_'.$value;
 			$qry     = $qry->$tmp_set($post);
 		}
 		$qry    = $qry->setPermission_id(4)->setUser_enterdatetime(date('Y-m-d H:i:s'));
 		$qry    = $qry->insert();
-
-		// copy one image as default image for each user
 		$id   = $qry->LAST_INSERT_ID();
-		$to   = root.'public_html/s-up/' . ceil($id/1000)*1000 . '/'.$id.'-thumb.jpg';
-		$from = root.'public_html/static/images/face/'.utility::post('gender').'-'.mt_rand(1,8).'.jpg';
-		$a    = File::copy($from , $to);
-		// var_dump($a);
 
-		$this->commit(function()
+
+		$this->commit(function($id)
 		{
+			// copy one image as default image for each user
+			$to   = root.'public_html/s-up/' . ceil($id/1000)*1000 . '/'.$id.'-thumb.jpg';
+			$from = root.'public_html/static/images/face/'.utility::post('gender').'-'.mt_rand(1,8).'.jpg';
+			$a    = File::copy($from , $to);
+			// var_dump($a);
 			debug::true(T_("register successfully"));
 			// if($this->login('permission_id') == 5 )
 				// $this->redirector()->set_domain()->set_url('camera');
-		});
+		},$id);
 		$this->rollback(function() { debug::error(T_("register failed!"));     });
 	}
 }

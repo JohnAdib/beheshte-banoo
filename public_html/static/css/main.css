@@ -1287,6 +1287,11 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
   box-shadow: 0px 0px 0px 1px transparent;
   visibility: visible;
   z-index: 101;
+
+  border-right: 4px solid #333;
+  border-left: 4px solid #333;
+  border-top: 4px solid #f1c40f;
+  border-bottom: 32px solid #f1c40f;
 }
 @-webkit-keyframes form-spin {
 

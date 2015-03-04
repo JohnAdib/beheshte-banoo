@@ -81,6 +81,7 @@ class model extends \mvc\model
 		// mobile exist more than 2 times!
 		else
 			debug::error(T_("please forward this message to administrator"));
+		sleep(1);
 	}
 }
 ?>

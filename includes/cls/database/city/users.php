@@ -84,7 +84,8 @@ class users
 	}
 	public function user_codemelli() 
 	{
-		$this->form("text")->name("codemelli")->min(0)->max(99999999999)->type('number');
+		$this->form("text")->name("codemelli")->min(0)->max(99999999999)->type('number')->validate()->nationalcode();
+
 	}
 	public function user_passport() 
 	{

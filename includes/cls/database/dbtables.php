@@ -196,7 +196,7 @@ while ($row = $qTables->fetch_object())
 		$mylabel    = ucwords($mylabel);
 		
 		$txtcomment = "\n\t//------------------------------------------------------------------ ";
-		$txtstart   = "\tpublic function $myfield() \n\t{\n\t\t";
+		$txtstart   = "\tpublic function $myfield()\n\t{\n\t\t";
 		$txtend     = true;
 
 		// if($myname === 'gender')          $property .= "->parent('span3')";
