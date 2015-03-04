@@ -62,7 +62,7 @@ route('*', function() {
 
 
   // ********************************************************************** Games
-  $(".list-cards").on( "click", ".fa-tty", function( event ) {
+  $(".list-cards").on( "click", ".fa-play", function( event ) {
     $(this)
       .addClass("hide")
       .parent().find('.fa-times').addClass('hide')

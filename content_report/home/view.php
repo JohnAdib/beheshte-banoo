@@ -78,7 +78,7 @@ class view extends \mvc\view
 			// if type not exits add it to array and fill with zero
 			if(!array_key_exists($myname, $chart_series))
 			{
-				$chart_series[$myname] = array_fill(1, $mydateCount, '0');
+				$chart_series[$myname] = array_fill(1, $mydateCount, 'null');
 			}
 
 			// push value of series in array

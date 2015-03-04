@@ -119,14 +119,6 @@ function transtext()
 	echo T_("Title");               // section_title
 	echo T_("Maxpoint");            // section_maxpoint
 	echo T_("Status");              // section_status
-
-	// ------------------------------------------------------------------- Table tokens
-	echo T_("tokens");              // Table tokens
-	echo T_("Tokens");              // Tokens
-	echo T_("token");               // tokens
-	echo T_("Colors");              // token_colors
-	echo T_("Numbers");             // token_numbers
-	echo T_("Status");              // token_status
 	echo T_("insert");              // Enum insert
 	echo T_("update");              // Enum update
 	echo T_("select");              // Enum select

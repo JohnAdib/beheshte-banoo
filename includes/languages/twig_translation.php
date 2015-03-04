@@ -11,7 +11,7 @@ function transtext()
 	echo T_("province");                                                              // Line 101
 	echo T_("gender");                                                                // Line 102
 	echo T_("Person who visit");                                                      // Line 40
-	echo T_("Person");                                                                // Line 41
+	echo T_("Person");                                                                // Line 43
 
 	//---------------------------------------------content_report/summary/display.html
 	echo T_("Total Admin User");                                                      // Line 19
