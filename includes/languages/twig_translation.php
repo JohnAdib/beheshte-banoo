@@ -97,21 +97,19 @@ function transtext()
 	//----------------------------------------------------content_cp/home/display.html
 	echo T_("Home");                                                                  // Line 40
 
-	//-------------------------------------------------content_cp/main/xhr-layout.html
+	//-----------------------------------------------------content_cp/main/layout.html
 	echo T_("Options");                                                               // Line 25 Seperate
 	echo T_("Go to");                                                                 // Line 34 Seperate
 	echo T_("Add New Record");                                                        // Line 39 Seperate
 	echo T_("Actions");                                                               // Line 52
+	echo T_("Edit this record");                                                      // Line 70
 	echo T_("Edit");                                                                  // Line 71
+	echo T_("Delete this record");                                                    // Line 73
 	echo T_("Delete");                                                                // Line 94
 	echo T_("delete record");                                                         // Line 89 Seperate
 	echo T_("seriously, are you sure? There's no coming back.");                      // Line 90 Seperate
 	echo T_("Cancel");                                                                // Line 92
 	echo T_("or");                                                                    // Line 93
-
-	//-----------------------------------------------------content_cp/main/layout.html
-	echo T_("Edit this record");                                                      // Line 70
-	echo T_("Delete this record");                                                    // Line 73
 
 	//---------------------------------------------------includes/cls/macro/forms.html
 	echo T_("Select");                                                                // Line 57

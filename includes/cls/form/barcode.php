@@ -15,7 +15,7 @@ class barcode extends \lib\form
 
 		$this->submit	= $this->make('submit')->value(T_('Check'))->title(T_('Click to check'))
 						->tabindex(2)
-						->class('row');
+						->class('button primary row-clear row');
 	}
 }
 ?>

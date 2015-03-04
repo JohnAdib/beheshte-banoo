@@ -90,7 +90,6 @@ class controller extends \mvc\controller
 						'permissiondetails',
 						'permissions',
 						'sections',
-						'tokens',
 						'userlogs',
 						'usermetas',
 						'users',

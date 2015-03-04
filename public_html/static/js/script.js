@@ -6,7 +6,6 @@ function launchFullscreen(element) {
   } else if(element.msRequestFullscreen) {element.msRequestFullscreen();
   }
 }
-jQuery.fn.fadeOutAndRemove = function(speed){$(this).fadeOut(speed,function(){$(this).remove();})};
 
 
 

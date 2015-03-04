@@ -22,7 +22,7 @@ class account extends \lib\form
 		$this->mobile	 = $this->make('#mobile')->label(null)->desc(T_("Enter your registered mobile"))
 							 ->value(((isset($_COOKIE["mobile"]))?htmlspecialchars('+'.$_COOKIE["mobile"]):null));
 		$this->password = $this->make('#password')->name('password')->label(null)->pl(T_('Password'))->desc(T_("Enter your password"));
-		$this->submit	 = $this->make('submit')->value(T_('Login'))->title(T_('Login'));
+		$this->submit	 = $this->make('submit')->value(T_('Login'))->title(T_('Login'))->class('button primary row-clear');
 	}
 
 	private function signup()
@@ -30,7 +30,7 @@ class account extends \lib\form
 		$this->mobile	 = $this->make('#mobile')->label(null)
 							 ->value(((isset($_COOKIE["mobile"]))?htmlspecialchars('+'.$_COOKIE["mobile"]):null));
 		$this->password = $this->make('#password')->name('password')->label(null)->pl(T_('Password'));
-		$this->submit	 = $this->make('submit')->value(T_('Create an account'))->title(T_('Create an account'));
+		$this->submit	 = $this->make('submit')->value(T_('Create an account'))->title(T_('Create an account'))->class('button primary row-clear');
 	}
 
 	private function verification()
@@ -40,20 +40,20 @@ class account extends \lib\form
 		$this->code		= $this->make('code')->label(null)->pl(T_('Code'))->maxlength(4)->autofocus()->autocomplete('off')
 							->required()->pattern('[0-9]{4}')->title(T_('input 4 number'))
 							->pos('hint--bottom')->desc(T_("Check your mobile and enter the code"));
-		$this->submit	= $this->make('submit')->value(T_('Verification'))->title(T_('Verification'));
+		$this->submit	= $this->make('submit')->value(T_('Verification'))->title(T_('Verification'))->class('button primary row-clear');
 	}
 
 	private function recovery()
 	{
 		$this->mobile	= $this->make('#mobile')->label(null)
 							->value(((isset($_COOKIE["mobile"]))?htmlspecialchars('+'.$_COOKIE["mobile"]):null));
-		$this->submit	= $this->make('submit')->value(T_('Recovery'))->title(T_('Recovery'));
+		$this->submit	= $this->make('submit')->value(T_('Recovery'))->title(T_('Recovery'))->class('button primary row-clear');
 	}
 
 	private function changepass()
 	{
 		$this->password = $this->make('#password')->name('password')->label(null)->pl(T_('Password'));
-		$this->submit	 = $this->make('submit')->title(T_('Change my password'));
+		$this->submit	 = $this->make('submit')->title(T_('Change my password'))->class('button primary row-clear');
 	}
 }
 ?>
