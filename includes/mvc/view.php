@@ -18,7 +18,7 @@ class view extends \lib\mvc\view
 												'en_US' => 'English'
 												);
 		$this->include->fontawesome  = true;
-		$this->include->barcode      = true;
+		$this->url->MainStatic       = false;
 		$this->data->bodyclass       = 'unselectable';
 		$this->data->permission      = $this->login('permission_id');
 

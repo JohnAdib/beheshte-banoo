@@ -15,9 +15,9 @@
  <link rel="author"        href="{{url.static}}humans.txt"/>
  <link rel="shortcut icon" href="{{url.static}}images/favicon.png"/>
 {%if include.fontawesome %}
- <link rel="stylesheet"    href="{{url.static}}css/font-awesome.min.css"/>{{include.newline}}{%endif%}
+ <link rel="stylesheet"    href="{{url.myStatic}}css/font-awesome.min.css"/>{{include.newline}}{%endif%}
 {%if include.css_main%}
- <link rel="stylesheet"    href="{{url.static}}css/main.css"/>{{include.newline}}{%endif%}
+ <link rel="stylesheet"    href="{{url.myStatic}}css/main.css"/>{{include.newline}}{%endif%}
 {%if include.css     %}
  <link rel="stylesheet"    href="{{url.static}}css/style.css"/>{{include.newline}}{%endif%}
 {%block head_css         %}{%endblock%}
@@ -103,13 +103,12 @@
 {%endblock%}
 {%block foot_css%}{%endblock%}
 
-{%if include.js_main   %} <script src="{{url.static}}js/common.js"></script>{{include.newline}}{%endif%}
-{%if include.datatable %} <script src="{{url.static}}js/datatable/jquery.dataTables.min.js"></script>{{include.newline}}{%endif%}
-{%if include.editor    %} <script src="{{url.static}}js/cp/medium-editor.min.js"></script>{{include.newline}}{%endif%}
-{%if include.telinput  %} <script src="{{url.static}}js/intlTelInput.min.js"></script>{{include.newline}}{%endif%}
-{%if include.chart     %} <script src="{{url.static}}js/highcharts/highcharts.js"></script>{{include.newline}}{%endif%}
-{%if include.chartexp  %} <script src="{{url.static}}js/highcharts/modules/exporting.js"></script>{{include.newline}}{%endif%}
-{%if include.barcode   %} <script src="{{url.static}}js/barcode-reader.js"></script>{{include.newline}}{%endif%}
+{%if include.js_main   %} <script src="{{url.myStatic}}js/common.js"></script>{{include.newline}}{%endif%}
+{%if include.datatable %} <script src="{{url.myStatic}}js/datatable/jquery.dataTables.min.js"></script>{{include.newline}}{%endif%}
+{%if include.editor    %} <script src="{{url.myStatic}}js/cp/medium-editor.min.js"></script>{{include.newline}}{%endif%}
+{%if include.telinput  %} <script src="{{url.myStatic}}js/intlTelInput.min.js"></script>{{include.newline}}{%endif%}
+{%if include.chart     %} <script src="{{url.myStatic}}js/highcharts/highcharts.js"></script>{{include.newline}}{%endif%}
+{%if include.chartexp  %} <script src="{{url.myStatic}}js/highcharts/modules/exporting.js"></script>{{include.newline}}{%endif%}
 {%if include.js        %} <script src="{{url.static}}js/script.js"></script>{{include.newline}}{%endif%}
 
 <div data-xhr='foot_js' class="foot_js">
