@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-03-03 11:48+0330\n"
-"PO-Revision-Date: 2015-03-03 11:48+0330\n"
+"POT-Creation-Date: 2015-03-04 09:17+0330\n"
+"PO-Revision-Date: 2015-03-04 09:17+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -16,41 +16,41 @@ msgstr ""
 "X-Poedit-KeywordsList: __;T_\n"
 "X-Poedit-SearchPath-0: ../../../../.\n"
 
-#: ../../../.././content_report/home/view.php:17
+#: ../../../.././content_report/home/view.php:19
 #: ../../../.././includes/languages/twig_translation.php:9
 msgid "by"
 msgstr "به تفکیک"
 
-#: ../../../.././content_report/home/view.php:18
+#: ../../../.././content_report/home/view.php:20
 msgid "Visitor report"
 msgstr "گزارش بازدیدکنندگان"
 
-#: ../../../.././content_report/home/view.php:26
+#: ../../../.././content_report/home/view.php:28
 msgid "Chart must be contain at least 2 column!"
 msgstr "نمودار باید حداقل شامل دو ستون داده ای باشد!"
 
-#: ../../../.././content_report/home/view.php:44
+#: ../../../.././content_report/home/view.php:46
 msgid "Foreign"
 msgstr "خارجی"
 
-#: ../../../.././content_report/home/view.php:46
+#: ../../../.././content_report/home/view.php:48
 msgid "Unknown"
 msgstr "نامشخص"
 
-#: ../../../.././content_report/home/view.php:53
+#: ../../../.././content_report/home/view.php:55
 msgid "Empty"
 msgstr "بدون مقدار"
 
-#: ../../../.././content_report/home/view.php:58
+#: ../../../.././content_report/home/view.php:60
 msgid "years old"
 msgstr "ساله"
 
-#: ../../../.././content_report/home/view.php:67
+#: ../../../.././content_report/home/view.php:69
 #: ../../../.././includes/languages/twig_translation.php:7
 msgid "popular booths"
 msgstr "پرطرفدارترین غرفه ها"
 
-#: ../../../.././content_report/home/view.php:74
+#: ../../../.././content_report/home/view.php:76
 msgid "Visitors"
 msgstr "بازدیدکنندگان"
 
@@ -69,7 +69,7 @@ msgstr "شما قبلا یک بار وارد سیستم شده اید!"
 
 #: ../../../.././content_account/home/view.php:23
 #: ../../../.././includes/cls/form/account.php:25
-#: ../../../.././includes/languages/twig_translation.php:80
+#: ../../../.././includes/languages/twig_translation.php:79
 msgid "Login"
 msgstr "ورود به سیستم"
 
@@ -160,7 +160,7 @@ msgid "error on verify your code!"
 msgstr "خطا در تایید اعتبار کد!"
 
 #: ../../../.././content_account/recovery/model.php:39
-#: ../../../.././includes/languages/twig_translation.php:58
+#: ../../../.././includes/languages/twig_translation.php:57
 msgid "we send a verification code for you"
 msgstr "ما کد اعتبارسنجی را برای شما ارسال خواهیم کرد"
 
@@ -295,7 +295,6 @@ msgid "Booths"
 msgstr "غرفه ها"
 
 #: ../../../.././includes/cls/database/city/translation.php:11
-#: ../../../.././includes/languages/twig_translation.php:30
 msgid "booth"
 msgstr "غرفه"
 
@@ -529,7 +528,7 @@ msgstr "تنظیمات"
 
 #: ../../../.././includes/cls/database/city/translation.php:80
 #: ../../../.././includes/languages/static_translation.php:54
-#: ../../../.././includes/languages/twig_translation.php:102
+#: ../../../.././includes/languages/twig_translation.php:101
 msgid "Options"
 msgstr "تنظیمات"
 
@@ -588,13 +587,13 @@ msgstr "افزودن"
 
 #: ../../../.././includes/cls/database/city/translation.php:97
 #: ../../../.././includes/languages/static_translation.php:59
-#: ../../../.././includes/languages/twig_translation.php:106
+#: ../../../.././includes/languages/twig_translation.php:105
 msgid "Edit"
 msgstr "ویرایش"
 
 #: ../../../.././includes/cls/database/city/translation.php:98
 #: ../../../.././includes/languages/static_translation.php:60
-#: ../../../.././includes/languages/twig_translation.php:107
+#: ../../../.././includes/languages/twig_translation.php:106
 msgid "Delete"
 msgstr "حذف"
 
@@ -1065,17 +1064,17 @@ msgid "United States"
 msgstr "آمریکا"
 
 #: ../../../.././includes/languages/static_translation.php:50
-#: ../../../.././includes/languages/twig_translation.php:79
+#: ../../../.././includes/languages/twig_translation.php:78
 msgid "Logout"
 msgstr "خروج از سیستم"
 
 #: ../../../.././includes/languages/static_translation.php:51
-#: ../../../.././includes/languages/twig_translation.php:99
+#: ../../../.././includes/languages/twig_translation.php:98
 msgid "Home"
 msgstr "صفحه نخست"
 
 #: ../../../.././includes/languages/static_translation.php:55
-#: ../../../.././includes/languages/twig_translation.php:103
+#: ../../../.././includes/languages/twig_translation.php:102
 msgid "Go to"
 msgstr "برو به"
 
@@ -1084,12 +1083,12 @@ msgid "Does not exist"
 msgstr "هیچ داده ای موجود نیست"
 
 #: ../../../.././includes/languages/static_translation.php:57
-#: ../../../.././includes/languages/twig_translation.php:104
+#: ../../../.././includes/languages/twig_translation.php:103
 msgid "Add New Record"
 msgstr "افزودن رکورد جدید"
 
 #: ../../../.././includes/languages/static_translation.php:58
-#: ../../../.././includes/languages/twig_translation.php:105
+#: ../../../.././includes/languages/twig_translation.php:104
 msgid "Actions"
 msgstr "عملیات"
 
@@ -1171,192 +1170,200 @@ msgstr "خلاصه گزارش آماری"
 msgid "show all visitors groupby date"
 msgstr "نمایش همه بازدیدکنندگان به تفکیک روز"
 
-#: ../../../.././includes/languages/twig_translation.php:15
+#: ../../../.././includes/languages/twig_translation.php:13
+msgid "Person who visit"
+msgstr "تعداد نفرات بازدید کننده"
+
+#: ../../../.././includes/languages/twig_translation.php:14
+msgid "Person"
+msgstr "نفر"
+
+#: ../../../.././includes/languages/twig_translation.php:17
 msgid "Total Admin User"
 msgstr "تعداد کاربران مدیر"
 
-#: ../../../.././includes/languages/twig_translation.php:16
+#: ../../../.././includes/languages/twig_translation.php:18
 msgid "Total Register User"
 msgstr "تعداد کاربران مسئول ثبت نام"
 
-#: ../../../.././includes/languages/twig_translation.php:17
+#: ../../../.././includes/languages/twig_translation.php:19
 msgid "Total Booth User"
 msgstr "تعداد غرفه دارها"
 
-#: ../../../.././includes/languages/twig_translation.php:18
+#: ../../../.././includes/languages/twig_translation.php:20
 msgid "Total Visitor User"
 msgstr "تعداد کاربران بازدیدکننده"
 
-#: ../../../.././includes/languages/twig_translation.php:19
+#: ../../../.././includes/languages/twig_translation.php:21
 msgid "Total kid User"
 msgstr "تعداد کاربران کودکستان"
 
-#: ../../../.././includes/languages/twig_translation.php:20
+#: ../../../.././includes/languages/twig_translation.php:22
 msgid "Total Sections"
 msgstr "تعداد بخش ها"
 
-#: ../../../.././includes/languages/twig_translation.php:21
+#: ../../../.././includes/languages/twig_translation.php:23
 msgid "Total Booths"
 msgstr "تعداد غرفه ها"
 
-#: ../../../.././includes/languages/twig_translation.php:22
+#: ../../../.././includes/languages/twig_translation.php:24
 msgid "Work days"
 msgstr "تعداد روزهای فعال"
 
-#: ../../../.././includes/languages/twig_translation.php:23
+#: ../../../.././includes/languages/twig_translation.php:25
 msgid "Total Game Prizes"
 msgstr "مجموع امتیازات کسب شده"
 
-#: ../../../.././includes/languages/twig_translation.php:24
+#: ../../../.././includes/languages/twig_translation.php:26
 msgid "Average Points By Users"
 msgstr "میانگین امتیازات کسب شده کاربران"
 
-#: ../../../.././includes/languages/twig_translation.php:25
+#: ../../../.././includes/languages/twig_translation.php:27
 msgid "Point per days (Average)"
 msgstr "میانگین امتیاز کسب شده در روز"
 
-#: ../../../.././includes/languages/twig_translation.php:26
+#: ../../../.././includes/languages/twig_translation.php:28
 msgid "Top Player"
 msgstr "برترین بازیکن"
 
-#: ../../../.././includes/languages/twig_translation.php:27
+#: ../../../.././includes/languages/twig_translation.php:29
 msgid "Top Player Point"
 msgstr "امتیاز برترین بازیکن"
 
-#: ../../../.././includes/languages/twig_translation.php:28
+#: ../../../.././includes/languages/twig_translation.php:30
 msgid "Total visitors"
 msgstr "مجموع بازدیدکنندگان"
 
-#: ../../../.././includes/languages/twig_translation.php:29
+#: ../../../.././includes/languages/twig_translation.php:31
 msgid "Visit per days (Average)"
 msgstr "میانگین بازدید روزانه"
 
-#: ../../../.././includes/languages/twig_translation.php:37
+#: ../../../.././includes/languages/twig_translation.php:36
 msgid "Don't have an account?"
 msgstr "اکانت ندارید؟"
 
-#: ../../../.././includes/languages/twig_translation.php:38
+#: ../../../.././includes/languages/twig_translation.php:37
 msgid "Click here to create an account"
 msgstr "برای ساخت اکانت کلیک کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:39
+#: ../../../.././includes/languages/twig_translation.php:38
 msgid "Sign Up"
 msgstr "ثبت نام"
 
-#: ../../../.././includes/languages/twig_translation.php:42
+#: ../../../.././includes/languages/twig_translation.php:41
 msgid "already have an account?"
 msgstr "اکانت دارید؟"
 
-#: ../../../.././includes/languages/twig_translation.php:43
+#: ../../../.././includes/languages/twig_translation.php:42
 msgid "click here to sign in to your account"
 msgstr "برای ورود به اکانت خود کلیک کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:44
+#: ../../../.././includes/languages/twig_translation.php:43
 msgid "Sign In"
 msgstr "ورود به سیستم"
 
-#: ../../../.././includes/languages/twig_translation.php:47
+#: ../../../.././includes/languages/twig_translation.php:46
 msgid "Please send number <b>2015</b> to below number"
 msgstr "لطفا عدد <b>2015</b> را به شماره زیر پیامک کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:48
+#: ../../../.././includes/languages/twig_translation.php:47
 msgid "Then wait we receive your message and verificate your account"
 msgstr ""
 "ما در انتظار پیامک شما بوده و پس از دریافت اکانت را برایتان فعال خواهیم کردیم"
 
-#: ../../../.././includes/languages/twig_translation.php:51
+#: ../../../.././includes/languages/twig_translation.php:50
 msgid "click here to login to your account"
 msgstr "برای ورود به اکانت خود کلیک کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:52
+#: ../../../.././includes/languages/twig_translation.php:51
 msgid "are you remember your password!?"
 msgstr "آیا کلمه عبور خود را به خاطر آوردید!؟"
 
-#: ../../../.././includes/languages/twig_translation.php:55
+#: ../../../.././includes/languages/twig_translation.php:54
 msgid "masoomeh holy shine"
 msgstr "حرم حضرت معصومه"
 
-#: ../../../.././includes/languages/twig_translation.php:59
+#: ../../../.././includes/languages/twig_translation.php:58
 msgid "please check your mobile and enter the code"
 msgstr "پس از بررسی موبایل خود کد را وارد کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:60
+#: ../../../.././includes/languages/twig_translation.php:59
 msgid "don't receive message?"
 msgstr "هنوز پیامک ما را دریافت نکردید؟"
 
-#: ../../../.././includes/languages/twig_translation.php:63
+#: ../../../.././includes/languages/twig_translation.php:62
 msgid "Scan your barcode and change your points to money!"
 msgstr "با اسکن کردن بارکد، امتیازات خود را نقد کنید!"
 
-#: ../../../.././includes/languages/twig_translation.php:66
+#: ../../../.././includes/languages/twig_translation.php:65
 msgid "Scan barcode for going to queue."
 msgstr "با اسکن بارکد برای خود نوبت ثبت کنید."
 
-#: ../../../.././includes/languages/twig_translation.php:67
+#: ../../../.././includes/languages/twig_translation.php:66
 msgid "Winner"
 msgstr "برنده"
 
-#: ../../../.././includes/languages/twig_translation.php:68
+#: ../../../.././includes/languages/twig_translation.php:67
 msgid "Looser"
 msgstr "بازنده"
 
-#: ../../../.././includes/languages/twig_translation.php:69
+#: ../../../.././includes/languages/twig_translation.php:68
 msgid "Start"
 msgstr "شروع"
 
-#: ../../../.././includes/languages/twig_translation.php:70
+#: ../../../.././includes/languages/twig_translation.php:69
 msgid "Absent"
 msgstr "غایب"
 
-#: ../../../.././includes/languages/twig_translation.php:73
+#: ../../../.././includes/languages/twig_translation.php:72
 msgid "Kindergartens"
 msgstr "مهدکودک"
 
-#: ../../../.././includes/languages/twig_translation.php:74
+#: ../../../.././includes/languages/twig_translation.php:73
 msgid "barcode"
 msgstr "بارکد"
 
-#: ../../../.././includes/languages/twig_translation.php:75
+#: ../../../.././includes/languages/twig_translation.php:74
 msgid "Delivery"
 msgstr "تحویل دادن"
 
-#: ../../../.././includes/languages/twig_translation.php:76
+#: ../../../.././includes/languages/twig_translation.php:75
 msgid "Call"
 msgstr "صدا کردن"
 
-#: ../../../.././includes/languages/twig_translation.php:81
+#: ../../../.././includes/languages/twig_translation.php:80
 msgid "Reports"
 msgstr "گزارش ها"
 
-#: ../../../.././includes/languages/twig_translation.php:82
+#: ../../../.././includes/languages/twig_translation.php:81
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
-#: ../../../.././includes/languages/twig_translation.php:83
+#: ../../../.././includes/languages/twig_translation.php:82
 msgid "Register Visitors"
 msgstr "ثبت نام بازدیدکنندگان"
 
-#: ../../../.././includes/languages/twig_translation.php:84
+#: ../../../.././includes/languages/twig_translation.php:83
 msgid "Register Kids"
 msgstr "ثبت کودکان"
 
-#: ../../../.././includes/languages/twig_translation.php:85
+#: ../../../.././includes/languages/twig_translation.php:84
 msgid "Register Visitors Avatar"
 msgstr "ثبت عکس بازدیدکنندگان"
 
-#: ../../../.././includes/languages/twig_translation.php:86
+#: ../../../.././includes/languages/twig_translation.php:85
 msgid "Start Game"
 msgstr "شروع بازی"
 
-#: ../../../.././includes/languages/twig_translation.php:87
+#: ../../../.././includes/languages/twig_translation.php:86
 msgid "Point Checker"
 msgstr "چک کردن امتیازها"
 
-#: ../../../.././includes/languages/twig_translation.php:88
+#: ../../../.././includes/languages/twig_translation.php:87
 msgid "Change points to meney"
 msgstr "نقد کردن امتیازات!"
 
-#: ../../../.././includes/languages/twig_translation.php:91
+#: ../../../.././includes/languages/twig_translation.php:90
 msgid ""
 "First of all, scan barcode then camera take a picture form you and show it "
 "for 3 second."
@@ -1364,66 +1371,78 @@ msgstr ""
 "ابتدا در جلوی دوربین آماده شوید. سپس با اسکن بارکد روی کارت، عکس شما ذخیره "
 "شده و به مدت ۳ ثانیه نمایش داده خواهد شد."
 
-#: ../../../.././includes/languages/twig_translation.php:92
+#: ../../../.././includes/languages/twig_translation.php:91
 msgid "if it looks good you successful else try again with scan a barcode"
 msgstr "اگر مشکلی در عکس وجود داشت دوباره بارکد را اسکن کنید."
 
-#: ../../../.././includes/languages/twig_translation.php:93
+#: ../../../.././includes/languages/twig_translation.php:92
 msgid "Please place in center of box and smile:)"
 msgstr "لطفا در مرکز کادر قرار گرفته و لبخند بزنید :)"
 
-#: ../../../.././includes/languages/twig_translation.php:96
+#: ../../../.././includes/languages/twig_translation.php:95
 msgid "Scan your barcode and see your points"
 msgstr "با اسکن کردن بارکد، امتیاز خود را مشاهده کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:108
+#: ../../../.././includes/languages/twig_translation.php:107
 msgid "delete record"
 msgstr "حذف رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:109
+#: ../../../.././includes/languages/twig_translation.php:108
 msgid "seriously, are you sure? There's no coming back."
 msgstr "مطمئنید؟ بازگشتی وجود ندارد"
 
-#: ../../../.././includes/languages/twig_translation.php:110
+#: ../../../.././includes/languages/twig_translation.php:109
 msgid "Cancel"
 msgstr "انصراف"
 
-#: ../../../.././includes/languages/twig_translation.php:111
+#: ../../../.././includes/languages/twig_translation.php:110
 msgid "or"
 msgstr "یا"
 
-#: ../../../.././includes/languages/twig_translation.php:114
+#: ../../../.././includes/languages/twig_translation.php:113
 msgid "Edit this record"
 msgstr "ویرایش این رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:115
+#: ../../../.././includes/languages/twig_translation.php:114
 msgid "Delete this record"
 msgstr "حذف این رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:118
+#: ../../../.././includes/languages/twig_translation.php:117
 msgid "Select"
 msgstr "انتخاب"
 
-#: ../../../.././includes/languages/twig_translation.php:121
+#: ../../../.././includes/languages/twig_translation.php:120
 msgid "Home Page"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/twig_translation.php:122
+#: ../../../.././includes/languages/twig_translation.php:121
 msgid "Experience our service in your language"
 msgstr "سرویس ما را با زبان مادری خودتان تجربه کنید"
 
 #: ../../../.././includes/mvc/view.php:10
 #: ../../../.././includes/mvc/view.php:12
-msgid "The Mystical City"
-msgstr "شهرک معارفی"
+msgid "Behsht Banoo"
+msgstr "بهشت بانو"
 
 #: ../../../.././includes/mvc/view.php:11
-msgid "The Mystical City for children"
-msgstr "شهرک معارفی برای کودکان"
+msgid "Behsht Banoo for children"
+msgstr "بهشت بانو برای کودکان"
 
 #: ../../../.././includes/mvc/view.php:14
-msgid "The Mystical City is good"
-msgstr "شهرک معارفی را تجربه کنید"
+msgid "Behsht Banoo is good"
+msgstr "بهشت بانو خوب است!"
+
+#~ msgid "Count"
+#~ msgstr "تعداد"
+
+#~ msgid "The Mystical City"
+#~ msgstr "شهرک معارفی"
+
+#~ msgid "The Mystical City for children"
+#~ msgstr "شهرک معارفی برای کودکان"
+
+#~ msgid "The Mystical City is good"
+#~ msgstr "شهرک معارفی را تجربه کنید"
 
 #~ msgid "Max Point Rached"
 #~ msgstr "بیشترین امتیاز کسب شده"
@@ -1523,9 +1542,6 @@ msgstr "شهرک معارفی را تجربه کنید"
 
 #~ msgid "INTERNAL ERROR"
 #~ msgstr "خطای داخلی"
-
-#~ msgid "for childrens"
-#~ msgstr "برای کودکان"
 
 #~ msgid "first of all, you must login to system!"
 #~ msgstr "شما ابتدا باید وارد سیستم شوید!"

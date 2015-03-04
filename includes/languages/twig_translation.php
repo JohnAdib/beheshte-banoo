@@ -4,12 +4,14 @@ function transtext()
 
 	//------------------------------------------------content_report/home/display.html
 	echo T_("summary reports");                                                       // Line 97
-	echo T_("popular booths");                                                        // Line 17
-	echo T_("show all visitors groupby date");                                        // Line 98
+	echo T_("popular booths");                                                        // Line 98
+	echo T_("show all visitors groupby date");                                        // Line 99
 	echo T_("by");                                                                    // Line 102
-	echo T_("birthdate");                                                             // Line 99
-	echo T_("province");                                                              // Line 100
-	echo T_("gender");                                                                // Line 101
+	echo T_("birthdate");                                                             // Line 100
+	echo T_("province");                                                              // Line 101
+	echo T_("gender");                                                                // Line 102
+	echo T_("Person who visit");                                                      // Line 40
+	echo T_("Person");                                                                // Line 41
 
 	//---------------------------------------------content_report/summary/display.html
 	echo T_("Total Admin User");                                                      // Line 19
@@ -27,11 +29,8 @@ function transtext()
 	echo T_("Top Player Point");                                                      // Line 73
 	echo T_("Total visitors");                                                        // Line 87
 	echo T_("Visit per days (Average)");                                              // Line 91
-	echo T_("booth");                                                                 // Line 102
 
 	//--------------------------------public_html/static/js/datatable-langs/index.html
-
-	//---------------------------------public_html/static/js/chartist/test/runner.html
 
 	//----------------------------------------------content_account/login/display.html
 	echo T_("Don't have an account?");                                                // Line 6

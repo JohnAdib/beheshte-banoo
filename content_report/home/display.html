@@ -31,19 +31,19 @@
  
 {%block foot_js%}
 {%if chart_labels%}
-
-
-
-
-
  <script type="text/javascript">
   $(function () { 
     $('#chart').highcharts({
       chart: { type: 'line' },
       title: { text: '{{global.title}}' },
       xAxis: { categories: [{%for date in chart_labels%}'{{date|date("m/d")}}', {%endfor%}] },
-      yAxis: { title: {text: '{%trans "Count"%}'} },
-      tooltip: { valueSuffix: ' {%trans "Person"%}' },
+      yAxis: { title: {text: '{%trans "Person who visit"%}'},floor: 0, allowDecimals: false,},
+      tooltip: { crosshairs: true, shared: true, useHTML: true,
+        headerFormat: '<small>{point.key}</small><table style="direction:rtl;text-align:right">',
+        pointFormat: '<tr><td style="color: {series.color}">{series.name}: </td>' + '<td><b>{point.y} {%trans "Person"%}</b></td></tr>',
+        footerFormat: '</table>',
+      },
+
       legend: {
         layout: 'vertical',
         align: 'right',

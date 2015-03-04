@@ -5,7 +5,9 @@ class view extends \mvc\view
 {
 	function config()
 	{
-		$this->include->chart = true;
+		$this->include->chart    = true;
+		// $this->include->chartexp = true;
+		
 		$mychild              = $this->child();
 
 		if($mychild === 'booth')
