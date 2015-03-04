@@ -7,6 +7,7 @@ class booths
 	public $booth_winpoint   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Winpoint',      'type' => 'tinyint@3',                         );
 	public $booth_loosepoint = array('null' =>'NO',  'show' =>'YES', 'label'=>'Loosepoint',    'type' => 'tinyint@3',                         );
 	public $booth_status     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable', );
+	public $booth_maxplayer  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Maxplayer',     'type' => 'int@2!10',                          );
 	public $booth_gametime   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Gametime',      'type' => 'time@!00:01:00',                    );
 	public $section_id       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Section',       'type' => 'smallint@2',                        'foreign'=>'sections@id!section_title');
 	public $date_modified    = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                        );
@@ -34,6 +35,10 @@ class booths
 	{
 		$this->form("select")->name("status")->type("select")->required()->validate();
 		$this->setChild();
+	}
+	public function booth_maxplayer() 
+	{
+		$this->form("text")->name("maxplayer")->min(0)->max(99)->required()->type('number');
 	}
 	public function booth_gametime() 
 	{

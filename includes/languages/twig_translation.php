@@ -30,7 +30,7 @@ function transtext()
 	echo T_("Total visitors");                                                        // Line 87
 	echo T_("Visit per days (Average)");                                              // Line 91
 
-	//--------------------------------public_html/static/js/datatable-langs/index.html
+	//----------------------public_html/static/js/datatable/datatable-langs/index.html
 
 	//----------------------------------------------content_account/login/display.html
 	echo T_("Don't have an account?");                                                // Line 6

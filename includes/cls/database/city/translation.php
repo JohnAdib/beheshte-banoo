@@ -14,6 +14,7 @@ function transtext()
 	echo T_("Winpoint");            // booth_winpoint
 	echo T_("Loosepoint");          // booth_loosepoint
 	echo T_("Status");              // booth_status
+	echo T_("Maxplayer");           // booth_maxplayer
 	echo T_("Gametime");            // booth_gametime
 	echo T_("Section");             // section_id
 	echo T_("Modified");            // date_modified
