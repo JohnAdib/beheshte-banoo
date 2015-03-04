@@ -88,7 +88,7 @@ class users
 	}
 	public function user_passport() 
 	{
-		$this->form("text")->name("passport")->maxlength(50)->class('hide')->type('text');
+		$this->form("text")->name("passport")->maxlength(50)->parent('hide')->type('text');
 	}
 	public function user_imageaddr() 
 	{
@@ -126,7 +126,7 @@ class users
 	}
 	public function user_barcode() 
 	{
-		$this->form("text")->name("barcode")->min(10000)->pattern('.{5,}')->max(99999)->required()->type('number');
+		$this->form("text")->name("barcode")->min(10000)->max(99999)->required()->type('number');
 	}
 	public function user_enterdatetime() 
 	{

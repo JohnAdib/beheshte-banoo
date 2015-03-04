@@ -11,7 +11,7 @@
   <ul class="list-cards" data-xhr="list-cards">
 {% for i in list %}
   <li tabindex="2">
-   <img class="c-avatar" src="s-up/1000/{{i.user_id}}-thumb.jpg" onerror="this.src='{{url.static}}images/face.png'">
+   <img class="c-avatar" src="s-up/1000/{{i.user_id}}-thumb.jpg" onerror="this.src='{{url.static}}images/face.png'" alt='{{i.firstname}} {{i.lastname}}'>
    <span class="c-name">{{i.firstname}} {{i.lastname}}</span>
    <span class="c-code">{{i.barcode}}</span>
 {%if i.game_status == 'start'%}

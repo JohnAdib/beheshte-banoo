@@ -97,7 +97,7 @@ function setproperty($myparam)
 			if($fieldname === 'barcode' || substr($type, strlen($type)-8) == "zerofill")
 			{
 				array_push($tmp, "->min(1".str_repeat("0",$mylen-1).")");
-				array_push($tmp, "->pattern('.{".$mylen.",}')");
+				// array_push($tmp, "->pattern('.{".$mylen.",}')");
 			}
 			elseif( substr($type, strlen($type)-8) == "unsigned")
 				array_push($tmp, "->min(0)");
@@ -199,21 +199,21 @@ while ($row = $qTables->fetch_object())
 		$txtstart   = "\tpublic function $myfield() \n\t{\n\t\t";
 		$txtend     = true;
 
-		// if($myname === 'gender')          $property .= "->class('span3')";
-		// elseif($myname === 'firstname')   $property .= "->class('span3')";
-		// elseif($myname  === 'lastname')   $property .= "->class('span6 endline')";
-		// elseif($myname  === 'mobile')     $property .= "->class('span3')";
-		// elseif($myname  === 'birthdate')  $property .= "->class('span3')";
-		// elseif($myname  === 'degree')     $property .= "->class('span3')";
-		// elseif($myfield === 'country_id') $property .= "->class('span2')";
-		// elseif($myname  === 'province')   $property .= "->class('span2')";
-		// elseif($myname  === 'codemelli')  $property .= "->class('span2 endline')";
-		// elseif($myname  === 'passport')   $property .= "->class('span2 endline hide')";
-		// elseif($myname  === 'barcode')    $property .= "->class('span12 endline')";
+		// if($myname === 'gender')          $property .= "->parent('span3')";
+		// elseif($myname === 'firstname')   $property .= "->parent('span3')";
+		// elseif($myname  === 'lastname')   $property .= "->parent('span6 endline')";
+		// elseif($myname  === 'mobile')     $property .= "->parent('span3')";
+		// elseif($myname  === 'birthdate')  $property .= "->parent('span3')";
+		// elseif($myname  === 'degree')     $property .= "->parent('span3')";
+		// elseif($myfield === 'country_id') $property .= "->parent('span2')";
+		// elseif($myname  === 'province')   $property .= "->parent('span2')";
+		// elseif($myname  === 'codemelli')  $property .= "->parent('span2 endline')";
+		// elseif($myname  === 'passport')   $property .= "->parent('span2 endline hide')";
+		// elseif($myname  === 'barcode')    $property .= "->parent('span12 endline')";
 
-		if($myname  === 'passport')       $property .= "->class('hide')";
-		elseif($myname  === 'color')      $property .= "->class('span4')";
-		elseif($myname  === 'number')     $property .= "->class('span4 endline')";
+		if($myname  === 'passport')       $property .= "->parent('hide')";
+		elseif($myname  === 'color')      $property .= "->parent('span4')";
+		elseif($myname  === 'number')     $property .= "->parent('span4 endline')";
 
 		// --------------------------------------------------------------------------------- ID
 		if($myfield=="id")

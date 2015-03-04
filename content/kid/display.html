@@ -9,7 +9,7 @@
   <form class="ajx form row auto" method="post" id="form-kids">
    <div class="field barcode span4 required">
     <label>{%trans "barcode"%}</label>
-    <input type="number" name="barcode" required="" min="10000" max="99999" value="" pattern=".{5,}" class="row" autofocus="" placeholder='{%trans "barcode"%}' id="barcode" >
+    <input type="number" name="barcode" required="" min="10000" max="99999" value="" class="row" autofocus="" placeholder='{%trans "barcode"%}' id="barcode" >
    </div>
 {{forms.make(form['kids'])}}
   </form>
@@ -17,7 +17,7 @@
   <ul class="list-cards" data-xhr="list-cards">
 {% for i in list %}
   <li tabindex="2">
-   <img class="c-avatar" src="s-up/1000/{{i.user_id}}-thumb.jpg" onerror="this.src='{{url.static}}images/face.png'">
+   <img class="c-avatar" src="s-up/1000/{{i.user_id}}-thumb.jpg" onerror="this.src='{{url.static}}images/face.png'" alt='{{i.firstname}} {{i.lastname}}'>
    <span class="c-name">{{i.firstname}} {{i.lastname}}</span>
    <span class="c-code">{{i.barcode}}</span>
    <span class="c-token {{i.kid_color|lower}}">{{i.kid_number}}</span>

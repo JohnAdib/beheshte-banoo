@@ -21,12 +21,12 @@ class kids
 	//------------------------------------------------------------------ select button
 	public function kid_color() 
 	{
-		$this->form("select")->name("color")->type("select")->required()->class('span4')->validate();
+		$this->form("select")->name("color")->type("select")->required()->parent('span4')->validate();
 		$this->setChild();
 	}
 	public function kid_number() 
 	{
-		$this->form("text")->name("number")->min(0)->max(9)->required()->class('span4 endline')->type('number');
+		$this->form("text")->name("number")->min(0)->max(9)->required()->parent('span4 endline')->type('number');
 	}
 	public function kid_date() 
 	{
