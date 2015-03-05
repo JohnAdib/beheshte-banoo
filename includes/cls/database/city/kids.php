@@ -4,7 +4,7 @@ class kids
 {
 	public $id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                                        );
 	public $user_id        = array('null' =>'NO',  'show' =>'NO',  'label'=>'user',          'type' => 'int@6',                                         'foreign'=>'users@id!user_nickname');
-	public $kid_color      = array('null' =>'NO',  'show' =>'YES', 'label'=>'color',         'type' => 'enum@Red,Green,Blue,Black,White,Yellow,Purple', );
+	public $kid_color      = array('null' =>'NO',  'show' =>'YES', 'label'=>'color',         'type' => 'enum@red,green,blue,black,white,yellow,purple', );
 	public $kid_number     = array('null' =>'NO',  'show' =>'YES', 'label'=>'number',        'type' => 'smallint@1',                                    );
 	public $kid_date       = array('null' =>'NO',  'show' =>'YES', 'label'=>'date',          'type' => 'date@',                                         );
 	public $kid_regtime    = array('null' =>'YES', 'show' =>'YES', 'label'=>'regtime',       'type' => 'datetime@',                                     );

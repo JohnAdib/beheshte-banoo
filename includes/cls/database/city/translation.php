@@ -47,13 +47,13 @@ function transtext()
 	echo T_("starttime");           // game_starttime
 	echo T_("endtime");             // game_endtime
 	echo T_("status");              // game_status
-	echo T_("Red");                 // Enum Red
-	echo T_("Green");               // Enum Green
-	echo T_("Blue");                // Enum Blue
-	echo T_("Black");               // Enum Black
-	echo T_("White");               // Enum White
-	echo T_("Yellow");              // Enum Yellow
-	echo T_("Purple");              // Enum Purple
+	echo T_("red");                 // Enum red
+	echo T_("green");               // Enum green
+	echo T_("blue");                // Enum blue
+	echo T_("black");               // Enum black
+	echo T_("white");               // Enum white
+	echo T_("yellow");              // Enum yellow
+	echo T_("purple");              // Enum purple
 	echo T_("in");                  // Enum in
 	echo T_("out");                 // Enum out
 	echo T_("babylost");            // Enum babylost

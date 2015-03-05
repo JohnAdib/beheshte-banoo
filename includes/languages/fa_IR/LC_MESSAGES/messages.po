@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-03-05 15:14+0330\n"
-"PO-Revision-Date: 2015-03-05 15:14+0330\n"
+"POT-Creation-Date: 2015-03-05 15:43+0330\n"
+"PO-Revision-Date: 2015-03-05 15:43+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -441,31 +441,31 @@ msgid "endtime"
 msgstr "زمان پایان"
 
 #: ../../../.././includes/cls/database/city/translation.php:50
-msgid "Red"
+msgid "red"
 msgstr "قرمز"
 
 #: ../../../.././includes/cls/database/city/translation.php:51
-msgid "Green"
+msgid "green"
 msgstr "سبز"
 
 #: ../../../.././includes/cls/database/city/translation.php:52
-msgid "Blue"
+msgid "blue"
 msgstr "آبی"
 
 #: ../../../.././includes/cls/database/city/translation.php:53
-msgid "Black"
+msgid "black"
 msgstr "مشکی"
 
 #: ../../../.././includes/cls/database/city/translation.php:54
-msgid "White"
+msgid "white"
 msgstr "سفید"
 
 #: ../../../.././includes/cls/database/city/translation.php:55
-msgid "Yellow"
+msgid "yellow"
 msgstr "زرد"
 
 #: ../../../.././includes/cls/database/city/translation.php:56
-msgid "Purple"
+msgid "purple"
 msgstr "بنفش"
 
 #: ../../../.././includes/cls/database/city/translation.php:57
@@ -1355,3 +1355,6 @@ msgstr "بهشت بانو برای کودکان"
 #: ../../../.././includes/mvc/view.php:14
 msgid "Behsht Banoo is good"
 msgstr "بهشت بانو خوب است!"
+
+#~ msgid "Blue"
+#~ msgstr "آبی"
