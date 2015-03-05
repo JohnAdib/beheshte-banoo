@@ -1080,7 +1080,7 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
   vertical-align: top;
   margin: 0 auto;
   outline: none;
-  padding: 10px 2%;
+  padding: 8px 2%;
   font-size: 1em;
   background: #ffffff;
   border: 1px solid rgba(39, 41, 43, 0.15);

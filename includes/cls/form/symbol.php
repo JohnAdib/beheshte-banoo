@@ -16,7 +16,7 @@ class symbol extends \lib\form
 							->required()->maxlength(17)->pattern(".{9,}");
 
 		$this->mobile 	= $this->make("mobile")->name('mobile')->type("tel")->label(T_("Mobile"))->pl(T_("Mobile"))
-							// ->pos('hint--rounded hint--top')->desc(T_("we send a verification code to this number"))
+							->pos('hint--rounded hint--top')->desc(T_("we send a verification code to this number"))
 							->required()->maxlength(17)->pattern(".{10,}")->autocomplete('off');
 
 		$this->pass =
