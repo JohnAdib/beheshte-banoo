@@ -36,7 +36,7 @@
     $('#chart').highcharts({
       chart: { type: 'line' },
       title: { text: '{{global.title}}' },
-      xAxis: { categories: [{%for date in chart_labels%}'{{date|date("m/d")}}', {%endfor%}] },
+      xAxis: { categories: [{%for date in chart_labels%}'{{date|jalali}}', {%endfor%}] },
       yAxis: { title: {text: '{%trans "Person who visit"%}'},floor: 0, allowDecimals: false,},
       tooltip: { crosshairs: true, shared: true, useHTML: true,
         headerFormat: '<small>{point.key}</small><table style="direction:rtl;text-align:right">',

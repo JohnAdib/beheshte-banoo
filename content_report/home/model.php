@@ -4,11 +4,11 @@ namespace content_report\home;
 
 class model extends \mvc\model
 {
-	// SELECT DATE_FORMAT(`user_enterdatetime`,'%d/%m/%Y'), count(*) 
+	// SELECT DATE_FORMAT(`user_enterdatetime`,'%Y-%m-%d'), count(*) 
 	// FROM `users` group by `user_enterdatetime`
 	// 
 	// 
-	// select date_format(`users`.`user_enterdatetime`,'%d/%m/%Y') AS
+	// select date_format(`users`.`user_enterdatetime`,'%Y-%m-%d') AS
 	// `date`,`user_gender` AS 'value', count(*) from `users` 
 	// group by `users`.`user_enterdatetime`, `user_gender`
 
@@ -29,14 +29,14 @@ class model extends \mvc\model
 			$groupbychild = 'groupbyUser_'.$mychild;
 			$qry          = $qry->$groupbychild();
 
-			$qry = $qry->field("#date_format(user_enterdatetime,'%d/%m/%Y') as date",
+			$qry = $qry->field("#date_format(user_enterdatetime,'%Y-%m-%d') as date",
 													'#count(*) as value',
 													"#user_$mychild as $mychild"
 												);
 		}
 		else
 		{
- 			$qry = $qry->field("#date_format(user_enterdatetime,'%d/%m/%Y') as date",
+ 			$qry = $qry->field("#date_format(user_enterdatetime,'%Y-%m-%d') as date",
  													'#count(*) as value'
  												);
 		}
