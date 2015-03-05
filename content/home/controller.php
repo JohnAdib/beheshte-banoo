@@ -6,7 +6,7 @@ class controller extends \mvc\controller
 {
 	public function config()
 	{
-		$this->get('testupdate')->ALL('testupdate');
+		// $this->get('testupdate')->ALL('testupdate');
 	}
 
 	// for routing check

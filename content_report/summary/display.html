@@ -61,16 +61,12 @@
      <div class="label">{%trans "Average Points By Users"%}</div>
     </div>
     <div class="statistic">
-     <div class="value">{{game.prizes / user.days}}</div>
+     <div class="value">{{(game.prizes / user.days) |round(1)}}</div>
      <div class="label">{%trans "Point per days (Average)"%}</div>
     </div>
     <div class="statistic purple txt">
      <div class="value">{{game.maxpoint.firstname}} {{game.maxpoint.lastname}}</div>
-     <div class="label">{%trans "Top Player"%}<br/><b></b></div>
-    </div>
-    <div class="statistic">
-     <div class="value">{{game.maxpoint.prizes}}</div>
-     <div class="label">{%trans "Top Player Point"%}<br/><b></b></div>
+     <div class="label">{%trans "Top Player"%} {%trans "with"%} <b>{{game.maxpoint.prizes}} {%trans "point"%}</b></div>
     </div>
    </div>
 
@@ -87,7 +83,7 @@
      <div class="label">{%trans "Total visitors"%}</div>
     </div>
     <div class="statistic">
-     <div class="value">{{user.visitor / user.days}}</div>
+     <div class="value">{{(user.visitor / user.days) |round(1)}}</div>
      <div class="label">{%trans "Visit per days (Average)"%}</div>
     </div>
    </div>

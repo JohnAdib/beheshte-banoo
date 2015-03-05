@@ -3,13 +3,13 @@ function transtext()
 {
 
 	//------------------------------------------------content_report/home/display.html
-	echo T_("summary reports");                                                       // Line 97
-	echo T_("popular booths");                                                        // Line 98
-	echo T_("show all visitors groupby date");                                        // Line 99
-	echo T_("by");                                                                    // Line 102
-	echo T_("birthdate");                                                             // Line 100
-	echo T_("province");                                                              // Line 101
-	echo T_("gender");                                                                // Line 102
+	echo T_("summary reports");                                                       // Line 93
+	echo T_("popular booths");                                                        // Line 94
+	echo T_("show all visitors groupby date");                                        // Line 95
+	echo T_("by");                                                                    // Line 98
+	echo T_("birthdate");                                                             // Line 96
+	echo T_("province");                                                              // Line 97
+	echo T_("gender");                                                                // Line 98
 	echo T_("Person who visit");                                                      // Line 40
 	echo T_("Person");                                                                // Line 43
 
@@ -26,9 +26,10 @@ function transtext()
 	echo T_("Average Points By Users");                                               // Line 61
 	echo T_("Point per days (Average)");                                              // Line 65
 	echo T_("Top Player");                                                            // Line 69
-	echo T_("Top Player Point");                                                      // Line 73
-	echo T_("Total visitors");                                                        // Line 87
-	echo T_("Visit per days (Average)");                                              // Line 91
+	echo T_("with");                                                                  // Line 69
+	echo T_("point");                                                                 // Line 69
+	echo T_("Total visitors");                                                        // Line 83
+	echo T_("Visit per days (Average)");                                              // Line 87
 
 	//----------------------public_html/static/js/datatable/datatable-langs/index.html
 

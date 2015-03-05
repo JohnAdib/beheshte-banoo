@@ -186,14 +186,16 @@ while ($row = $qTables->fetch_object())
 		}
 		$required   = $myfield_null=='NO'?'->required()':null;
 		$property  .= $required;
-		$tmp_pos    = strpos($myfield, '_');
-		$prefix     = substr($myfield, 0, $tmp_pos );
 		$isforeign  = false;
+		$prefix     = substr($myfield, 0, $tmp_pos );
+
+		// filter then name of field for show in form
+		$tmp_pos    = strpos($myfield, '_');
 		$myname     = substr($myfield, ($tmp_pos ? $tmp_pos+1 : 0) );
-		
 		$myname     = strtolower($myname);
 		$mylabel    = str_replace("_", " ", $myname);
-		$mylabel    = ucwords($mylabel);
+
+		$mylabel    = $mylabel;
 		
 		$txtcomment = "\n\t//------------------------------------------------------------------ ";
 		$txtstart   = "\tpublic function $myfield()\n\t{\n\t\t";
