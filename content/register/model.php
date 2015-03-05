@@ -19,7 +19,7 @@ class model extends \mvc\model
 
 		$qry     = $this->sql()->tableUsers();
 		$fields  = array( 'gender','firstname','lastname','mobile',
-								'birthdate','codemelli','passport','country','province', 'barcode');
+								'birthdate','nationalcode','passport','country','province', 'barcode');
 
 		foreach ($fields as $value)
 		{

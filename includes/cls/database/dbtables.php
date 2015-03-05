@@ -140,7 +140,7 @@ function setproperty($_arg)
 
 
 // change field name with condition and return new user friendly name
-function field_userFriendly($_fieldname)
+function field_userFriendly($_fieldname, $_export = 'name')
 {
 	$_fieldname = strtolower($_fieldname);
 
@@ -186,7 +186,9 @@ function field_userFriendly($_fieldname)
 		$mytype  = 'id';
 	}
 
-	return array('name' => $myname, 'label' => $mylabel, 'type' => $mytype );
+	$result = array('name' => $myname, 'label' => $mylabel, 'type' => $mytype );
+	
+	return $result[$_export];
 }
 
 
@@ -246,10 +248,9 @@ while ($row = $qTables->fetch_object())
 
 
 		// filter then name of field for show in form
-		$field_data = field_userFriendly($myfield);
-		$myname     = $field_data['name'];
-		$mylabel    = $field_data['label'];
-		$mytype     = $field_data['type'];
+		$myname     = field_userFriendly($myfield, 'name');
+		$mylabel    = field_userFriendly($myfield, 'label');
+		$mytype     = field_userFriendly($myfield, 'type');
 
 
 		$prefix     = substr($myfield, 0, $tmp_pos );
@@ -346,9 +347,10 @@ while ($row = $qTables->fetch_object())
 			$fn      .= $txtstart. '$this->form("text")->name("'. $myname.'")'.$property.';';
 
 			if($myname === 'province' )
-			{
 				$fn .= "\n\t\t".'$this->setChild'."('provinces@id!province_name', '18');";
-			}
+
+			if($myname === 'nationalcode')
+				$fn .= "\n\t\t".'$this->validate()->nationalcode();';
 		}
 
 		// if want to add txt end then end it

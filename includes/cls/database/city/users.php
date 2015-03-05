@@ -85,6 +85,7 @@ class users
 	public function user_nationalcode() 
 	{
 		$this->form("text")->name("nationalcode")->min(0)->max(99999999999)->type('number');
+		$this->validate()->nationalcode();
 	}
 	public function user_passport() 
 	{

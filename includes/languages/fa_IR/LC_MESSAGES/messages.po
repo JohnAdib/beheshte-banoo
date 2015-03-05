@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-03-05 13:19+0330\n"
-"PO-Revision-Date: 2015-03-05 13:21+0330\n"
+"POT-Creation-Date: 2015-03-05 15:14+0330\n"
+"PO-Revision-Date: 2015-03-05 15:14+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -1081,6 +1081,10 @@ msgstr "کودکستان"
 #: ../../../.././includes/languages/static_translation.php:83
 msgid "Report"
 msgstr "گزارش"
+
+#: ../../../.././includes/languages/static_translation.php:86
+msgid "error in field"
+msgstr "خطا در فیلد"
 
 #: ../../../.././includes/languages/twig_translation.php:6
 msgid "summary reports"

@@ -83,5 +83,7 @@ function transtext()
 	echo T_('Report');
 	echo T_('birthdate');
 	echo T_('gender');
+	echo T_('error in field');
+	
 }
 ?>
