@@ -73,7 +73,10 @@ function transtext()
 	echo T_("Absent");                                                                // Line 24
 
 	//--------------------------------------------------------content/kid/display.html
-	echo T_("Kindergartens");                                                         // Line 8 Seperate
+	echo T_("You can manage kids in this page.");                                     // Line 8 Seperate
+	echo T_("Enter barcode then set color and number for register kids.");            // Line 8 Seperate
+	echo T_("If parent want they child, click on Call button and call them.");        // Line 8 Seperate
+	echo T_("After delivery click on Delivery.");                                     // Line 8 Seperate
 	echo T_("barcode");                                                               // Line 12
 	echo T_("Delivery");                                                              // Line 28
 	echo T_("Call");                                                                  // Line 27
@@ -83,12 +86,16 @@ function transtext()
 	echo T_("Login");                                                                 // Line 48
 	echo T_("Reports");                                                               // Line 22
 	echo T_("Control Panel");                                                         // Line 44
-	echo T_("Register Visitors");                                                     // Line 36
-	echo T_("Register Kids");                                                         // Line 38
-	echo T_("Register Visitors Avatar");                                              // Line 37
+	echo T_("Register Visitors");                                                     // Line 39
+	echo T_("Register Kids");                                                         // Line 41
+	echo T_("Register Visitors Avatar");                                              // Line 40
 	echo T_("Start Game");                                                            // Line 34
-	echo T_("Point Checker");                                                         // Line 28
-	echo T_("Change points to meney");                                                // Line 29
+	echo T_("Point Checker");                                                         // Line 36
+	echo T_("Change points to meney");                                                // Line 37
+
+	//---------------------------------------------------content/register/display.html
+	echo T_("for using system and give prize visitors must register in system.");     // Line 7 Seperate
+	echo T_("you can register visitors in this form.");                               // Line 7 Seperate
 
 	//-----------------------------------------------------content/camera/display.html
 	echo T_("First of all, scan barcode then camera take a picture form you and show it for 3 second.");// Line 12 Seperate
