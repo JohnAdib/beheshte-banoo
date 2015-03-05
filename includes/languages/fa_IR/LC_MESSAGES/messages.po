@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-03-05 15:43+0330\n"
-"PO-Revision-Date: 2015-03-05 15:43+0330\n"
+"POT-Creation-Date: 2015-03-05 18:09+0330\n"
+"PO-Revision-Date: 2015-03-05 18:09+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -138,12 +138,12 @@ msgid "mobile number exist!"
 msgstr "این شماره موبایل قبلا در سیستم ثبت شده است!"
 
 #: ../../../.././content_account/signup/model.php:39
-#: ../../../.././content/register/model.php:46
+#: ../../../.././content/register/model.php:47
 msgid "register successfully"
 msgstr "ثبت نام با موفقیت انجام شد"
 
 #: ../../../.././content_account/signup/model.php:46
-#: ../../../.././content/register/model.php:50
+#: ../../../.././content/register/model.php:51
 msgid "register failed!"
 msgstr "ثبت نام ناموفق بود!"
 
@@ -725,10 +725,8 @@ msgid "password"
 msgstr "کلمه عبور"
 
 #: ../../../.././includes/cls/database/city/translation.php:163
-#: ../../../.././includes/languages/static_translation.php:84
-#: ../../../.././includes/languages/twig_translation.php:10
-msgid "birthdate"
-msgstr "تاریخ تولد"
+msgid "birthyear"
+msgstr "سال تولد"
 
 #: ../../../.././includes/cls/database/city/translation.php:164
 msgid "degree"
@@ -1081,6 +1079,11 @@ msgstr "کودکستان"
 #: ../../../.././includes/languages/static_translation.php:83
 msgid "Report"
 msgstr "گزارش"
+
+#: ../../../.././includes/languages/static_translation.php:84
+#: ../../../.././includes/languages/twig_translation.php:10
+msgid "birthdate"
+msgstr "تاریخ تولد"
 
 #: ../../../.././includes/languages/static_translation.php:86
 msgid "error in field"

@@ -132,6 +132,13 @@ function setproperty($_arg)
 			return $tmp;
 			break;
 
+		case 'year':
+			$tmp[0] 	= "->type('number')";
+			array_push($tmp, "->min(0)");
+			array_push($tmp, "->max(9999)");
+			return $tmp;
+			break;		
+
 		default:
 			return ("N-A: Create Error, Please check for new datatype");
 			break;
@@ -349,8 +356,8 @@ while ($row = $qTables->fetch_object())
 			if($myname === 'province' )
 				$fn .= "\n\t\t".'$this->setChild'."('provinces@id!province_name', '18');";
 
-			if($myname === 'nationalcode')
-				$fn .= "\n\t\t".'$this->validate()->nationalcode();';
+			if($myname === 'nationalcode' || $myname === 'birthyear')
+				$fn .= "\n\t\t".'$this->validate()->'.$myname.'();';
 		}
 
 		// if want to add txt end then end it

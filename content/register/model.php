@@ -19,15 +19,16 @@ class model extends \mvc\model
 
 		$qry     = $this->sql()->tableUsers();
 		$fields  = array( 'gender','firstname','lastname','mobile',
-								'birthdate','nationalcode','passport','country','province', 'barcode');
+								'birthyear','nationalcode','passport','country','province', 'barcode');
 
 		foreach ($fields as $value)
 		{
 			$post    = utility::post($value);
-			// if($value === 'birthdate')
+			// if($value === 'birthyear')
 			// {
 			// 	$post    = utility::post($value, 'filter');
 			// }
+
 			$tmp_set = 'setUser_'.$value;
 			$qry     = $qry->$tmp_set($post);
 		}

@@ -9,7 +9,7 @@ class users
 	public $user_mobile        = array('null' =>'YES', 'show' =>'YES', 'label'=>'mobile',        'type' => 'varchar@15',                                               );
 	public $user_mobile2       = array('null' =>'YES', 'show' =>'YES', 'label'=>'mobile2',       'type' => 'varchar@15',                                               );
 	public $user_password      = array('null' =>'YES', 'show' =>'YES', 'label'=>'password',      'type' => 'varchar@64',                                               );
-	public $user_birthdate     = array('null' =>'YES', 'show' =>'YES', 'label'=>'birthdate',     'type' => 'datetime@',                                                );
+	public $user_birthyear     = array('null' =>'YES', 'show' =>'YES', 'label'=>'birthyear',     'type' => 'year@4',                                                   );
 	public $user_degree        = array('null' =>'YES', 'show' =>'YES', 'label'=>'degree',        'type' => 'varchar@50',                                               );
 	public $country_id         = array('null' =>'YES', 'show' =>'YES', 'label'=>'country',       'type' => 'smallint@3!101',                                           'foreign'=>'countrys@id!country_name');
 	public $user_province      = array('null' =>'YES', 'show' =>'YES', 'label'=>'province',      'type' => 'varchar@50',                                               );
@@ -60,9 +60,10 @@ class users
 	{
 		$this->form("text")->name("password")->maxlength(64)->type('password');
 	}
-	public function user_birthdate() 
+	public function user_birthyear() 
 	{
-		$this->form("text")->name("birthdate");
+		$this->form("text")->name("birthyear")->min(0)->max(9999)->type('number');
+		$this->validate()->birthyear();
 	}
 	public function user_degree() 
 	{

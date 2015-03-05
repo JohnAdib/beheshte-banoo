@@ -7,7 +7,7 @@ function transtext()
 	echo T_("popular booths");                                                        // Line 94
 	echo T_("show all visitors groupby date");                                        // Line 95
 	echo T_("by");                                                                    // Line 98
-	echo T_("birthdate");                                                             // Line 96
+	echo T_("birthyear");                                                             // Line 96
 	echo T_("province");                                                              // Line 97
 	echo T_("gender");                                                                // Line 98
 	echo T_("Person who visit");                                                      // Line 40

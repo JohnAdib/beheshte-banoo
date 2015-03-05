@@ -49,15 +49,14 @@ class view extends \mvc\view
 				}
 				else
 				{
-					if($mychild === 'birthdate')
+					if($mychild === 'birthyear')
 					{
 						if($value[$mychild] == 0)
 							$myname   = T_('Empty');
 						else
 						{
-							$from     = new \DateTime($value[$mychild]);
-							$to       = new \DateTime('today');
-							$myname   = $from->diff($to)->y .' '.T_('years old');
+							$from     = $value[$mychild];
+							$myname   = date("Y") - $from .' '.T_('years old');
 						}
 					}
 					// return the name of provinces

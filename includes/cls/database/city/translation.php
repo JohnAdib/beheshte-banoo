@@ -160,7 +160,7 @@ function transtext()
 	echo T_("mobile");              // user_mobile
 	echo T_("mobile2");             // user_mobile2
 	echo T_("password");            // user_password
-	echo T_("birthdate");           // user_birthdate
+	echo T_("birthyear");           // user_birthyear
 	echo T_("degree");              // user_degree
 	echo T_("province");            // user_province
 	echo T_("nationalcode");        // user_nationalcode
