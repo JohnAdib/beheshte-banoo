@@ -12,10 +12,10 @@ function transtext()
 	echo T_("title");               // booth_title
 	echo T_("winpoint");            // booth_winpoint
 	echo T_("loosepoint");          // booth_loosepoint
-	echo T_("status");              // booth_status
 	echo T_("maxplayer");           // booth_maxplayer
 	echo T_("gametime");            // booth_gametime
 	echo T_("section");             // section_id
+	echo T_("status");              // booth_status
 	echo T_("modified");            // date_modified
 
 	// ------------------------------------------------------------------- Table citys

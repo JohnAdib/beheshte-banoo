@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-03-05 18:09+0330\n"
-"PO-Revision-Date: 2015-03-05 18:09+0330\n"
+"POT-Creation-Date: 2015-03-05 19:22+0330\n"
+"PO-Revision-Date: 2015-03-05 19:24+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -41,16 +41,16 @@ msgstr "نامشخص"
 msgid "Empty"
 msgstr "بدون مقدار"
 
-#: ../../../.././content_report/home/view.php:60
+#: ../../../.././content_report/home/view.php:59
 msgid "years old"
 msgstr "ساله"
 
-#: ../../../.././content_report/home/view.php:69
+#: ../../../.././content_report/home/view.php:68
 #: ../../../.././includes/languages/twig_translation.php:7
 msgid "popular booths"
 msgstr "پرطرفدارترین غرفه ها"
 
-#: ../../../.././content_report/home/view.php:76
+#: ../../../.././content_report/home/view.php:75
 msgid "Visitors"
 msgstr "بازدیدکنندگان"
 
@@ -69,7 +69,7 @@ msgstr "شما قبلا یک بار وارد سیستم شده اید!"
 
 #: ../../../.././content_account/home/view.php:23
 #: ../../../.././includes/cls/form/account.php:25
-#: ../../../.././includes/languages/twig_translation.php:80
+#: ../../../.././includes/languages/twig_translation.php:83
 msgid "Login"
 msgstr "ورود به سیستم"
 
@@ -138,12 +138,12 @@ msgid "mobile number exist!"
 msgstr "این شماره موبایل قبلا در سیستم ثبت شده است!"
 
 #: ../../../.././content_account/signup/model.php:39
-#: ../../../.././content/register/model.php:47
+#: ../../../.././content/register/model.php:48
 msgid "register successfully"
 msgstr "ثبت نام با موفقیت انجام شد"
 
 #: ../../../.././content_account/signup/model.php:46
-#: ../../../.././content/register/model.php:51
+#: ../../../.././content/register/model.php:52
 msgid "register failed!"
 msgstr "ثبت نام ناموفق بود!"
 
@@ -314,6 +314,19 @@ msgid "loosepoint"
 msgstr "امتیاز باخت"
 
 #: ../../../.././includes/cls/database/city/translation.php:15
+msgid "maxplayer"
+msgstr "حداکثر بازیکنان"
+
+#: ../../../.././includes/cls/database/city/translation.php:16
+msgid "gametime"
+msgstr "زمان بازی"
+
+#: ../../../.././includes/cls/database/city/translation.php:17
+#: ../../../.././includes/cls/database/city/translation.php:109
+msgid "section"
+msgstr "بخش"
+
+#: ../../../.././includes/cls/database/city/translation.php:18
 #: ../../../.././includes/cls/database/city/translation.php:49
 #: ../../../.././includes/cls/database/city/translation.php:72
 #: ../../../.././includes/cls/database/city/translation.php:81
@@ -324,19 +337,6 @@ msgstr "امتیاز باخت"
 #: ../../../.././includes/cls/database/city/translation.php:173
 msgid "status"
 msgstr "وضعیت"
-
-#: ../../../.././includes/cls/database/city/translation.php:16
-msgid "maxplayer"
-msgstr "حداکثر بازیکنان"
-
-#: ../../../.././includes/cls/database/city/translation.php:17
-msgid "gametime"
-msgstr "زمان بازی"
-
-#: ../../../.././includes/cls/database/city/translation.php:18
-#: ../../../.././includes/cls/database/city/translation.php:109
-msgid "section"
-msgstr "بخش"
 
 #: ../../../.././includes/cls/database/city/translation.php:19
 msgid "modified"
@@ -725,6 +725,7 @@ msgid "password"
 msgstr "کلمه عبور"
 
 #: ../../../.././includes/cls/database/city/translation.php:163
+#: ../../../.././includes/languages/twig_translation.php:10
 msgid "birthyear"
 msgstr "سال تولد"
 
@@ -761,7 +762,7 @@ msgid "feedback"
 msgstr "بازخورد"
 
 #: ../../../.././includes/cls/database/city/translation.php:174
-#: ../../../.././includes/languages/twig_translation.php:74
+#: ../../../.././includes/languages/twig_translation.php:77
 msgid "barcode"
 msgstr "بارکد"
 
@@ -977,22 +978,22 @@ msgid "United States"
 msgstr "آمریکا"
 
 #: ../../../.././includes/languages/static_translation.php:50
-#: ../../../.././includes/languages/twig_translation.php:79
+#: ../../../.././includes/languages/twig_translation.php:82
 msgid "Logout"
 msgstr "خروج از سیستم"
 
 #: ../../../.././includes/languages/static_translation.php:51
-#: ../../../.././includes/languages/twig_translation.php:99
+#: ../../../.././includes/languages/twig_translation.php:102
 msgid "Home"
 msgstr "صفحه نخست"
 
 #: ../../../.././includes/languages/static_translation.php:54
-#: ../../../.././includes/languages/twig_translation.php:102
+#: ../../../.././includes/languages/twig_translation.php:105
 msgid "Options"
 msgstr "تنظیمات"
 
 #: ../../../.././includes/languages/static_translation.php:55
-#: ../../../.././includes/languages/twig_translation.php:103
+#: ../../../.././includes/languages/twig_translation.php:106
 msgid "Go to"
 msgstr "برو به"
 
@@ -1001,22 +1002,22 @@ msgid "Does not exist"
 msgstr "هیچ داده ای موجود نیست"
 
 #: ../../../.././includes/languages/static_translation.php:57
-#: ../../../.././includes/languages/twig_translation.php:104
+#: ../../../.././includes/languages/twig_translation.php:107
 msgid "Add New Record"
 msgstr "افزودن رکورد جدید"
 
 #: ../../../.././includes/languages/static_translation.php:58
-#: ../../../.././includes/languages/twig_translation.php:105
+#: ../../../.././includes/languages/twig_translation.php:108
 msgid "Actions"
 msgstr "عملیات"
 
 #: ../../../.././includes/languages/static_translation.php:59
-#: ../../../.././includes/languages/twig_translation.php:107
+#: ../../../.././includes/languages/twig_translation.php:110
 msgid "Edit"
 msgstr "ویرایش"
 
 #: ../../../.././includes/languages/static_translation.php:60
-#: ../../../.././includes/languages/twig_translation.php:109
+#: ../../../.././includes/languages/twig_translation.php:112
 msgid "Delete"
 msgstr "حذف"
 
@@ -1081,13 +1082,28 @@ msgid "Report"
 msgstr "گزارش"
 
 #: ../../../.././includes/languages/static_translation.php:84
-#: ../../../.././includes/languages/twig_translation.php:10
 msgid "birthdate"
 msgstr "تاریخ تولد"
 
 #: ../../../.././includes/languages/static_translation.php:86
 msgid "error in field"
 msgstr "خطا در فیلد"
+
+#: ../../../.././includes/languages/static_translation.php:87
+msgid "submit"
+msgstr "تایید"
+
+#: ../../../.././includes/languages/static_translation.php:88
+msgid "Submit"
+msgstr "تایید"
+
+#: ../../../.././includes/languages/static_translation.php:89
+msgid "save"
+msgstr "ذخیره"
+
+#: ../../../.././includes/languages/static_translation.php:90
+msgid "Save"
+msgstr "ذخیره"
 
 #: ../../../.././includes/languages/twig_translation.php:6
 msgid "summary reports"
@@ -1228,69 +1244,81 @@ msgstr "با اسکن کردن بارکد، امتیازات خود را نقد 
 
 #: ../../../.././includes/languages/twig_translation.php:66
 msgid "Scan barcode for going to queue."
-msgstr "با اسکن بارکد برای خود نوبت ثبت کنید."
+msgstr "برای افزودن به صف، بارکد را وارد کنید."
 
 #: ../../../.././includes/languages/twig_translation.php:67
+msgid "If child absent click on absent button."
+msgstr "اگر شخص در نوبت خود حاضر نبود بر روی دکمه غایب کلیک کنید."
+
+#: ../../../.././includes/languages/twig_translation.php:68
+msgid "For start game click on Start."
+msgstr "برای شروع بازی بر روی دکمه شروع کلیک کنید"
+
+#: ../../../.././includes/languages/twig_translation.php:69
+msgid "After starting game you can set winner and looser for gain points."
+msgstr "بعد از شروع بازی شما میتوانید وضعیت برنده یا بازنده را مشخص کنید."
+
+#: ../../../.././includes/languages/twig_translation.php:70
 msgid "Winner"
 msgstr "برنده"
 
-#: ../../../.././includes/languages/twig_translation.php:68
+#: ../../../.././includes/languages/twig_translation.php:71
 msgid "Looser"
 msgstr "بازنده"
 
-#: ../../../.././includes/languages/twig_translation.php:69
+#: ../../../.././includes/languages/twig_translation.php:72
 msgid "Start"
 msgstr "شروع"
 
-#: ../../../.././includes/languages/twig_translation.php:70
+#: ../../../.././includes/languages/twig_translation.php:73
 msgid "Absent"
 msgstr "غایب"
 
-#: ../../../.././includes/languages/twig_translation.php:73
+#: ../../../.././includes/languages/twig_translation.php:76
 msgid "Kindergartens"
 msgstr "مهدکودک"
 
-#: ../../../.././includes/languages/twig_translation.php:75
+#: ../../../.././includes/languages/twig_translation.php:78
 msgid "Delivery"
 msgstr "تحویل دادن"
 
-#: ../../../.././includes/languages/twig_translation.php:76
+#: ../../../.././includes/languages/twig_translation.php:79
 msgid "Call"
 msgstr "صدا کردن"
 
-#: ../../../.././includes/languages/twig_translation.php:81
+#: ../../../.././includes/languages/twig_translation.php:84
 msgid "Reports"
 msgstr "گزارش ها"
 
-#: ../../../.././includes/languages/twig_translation.php:82
+#: ../../../.././includes/languages/twig_translation.php:85
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
-#: ../../../.././includes/languages/twig_translation.php:83
+#: ../../../.././includes/languages/twig_translation.php:86
 msgid "Register Visitors"
 msgstr "ثبت نام بازدیدکنندگان"
 
-#: ../../../.././includes/languages/twig_translation.php:84
+#: ../../../.././includes/languages/twig_translation.php:87
 msgid "Register Kids"
 msgstr "ثبت کودکان"
 
-#: ../../../.././includes/languages/twig_translation.php:85
+#: ../../../.././includes/languages/twig_translation.php:88
 msgid "Register Visitors Avatar"
 msgstr "ثبت عکس بازدیدکنندگان"
 
-#: ../../../.././includes/languages/twig_translation.php:86
+#: ../../../.././includes/languages/twig_translation.php:89
 msgid "Start Game"
 msgstr "شروع بازی"
 
-#: ../../../.././includes/languages/twig_translation.php:87
+#: ../../../.././includes/languages/twig_translation.php:90
 msgid "Point Checker"
 msgstr "چک کردن امتیازها"
 
-#: ../../../.././includes/languages/twig_translation.php:88
+#: ../../../.././includes/languages/twig_translation.php:91
 msgid "Change points to meney"
 msgstr "نقد کردن امتیازات!"
 
-#: ../../../.././includes/languages/twig_translation.php:91
+#: ../../../.././includes/languages/twig_translation.php:94
 msgid ""
 "First of all, scan barcode then camera take a picture form you and show it "
 "for 3 second."
@@ -1298,51 +1326,51 @@ msgstr ""
 "ابتدا در جلوی دوربین آماده شوید. سپس با اسکن بارکد روی کارت، عکس شما ذخیره "
 "شده و به مدت ۳ ثانیه نمایش داده خواهد شد."
 
-#: ../../../.././includes/languages/twig_translation.php:92
+#: ../../../.././includes/languages/twig_translation.php:95
 msgid "if it looks good you successful else try again with scan a barcode"
 msgstr "اگر مشکلی در عکس وجود داشت دوباره بارکد را اسکن کنید."
 
-#: ../../../.././includes/languages/twig_translation.php:93
+#: ../../../.././includes/languages/twig_translation.php:96
 msgid "Please place in center of box and smile:)"
 msgstr "لطفا در مرکز کادر قرار گرفته و لبخند بزنید :)"
 
-#: ../../../.././includes/languages/twig_translation.php:96
+#: ../../../.././includes/languages/twig_translation.php:99
 msgid "Scan your barcode and see your points"
 msgstr "با اسکن کردن بارکد، امتیاز خود را مشاهده کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:106
+#: ../../../.././includes/languages/twig_translation.php:109
 msgid "Edit this record"
 msgstr "ویرایش این رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:108
+#: ../../../.././includes/languages/twig_translation.php:111
 msgid "Delete this record"
 msgstr "حذف این رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:110
+#: ../../../.././includes/languages/twig_translation.php:113
 msgid "delete record"
 msgstr "حذف رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:111
+#: ../../../.././includes/languages/twig_translation.php:114
 msgid "seriously, are you sure? There's no coming back."
 msgstr "مطمئنید؟ بازگشتی وجود ندارد"
 
-#: ../../../.././includes/languages/twig_translation.php:112
+#: ../../../.././includes/languages/twig_translation.php:115
 msgid "Cancel"
 msgstr "انصراف"
 
-#: ../../../.././includes/languages/twig_translation.php:113
+#: ../../../.././includes/languages/twig_translation.php:116
 msgid "or"
 msgstr "یا"
 
-#: ../../../.././includes/languages/twig_translation.php:116
+#: ../../../.././includes/languages/twig_translation.php:119
 msgid "Select"
 msgstr "انتخاب"
 
-#: ../../../.././includes/languages/twig_translation.php:119
+#: ../../../.././includes/languages/twig_translation.php:122
 msgid "Home Page"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/twig_translation.php:120
+#: ../../../.././includes/languages/twig_translation.php:123
 msgid "Experience our service in your language"
 msgstr "سرویس ما را با زبان مادری خودتان تجربه کنید"
 

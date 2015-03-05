@@ -17,7 +17,6 @@ class model extends \mvc\model
 			debug::error(T_("This card number does not exist"));
 			return;
 		}
-
 		$booth_id  = $this->login('booth_id');
 		// **************************** disallow register user duplicate in kids
 		$qry       = $this->sql()->tableGames  ()
