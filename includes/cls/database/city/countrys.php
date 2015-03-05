@@ -2,12 +2,12 @@
 namespace database\city;
 class countrys 
 {
-	public $id           = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@3',  );
-	public $country_code = array('null' =>'NO',  'show' =>'YES', 'label'=>'Code',          'type' => 'char@2',      );
-	public $country_name = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@100', );
+	public $id           = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@3',  );
+	public $country_code = array('null' =>'NO',  'show' =>'YES', 'label'=>'code',          'type' => 'char@2',      );
+	public $country_name = array('null' =>'NO',  'show' =>'YES', 'label'=>'name',          'type' => 'varchar@100', );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 	public function country_code() 
 	{

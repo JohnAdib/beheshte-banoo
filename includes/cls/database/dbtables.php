@@ -25,11 +25,12 @@ if (!file_exists(__DIR__.'/'.db_name))
 	mkdir(__DIR__.'/'.db_name, 0777, true);
 
 
-function _type($type, $def,$_table  = null)
+// this function return the type of field
+function _type($_type, $_def, $_table = null)
 {
 	global $translation;
-	$def     = $def ? "!$def" : null;
-	preg_match("/^([^(]*)(\((.*)\))?/", $type, $tp);
+	$_def     = $_def ? "!$_def" : null;
+	preg_match("/^([^(]*)(\((.*)\))?/", $_type, $tp);
 	$_type   = $tp[1];
 	$_length = isset($tp[3]) ? $tp[3] : null;
 	switch ($_type) 
@@ -45,19 +46,21 @@ function _type($type, $def,$_table  = null)
 						$translation['Enum '.$value] = $value;
 				}
 			}
-			return ("'type' => '$_type@$_length{$def}'");
+			return ("'type' => '$_type@$_length{$_def}'");
 			break;
 
 		default:
-			return ("'type' => '$_type@$_length{$def}'");
+			return ("'type' => '$_type@$_length{$_def}'");
 			break;
 	}
 }
 
-function setproperty($myparam)
+
+// this function set needed property of fields for HTML5
+function setproperty($_arg)
 {
-	$type       = $myparam->Type;
-	$field      = $myparam->Field;
+	$type       = $_arg->Type;
+	$field      = $_arg->Field;
 	$tmp_pos    = strpos($field, '_');
 	$fieldname  = substr($field, ($tmp_pos ? $tmp_pos+1 : 0) );
 
@@ -135,6 +138,59 @@ function setproperty($myparam)
 	}
 }
 
+
+// change field name with condition and return new user friendly name
+function field_userFriendly($_fieldname)
+{
+	$_fieldname = strtolower($_fieldname);
+
+	// check for _ exist in name or not
+	$tmp_pos = strpos($_fieldname, '_');
+	if($tmp_pos)
+	{
+		$suffix = substr($_fieldname, $tmp_pos + 1);
+		$prefix = substr($_fieldname, 0, $tmp_pos);
+
+		// if is foreign key like user_id or permission_id
+		// change it to user_ or permission_
+		if($suffix === 'id')
+		{
+			$myname  = $prefix.'_';
+			$mylabel = $prefix;
+			$mytype  = 'foreign';
+		}
+
+		// if especial foreign key like user_id_customer
+		// change it to user_customer
+		elseif(substr($suffix, 0, 2) === 'id_')
+		{
+			$myname  = $prefix.'_'.substr($suffix, 3);
+			$mylabel = $prefix.' '.substr($suffix, 3);
+			$mytype  = 'foreign';
+		}
+
+		// for normal field like user_firstname or user_gender
+		// change it to firstname or gender
+		else
+		{
+			$myname  = $suffix;
+			$mylabel = $suffix;
+			$mytype  = 'normal';
+		}
+	}
+	// in field like id return id
+	else
+	{
+		$myname   = $_fieldname;
+		$mylabel  = $_fieldname;
+		$mytype  = 'id';
+	}
+
+	return array('name' => $myname, 'label' => $mylabel, 'type' => $mytype );
+}
+
+
+
 // loop until end of tables
 while ($row = $qTables->fetch_object())
 {
@@ -153,17 +209,17 @@ while ($row = $qTables->fetch_object())
 	$counter['type'] = 0;
 	while ($mycrow1 = $qCOL1->fetch_object())
 	{
-		$mytype = _type($mycrow1->Type, $mycrow1->Default, $TABLENAME);
-		if(strlen($mytype) > $counter['type'])
-			$counter['type'] = strlen($mytype);
+		$tmp_type = _type($mycrow1->Type, $mycrow1->Default, $TABLENAME);
+		if(strlen($tmp_type) > $counter['type'])
+			$counter['type'] = strlen($tmp_type);
 
 		if(strlen($mycrow1->Field) > $counter['name'])
 			$counter['name'] = strlen($mycrow1->Field);
 	}
 
-	$translation['Table '.$TABLENAME] = $TABLENAME;
-	$translation[ucfirst($TABLENAME)] = ucfirst($TABLENAME);
-	$translation[$TABLENAME]          = substr($TABLENAME, 0, -1);
+	$translation['Table '.$TABLENAME]       = $TABLENAME;
+	// $translation[$TABLENAME]                = $TABLENAME;
+	$translation[substr($TABLENAME, 0, -1)] = substr($TABLENAME, 0, -1);
 	// create file of each table -------------------------------------------------------------------
 	while ($crow = $qCOL->fetch_object())
 	{
@@ -186,78 +242,55 @@ while ($row = $qTables->fetch_object())
 		}
 		$required   = $myfield_null=='NO'?'->required()':null;
 		$property  .= $required;
-		$isforeign  = false;
-		$prefix     = substr($myfield, 0, $tmp_pos );
+		$tmp_pos    = strpos($myfield, '_');
+
 
 		// filter then name of field for show in form
-		$tmp_pos    = strpos($myfield, '_');
-		$myname     = substr($myfield, ($tmp_pos ? $tmp_pos+1 : 0) );
-		$myname     = strtolower($myname);
-		$mylabel    = str_replace("_", " ", $myname);
+		$field_data = field_userFriendly($myfield);
+		$myname     = $field_data['name'];
+		$mylabel    = $field_data['label'];
+		$mytype     = $field_data['type'];
 
-		$mylabel    = $mylabel;
-		
+
+		$prefix     = substr($myfield, 0, $tmp_pos );
 		$txtcomment = "\n\t//------------------------------------------------------------------ ";
-		$txtstart   = "\tpublic function $myfield()\n\t{\n\t\t";
+		$txtstart   = "\tpublic function $myfield() \n\t{\n\t\t";
 		$txtend     = true;
 
-		// if($myname === 'gender')          $property .= "->parent('span3')";
-		// elseif($myname === 'firstname')   $property .= "->parent('span3')";
-		// elseif($myname  === 'lastname')   $property .= "->parent('span6 endline')";
-		// elseif($myname  === 'mobile')     $property .= "->parent('span3')";
-		// elseif($myname  === 'birthdate')  $property .= "->parent('span3')";
-		// elseif($myname  === 'degree')     $property .= "->parent('span3')";
-		// elseif($myfield === 'country_id') $property .= "->parent('span2')";
-		// elseif($myname  === 'province')   $property .= "->parent('span2')";
-		// elseif($myname  === 'codemelli')  $property .= "->parent('span2 endline')";
-		// elseif($myname  === 'passport')   $property .= "->parent('span2 endline hide')";
-		// elseif($myname  === 'barcode')    $property .= "->parent('span12 endline')";
-
+		/**
+		 -------------------------------------------------------- only in this project - Start
+		*/
 		if($myname  === 'passport')       $property .= "->parent('hide')";
 		elseif($myname  === 'color')      $property .= "->parent('span4')";
 		elseif($myname  === 'number')     $property .= "->parent('span4 endline')";
+		/**
+		 -------------------------------------------------------- only in this project - End
+		*/
 
-		// --------------------------------------------------------------------------------- ID
-		if($myfield=="id")
+
+		// ------------------------------------------------------------- ID
+		if($mytype === "id" || ($myfield=='user_id' && $TABLENAME!=''))
 		{
-			$fn           .= $txtcomment. "id - primary key\n";
-			$fn           .= "\tpublic function $myfield() {" . '$this->validate()->id();' ."}\n";
-			$myfield_show  = 'NO';
-			$txtend        = false;
-
-		}
-
-		// --------------------------------------------------------------------------------- Foreign Key - User_id
-		elseif ($myfield=='user_id' && $TABLENAME!='')
-		{
-			// for foreign key we use prefix that means we use (table name-last char)
-			$fn			 .= "\tpublic function $myfield() {" . '$this->validate()->id();' ."}\n";
-
-			$isforeign    = true;
-			$mylabel      = ucwords(strtolower($prefix));
+			$fn          .= $txtcomment. $myfield."\n";
+			$fn          .= "\tpublic function $myfield() {" . '$this->validate()->id();' ."}\n";
 			$myfield_show = 'NO';
 			$txtend       = false;
 		}
 
-		// --------------------------------------------------------------------------------- Foreign Key
-		elseif ($myname=="id" || $myfield=="user_id_customer")
+		// ------------------------------------------------------------- Foreign Key
+		elseif ($mytype === "foreign")
 		{
 			// for foreign key we use prefix that means we use (table name-last char)
 			$fn .= $txtcomment. "id - foreign key\n";
-			$fn .= $txtstart. '$this->form("select")->name("'. $prefix.'_")'.$property.'->type("select")->validate()->id();';
+			$fn .= $txtstart. '$this->form("select")->name("'.$myname.'")'.$property.'->type("select")->validate()->id();';
 			$fn .= "\n\t\t".'$this->setChild();';
-
-			$isforeign = true;
-			$mylabel   = ucwords(strtolower($prefix));
 		}
 
-
-		// --------------------------------------------------------------------------------- General & more usable fields
+		// ------------------------------------------------------------- General & more usable fields
 		elseif ($myname=='title'	|| $myname=="slug" 	|| $myname=="desc" || $myname=="email"
 			 ||  $myname=="website"	|| $myname=="mobile" || $myname=="tel"  || $myname=="pass"
 			 || $myfield=="attachment_type")
 		{
-			// var_dump($property_type);
 			$property  = $property. $property_type;
 			$fn       .= $txtcomment. $myname."\n";
 			$fn       .= $txtstart. '$this->form("#'.$myname.'")'.$property.';';
@@ -269,18 +302,16 @@ while ($row = $qTables->fetch_object())
 			}
 		}
 
-		// --------------------------------------------------------------------------------- unuse
+		// ------------------------------------------------------------- unuse
 		elseif($myfield=="date_modified" || $myfield=='user_incomes' || $myfield=='user_outcomes'
 			|| $myfield=='user_logincount')
 		{
-			$fn           .= "\tpublic function $myfield() {}\n";
-			// $mylabel      = str_replace("_", " ", $myfield);
-			$mylabel      = ucwords(strtolower($mylabel));
+			$fn          .= "\tpublic function $myfield() {}\n";
 			$myfield_show = 'NO';
 			$txtend       = false;
 		}
 
-		// --------------------------------------------------------------------------------- radio
+		// ------------------------------------------------------------- radio
 		elseif ($myname=="active" 		|| $myname=="view"		|| $myname=="verified"
 			|| $myname=="add" 			|| $myname=="edit" 		|| $myname=="delete"
 			|| $myname=="service"		|| $myname=="gender"		|| $myname=="married"
@@ -293,7 +324,7 @@ while ($row = $qTables->fetch_object())
 			$fn    .= "\n\t\t".'$this->setChild();';
 		}
 
-		// --------------------------------------------------------------------------------- select
+		// ------------------------------------------------------------- select
 		elseif ($myname=="status" 	|| $myname=="model" 		|| $myname=="priority"
 			|| $myname=="sellin"		|| $myname=="priority" 	|| $myname=='method'
 			|| $myname=="type"		|| $myname=="paperstatus" || $property_type =="->type('select')"
@@ -301,7 +332,7 @@ while ($row = $qTables->fetch_object())
 		{
 			$fn    .= $txtcomment. "select button\n";
 			$fn    .= $txtstart. '$this->form("select")->name("'. $myname.'")->type("select")'.$property.'->validate();';
-			// $fn .= "\n\t\t".'$this->setChild($this->form);';
+
 			if($myname === 'province' )
 				$fn .= "\n\t\t".'$this->setChild'."('provinces@id!province_name', '18');";
 			else
@@ -331,16 +362,17 @@ while ($row = $qTables->fetch_object())
 			$myfield_show	= 'NO';
 		}
 		
-		$mytype     = _type($crow->Type, $crow->Default);
+		$tmp_type = _type($crow->Type, $crow->Default);
 		$fields		= "public \$$crow->Field"    .str_repeat(' ',$counter['name']+1-strlen($crow->Field))
 		             ."= array("
 		             ."'null' =>'$myfield_null',"  .str_repeat(' ',4-strlen($myfield_null))
 		             ."'show' =>'$myfield_show',"  .str_repeat(' ',4-strlen($myfield_show))
 		             ."'label'=>'$mylabel',"       .str_repeat(' ',14-strlen($mylabel))
-		             .$mytype.","                  .str_repeat(' ',$counter['type']+1-strlen($mytype));
+		             .$tmp_type.","                  .str_repeat(' ',$counter['type']+1-strlen($tmp_type));
 		             // .");\n";
 		echo('<li><pre style="margin: 0;">'.$fields.'</pre></li>');
-		if($isforeign)
+
+		if($mytype === 'foreign')
 		{
 			$table            = $prefix.'s';
 			$fields          .= "'foreign'=>'$table@id!";
@@ -368,7 +400,8 @@ while ($row = $qTables->fetch_object())
 }
 $connect->close();
 
-// create translation file
+
+// create translation file for gettext
 $translation_output  = '<?php'."\n".'function transtext()'."\n{\n";
 foreach ($translation as $key => $value)
 {
@@ -376,14 +409,11 @@ foreach ($translation as $key => $value)
 		$translation_output .= "\n\t// ------------------------------------------------------------------- $key\n";
 
 	$translation_output .= "\t".'echo T_'.'("'.$value.'");'.str_repeat(' ',20-strlen($value)).'// '.$key."\n";
-	// if(substr($key, 0, 5)=='Enum ')
-	// 	$translation_output .= "\t".str_repeat(' ',20-strlen($key))."Enum value";
-
-	// $translation_output .= "\n";
 }
 $translation_output .= "\n}\n?>";
 file_put_contents(__DIR__.'/'.db_name."/translation.php", $translation_output);
 
+// show final result!
 echo "<br/><br/><hr/><h1>Finish..!</h1>";
 echo "<p>Convert db to file and create translation file completed!</p></body></html>";
 ?>

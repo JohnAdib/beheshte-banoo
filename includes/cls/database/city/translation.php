@@ -7,31 +7,28 @@ function transtext()
 
 	// ------------------------------------------------------------------- Table booths
 	echo T_("booths");              // Table booths
-	echo T_("Booths");              // Booths
-	echo T_("booth");               // booths
-	echo T_("Id");                  // id
-	echo T_("Title");               // booth_title
-	echo T_("Winpoint");            // booth_winpoint
-	echo T_("Loosepoint");          // booth_loosepoint
-	echo T_("Status");              // booth_status
-	echo T_("Maxplayer");           // booth_maxplayer
-	echo T_("Gametime");            // booth_gametime
-	echo T_("Section");             // section_id
-	echo T_("Modified");            // date_modified
+	echo T_("booth");               // booth
+	echo T_("id");                  // id
+	echo T_("title");               // booth_title
+	echo T_("winpoint");            // booth_winpoint
+	echo T_("loosepoint");          // booth_loosepoint
+	echo T_("status");              // booth_status
+	echo T_("maxplayer");           // booth_maxplayer
+	echo T_("gametime");            // booth_gametime
+	echo T_("section");             // section_id
+	echo T_("modified");            // date_modified
 
 	// ------------------------------------------------------------------- Table citys
 	echo T_("citys");               // Table citys
-	echo T_("Citys");               // Citys
-	echo T_("city");                // citys
-	echo T_("Province");            // province_id
-	echo T_("Name");                // city_name
+	echo T_("city");                // city
+	echo T_("province");            // province_id
+	echo T_("name");                // city_name
 
 	// ------------------------------------------------------------------- Table countrys
 	echo T_("countrys");            // Table countrys
-	echo T_("Countrys");            // Countrys
-	echo T_("country");             // countrys
-	echo T_("Code");                // country_code
-	echo T_("Name");                // country_name
+	echo T_("country");             // country
+	echo T_("code");                // country_code
+	echo T_("name");                // country_name
 	echo T_("time");                // Enum time
 	echo T_("start");               // Enum start
 	echo T_("win");                 // Enum win
@@ -41,16 +38,15 @@ function transtext()
 
 	// ------------------------------------------------------------------- Table games
 	echo T_("games");               // Table games
-	echo T_("Games");               // Games
-	echo T_("game");                // games
-	echo T_("User");                // user_id
-	echo T_("Booth");               // booth_id
-	echo T_("Prize");               // game_prize
-	echo T_("Date");                // game_date
-	echo T_("Regtime");             // game_regtime
-	echo T_("Starttime");           // game_starttime
-	echo T_("Endtime");             // game_endtime
-	echo T_("Status");              // game_status
+	echo T_("game");                // game
+	echo T_("user");                // user_id
+	echo T_("booth");               // booth_id
+	echo T_("prize");               // game_prize
+	echo T_("date");                // game_date
+	echo T_("regtime");             // game_regtime
+	echo T_("starttime");           // game_starttime
+	echo T_("endtime");             // game_endtime
+	echo T_("status");              // game_status
 	echo T_("Red");                 // Enum Red
 	echo T_("Green");               // Enum Green
 	echo T_("Blue");                // Enum Blue
@@ -66,60 +62,54 @@ function transtext()
 
 	// ------------------------------------------------------------------- Table kids
 	echo T_("kids");                // Table kids
-	echo T_("Kids");                // Kids
-	echo T_("kid");                 // kids
-	echo T_("Color");               // kid_color
-	echo T_("Number");              // kid_number
-	echo T_("Date");                // kid_date
-	echo T_("Regtime");             // kid_regtime
-	echo T_("Returntime");          // kid_returntime
-	echo T_("Endtime");             // kid_endtime
-	echo T_("Status");              // kid_status
+	echo T_("kid");                 // kid
+	echo T_("color");               // kid_color
+	echo T_("number");              // kid_number
+	echo T_("date");                // kid_date
+	echo T_("regtime");             // kid_regtime
+	echo T_("returntime");          // kid_returntime
+	echo T_("endtime");             // kid_endtime
+	echo T_("status");              // kid_status
 
 	// ------------------------------------------------------------------- Table options
 	echo T_("options");             // Table options
-	echo T_("Options");             // Options
-	echo T_("option");              // options
-	echo T_("Cat");                 // option_cat
-	echo T_("Name");                // option_name
-	echo T_("Value");               // option_value
-	echo T_("Extra");               // option_extra
-	echo T_("Status");              // option_status
+	echo T_("option");              // option
+	echo T_("cat");                 // option_cat
+	echo T_("name");                // option_name
+	echo T_("value");               // option_value
+	echo T_("extra");               // option_extra
+	echo T_("status");              // option_status
 	echo T_("yes");                 // Enum yes
 	echo T_("no");                  // Enum no
 
 	// ------------------------------------------------------------------- Table permissiondetails
 	echo T_("permissiondetails");   // Table permissiondetails
-	echo T_("Permissiondetails");   // Permissiondetails
-	echo T_("permissiondetail");    // permissiondetails
-	echo T_("Module");              // permissiondetail_module
-	echo T_("View");                // permissiondetail_view
-	echo T_("Add");                 // permissiondetail_add
-	echo T_("Edit");                // permissiondetail_edit
-	echo T_("Delete");              // permissiondetail_delete
-	echo T_("Permission");          // permission_id
+	echo T_("permissiondetail");    // permissiondetail
+	echo T_("module");              // permissiondetail_module
+	echo T_("view");                // permissiondetail_view
+	echo T_("add");                 // permissiondetail_add
+	echo T_("edit");                // permissiondetail_edit
+	echo T_("delete");              // permissiondetail_delete
+	echo T_("permission");          // permission_id
 
 	// ------------------------------------------------------------------- Table permissions
 	echo T_("permissions");         // Table permissions
-	echo T_("Permissions");         // Permissions
-	echo T_("permission");          // permissions
-	echo T_("Title");               // permission_title
-	echo T_("Status");              // permission_status
+	echo T_("permission");          // permission
+	echo T_("title");               // permission_title
+	echo T_("status");              // permission_status
 
 	// ------------------------------------------------------------------- Table provinces
 	echo T_("provinces");           // Table provinces
-	echo T_("Provinces");           // Provinces
-	echo T_("province");            // provinces
-	echo T_("Country");             // country_id
-	echo T_("Name");                // province_name
+	echo T_("province");            // province
+	echo T_("country");             // country_id
+	echo T_("name");                // province_name
 
 	// ------------------------------------------------------------------- Table sections
 	echo T_("sections");            // Table sections
-	echo T_("Sections");            // Sections
-	echo T_("section");             // sections
-	echo T_("Title");               // section_title
-	echo T_("Maxpoint");            // section_maxpoint
-	echo T_("Status");              // section_status
+	echo T_("section");             // section
+	echo T_("title");               // section_title
+	echo T_("maxpoint");            // section_maxpoint
+	echo T_("status");              // section_status
 	echo T_("insert");              // Enum insert
 	echo T_("update");              // Enum update
 	echo T_("select");              // Enum select
@@ -136,25 +126,23 @@ function transtext()
 
 	// ------------------------------------------------------------------- Table userlogs
 	echo T_("userlogs");            // Table userlogs
-	echo T_("Userlogs");            // Userlogs
-	echo T_("userlog");             // userlogs
-	echo T_("Type");                // userlog_type
-	echo T_("Module");              // userlog_module
-	echo T_("Value");               // userlog_value
-	echo T_("Priority");            // userlog_priority
-	echo T_("Ip");                  // userlog_ip
-	echo T_("Time");                // userlog_time
-	echo T_("Status");              // userlog_status
+	echo T_("userlog");             // userlog
+	echo T_("type");                // userlog_type
+	echo T_("module");              // userlog_module
+	echo T_("value");               // userlog_value
+	echo T_("priority");            // userlog_priority
+	echo T_("ip");                  // userlog_ip
+	echo T_("time");                // userlog_time
+	echo T_("status");              // userlog_status
 
 	// ------------------------------------------------------------------- Table usermetas
 	echo T_("usermetas");           // Table usermetas
-	echo T_("Usermetas");           // Usermetas
-	echo T_("usermeta");            // usermetas
-	echo T_("Cat");                 // usermeta_cat
-	echo T_("Name");                // usermeta_name
-	echo T_("Value");               // usermeta_value
-	echo T_("Extra");               // usermeta_extra
-	echo T_("Status");              // usermeta_status
+	echo T_("usermeta");            // usermeta
+	echo T_("cat");                 // usermeta_cat
+	echo T_("name");                // usermeta_name
+	echo T_("value");               // usermeta_value
+	echo T_("extra");               // usermeta_extra
+	echo T_("status");              // usermeta_status
 	echo T_("male");                // Enum male
 	echo T_("female");              // Enum female
 	echo T_("active");              // Enum active
@@ -165,28 +153,27 @@ function transtext()
 
 	// ------------------------------------------------------------------- Table users
 	echo T_("users");               // Table users
-	echo T_("Users");               // Users
-	echo T_("user");                // users
-	echo T_("Gender");              // user_gender
-	echo T_("Firstname");           // user_firstname
-	echo T_("Lastname");            // user_lastname
-	echo T_("Mobile");              // user_mobile
-	echo T_("Mobile2");             // user_mobile2
-	echo T_("Password");            // user_password
-	echo T_("Birthdate");           // user_birthdate
-	echo T_("Degree");              // user_degree
-	echo T_("Province");            // user_province
-	echo T_("Codemelli");           // user_codemelli
-	echo T_("Passport");            // user_passport
-	echo T_("Imageaddr");           // user_imageaddr
-	echo T_("Logincounter");        // user_logincounter
-	echo T_("Refinecounter");       // user_refinecounter
-	echo T_("Parent");              // user_parent
-	echo T_("Feedback");            // user_feedback
-	echo T_("Status");              // user_status
-	echo T_("Barcode");             // user_barcode
-	echo T_("Enterdatetime");       // user_enterdatetime
-	echo T_("Exitdatetime");        // user_exitdatetime
+	echo T_("user");                // user
+	echo T_("gender");              // user_gender
+	echo T_("firstname");           // user_firstname
+	echo T_("lastname");            // user_lastname
+	echo T_("mobile");              // user_mobile
+	echo T_("mobile2");             // user_mobile2
+	echo T_("password");            // user_password
+	echo T_("birthdate");           // user_birthdate
+	echo T_("degree");              // user_degree
+	echo T_("province");            // user_province
+	echo T_("nationalcode");        // user_nationalcode
+	echo T_("passport");            // user_passport
+	echo T_("imageaddr");           // user_imageaddr
+	echo T_("logincounter");        // user_logincounter
+	echo T_("refinecounter");       // user_refinecounter
+	echo T_("parent");              // user_parent
+	echo T_("feedback");            // user_feedback
+	echo T_("status");              // user_status
+	echo T_("barcode");             // user_barcode
+	echo T_("enterdatetime");       // user_enterdatetime
+	echo T_("exitdatetime");        // user_exitdatetime
 
 }
 ?>

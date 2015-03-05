@@ -2,19 +2,19 @@
 namespace database\city;
 class userlogs 
 {
-	public $id               = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                                                                       );
-	public $userlog_type     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Type',          'type' => 'enum@insert,update,delete,select,error,login,signup,changepass,access,logout', );
-	public $userlog_module   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Module',        'type' => 'varchar@50',                                                                   );
-	public $userlog_value    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Value',         'type' => 'varchar@200',                                                                  );
-	public $userlog_priority = array('null' =>'NO',  'show' =>'YES', 'label'=>'Priority',      'type' => 'enum@high,medium,low,critical!medium',                                         );
-	public $userlog_ip       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Ip',            'type' => 'int@10',                                                                       );
-	public $userlog_time     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Time',          'type' => 'datetime@',                                                                    );
-	public $user_id          = array('null' =>'YES', 'show' =>'NO',  'label'=>'User',          'type' => 'int@6',                                                                        'foreign'=>'users@id!user_nickname');
-	public $userlog_status   = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@enable,disable,expire!enable',                                            );
-	public $date_modified    = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                                                   );
+	public $id               = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                                                                       );
+	public $userlog_type     = array('null' =>'NO',  'show' =>'YES', 'label'=>'type',          'type' => 'enum@insert,update,delete,select,error,login,signup,changepass,access,logout', );
+	public $userlog_module   = array('null' =>'NO',  'show' =>'YES', 'label'=>'module',        'type' => 'varchar@50',                                                                   );
+	public $userlog_value    = array('null' =>'YES', 'show' =>'YES', 'label'=>'value',         'type' => 'varchar@200',                                                                  );
+	public $userlog_priority = array('null' =>'NO',  'show' =>'YES', 'label'=>'priority',      'type' => 'enum@high,medium,low,critical!medium',                                         );
+	public $userlog_ip       = array('null' =>'NO',  'show' =>'YES', 'label'=>'ip',            'type' => 'int@10',                                                                       );
+	public $userlog_time     = array('null' =>'NO',  'show' =>'YES', 'label'=>'time',          'type' => 'datetime@',                                                                    );
+	public $user_id          = array('null' =>'YES', 'show' =>'NO',  'label'=>'user',          'type' => 'int@6',                                                                        'foreign'=>'users@id!user_nickname');
+	public $userlog_status   = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@enable,disable,expire!enable',                                            );
+	public $date_modified    = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                                                                   );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ select button
@@ -46,6 +46,8 @@ class userlogs
 	{
 		$this->form("text")->name("time")->required();
 	}
+
+	//------------------------------------------------------------------ user_id
 	public function user_id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ select button

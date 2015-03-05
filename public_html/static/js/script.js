@@ -87,7 +87,7 @@ route('*', function() {
     // if iran selected
     if(this.value==101)
     {
-      $('.codemelli').removeClass('hide');
+      $('.nationalcode').removeClass('hide');
       $('.passport').addClass('hide');
       $('.province').removeClass('disabled');
       $('.province select').prop('disabled', false);
@@ -96,7 +96,7 @@ route('*', function() {
     else
     {
       $('.passport').removeClass('hide');
-      $('.codemelli').addClass('hide');
+      $('.nationalcode').addClass('hide');
       $('.province').addClass('disabled');
       $('.province select').prop('disabled', true);
       $('.province select').prop('value', false);

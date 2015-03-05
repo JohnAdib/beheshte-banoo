@@ -2,12 +2,12 @@
 namespace database\city;
 class provinces 
 {
-	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'smallint@5', );
-	public $country_id    = array('null' =>'NO',  'show' =>'YES', 'label'=>'Country',       'type' => 'smallint@3', 'foreign'=>'countrys@id!country_name');
-	public $province_name = array('null' =>'NO',  'show' =>'YES', 'label'=>'Name',          'type' => 'varchar@32', );
+	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5', );
+	public $country_id    = array('null' =>'NO',  'show' =>'YES', 'label'=>'country',       'type' => 'smallint@3', 'foreign'=>'countrys@id!country_name');
+	public $province_name = array('null' =>'NO',  'show' =>'YES', 'label'=>'name',          'type' => 'varchar@32', );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ id - foreign key

@@ -2,34 +2,34 @@
 namespace database\city;
 class users 
 {
-	public $id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@6',                                                    );
-	public $user_gender        = array('null' =>'YES', 'show' =>'YES', 'label'=>'Gender',        'type' => 'enum@male,female!male',                                    );
-	public $user_firstname     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Firstname',     'type' => 'varchar@15',                                               );
-	public $user_lastname      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Lastname',      'type' => 'varchar@30',                                               );
-	public $user_mobile        = array('null' =>'YES', 'show' =>'YES', 'label'=>'Mobile',        'type' => 'varchar@15',                                               );
-	public $user_mobile2       = array('null' =>'YES', 'show' =>'YES', 'label'=>'Mobile2',       'type' => 'varchar@15',                                               );
-	public $user_password      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Password',      'type' => 'varchar@64',                                               );
-	public $user_birthdate     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Birthdate',     'type' => 'datetime@',                                                );
-	public $user_degree        = array('null' =>'YES', 'show' =>'YES', 'label'=>'Degree',        'type' => 'varchar@50',                                               );
-	public $country_id         = array('null' =>'YES', 'show' =>'YES', 'label'=>'Country',       'type' => 'smallint@3!101',                                           'foreign'=>'countrys@id!country_name');
-	public $user_province      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Province',      'type' => 'varchar@50',                                               );
-	public $user_codemelli     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Codemelli',     'type' => 'bigint@11',                                                );
-	public $user_passport      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Passport',      'type' => 'varchar@50',                                               );
-	public $user_imageaddr     = array('null' =>'YES', 'show' =>'YES', 'label'=>'Imageaddr',     'type' => 'varchar@500',                                              );
-	public $user_logincounter  = array('null' =>'NO',  'show' =>'YES', 'label'=>'Logincounter',  'type' => 'smallint@3',                                               );
-	public $user_refinecounter = array('null' =>'YES', 'show' =>'YES', 'label'=>'Refinecounter', 'type' => 'smallint@2',                                               );
-	public $user_parent        = array('null' =>'YES', 'show' =>'YES', 'label'=>'Parent',        'type' => 'int@6',                                                    );
-	public $permission_id      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Permission',    'type' => 'smallint@5',                                               'foreign'=>'permissions@id!permission_title');
-	public $user_feedback      = array('null' =>'YES', 'show' =>'YES', 'label'=>'Feedback',      'type' => 'tinyint@3',                                                );
-	public $user_status        = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@active,awaiting,deactive,removed,filter,exit!active', );
-	public $user_barcode       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Barcode',       'type' => 'int@5',                                                    );
-	public $user_enterdatetime = array('null' =>'NO',  'show' =>'YES', 'label'=>'Enterdatetime', 'type' => 'datetime@',                                                );
-	public $user_exitdatetime  = array('null' =>'YES', 'show' =>'YES', 'label'=>'Exitdatetime',  'type' => 'datetime@',                                                );
-	public $booth_id           = array('null' =>'YES', 'show' =>'YES', 'label'=>'Booth',         'type' => 'smallint@3',                                               'foreign'=>'booths@id!booth_title');
-	public $date_modified      = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                               );
+	public $id                 = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@6',                                                    );
+	public $user_gender        = array('null' =>'YES', 'show' =>'YES', 'label'=>'gender',        'type' => 'enum@male,female!male',                                    );
+	public $user_firstname     = array('null' =>'NO',  'show' =>'YES', 'label'=>'firstname',     'type' => 'varchar@15',                                               );
+	public $user_lastname      = array('null' =>'NO',  'show' =>'YES', 'label'=>'lastname',      'type' => 'varchar@30',                                               );
+	public $user_mobile        = array('null' =>'YES', 'show' =>'YES', 'label'=>'mobile',        'type' => 'varchar@15',                                               );
+	public $user_mobile2       = array('null' =>'YES', 'show' =>'YES', 'label'=>'mobile2',       'type' => 'varchar@15',                                               );
+	public $user_password      = array('null' =>'YES', 'show' =>'YES', 'label'=>'password',      'type' => 'varchar@64',                                               );
+	public $user_birthdate     = array('null' =>'YES', 'show' =>'YES', 'label'=>'birthdate',     'type' => 'datetime@',                                                );
+	public $user_degree        = array('null' =>'YES', 'show' =>'YES', 'label'=>'degree',        'type' => 'varchar@50',                                               );
+	public $country_id         = array('null' =>'YES', 'show' =>'YES', 'label'=>'country',       'type' => 'smallint@3!101',                                           'foreign'=>'countrys@id!country_name');
+	public $user_province      = array('null' =>'YES', 'show' =>'YES', 'label'=>'province',      'type' => 'varchar@50',                                               );
+	public $user_nationalcode  = array('null' =>'YES', 'show' =>'YES', 'label'=>'nationalcode',  'type' => 'bigint@11',                                                );
+	public $user_passport      = array('null' =>'YES', 'show' =>'YES', 'label'=>'passport',      'type' => 'varchar@50',                                               );
+	public $user_imageaddr     = array('null' =>'YES', 'show' =>'YES', 'label'=>'imageaddr',     'type' => 'varchar@500',                                              );
+	public $user_logincounter  = array('null' =>'NO',  'show' =>'YES', 'label'=>'logincounter',  'type' => 'smallint@3',                                               );
+	public $user_refinecounter = array('null' =>'YES', 'show' =>'YES', 'label'=>'refinecounter', 'type' => 'smallint@2',                                               );
+	public $user_parent        = array('null' =>'YES', 'show' =>'YES', 'label'=>'parent',        'type' => 'int@6',                                                    );
+	public $permission_id      = array('null' =>'NO',  'show' =>'YES', 'label'=>'permission',    'type' => 'smallint@5',                                               'foreign'=>'permissions@id!permission_title');
+	public $user_feedback      = array('null' =>'YES', 'show' =>'YES', 'label'=>'feedback',      'type' => 'tinyint@3',                                                );
+	public $user_status        = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@active,awaiting,deactive,removed,filter,exit!active', );
+	public $user_barcode       = array('null' =>'NO',  'show' =>'YES', 'label'=>'barcode',       'type' => 'int@5',                                                    );
+	public $user_enterdatetime = array('null' =>'NO',  'show' =>'YES', 'label'=>'enterdatetime', 'type' => 'datetime@',                                                );
+	public $user_exitdatetime  = array('null' =>'YES', 'show' =>'YES', 'label'=>'exitdatetime',  'type' => 'datetime@',                                                );
+	public $booth_id           = array('null' =>'YES', 'show' =>'YES', 'label'=>'booth',         'type' => 'smallint@3',                                               'foreign'=>'booths@id!booth_title');
+	public $date_modified      = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                                               );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ radio button
@@ -82,10 +82,9 @@ class users
 		$this->form("select")->name("province")->type("select")->maxlength(50)->validate();
 		$this->setChild('provinces@id!province_name', '18');
 	}
-	public function user_codemelli() 
+	public function user_nationalcode() 
 	{
-		$this->form("text")->name("codemelli")->min(0)->max(99999999999)->type('number')->validate()->nationalcode();
-
+		$this->form("text")->name("nationalcode")->min(0)->max(99999999999)->type('number');
 	}
 	public function user_passport() 
 	{

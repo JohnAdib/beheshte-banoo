@@ -2,20 +2,22 @@
 namespace database\city;
 class kids 
 {
-	public $id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'Id',            'type' => 'int@10',                                        );
-	public $user_id        = array('null' =>'NO',  'show' =>'NO',  'label'=>'User',          'type' => 'int@6',                                         'foreign'=>'users@id!user_nickname');
-	public $kid_color      = array('null' =>'NO',  'show' =>'YES', 'label'=>'Color',         'type' => 'enum@Red,Green,Blue,Black,White,Yellow,Purple', );
-	public $kid_number     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Number',        'type' => 'smallint@1',                                    );
-	public $kid_date       = array('null' =>'NO',  'show' =>'YES', 'label'=>'Date',          'type' => 'date@',                                         );
-	public $kid_regtime    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Regtime',       'type' => 'datetime@',                                     );
-	public $kid_returntime = array('null' =>'YES', 'show' =>'YES', 'label'=>'Returntime',    'type' => 'datetime@',                                     );
-	public $kid_endtime    = array('null' =>'YES', 'show' =>'YES', 'label'=>'Endtime',       'type' => 'datetime@',                                     );
-	public $kid_status     = array('null' =>'NO',  'show' =>'YES', 'label'=>'Status',        'type' => 'enum@in,out,babylost,parentlost,awaiting!in',   );
-	public $date_modified  = array('null' =>'YES', 'show' =>'NO',  'label'=>'Modified',      'type' => 'timestamp@',                                    );
+	public $id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'int@10',                                        );
+	public $user_id        = array('null' =>'NO',  'show' =>'NO',  'label'=>'user',          'type' => 'int@6',                                         'foreign'=>'users@id!user_nickname');
+	public $kid_color      = array('null' =>'NO',  'show' =>'YES', 'label'=>'color',         'type' => 'enum@Red,Green,Blue,Black,White,Yellow,Purple', );
+	public $kid_number     = array('null' =>'NO',  'show' =>'YES', 'label'=>'number',        'type' => 'smallint@1',                                    );
+	public $kid_date       = array('null' =>'NO',  'show' =>'YES', 'label'=>'date',          'type' => 'date@',                                         );
+	public $kid_regtime    = array('null' =>'YES', 'show' =>'YES', 'label'=>'regtime',       'type' => 'datetime@',                                     );
+	public $kid_returntime = array('null' =>'YES', 'show' =>'YES', 'label'=>'returntime',    'type' => 'datetime@',                                     );
+	public $kid_endtime    = array('null' =>'YES', 'show' =>'YES', 'label'=>'endtime',       'type' => 'datetime@',                                     );
+	public $kid_status     = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@in,out,babylost,parentlost,awaiting!in',   );
+	public $date_modified  = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                                    );
 
 
-	//------------------------------------------------------------------ id - primary key
+	//------------------------------------------------------------------ id
 	public function id() {$this->validate()->id();}
+
+	//------------------------------------------------------------------ user_id
 	public function user_id() {$this->validate()->id();}
 
 	//------------------------------------------------------------------ select button
