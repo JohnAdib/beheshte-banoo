@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-03-06 15:28+0330\n"
-"PO-Revision-Date: 2015-03-06 15:28+0330\n"
+"POT-Creation-Date: 2015-03-06 16:37+0330\n"
+"PO-Revision-Date: 2015-03-06 16:37+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -101,7 +101,7 @@ msgid "SMS Callback"
 msgstr "پیامک های دریافتی"
 
 #: ../../../.././content_account/home/view.php:61
-#: ../../../.././includes/languages/static_translation.php:19
+#: ../../../.././includes/languages/static_translation.php:20
 msgid "Ermile"
 msgstr "ارمایل"
 
@@ -252,7 +252,6 @@ msgid "This card number in use!"
 msgstr "این کد در حال استفاده است!"
 
 #: ../../../.././content/register/view.php:8
-#: ../../../.././includes/languages/static_translation.php:78
 msgid "Register"
 msgstr "ثبت نام"
 
@@ -621,6 +620,7 @@ msgid "login"
 msgstr "ورود به سیستم"
 
 #: ../../../.././includes/cls/database/city/translation.php:119
+#: ../../../.././includes/languages/static_translation.php:35
 msgid "signup"
 msgstr "ثبت نام"
 
@@ -713,7 +713,6 @@ msgid "users"
 msgstr "کاربران"
 
 #: ../../../.././includes/cls/database/city/translation.php:158
-#: ../../../.././includes/languages/static_translation.php:85
 #: ../../../.././includes/languages/twig_translation.php:12
 msgid "gender"
 msgstr "جنسیت"
@@ -861,268 +860,181 @@ msgid "Saloos"
 msgstr "سالوس"
 
 #: ../../../.././includes/languages/static_translation.php:7
+msgid "saloos"
+msgstr "سالوس"
+
+#: ../../../.././includes/languages/static_translation.php:8
 msgid "Another Project with Saloos"
 msgstr "یک پروژه دیگر با سالوس"
 
-#: ../../../.././includes/languages/static_translation.php:8
+#: ../../../.././includes/languages/static_translation.php:9
 msgid "Saloos is an artichokes for PHP programming!!"
 msgstr "سالوس یک کنگر برای برنامه نویسی با پی اچ پی!"
 
-#: ../../../.././includes/languages/static_translation.php:9
+#: ../../../.././includes/languages/static_translation.php:10
 msgid "Saloos is powerfull."
 msgstr "سالوس اقتدار بخش!"
 
-#: ../../../.././includes/languages/static_translation.php:10
+#: ../../../.././includes/languages/static_translation.php:11
 msgid "insert successfully"
 msgstr "رکورد با موفقیت ثبت شد"
 
-#: ../../../.././includes/languages/static_translation.php:11
+#: ../../../.././includes/languages/static_translation.php:12
 msgid "insert failed!"
 msgstr "فراید ثبت ناموفق بود!"
 
-#: ../../../.././includes/languages/static_translation.php:12
+#: ../../../.././includes/languages/static_translation.php:13
 msgid "update successfully"
 msgstr "بروزرسانی با موفقیت انجام شد"
 
-#: ../../../.././includes/languages/static_translation.php:13
+#: ../../../.././includes/languages/static_translation.php:14
 msgid "update failed!"
 msgstr "بروزرسانی ناموفق بود!"
 
-#: ../../../.././includes/languages/static_translation.php:14
+#: ../../../.././includes/languages/static_translation.php:15
 msgid "delete successfully"
 msgstr "حذف با موفقیت انجام شد."
 
-#: ../../../.././includes/languages/static_translation.php:15
+#: ../../../.././includes/languages/static_translation.php:16
 msgid "delete failed!"
 msgstr "عملیات حذف ناموفق بود!"
 
-#: ../../../.././includes/languages/static_translation.php:16
+#: ../../../.././includes/languages/static_translation.php:17
 msgid "id does not exist!"
 msgstr "این کد در سیستم وجود ندارد!"
 
-#: ../../../.././includes/languages/static_translation.php:17
+#: ../../../.././includes/languages/static_translation.php:18
 msgid "all require fields must fill"
 msgstr "تمام رکوردهای الزامی باید پر شوند"
 
-#: ../../../.././includes/languages/static_translation.php:18
+#: ../../../.././includes/languages/static_translation.php:19
 msgid "some fields must be change for update!"
 msgstr "برای بروزرسانی باید حداقل یک فیلد را تغییر دهید!"
 
-#: ../../../.././includes/languages/static_translation.php:20
+#: ../../../.././includes/languages/static_translation.php:21
 msgid "ermile"
 msgstr "ارمایل"
 
-#: ../../../.././includes/languages/static_translation.php:21
+#: ../../../.././includes/languages/static_translation.php:22
 msgid "now we only support Iran!"
 msgstr "در حال حاضر ما فقط به شماره های ایران سرویس می دهیم!"
 
-#: ../../../.././includes/languages/static_translation.php:22
+#: ../../../.././includes/languages/static_translation.php:23
 msgid "your verification code is"
 msgstr "کد اعتبارسنجی شما"
 
-#: ../../../.././includes/languages/static_translation.php:23
+#: ../../../.././includes/languages/static_translation.php:24
 msgid "your recovery code is"
 msgstr "کد بازیابی کلمه عبور شما"
 
-#: ../../../.././includes/languages/static_translation.php:24
+#: ../../../.././includes/languages/static_translation.php:25
 msgid "you account is verified successfully"
 msgstr "اعتبارسنجی اکانت شما با موفقیت به انجام رسید"
 
-#: ../../../.././includes/languages/static_translation.php:25
+#: ../../../.././includes/languages/static_translation.php:26
 msgid "thanks for using our service"
 msgstr "متشکریم که از سرویس ما استفاده می کنید"
 
-#: ../../../.././includes/languages/static_translation.php:26
+#: ../../../.././includes/languages/static_translation.php:27
 msgid "made in iran"
 msgstr "ساخت ایران"
 
+#: ../../../.././includes/languages/static_translation.php:28
+msgid "Iran"
+msgstr "ایران"
+
 #: ../../../.././includes/languages/static_translation.php:29
-msgid "Iran (Islamic Republic of)"
-msgstr "جمهوری اسلامی ایران"
+msgid "iran"
+msgstr "ایران"
 
 #: ../../../.././includes/languages/static_translation.php:30
-msgid "India"
-msgstr "هند"
+msgid "submit"
+msgstr "تایید"
 
 #: ../../../.././includes/languages/static_translation.php:31
-msgid "Iraq"
-msgstr "عراق"
+msgid "save"
+msgstr "ذخیره"
 
 #: ../../../.././includes/languages/static_translation.php:32
-msgid "Lebanon"
-msgstr "لبنان"
+msgid "add new"
+msgstr "افزودن"
 
 #: ../../../.././includes/languages/static_translation.php:33
-msgid "Afghanistan"
-msgstr "افغانستان"
+msgid "signin"
+msgstr "ورود"
 
 #: ../../../.././includes/languages/static_translation.php:34
-msgid "Azerbaijan"
-msgstr "آذربایجان"
-
-#: ../../../.././includes/languages/static_translation.php:35
-msgid "Bahrain"
-msgstr "بحرین"
+msgid "sign in"
+msgstr "ورود به سیستم"
 
 #: ../../../.././includes/languages/static_translation.php:36
-msgid "United Arab Emirates"
-msgstr "امارات متحده عربی"
+msgid "sign up"
+msgstr "ثبت نام"
 
 #: ../../../.././includes/languages/static_translation.php:37
-msgid "Uzbekistan"
-msgstr "ازبکستان"
+msgid "register"
+msgstr "ثبت نام"
 
 #: ../../../.././includes/languages/static_translation.php:38
-msgid "Turkey"
-msgstr "ترکیه"
+msgid "create an account"
+msgstr "اکانت بسازید"
 
 #: ../../../.././includes/languages/static_translation.php:39
-msgid "Saudi Arabia"
-msgstr "عربستان سعودی"
+msgid "home"
+msgstr "خانه"
 
 #: ../../../.././includes/languages/static_translation.php:40
-msgid "Singapore"
-msgstr "سنگاپور"
-
-#: ../../../.././includes/languages/static_translation.php:41
-msgid "Pakistan"
-msgstr "پاکستان"
-
-#: ../../../.././includes/languages/static_translation.php:42
-msgid "Qatar"
-msgstr "قطر"
-
-#: ../../../.././includes/languages/static_translation.php:43
-msgid "United States"
-msgstr "آمریکا"
-
-#: ../../../.././includes/languages/static_translation.php:50
-#: ../../../.././includes/languages/twig_translation.php:82
-msgid "Logout"
-msgstr "خروج از سیستم"
-
-#: ../../../.././includes/languages/static_translation.php:51
 #: ../../../.././includes/languages/twig_translation.php:106
 msgid "Home"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/static_translation.php:54
-#: ../../../.././includes/languages/twig_translation.php:109
-msgid "Options"
-msgstr "تنظیمات"
+#: ../../../.././includes/languages/static_translation.php:41
+msgid "homepage"
+msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/static_translation.php:55
-#: ../../../.././includes/languages/twig_translation.php:110
-msgid "Go to"
-msgstr "برو به"
-
-#: ../../../.././includes/languages/static_translation.php:56
-msgid "Does not exist"
-msgstr "هیچ داده ای موجود نیست"
-
-#: ../../../.././includes/languages/static_translation.php:57
-#: ../../../.././includes/languages/twig_translation.php:111
-msgid "Add New Record"
-msgstr "افزودن رکورد جدید"
-
-#: ../../../.././includes/languages/static_translation.php:58
-#: ../../../.././includes/languages/twig_translation.php:112
-msgid "Actions"
-msgstr "عملیات"
-
-#: ../../../.././includes/languages/static_translation.php:59
-#: ../../../.././includes/languages/twig_translation.php:114
-msgid "Edit"
-msgstr "ویرایش"
-
-#: ../../../.././includes/languages/static_translation.php:60
-#: ../../../.././includes/languages/twig_translation.php:116
-msgid "Delete"
-msgstr "حذف"
-
-#: ../../../.././includes/languages/static_translation.php:65
-msgid "Next page"
-msgstr "صفحه بعد"
-
-#: ../../../.././includes/languages/static_translation.php:68
-msgid "home"
-msgstr "خانه"
-
-#: ../../../.././includes/languages/static_translation.php:69
+#: ../../../.././includes/languages/static_translation.php:42
 msgid "Homepage"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/static_translation.php:70
-msgid "Signup"
-msgstr "ثبت نام"
-
-#: ../../../.././includes/languages/static_translation.php:71
-msgid "Add new"
-msgstr "افزودن"
-
-#: ../../../.././includes/languages/static_translation.php:72
-msgid "Add New"
-msgstr "افزودن"
-
-#: ../../../.././includes/languages/static_translation.php:73
-msgid "Admin"
+#: ../../../.././includes/languages/static_translation.php:43
+msgid "admin"
 msgstr "مدیریت"
 
-#: ../../../.././includes/languages/static_translation.php:74
-msgid "Visitor"
-msgstr "بازدیدکننده"
-
-#: ../../../.././includes/languages/static_translation.php:75
-msgid "Boother"
-msgstr "غرفه دار"
-
-#: ../../../.././includes/languages/static_translation.php:76
-msgid "Registerer"
-msgstr "مسئول ثبت نام"
-
-#: ../../../.././includes/languages/static_translation.php:79
-msgid "Camera"
-msgstr "ثبت تصویر"
-
-#: ../../../.././includes/languages/static_translation.php:80
-msgid "Game"
-msgstr "بازی"
-
-#: ../../../.././includes/languages/static_translation.php:81
-msgid "Point"
-msgstr "بررسی امتیاز"
-
-#: ../../../.././includes/languages/static_translation.php:82
-msgid "Kid"
-msgstr "کودکستان"
-
-#: ../../../.././includes/languages/static_translation.php:83
-msgid "Report"
-msgstr "گزارش"
-
-#: ../../../.././includes/languages/static_translation.php:84
-msgid "birthdate"
-msgstr "تاریخ تولد"
-
-#: ../../../.././includes/languages/static_translation.php:86
+#: ../../../.././includes/languages/static_translation.php:44
 msgid "error in field"
 msgstr "خطا در فیلد"
 
-#: ../../../.././includes/languages/static_translation.php:87
-msgid "submit"
-msgstr "تایید"
+#: ../../../.././includes/languages/static_translation.php:51
+msgid "Boother"
+msgstr "غرفه دار"
 
-#: ../../../.././includes/languages/static_translation.php:88
-msgid "Submit"
-msgstr "تایید"
+#: ../../../.././includes/languages/static_translation.php:52
+msgid "Registerer"
+msgstr "مسئول ثبت نام"
 
-#: ../../../.././includes/languages/static_translation.php:89
-msgid "save"
-msgstr "ذخیره"
+#: ../../../.././includes/languages/static_translation.php:53
+msgid "Camera"
+msgstr "ثبت تصویر"
 
-#: ../../../.././includes/languages/static_translation.php:90
-msgid "Save"
-msgstr "ذخیره"
+#: ../../../.././includes/languages/static_translation.php:54
+msgid "Game"
+msgstr "بازی"
+
+#: ../../../.././includes/languages/static_translation.php:55
+msgid "Point"
+msgstr "بررسی امتیاز"
+
+#: ../../../.././includes/languages/static_translation.php:56
+msgid "Report"
+msgstr "گزارش"
+
+#: ../../../.././includes/languages/static_translation.php:57
+msgid "Kid"
+msgstr "کودکستان"
+
+#: ../../../.././includes/languages/static_translation.php:58
+msgid "change"
+msgstr "تبدیل"
 
 #: ../../../.././includes/languages/twig_translation.php:6
 msgid "summary reports"
@@ -1317,6 +1229,10 @@ msgstr "تحویل دادن"
 msgid "Call"
 msgstr "صدا کردن"
 
+#: ../../../.././includes/languages/twig_translation.php:82
+msgid "Logout"
+msgstr "خروج از سیستم"
+
 #: ../../../.././includes/languages/twig_translation.php:84
 msgid "Reports"
 msgstr "گزارش ها"
@@ -1378,13 +1294,37 @@ msgstr "لطفا در مرکز کادر قرار گرفته و لبخند بزن
 msgid "Scan your barcode and see your points"
 msgstr "با اسکن کردن بارکد، امتیاز خود را مشاهده کنید"
 
+#: ../../../.././includes/languages/twig_translation.php:109
+msgid "Options"
+msgstr "تنظیمات"
+
+#: ../../../.././includes/languages/twig_translation.php:110
+msgid "Go to"
+msgstr "برو به"
+
+#: ../../../.././includes/languages/twig_translation.php:111
+msgid "Add New Record"
+msgstr "افزودن رکورد جدید"
+
+#: ../../../.././includes/languages/twig_translation.php:112
+msgid "Actions"
+msgstr "عملیات"
+
 #: ../../../.././includes/languages/twig_translation.php:113
 msgid "Edit this record"
 msgstr "ویرایش این رکورد"
 
+#: ../../../.././includes/languages/twig_translation.php:114
+msgid "Edit"
+msgstr "ویرایش"
+
 #: ../../../.././includes/languages/twig_translation.php:115
 msgid "Delete this record"
 msgstr "حذف این رکورد"
+
+#: ../../../.././includes/languages/twig_translation.php:116
+msgid "Delete"
+msgstr "حذف"
 
 #: ../../../.././includes/languages/twig_translation.php:117
 msgid "delete record"
@@ -1426,12 +1366,3 @@ msgstr "بهشت بانو برای کودکان"
 #: ../../../.././includes/mvc/view.php:14
 msgid "Behsht Banoo is good"
 msgstr "بهشت بانو خوب است!"
-
-#~ msgid "masoomeh holy shine"
-#~ msgstr "حرم حضرت معصومه"
-
-#~ msgid "Kindergartens"
-#~ msgstr "مهدکودک"
-
-#~ msgid "Blue"
-#~ msgstr "آبی"

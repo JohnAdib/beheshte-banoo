@@ -1087,6 +1087,7 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
   opacity: 0.6;
   border-radius: 3px;
   display: block;
+  background-color:#eee;
 }
 .form select{border:none;}
 .form textarea, .editor {
