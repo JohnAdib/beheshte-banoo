@@ -10,7 +10,7 @@
 <div class="center" data-xhr="center">
  <div class="content">
  <p id="description">{%trans%}First of all, scan barcode then camera take a picture form you and show it for 3 second.{%endtrans%} {%trans%}if it looks good you successful else try again with scan a barcode{%endtrans%}</p>
-   <form class="ajx form row" method="post" id="form-barcode">
+   <form class="ajx form row form-barcode" method="post" id="form-camera">
     <input id='webcamimage' type="hidden" name="webcam" value=""/>{{forms.make(form['barcode'])}}
    </form>
    <div id="counter"><span id="timer"></span></div>

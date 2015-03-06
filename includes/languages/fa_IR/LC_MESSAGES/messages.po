@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-03-05 23:43+0330\n"
-"PO-Revision-Date: 2015-03-05 23:43+0330\n"
+"POT-Creation-Date: 2015-03-06 15:28+0330\n"
+"PO-Revision-Date: 2015-03-06 15:28+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -69,7 +69,7 @@ msgstr "شما قبلا یک بار وارد سیستم شده اید!"
 
 #: ../../../.././content_account/home/view.php:23
 #: ../../../.././includes/cls/form/account.php:25
-#: ../../../.././includes/languages/twig_translation.php:86
+#: ../../../.././includes/languages/twig_translation.php:83
 msgid "Login"
 msgstr "ورود به سیستم"
 
@@ -160,7 +160,7 @@ msgid "error on verify your code!"
 msgstr "خطا در تایید اعتبار کد!"
 
 #: ../../../.././content_account/recovery/model.php:39
-#: ../../../.././includes/languages/twig_translation.php:58
+#: ../../../.././includes/languages/twig_translation.php:55
 msgid "we send a verification code for you"
 msgstr "ما کد اعتبارسنجی را برای شما ارسال خواهیم کرد"
 
@@ -198,12 +198,10 @@ msgid "This card number does not exist"
 msgstr "این کد در سیستم وجود ندارد!"
 
 #: ../../../.././content/change/model.php:35
-#: ../../../.././content/point/model.php:29
 msgid "No of games"
 msgstr "تعداد بازی ها"
 
 #: ../../../.././content/change/model.php:36
-#: ../../../.././content/point/model.php:30
 msgid "Total of points"
 msgstr "جمع امتیازات"
 
@@ -270,6 +268,18 @@ msgstr "عکس شما با موفقیت ثبت شد"
 msgid "Error on write webcam picture to server"
 msgstr "خطا در هنگام ذخیره عکس در سرور"
 
+#: ../../../.././content/point/model.php:29
+msgid "identify code"
+msgstr "کد شناسایی"
+
+#: ../../../.././content/point/model.php:30
+msgid "no of games"
+msgstr "تعداد بازی ها"
+
+#: ../../../.././content/point/model.php:31
+msgid "total points"
+msgstr "جمع امتیازات"
+
 #: ../../../.././content_cp/home/controller.php:24
 msgid "Not found!"
 msgstr "یافت نشد"
@@ -291,7 +301,7 @@ msgid "booths"
 msgstr "غرفه ها"
 
 #: ../../../.././includes/cls/database/city/translation.php:10
-#: ../../../.././includes/cls/database/city/translation.php:43
+#: ../../../.././includes/cls/database/city/translation.php:44
 msgid "booth"
 msgstr "غرفه"
 
@@ -300,8 +310,8 @@ msgid "id"
 msgstr "کد"
 
 #: ../../../.././includes/cls/database/city/translation.php:12
-#: ../../../.././includes/cls/database/city/translation.php:98
-#: ../../../.././includes/cls/database/city/translation.php:110
+#: ../../../.././includes/cls/database/city/translation.php:99
+#: ../../../.././includes/cls/database/city/translation.php:111
 msgid "title"
 msgstr "عنوان"
 
@@ -322,19 +332,19 @@ msgid "gametime"
 msgstr "زمان بازی"
 
 #: ../../../.././includes/cls/database/city/translation.php:17
-#: ../../../.././includes/cls/database/city/translation.php:109
+#: ../../../.././includes/cls/database/city/translation.php:110
 msgid "section"
 msgstr "بخش"
 
 #: ../../../.././includes/cls/database/city/translation.php:18
-#: ../../../.././includes/cls/database/city/translation.php:49
-#: ../../../.././includes/cls/database/city/translation.php:72
-#: ../../../.././includes/cls/database/city/translation.php:81
-#: ../../../.././includes/cls/database/city/translation.php:99
-#: ../../../.././includes/cls/database/city/translation.php:112
-#: ../../../.././includes/cls/database/city/translation.php:136
-#: ../../../.././includes/cls/database/city/translation.php:145
-#: ../../../.././includes/cls/database/city/translation.php:173
+#: ../../../.././includes/cls/database/city/translation.php:50
+#: ../../../.././includes/cls/database/city/translation.php:73
+#: ../../../.././includes/cls/database/city/translation.php:82
+#: ../../../.././includes/cls/database/city/translation.php:100
+#: ../../../.././includes/cls/database/city/translation.php:113
+#: ../../../.././includes/cls/database/city/translation.php:137
+#: ../../../.././includes/cls/database/city/translation.php:146
+#: ../../../.././includes/cls/database/city/translation.php:174
 msgid "status"
 msgstr "وضعیت"
 
@@ -351,17 +361,17 @@ msgid "city"
 msgstr "شهر"
 
 #: ../../../.././includes/cls/database/city/translation.php:24
-#: ../../../.././includes/cls/database/city/translation.php:103
-#: ../../../.././includes/cls/database/city/translation.php:165
+#: ../../../.././includes/cls/database/city/translation.php:104
+#: ../../../.././includes/cls/database/city/translation.php:166
 #: ../../../.././includes/languages/twig_translation.php:11
 msgid "province"
 msgstr "استان"
 
 #: ../../../.././includes/cls/database/city/translation.php:25
 #: ../../../.././includes/cls/database/city/translation.php:31
-#: ../../../.././includes/cls/database/city/translation.php:78
-#: ../../../.././includes/cls/database/city/translation.php:105
-#: ../../../.././includes/cls/database/city/translation.php:142
+#: ../../../.././includes/cls/database/city/translation.php:79
+#: ../../../.././includes/cls/database/city/translation.php:106
+#: ../../../.././includes/cls/database/city/translation.php:143
 msgid "name"
 msgstr "نام"
 
@@ -370,7 +380,7 @@ msgid "countrys"
 msgstr "کشورها"
 
 #: ../../../.././includes/cls/database/city/translation.php:29
-#: ../../../.././includes/cls/database/city/translation.php:104
+#: ../../../.././includes/cls/database/city/translation.php:105
 msgid "country"
 msgstr "کشور"
 
@@ -379,398 +389,402 @@ msgid "code"
 msgstr "بارکد"
 
 #: ../../../.././includes/cls/database/city/translation.php:32
-#: ../../../.././includes/cls/database/city/translation.php:135
+msgid "namefa"
+msgstr "نام"
+
+#: ../../../.././includes/cls/database/city/translation.php:33
+#: ../../../.././includes/cls/database/city/translation.php:136
 msgid "time"
 msgstr "زمان"
 
-#: ../../../.././includes/cls/database/city/translation.php:33
+#: ../../../.././includes/cls/database/city/translation.php:34
 msgid "start"
 msgstr "شروع"
 
-#: ../../../.././includes/cls/database/city/translation.php:34
+#: ../../../.././includes/cls/database/city/translation.php:35
 msgid "win"
 msgstr "برنده"
 
-#: ../../../.././includes/cls/database/city/translation.php:35
+#: ../../../.././includes/cls/database/city/translation.php:36
 msgid "loose"
 msgstr "بازنده"
 
-#: ../../../.././includes/cls/database/city/translation.php:36
+#: ../../../.././includes/cls/database/city/translation.php:37
 msgid "absent"
 msgstr "غایب"
 
-#: ../../../.././includes/cls/database/city/translation.php:37
-#: ../../../.././includes/cls/database/city/translation.php:92
+#: ../../../.././includes/cls/database/city/translation.php:38
+#: ../../../.././includes/cls/database/city/translation.php:93
 msgid "delete"
 msgstr "حذف"
 
-#: ../../../.././includes/cls/database/city/translation.php:40
+#: ../../../.././includes/cls/database/city/translation.php:41
 msgid "games"
 msgstr "بازی ها"
 
-#: ../../../.././includes/cls/database/city/translation.php:41
+#: ../../../.././includes/cls/database/city/translation.php:42
 msgid "game"
 msgstr "بازی"
 
-#: ../../../.././includes/cls/database/city/translation.php:42
-#: ../../../.././includes/cls/database/city/translation.php:156
+#: ../../../.././includes/cls/database/city/translation.php:43
+#: ../../../.././includes/cls/database/city/translation.php:157
 msgid "user"
 msgstr "کاربر"
 
-#: ../../../.././includes/cls/database/city/translation.php:44
+#: ../../../.././includes/cls/database/city/translation.php:45
 msgid "prize"
 msgstr "جایزه"
 
-#: ../../../.././includes/cls/database/city/translation.php:45
-#: ../../../.././includes/cls/database/city/translation.php:68
+#: ../../../.././includes/cls/database/city/translation.php:46
+#: ../../../.././includes/cls/database/city/translation.php:69
 msgid "date"
 msgstr "تاریخ"
 
-#: ../../../.././includes/cls/database/city/translation.php:46
-#: ../../../.././includes/cls/database/city/translation.php:69
+#: ../../../.././includes/cls/database/city/translation.php:47
+#: ../../../.././includes/cls/database/city/translation.php:70
 msgid "regtime"
 msgstr "زمان ثبت"
 
-#: ../../../.././includes/cls/database/city/translation.php:47
+#: ../../../.././includes/cls/database/city/translation.php:48
 msgid "starttime"
 msgstr "زمان شروع"
 
-#: ../../../.././includes/cls/database/city/translation.php:48
-#: ../../../.././includes/cls/database/city/translation.php:71
+#: ../../../.././includes/cls/database/city/translation.php:49
+#: ../../../.././includes/cls/database/city/translation.php:72
 msgid "endtime"
 msgstr "زمان پایان"
 
-#: ../../../.././includes/cls/database/city/translation.php:50
+#: ../../../.././includes/cls/database/city/translation.php:51
 msgid "red"
 msgstr "قرمز"
 
-#: ../../../.././includes/cls/database/city/translation.php:51
+#: ../../../.././includes/cls/database/city/translation.php:52
 msgid "green"
 msgstr "سبز"
 
-#: ../../../.././includes/cls/database/city/translation.php:52
+#: ../../../.././includes/cls/database/city/translation.php:53
 msgid "blue"
 msgstr "آبی"
 
-#: ../../../.././includes/cls/database/city/translation.php:53
+#: ../../../.././includes/cls/database/city/translation.php:54
 msgid "black"
 msgstr "مشکی"
 
-#: ../../../.././includes/cls/database/city/translation.php:54
+#: ../../../.././includes/cls/database/city/translation.php:55
 msgid "white"
 msgstr "سفید"
 
-#: ../../../.././includes/cls/database/city/translation.php:55
+#: ../../../.././includes/cls/database/city/translation.php:56
 msgid "yellow"
 msgstr "زرد"
 
-#: ../../../.././includes/cls/database/city/translation.php:56
+#: ../../../.././includes/cls/database/city/translation.php:57
 msgid "purple"
 msgstr "بنفش"
 
-#: ../../../.././includes/cls/database/city/translation.php:57
+#: ../../../.././includes/cls/database/city/translation.php:58
 msgid "in"
 msgstr "ورود"
 
-#: ../../../.././includes/cls/database/city/translation.php:58
+#: ../../../.././includes/cls/database/city/translation.php:59
 msgid "out"
 msgstr "خارج شده"
 
-#: ../../../.././includes/cls/database/city/translation.php:59
+#: ../../../.././includes/cls/database/city/translation.php:60
 msgid "babylost"
 msgstr "بچه گم شده"
 
-#: ../../../.././includes/cls/database/city/translation.php:60
+#: ../../../.././includes/cls/database/city/translation.php:61
 msgid "parentlost"
 msgstr "والد گم شده"
 
-#: ../../../.././includes/cls/database/city/translation.php:61
+#: ../../../.././includes/cls/database/city/translation.php:62
 msgid "awaiting"
 msgstr "در حال انتظار"
 
-#: ../../../.././includes/cls/database/city/translation.php:64
+#: ../../../.././includes/cls/database/city/translation.php:65
 msgid "kids"
 msgstr "کودکستان"
 
-#: ../../../.././includes/cls/database/city/translation.php:65
+#: ../../../.././includes/cls/database/city/translation.php:66
 msgid "kid"
 msgstr "کودک"
 
-#: ../../../.././includes/cls/database/city/translation.php:66
+#: ../../../.././includes/cls/database/city/translation.php:67
 msgid "color"
 msgstr "رنگ"
 
-#: ../../../.././includes/cls/database/city/translation.php:67
+#: ../../../.././includes/cls/database/city/translation.php:68
 msgid "number"
 msgstr "شماره"
 
-#: ../../../.././includes/cls/database/city/translation.php:70
+#: ../../../.././includes/cls/database/city/translation.php:71
 msgid "returntime"
 msgstr "زمان درخواست خروج"
 
-#: ../../../.././includes/cls/database/city/translation.php:75
+#: ../../../.././includes/cls/database/city/translation.php:76
 msgid "options"
 msgstr "تنظیمات"
 
-#: ../../../.././includes/cls/database/city/translation.php:76
+#: ../../../.././includes/cls/database/city/translation.php:77
 msgid "option"
 msgstr "تنظیمات"
 
-#: ../../../.././includes/cls/database/city/translation.php:77
-#: ../../../.././includes/cls/database/city/translation.php:141
+#: ../../../.././includes/cls/database/city/translation.php:78
+#: ../../../.././includes/cls/database/city/translation.php:142
 msgid "cat"
 msgstr "دسته"
 
-#: ../../../.././includes/cls/database/city/translation.php:79
-#: ../../../.././includes/cls/database/city/translation.php:132
-#: ../../../.././includes/cls/database/city/translation.php:143
+#: ../../../.././includes/cls/database/city/translation.php:80
+#: ../../../.././includes/cls/database/city/translation.php:133
+#: ../../../.././includes/cls/database/city/translation.php:144
 msgid "value"
 msgstr "مقدار"
 
-#: ../../../.././includes/cls/database/city/translation.php:80
-#: ../../../.././includes/cls/database/city/translation.php:144
+#: ../../../.././includes/cls/database/city/translation.php:81
+#: ../../../.././includes/cls/database/city/translation.php:145
 msgid "extra"
 msgstr "اضافی"
 
-#: ../../../.././includes/cls/database/city/translation.php:82
+#: ../../../.././includes/cls/database/city/translation.php:83
 msgid "yes"
 msgstr "بله"
 
-#: ../../../.././includes/cls/database/city/translation.php:83
+#: ../../../.././includes/cls/database/city/translation.php:84
 msgid "no"
 msgstr "خیر"
 
-#: ../../../.././includes/cls/database/city/translation.php:86
+#: ../../../.././includes/cls/database/city/translation.php:87
 msgid "permissiondetails"
 msgstr "جزئیات سطح دسترسی"
 
-#: ../../../.././includes/cls/database/city/translation.php:87
+#: ../../../.././includes/cls/database/city/translation.php:88
 msgid "permissiondetail"
 msgstr "جزئیات سطح دسترسی"
 
-#: ../../../.././includes/cls/database/city/translation.php:88
-#: ../../../.././includes/cls/database/city/translation.php:131
+#: ../../../.././includes/cls/database/city/translation.php:89
+#: ../../../.././includes/cls/database/city/translation.php:132
 msgid "module"
 msgstr "ماژول"
 
-#: ../../../.././includes/cls/database/city/translation.php:89
+#: ../../../.././includes/cls/database/city/translation.php:90
 msgid "view"
 msgstr "مشاهده"
 
-#: ../../../.././includes/cls/database/city/translation.php:90
+#: ../../../.././includes/cls/database/city/translation.php:91
 msgid "add"
 msgstr "افزودن"
 
-#: ../../../.././includes/cls/database/city/translation.php:91
+#: ../../../.././includes/cls/database/city/translation.php:92
 msgid "edit"
 msgstr "ویرایش"
 
-#: ../../../.././includes/cls/database/city/translation.php:93
-#: ../../../.././includes/cls/database/city/translation.php:97
+#: ../../../.././includes/cls/database/city/translation.php:94
+#: ../../../.././includes/cls/database/city/translation.php:98
 msgid "permission"
 msgstr "سطح دسترسی"
 
-#: ../../../.././includes/cls/database/city/translation.php:96
+#: ../../../.././includes/cls/database/city/translation.php:97
 msgid "permissions"
 msgstr "سطح دسترسی ها"
 
-#: ../../../.././includes/cls/database/city/translation.php:102
+#: ../../../.././includes/cls/database/city/translation.php:103
 msgid "provinces"
 msgstr "استان ها"
 
-#: ../../../.././includes/cls/database/city/translation.php:108
+#: ../../../.././includes/cls/database/city/translation.php:109
 msgid "sections"
 msgstr "بخش ها"
 
-#: ../../../.././includes/cls/database/city/translation.php:111
+#: ../../../.././includes/cls/database/city/translation.php:112
 msgid "maxpoint"
 msgstr "حداکثر امتیاز"
 
-#: ../../../.././includes/cls/database/city/translation.php:113
+#: ../../../.././includes/cls/database/city/translation.php:114
 msgid "insert"
 msgstr "ثبت"
 
-#: ../../../.././includes/cls/database/city/translation.php:114
+#: ../../../.././includes/cls/database/city/translation.php:115
 msgid "update"
 msgstr "به روزرسانی"
 
-#: ../../../.././includes/cls/database/city/translation.php:115
+#: ../../../.././includes/cls/database/city/translation.php:116
 msgid "select"
 msgstr "انتخاب"
 
-#: ../../../.././includes/cls/database/city/translation.php:116
+#: ../../../.././includes/cls/database/city/translation.php:117
 msgid "error"
 msgstr "خطا"
 
-#: ../../../.././includes/cls/database/city/translation.php:117
+#: ../../../.././includes/cls/database/city/translation.php:118
 msgid "login"
 msgstr "ورود به سیستم"
 
-#: ../../../.././includes/cls/database/city/translation.php:118
+#: ../../../.././includes/cls/database/city/translation.php:119
 msgid "signup"
 msgstr "ثبت نام"
 
-#: ../../../.././includes/cls/database/city/translation.php:119
+#: ../../../.././includes/cls/database/city/translation.php:120
 msgid "changepass"
 msgstr "تغییر کلمه عبور"
 
-#: ../../../.././includes/cls/database/city/translation.php:120
+#: ../../../.././includes/cls/database/city/translation.php:121
 msgid "access"
 msgstr "دسترسی غیرمجاز"
 
-#: ../../../.././includes/cls/database/city/translation.php:121
+#: ../../../.././includes/cls/database/city/translation.php:122
 msgid "logout"
 msgstr "خروج از سیستم"
 
-#: ../../../.././includes/cls/database/city/translation.php:122
+#: ../../../.././includes/cls/database/city/translation.php:123
 msgid "high"
 msgstr "بالا"
 
-#: ../../../.././includes/cls/database/city/translation.php:123
+#: ../../../.././includes/cls/database/city/translation.php:124
 msgid "medium"
 msgstr "متوسط"
 
-#: ../../../.././includes/cls/database/city/translation.php:124
+#: ../../../.././includes/cls/database/city/translation.php:125
 msgid "low"
 msgstr "کم"
 
-#: ../../../.././includes/cls/database/city/translation.php:125
+#: ../../../.././includes/cls/database/city/translation.php:126
 msgid "critical"
 msgstr "بحرانی"
 
-#: ../../../.././includes/cls/database/city/translation.php:128
+#: ../../../.././includes/cls/database/city/translation.php:129
 msgid "userlogs"
 msgstr "وقایع کاربران"
 
-#: ../../../.././includes/cls/database/city/translation.php:129
+#: ../../../.././includes/cls/database/city/translation.php:130
 msgid "userlog"
 msgstr "وقایع کاربر"
 
-#: ../../../.././includes/cls/database/city/translation.php:130
+#: ../../../.././includes/cls/database/city/translation.php:131
 msgid "type"
 msgstr "نوع"
 
-#: ../../../.././includes/cls/database/city/translation.php:133
+#: ../../../.././includes/cls/database/city/translation.php:134
 msgid "priority"
 msgstr "اولویت"
 
-#: ../../../.././includes/cls/database/city/translation.php:134
+#: ../../../.././includes/cls/database/city/translation.php:135
 msgid "ip"
 msgstr "آی پی"
 
-#: ../../../.././includes/cls/database/city/translation.php:139
+#: ../../../.././includes/cls/database/city/translation.php:140
 msgid "usermetas"
 msgstr "اطلاعات اضافی کاربران"
 
-#: ../../../.././includes/cls/database/city/translation.php:140
+#: ../../../.././includes/cls/database/city/translation.php:141
 msgid "usermeta"
 msgstr "اطلاعات اضافی کاربر"
 
-#: ../../../.././includes/cls/database/city/translation.php:146
+#: ../../../.././includes/cls/database/city/translation.php:147
 msgid "male"
 msgstr "آقا"
 
-#: ../../../.././includes/cls/database/city/translation.php:147
+#: ../../../.././includes/cls/database/city/translation.php:148
 msgid "female"
 msgstr "خانم"
 
-#: ../../../.././includes/cls/database/city/translation.php:148
+#: ../../../.././includes/cls/database/city/translation.php:149
 msgid "active"
 msgstr "فعال"
 
-#: ../../../.././includes/cls/database/city/translation.php:149
+#: ../../../.././includes/cls/database/city/translation.php:150
 msgid "deactive"
 msgstr "غیرفعال"
 
-#: ../../../.././includes/cls/database/city/translation.php:150
+#: ../../../.././includes/cls/database/city/translation.php:151
 msgid "removed"
 msgstr "حذف شده"
 
-#: ../../../.././includes/cls/database/city/translation.php:151
+#: ../../../.././includes/cls/database/city/translation.php:152
 msgid "filter"
 msgstr "فیلتر"
 
-#: ../../../.././includes/cls/database/city/translation.php:152
+#: ../../../.././includes/cls/database/city/translation.php:153
 msgid "exit"
 msgstr "خروج"
 
-#: ../../../.././includes/cls/database/city/translation.php:155
+#: ../../../.././includes/cls/database/city/translation.php:156
 msgid "users"
 msgstr "کاربران"
 
-#: ../../../.././includes/cls/database/city/translation.php:157
+#: ../../../.././includes/cls/database/city/translation.php:158
 #: ../../../.././includes/languages/static_translation.php:85
 #: ../../../.././includes/languages/twig_translation.php:12
 msgid "gender"
 msgstr "جنسیت"
 
-#: ../../../.././includes/cls/database/city/translation.php:158
+#: ../../../.././includes/cls/database/city/translation.php:159
 msgid "firstname"
 msgstr "نام"
 
-#: ../../../.././includes/cls/database/city/translation.php:159
+#: ../../../.././includes/cls/database/city/translation.php:160
 msgid "lastname"
 msgstr "نام خانوادگی"
 
-#: ../../../.././includes/cls/database/city/translation.php:160
+#: ../../../.././includes/cls/database/city/translation.php:161
 msgid "mobile"
 msgstr "موبایل"
 
-#: ../../../.././includes/cls/database/city/translation.php:161
+#: ../../../.././includes/cls/database/city/translation.php:162
 msgid "mobile2"
 msgstr "موبایل دوم"
 
-#: ../../../.././includes/cls/database/city/translation.php:162
+#: ../../../.././includes/cls/database/city/translation.php:163
 msgid "password"
 msgstr "کلمه عبور"
 
-#: ../../../.././includes/cls/database/city/translation.php:163
+#: ../../../.././includes/cls/database/city/translation.php:164
 #: ../../../.././includes/languages/twig_translation.php:10
 msgid "birthyear"
 msgstr "سال تولد"
 
-#: ../../../.././includes/cls/database/city/translation.php:164
+#: ../../../.././includes/cls/database/city/translation.php:165
 msgid "degree"
 msgstr "مدرک تحصیلی"
 
-#: ../../../.././includes/cls/database/city/translation.php:166
+#: ../../../.././includes/cls/database/city/translation.php:167
 msgid "nationalcode"
 msgstr "کد ملی"
 
-#: ../../../.././includes/cls/database/city/translation.php:167
+#: ../../../.././includes/cls/database/city/translation.php:168
 msgid "passport"
 msgstr "پاسپورت"
 
-#: ../../../.././includes/cls/database/city/translation.php:168
+#: ../../../.././includes/cls/database/city/translation.php:169
 msgid "imageaddr"
 msgstr "آدرس عکس"
 
-#: ../../../.././includes/cls/database/city/translation.php:169
+#: ../../../.././includes/cls/database/city/translation.php:170
 msgid "logincounter"
 msgstr "دفعات ورود"
 
-#: ../../../.././includes/cls/database/city/translation.php:170
+#: ../../../.././includes/cls/database/city/translation.php:171
 msgid "refinecounter"
 msgstr "دفعات تسویه حساب"
 
-#: ../../../.././includes/cls/database/city/translation.php:171
+#: ../../../.././includes/cls/database/city/translation.php:172
 msgid "parent"
 msgstr "والد"
 
-#: ../../../.././includes/cls/database/city/translation.php:172
+#: ../../../.././includes/cls/database/city/translation.php:173
 msgid "feedback"
 msgstr "بازخورد"
 
-#: ../../../.././includes/cls/database/city/translation.php:174
-#: ../../../.././includes/languages/twig_translation.php:80
+#: ../../../.././includes/cls/database/city/translation.php:175
+#: ../../../.././includes/languages/twig_translation.php:77
 msgid "barcode"
 msgstr "بارکد"
 
-#: ../../../.././includes/cls/database/city/translation.php:175
+#: ../../../.././includes/cls/database/city/translation.php:176
 msgid "enterdatetime"
 msgstr "زمان ورود"
 
-#: ../../../.././includes/cls/database/city/translation.php:176
+#: ../../../.././includes/cls/database/city/translation.php:177
 msgid "exitdatetime"
 msgstr "زمان خروج"
 
@@ -793,7 +807,7 @@ msgstr "موبایل ثبت شده را وارد کنید"
 #: ../../../.././includes/cls/form/account.php:24
 #: ../../../.././includes/cls/form/account.php:32
 #: ../../../.././includes/cls/form/account.php:55
-#: ../../../.././includes/cls/form/symbol.php:23
+#: ../../../.././includes/cls/form/symbol.php:31
 msgid "Password"
 msgstr "کلمه عبور"
 
@@ -825,15 +839,20 @@ msgstr "کلمه عبور"
 msgid "Tel"
 msgstr "تلفن"
 
-#: ../../../.././includes/cls/form/symbol.php:18
+#: ../../../.././includes/cls/form/symbol.php:20
+#: ../../../.././includes/cls/form/symbol.php:26
 msgid "Mobile"
 msgstr "موبایل"
 
-#: ../../../.././includes/cls/form/symbol.php:24
+#: ../../../.././includes/cls/form/symbol.php:21
+msgid "we send a verification code to this number"
+msgstr "ما کد اعتبارسنجی را به این شماره ارسال خواهیم کرد"
+
+#: ../../../.././includes/cls/form/symbol.php:32
 msgid "between 5-40 character"
 msgstr "بین ۵ تا ۴۰ کاراکتر."
 
-#: ../../../.././includes/cls/form/symbol.php:25
+#: ../../../.././includes/cls/form/symbol.php:33
 msgid "between 5-40 character. be tricky!"
 msgstr "بین ۵ تا ۴۰ کاراکتر. در انتخاب کلمه عبور دقت به خرج دهید"
 
@@ -978,22 +997,22 @@ msgid "United States"
 msgstr "آمریکا"
 
 #: ../../../.././includes/languages/static_translation.php:50
-#: ../../../.././includes/languages/twig_translation.php:85
+#: ../../../.././includes/languages/twig_translation.php:82
 msgid "Logout"
 msgstr "خروج از سیستم"
 
 #: ../../../.././includes/languages/static_translation.php:51
-#: ../../../.././includes/languages/twig_translation.php:109
+#: ../../../.././includes/languages/twig_translation.php:106
 msgid "Home"
 msgstr "صفحه نخست"
 
 #: ../../../.././includes/languages/static_translation.php:54
-#: ../../../.././includes/languages/twig_translation.php:112
+#: ../../../.././includes/languages/twig_translation.php:109
 msgid "Options"
 msgstr "تنظیمات"
 
 #: ../../../.././includes/languages/static_translation.php:55
-#: ../../../.././includes/languages/twig_translation.php:113
+#: ../../../.././includes/languages/twig_translation.php:110
 msgid "Go to"
 msgstr "برو به"
 
@@ -1002,22 +1021,22 @@ msgid "Does not exist"
 msgstr "هیچ داده ای موجود نیست"
 
 #: ../../../.././includes/languages/static_translation.php:57
-#: ../../../.././includes/languages/twig_translation.php:114
+#: ../../../.././includes/languages/twig_translation.php:111
 msgid "Add New Record"
 msgstr "افزودن رکورد جدید"
 
 #: ../../../.././includes/languages/static_translation.php:58
-#: ../../../.././includes/languages/twig_translation.php:115
+#: ../../../.././includes/languages/twig_translation.php:112
 msgid "Actions"
 msgstr "عملیات"
 
 #: ../../../.././includes/languages/static_translation.php:59
-#: ../../../.././includes/languages/twig_translation.php:117
+#: ../../../.././includes/languages/twig_translation.php:114
 msgid "Edit"
 msgstr "ویرایش"
 
 #: ../../../.././includes/languages/static_translation.php:60
-#: ../../../.././includes/languages/twig_translation.php:119
+#: ../../../.././includes/languages/twig_translation.php:116
 msgid "Delete"
 msgstr "حذف"
 
@@ -1226,124 +1245,120 @@ msgstr "برای ورود به اکانت خود کلیک کنید"
 msgid "are you remember your password!?"
 msgstr "آیا کلمه عبور خود را به خاطر آوردید!؟"
 
-#: ../../../.././includes/languages/twig_translation.php:55
-msgid "masoomeh holy shine"
-msgstr "حرم حضرت معصومه"
-
-#: ../../../.././includes/languages/twig_translation.php:59
+#: ../../../.././includes/languages/twig_translation.php:56
 msgid "please check your mobile and enter the code"
 msgstr "پس از بررسی موبایل خود کد را وارد کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:60
+#: ../../../.././includes/languages/twig_translation.php:57
 msgid "don't receive message?"
 msgstr "هنوز پیامک ما را دریافت نکردید؟"
 
-#: ../../../.././includes/languages/twig_translation.php:63
+#: ../../../.././includes/languages/twig_translation.php:60
 msgid "Scan your barcode and change your points to money!"
 msgstr "با اسکن کردن بارکد، امتیازات خود را نقد کنید!"
 
-#: ../../../.././includes/languages/twig_translation.php:66
+#: ../../../.././includes/languages/twig_translation.php:63
 msgid "Scan barcode for going to queue."
 msgstr "برای افزودن به صف، بارکد را وارد کنید."
 
-#: ../../../.././includes/languages/twig_translation.php:67
+#: ../../../.././includes/languages/twig_translation.php:64
 msgid "If child absent click on absent button."
 msgstr "اگر شخص در نوبت خود حاضر نبود بر روی دکمه غایب کلیک کنید."
 
-#: ../../../.././includes/languages/twig_translation.php:68
+#: ../../../.././includes/languages/twig_translation.php:65
 msgid "For start game click on Start."
 msgstr "برای شروع بازی بر روی دکمه شروع کلیک کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:69
+#: ../../../.././includes/languages/twig_translation.php:66
 msgid "After starting game you can set winner and looser for gain points."
 msgstr "بعد از شروع بازی شما توانایی تغییر وضعیت را به برنده یا بازنده دارید."
 
-#: ../../../.././includes/languages/twig_translation.php:70
+#: ../../../.././includes/languages/twig_translation.php:67
 msgid "Winner"
 msgstr "برنده"
 
-#: ../../../.././includes/languages/twig_translation.php:71
+#: ../../../.././includes/languages/twig_translation.php:68
 msgid "Looser"
 msgstr "بازنده"
 
-#: ../../../.././includes/languages/twig_translation.php:72
+#: ../../../.././includes/languages/twig_translation.php:69
 msgid "Start"
 msgstr "شروع"
 
-#: ../../../.././includes/languages/twig_translation.php:73
+#: ../../../.././includes/languages/twig_translation.php:70
 msgid "Absent"
 msgstr "غایب"
 
-#: ../../../.././includes/languages/twig_translation.php:76
+#: ../../../.././includes/languages/twig_translation.php:73
 msgid "You can manage kids in this page."
 msgstr "در این صفحه شما توانایی مدیریت کودکستان را خواهید داشت."
 
-#: ../../../.././includes/languages/twig_translation.php:77
+#: ../../../.././includes/languages/twig_translation.php:74
 msgid "Enter barcode then set color and number for register kids."
 msgstr ""
 "پس از ورود کد شناسایی و تنظیم رنگ و شماره کودک توانایی ورود به کودکستان را "
 "خواهد داشت."
 
-#: ../../../.././includes/languages/twig_translation.php:78
+#: ../../../.././includes/languages/twig_translation.php:75
 msgid "If parent want they child, click on Call button and call them."
 msgstr ""
 "اگر والدین کودک به دنبال آن ها آمده اند، بر روی دکمه صدا کردن کلیک کرده و آن "
 "ها را صدا بزنید."
 
-#: ../../../.././includes/languages/twig_translation.php:79
+#: ../../../.././includes/languages/twig_translation.php:76
 msgid "After delivery click on Delivery."
 msgstr "پس از تحویل کودک به والدین خود بر روی دکمه تحویل دادن کلیک کنید."
 
-#: ../../../.././includes/languages/twig_translation.php:81
+#: ../../../.././includes/languages/twig_translation.php:78
 msgid "Delivery"
 msgstr "تحویل دادن"
 
-#: ../../../.././includes/languages/twig_translation.php:82
+#: ../../../.././includes/languages/twig_translation.php:79
 msgid "Call"
 msgstr "صدا کردن"
 
-#: ../../../.././includes/languages/twig_translation.php:87
+#: ../../../.././includes/languages/twig_translation.php:84
 msgid "Reports"
 msgstr "گزارش ها"
 
-#: ../../../.././includes/languages/twig_translation.php:88
+#: ../../../.././includes/languages/twig_translation.php:85
 msgid "Control Panel"
 msgstr "کنترل پنل"
 
-#: ../../../.././includes/languages/twig_translation.php:89
+#: ../../../.././includes/languages/twig_translation.php:86
 msgid "Register Visitors"
 msgstr "ثبت نام بازدیدکنندگان"
 
-#: ../../../.././includes/languages/twig_translation.php:90
+#: ../../../.././includes/languages/twig_translation.php:87
 msgid "Register Kids"
 msgstr "ثبت کودکان"
 
-#: ../../../.././includes/languages/twig_translation.php:91
+#: ../../../.././includes/languages/twig_translation.php:88
 msgid "Register Visitors Avatar"
 msgstr "ثبت عکس بازدیدکنندگان"
 
-#: ../../../.././includes/languages/twig_translation.php:92
+#: ../../../.././includes/languages/twig_translation.php:89
 msgid "Start Game"
 msgstr "شروع بازی"
 
-#: ../../../.././includes/languages/twig_translation.php:93
+#: ../../../.././includes/languages/twig_translation.php:90
 msgid "Point Checker"
 msgstr "چک کردن امتیازها"
 
-#: ../../../.././includes/languages/twig_translation.php:94
+#: ../../../.././includes/languages/twig_translation.php:91
 msgid "Change points to meney"
 msgstr "نقد کردن امتیازات!"
 
-#: ../../../.././includes/languages/twig_translation.php:97
+#: ../../../.././includes/languages/twig_translation.php:94
 msgid "for using system and give prize visitors must register in system."
 msgstr ""
 "بازدیدکنندگان برای استفاده از سامانه و دریافت هدایا باید در سیستم عضو شوند."
 
-#: ../../../.././includes/languages/twig_translation.php:98
+#: ../../../.././includes/languages/twig_translation.php:95
 msgid "you can register visitors in this form."
 msgstr "در این صفحه شما توانایی ثبت اطلاعات بازدیدکنندگان را خواهید داشت."
 
-#: ../../../.././includes/languages/twig_translation.php:101
+#: ../../../.././includes/languages/twig_translation.php:98
 msgid ""
 "First of all, scan barcode then camera take a picture form you and show it "
 "for 3 second."
@@ -1351,51 +1366,51 @@ msgstr ""
 "ابتدا در جلوی دوربین آماده شوید. سپس با اسکن بارکد روی کارت، عکس شما ذخیره "
 "شده و به مدت ۳ ثانیه نمایش داده خواهد شد."
 
-#: ../../../.././includes/languages/twig_translation.php:102
+#: ../../../.././includes/languages/twig_translation.php:99
 msgid "if it looks good you successful else try again with scan a barcode"
 msgstr "اگر مشکلی در عکس وجود داشت دوباره بارکد را اسکن کنید."
 
-#: ../../../.././includes/languages/twig_translation.php:103
+#: ../../../.././includes/languages/twig_translation.php:100
 msgid "Please place in center of box and smile:)"
 msgstr "لطفا در مرکز کادر قرار گرفته و لبخند بزنید :)"
 
-#: ../../../.././includes/languages/twig_translation.php:106
+#: ../../../.././includes/languages/twig_translation.php:103
 msgid "Scan your barcode and see your points"
 msgstr "با اسکن کردن بارکد، امتیاز خود را مشاهده کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:116
+#: ../../../.././includes/languages/twig_translation.php:113
 msgid "Edit this record"
 msgstr "ویرایش این رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:118
+#: ../../../.././includes/languages/twig_translation.php:115
 msgid "Delete this record"
 msgstr "حذف این رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:120
+#: ../../../.././includes/languages/twig_translation.php:117
 msgid "delete record"
 msgstr "حذف رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:121
+#: ../../../.././includes/languages/twig_translation.php:118
 msgid "seriously, are you sure? There's no coming back."
 msgstr "مطمئنید؟ بازگشتی وجود ندارد"
 
-#: ../../../.././includes/languages/twig_translation.php:122
+#: ../../../.././includes/languages/twig_translation.php:119
 msgid "Cancel"
 msgstr "انصراف"
 
-#: ../../../.././includes/languages/twig_translation.php:123
+#: ../../../.././includes/languages/twig_translation.php:120
 msgid "or"
 msgstr "یا"
 
-#: ../../../.././includes/languages/twig_translation.php:126
+#: ../../../.././includes/languages/twig_translation.php:123
 msgid "Select"
 msgstr "انتخاب"
 
-#: ../../../.././includes/languages/twig_translation.php:129
+#: ../../../.././includes/languages/twig_translation.php:126
 msgid "Home Page"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/twig_translation.php:130
+#: ../../../.././includes/languages/twig_translation.php:127
 msgid "Experience our service in your language"
 msgstr "سرویس ما را با زبان مادری خودتان تجربه کنید"
 
@@ -1411,6 +1426,9 @@ msgstr "بهشت بانو برای کودکان"
 #: ../../../.././includes/mvc/view.php:14
 msgid "Behsht Banoo is good"
 msgstr "بهشت بانو خوب است!"
+
+#~ msgid "masoomeh holy shine"
+#~ msgstr "حرم حضرت معصومه"
 
 #~ msgid "Kindergartens"
 #~ msgstr "مهدکودک"

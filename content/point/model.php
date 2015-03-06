@@ -26,8 +26,9 @@ class model extends \mvc\model
 			$totalpoint += $value['game_prize'];
 		}
 		
-		debug::true(T_("No of games").' '. $qry->num());
-		debug::true(T_("Total of points").' '.$totalpoint);
+		debug::msg('code',T_("identify code").' '. $qry->num());
+		debug::msg('games',T_("no of games").' '. $qry->num());
+		debug::msg('points',T_("total points").' '.$totalpoint);
 	}
 }
 ?>

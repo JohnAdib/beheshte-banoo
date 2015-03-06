@@ -51,9 +51,6 @@ function transtext()
 	echo T_("click here to login to your account");                                   // Line 6
 	echo T_("are you remember your password!?");                                      // Line 6
 
-	//------------------------------------------------content_account/main/layout.html
-	echo T_("masoomeh holy shine");                                                   // Line 9
-
 	//---------------------------------------content_account/verification/display.html
 	echo T_("we send a verification code for you");                                   // Line 6
 	echo T_("please check your mobile and enter the code");                           // Line 7
