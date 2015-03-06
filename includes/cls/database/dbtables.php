@@ -81,7 +81,7 @@ function setproperty($_arg)
 	switch ($_type) 
 	{
 		case 'enum':
-			$tmp[0] 	= "->type('select')";
+			$tmp[0] 	= "->type('radio')";
 			return $tmp;
 			break;
 
@@ -336,7 +336,7 @@ while ($row = $qTables->fetch_object())
 		elseif ($myname=="status" 	|| $myname=="model" 		|| $myname=="priority"
 			|| $myname=="sellin"		|| $myname=="priority" 	|| $myname=='method'
 			|| $myname=="type"		|| $myname=="paperstatus" || $property_type =="->type('select')"
-			)
+			|| $myfield=="kid_color")
 		{
 			$fn    .= $txtcomment. "select button\n";
 			$fn    .= $txtstart. '$this->form("select")->name("'. $myname.'")->type("select")'.$property.'->validate();';
