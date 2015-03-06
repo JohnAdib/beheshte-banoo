@@ -49,7 +49,7 @@ class model extends \mvc\model
 			// if($this->login('permission_id') == 5 )
 				// $this->redirector()->set_domain()->set_url('camera');
 		},$id);
-		$this->rollback(function() { debug::error(T_("register failed!"));     });
+		$this->rollback(function() { debug::title(T_("transaction error").': ');     });
 	}
 }
 ?>

@@ -86,14 +86,14 @@
 {%endblock%}
 {%block debug%}
  {%if debug is iterable%}
-  <div id="formError" class="error_{{debug.status}} unselectable">
+  <div id="formError">
   {%for key, mydebug in debug.messages if mydebug is iterable %}
-   <ul class="{{key}}">
+   <ul class="{{key}} unselectable">
    {%for key, err in mydebug%}
    {%if err.title is defined%}
-   <li class="{{err.group}} {{err.redirect}}">{{err.title}}</li>
+   <li class="notify-{{err.group}} {{err.redirect}}">{{debug.title}} {{err.title}}</li>
    {%else%}
-   <li class="n_{{key}}">{{err}}</li>
+   <li class="notify-{{key}}">{{err}}</li>
    {%endif%}
    {%endfor%}
    </ul>
