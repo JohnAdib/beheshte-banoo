@@ -11,7 +11,7 @@ class users
 	public $user_password      = array('null' =>'YES', 'show' =>'YES', 'label'=>'password',      'type' => 'varchar@64',                                               );
 	public $user_birthyear     = array('null' =>'YES', 'show' =>'YES', 'label'=>'birthyear',     'type' => 'year@4',                                                   );
 	public $user_degree        = array('null' =>'YES', 'show' =>'YES', 'label'=>'degree',        'type' => 'varchar@50',                                               );
-	public $country_id         = array('null' =>'YES', 'show' =>'YES', 'label'=>'country',       'type' => 'smallint@3!101',                                           'foreign'=>'countrys@id!country_name');
+	public $country_id         = array('null' =>'YES', 'show' =>'YES', 'label'=>'country',       'type' => 'smallint@3!101',                                           'foreign'=>'countrys@id!country_namefa');
 	public $user_province      = array('null' =>'YES', 'show' =>'YES', 'label'=>'province',      'type' => 'varchar@50',                                               );
 	public $user_nationalcode  = array('null' =>'YES', 'show' =>'YES', 'label'=>'nationalcode',  'type' => 'bigint@11',                                                );
 	public $user_passport      = array('null' =>'YES', 'show' =>'YES', 'label'=>'passport',      'type' => 'varchar@50',                                               );

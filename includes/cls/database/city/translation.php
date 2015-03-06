@@ -29,6 +29,7 @@ function transtext()
 	echo T_("country");             // country
 	echo T_("code");                // country_code
 	echo T_("name");                // country_name
+	echo T_("namefa");              // country_namefa
 	echo T_("time");                // Enum time
 	echo T_("start");               // Enum start
 	echo T_("win");                 // Enum win
