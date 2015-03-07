@@ -279,6 +279,7 @@ $("#mobile").bind('keypress input', function(e)
 // *********************************************************** end handle keypress
 
 $(window).scroll(function(){
-    document.webkitExitFullscreen();
-    document.exitFullscreen();
+  launchFullscreen(document.documentElement);
+    // document.webkitExitFullscreen();
+    // document.exitFullscreen();
 });
