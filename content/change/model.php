@@ -32,9 +32,16 @@ class model extends \mvc\model
 		if(!$changevalue)
 			$changevalue = 100;
 
-		debug::true(T_("No of games").' '. $qry->num());
-		debug::true(T_("Total of points").' '.$totalpoint);
-		debug::true(T_("Total of Cash").' '.$totalpoint*$changevalue.' '.T_("Toman"));
+
+		$qry2       = $this->sql()->tableUsers()->whereId($id)->select();
+		$usertable  = $qry2->assoc();
+
+		debug::msg('code', $id);
+		debug::msg('name', $usertable['user_firstname'].' '.$usertable['user_lastname']);
+		debug::msg('games', T_("no of games")  .' '. $qry->num());
+		debug::msg('points', T_("total points").' '. $totalpoint);
+		debug::msg('prizes', T_("Total of Cash").' '.$totalpoint*$changevalue.' '.T_("Toman"));
+
 
 		$qry  = $this->sql()->tableUsers()
 						->setUser_status('deactive')
@@ -42,7 +49,7 @@ class model extends \mvc\model
 						->whereId($id)->update();
 
 		$this->commit(function()   { debug::true(T_("We hope see you again!")); });
-		$this->rollback(function() { debug::error(T_("Change to money failed!"));     });
+		$this->rollback(function() { debug::title(T_("Change to money failed!"));     });
 	}
 }
 ?>

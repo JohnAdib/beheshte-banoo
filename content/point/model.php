@@ -25,10 +25,14 @@ class model extends \mvc\model
 		{
 			$totalpoint += $value['game_prize'];
 		}
+
+		$qry2       = $this->sql()->tableUsers()->whereId($id)->select();
+		$usertable  = $qry2->assoc();
 		
-		debug::msg('code',T_("identify code").' '. $qry->num());
-		debug::msg('games',T_("no of games").' '. $qry->num());
-		debug::msg('points',T_("total points").' '.$totalpoint);
+		debug::msg('code', $id);
+		debug::msg('name', $usertable['user_firstname'].' '.$usertable['user_lastname']);
+		debug::msg('games', T_("no of games")  .' '. $qry->num());
+		debug::msg('points', T_("total points").' '. $totalpoint);
 	}
 }
 ?>

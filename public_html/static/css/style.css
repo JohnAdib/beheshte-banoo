@@ -23,8 +23,10 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 .account input{background-color:#fff;border-radius:3px;border:none;width:90%;min-height: 25px; margin:2px 5%;padding: 10px 5%;}
 .field span{width:100%;}
 
-
+#point .content{min-height:148px}
+#change .content{min-height:148px}
 #person-card #person-data{font-size:17px;font-size:1.7rem}
+#person-card #person-avatar{border-radius:50%;margin:0 auto;display:block;max-width:100%;}
 
 #footer{position:fixed}
 #footer #langlist {font-family:'IRANSans',serif;font-size:0.8em;}
@@ -40,10 +42,10 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 
 #counter{font-size: 3em;position: absolute;left: 20px;z-index: 2;}
 
-#form-kids button{width:100%;}
-#form-kids select{text-align:center;/*height: 41px;*/}
-#form-kids input{text-align:center;width: 100%;}
-#form-kids .field > label{display:none}
+#form-kid button{width:100%;}
+#form-kid select{text-align:center;}
+#form-kid input{text-align:center;width: 100%;}
+#form-kid .field > label{display:none}
 
 .form-barcode{margin:0 auto;padding:0;min-height:70px;}
 .form-barcode .barcode{margin:0;padding:0;}

@@ -1,42 +1,3 @@
-// ***************************************************** Kids
-function bindKids() {
-  $('#form-kids').on('ajaxify:success', function() {
-    Navigate({
-      url: location.href,
-      replace: true,
-      filter: 'list-cards'
-    })
-  });
-}
-$(window).on('statechange', function() {
-  history.state.url.indexOf('kid')
-  if(history.state && history.state.url.indexOf('kid') > -1 && !history.state.replace) {
-    bindKids();
-  }
-});
-bindKids();
-
-
-// ***************************************************** Games
-function bindBarcode() {
-  $('#form-barcode').on('ajaxify:success', function() {
-    Navigate({
-      url: location.href,
-      replace: true,
-      filter: 'list-cards'
-    })
-  });
-}
-
-$(window).on('statechange', function() {
-  history.state.url.indexOf('game')
-  if(history.state && history.state.url.indexOf('game') > -1 && !history.state.replace) {
-    bindBarcode();
-  }
-});
-bindBarcode();
-
-
 route('*', function() {
   // ********************************************************************** Kids
   $(".list-cards").on( "click", ".fa-bullhorn", function( event ) {
@@ -101,7 +62,6 @@ route('*', function() {
 
 
 
-
 // *********************************************************** barcode reader
 (function(root, $) {
   root.barcodeOptions = {
@@ -137,11 +97,147 @@ route('*', function() {
 })(window, jQuery);
 
 
+// *********************************************************** Forms
+// ***************************************************** Kids
+function bindKid() {
+  $('#form-kid').on('ajaxify:success', function() {
+    Navigate({
+      url: location.href,
+      replace: true,
+      filter: 'list-cards'
+    })
+  });
+}
+$(window).on('statechange', function() {
+  history.state.url.indexOf('kid')
+  if(history.state && history.state.url.indexOf('kid') > -1 && !history.state.replace) {
+    bindKid();
+  }
+});
+bindKid();
 
 
-var invalid = false;
+// ***************************************************** Games
+function bindBarcode() {
+  $('#form-game').on('ajaxify:success', function() {
+    Navigate({
+      url: location.href,
+      replace: true,
+      filter: 'list-cards'
+    })
+  });
+}
 
+$(window).on('statechange', function() {
+  history.state.url.indexOf('game')
+  if(history.state && history.state.url.indexOf('game') > -1 && !history.state.replace) {
+    bindBarcode();
+  }
+});
+bindBarcode();
+
+
+// ***************************************************** points
+function bindPoint() {
+  $('#form-point').on('ajaxify:success', function(e, data) {
+    if(data.status == 1)
+    {
+      var mymsg = data.msg;
+      console.log(mymsg);
+
+
+      $("#person-avatar").animate({opacity: 1.0}, 3000);
+
+      $("#person-avatar").attr("src","s-up/1000/"+mymsg.code+"-thumb.jpg");
+
+      document.getElementById('person-name').innerHTML = mymsg.name;
+      document.getElementById('person-games').innerHTML = mymsg.games;
+      document.getElementById('person-points').innerHTML = mymsg.points;
+
+      setTimeout(function()
+      {
+        $("#person-avatar").attr("src","static/images/face.png");
+        document.getElementById('person-name').innerHTML = '';
+        document.getElementById('person-games').innerHTML = '';
+        document.getElementById('person-points').innerHTML = '';
+
+      }, 5000);
+    }
+  });
+}
+
+$(window).on('statechange', function() {
+  history.state.url.indexOf('point')
+  if(history.state && history.state.url.indexOf('point') > -1 && !history.state.replace) {
+    bindPoint();
+  }
+});
+bindPoint();
+
+
+// ***************************************************** points
+function bindchange() {
+  $('#form-change').on('ajaxify:success', function(e, data) {
+    if(data.status == 1)
+    {
+      var mymsg = data.msg;
+      console.log(mymsg);
+
+
+      $("#person-avatar").animate({opacity: 1.0}, 3000);
+
+      $("#person-avatar").attr("src","s-up/1000/"+mymsg.code+"-thumb.jpg");
+
+      document.getElementById('person-name').innerHTML = mymsg.name;
+      document.getElementById('person-games').innerHTML = mymsg.games;
+      document.getElementById('person-points').innerHTML = mymsg.points;
+      document.getElementById('person-prizes').innerHTML = mymsg.prizes;
+
+      setTimeout(function()
+      {
+        $("#person-avatar").attr("src","static/images/face.png");
+        document.getElementById('person-name').innerHTML = '';
+        document.getElementById('person-games').innerHTML = '';
+        document.getElementById('person-points').innerHTML = '';
+        document.getElementById('person-prizes').innerHTML = '';
+
+      }, 10000);
+    }
+  });
+}
+
+$(window).on('statechange', function() {
+  history.state.url.indexOf('change')
+  if(history.state && history.state.url.indexOf('change') > -1 && !history.state.replace) {
+    bindchange();
+  }
+});
+bindchange();
+
+
+
+// *********************************************************** handle keypress
 $("input[type=number]").bind('keypress input', function(e)
+{
+  var input = parseInt(e.which);
+  // console.log(e.which);
+
+  if (input >= 1776 &&  input <= 1785)
+  {
+    this.value += String.fromCharCode(input-1728);
+    return false;
+  }
+  else if ((input >= 48 && input <= 57) || input == 13)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+});
+
+$("input[type=tel]").bind('keypress input', function(e)
 {
   var input = parseInt(e.which);
   // console.log(e.which);
@@ -180,3 +276,5 @@ $("#mobile").bind('keypress input', function(e)
     return false;
   }
 });
+// *********************************************************** end handle keypress
+
