@@ -278,7 +278,3 @@ $("#mobile").bind('keypress input', function(e)
 });
 // *********************************************************** end handle keypress
 
-
-if(navigator.userAgent.match(/Android/i)){
-    window.scrollTo(0,1);
- }
