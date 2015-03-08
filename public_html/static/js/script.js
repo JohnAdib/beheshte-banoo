@@ -207,10 +207,10 @@ function bindchange() {
 }
 
 $(window).on('statechange', function() {
-  history.state.url.indexOf('change')
   if(history.state && history.state.url.indexOf('change') > -1 && !history.state.replace) {
     bindchange();
   }
+  Webcam.reset();
 });
 bindchange();
 
