@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-03-07 22:37+0330\n"
-"PO-Revision-Date: 2015-03-07 22:46+0330\n"
+"POT-Creation-Date: 2015-03-08 21:42+0330\n"
+"PO-Revision-Date: 2015-03-08 21:42+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -223,7 +223,7 @@ msgid "Change to money failed!"
 msgstr "نقد کردن امتیازات ناموفق بود!"
 
 #: ../../../.././content/game/model.php:30
-msgid "This kid  is already in Time!"
+msgid "This kid is already in Time!"
 msgstr "این کودک در حال حاضر در نوبت در حال انتظار است!"
 
 #: ../../../.././content/game/model.php:45
