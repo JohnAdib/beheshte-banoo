@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-03-06 20:40+0330\n"
-"PO-Revision-Date: 2015-03-06 20:40+0330\n"
+"POT-Creation-Date: 2015-03-07 22:37+0330\n"
+"PO-Revision-Date: 2015-03-07 22:46+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -196,27 +196,29 @@ msgstr "این اطلاعات اشتباه است"
 msgid "This card number does not exist"
 msgstr "این کد در سیستم وجود ندارد!"
 
-#: ../../../.././content/change/model.php:35
-msgid "No of games"
+#: ../../../.././content/change/model.php:41
+#: ../../../.././content/point/model.php:34
+msgid "no of games"
 msgstr "تعداد بازی ها"
 
-#: ../../../.././content/change/model.php:36
-msgid "Total of points"
+#: ../../../.././content/change/model.php:42
+#: ../../../.././content/point/model.php:35
+msgid "total points"
 msgstr "جمع امتیازات"
 
-#: ../../../.././content/change/model.php:37
+#: ../../../.././content/change/model.php:43
 msgid "Total of Cash"
 msgstr "جمع مبلغ کسب شده"
 
-#: ../../../.././content/change/model.php:37
+#: ../../../.././content/change/model.php:43
 msgid "Toman"
 msgstr "تومان"
 
-#: ../../../.././content/change/model.php:44
+#: ../../../.././content/change/model.php:51
 msgid "We hope see you again!"
 msgstr "امیدواریم دوباره شما را ملاقات کنیم!"
 
-#: ../../../.././content/change/model.php:45
+#: ../../../.././content/change/model.php:52
 msgid "Change to money failed!"
 msgstr "نقد کردن امتیازات ناموفق بود!"
 
@@ -269,18 +271,6 @@ msgstr "عکس شما با موفقیت ثبت شد"
 #: ../../../.././content/camera/model.php:68
 msgid "Error on write webcam picture to server"
 msgstr "خطا در هنگام ذخیره عکس در سرور"
-
-#: ../../../.././content/point/model.php:29
-msgid "identify code"
-msgstr "کد شناسایی"
-
-#: ../../../.././content/point/model.php:30
-msgid "no of games"
-msgstr "تعداد بازی ها"
-
-#: ../../../.././content/point/model.php:31
-msgid "total points"
-msgstr "جمع امتیازات"
 
 #: ../../../.././content_cp/home/controller.php:24
 msgid "Not found!"
@@ -1369,3 +1359,12 @@ msgstr "بهشت بانو برای کودکان"
 #: ../../../.././includes/mvc/view.php:14
 msgid "Behsht Banoo is good"
 msgstr "بهشت بانو خوب است!"
+
+#~ msgid "No of games"
+#~ msgstr "تعداد بازی ها"
+
+#~ msgid "Total of points"
+#~ msgstr "جمع امتیازات"
+
+#~ msgid "identify code"
+#~ msgstr "کد شناسایی"
