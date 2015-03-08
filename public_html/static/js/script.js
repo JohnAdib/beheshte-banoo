@@ -6,7 +6,7 @@ route('*', function() {
       .parent().find('.fa-child').removeClass('hide');
   });
   $(".list-cards").on( "click", ".fa-child", function( event ) {
-    $(this).parent().fadeOutAndRemove('normal');
+    $(this).parent().moveAndRemove('normal');
   });
 
 
@@ -19,13 +19,13 @@ route('*', function() {
       .parent().find('.fa-thumbs-down').removeClass('hide');
   });
   $(".list-cards").on( "click", ".fa-times", function( event ) {
-    $(this).parent().fadeOutAndRemove('normal');
+    $(this).parent().moveAndRemove('normal');
   });
   $(".list-cards").on( "click", ".fa-thumbs-up", function( event ) {
-    $(this).parent().fadeOutAndRemove('normal');
+    $(this).parent().moveAndRemove('normal');
   });
   $(".list-cards").on( "click", ".fa-thumbs-down", function( event ) {
-    $(this).parent().fadeOutAndRemove('normal');
+    $(this).parent().moveAndRemove('normal');
   });
   $(".list-cards").on( "click", ".fa-reply", function( event ) {
     $("#barcode").focus();

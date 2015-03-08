@@ -20,23 +20,23 @@ route('*', function() {
     $("#options-meta").toggleClass('disappear');
   });
 
-  $(document).bind('ajaxSuccess', function(e, promise, xhr) {
-    if(xhr.url === $('#delete-confirm [data-ajaxify]').prop('href')) {
-      setTimeout(function() {
-        Navigate({
-          url: location.href,
-          replace: true
-        });
-      }, 500);
+  var $deleteConfirm = $('#delete-confirm'),
+      $deleteAjaxify = $deleteConfirm.find('a[data-ajaxify]');
+
+  $deleteAjaxify.on('ajaxify:success', function(e, data) {
+    if(data.status !== 0) {
+      Navigate({
+        url: location.href,
+        replace: true
+      });
     }
   });
 
-  $('#delete-confirm').on('open', function(e, link) {
-    var $this = $(this),
-        $link = $(link);
+  $deleteConfirm.on('open', function(e, link) {
+    var $link = $(link);
 
-    $this.find('a[data-ajaxify]').attr('href', $link.attr('href'))
-         .copyData($this);
+    $deleteAjaxify.attr('href', $link.attr('href'))
+                  .copyData($link);
   });
 
   var $slug = $('#slug'),
