@@ -27,7 +27,7 @@ class model extends \mvc\model
 												->select();
 		if($qry->num()>0)
 		{
-			debug::error(T_("This kid  is already in Time!"));
+			debug::error(T_("This kid is already in Time!"));
 			return;
 		}
 
@@ -66,9 +66,10 @@ class model extends \mvc\model
 
 	public function post_absent()
 	{
-		// sleep (5);
 		$myid = utility::post('id');
-		$qry  = $this->sql()->tableGames()->setGame_status('absent')->whereId($myid)->update();
+		$qry  = $this->sql()->tableGames()->setGame_status('absent')
+																				->setGame_endtime(date('Y-m-d H:i:s'))
+																				->whereId($myid)->update();
 
 		$this->commit(function()   { });
 		$this->rollback(function() { });
@@ -76,6 +77,7 @@ class model extends \mvc\model
 
 	public function post_start()
 	{
+		sleep (20);
 		$myid = utility::post('id');
 		$qry  = $this->sql()->tableGames()->setGame_status('start')
 																				->setGame_starttime(date('Y-m-d H:i:s'))
@@ -87,6 +89,7 @@ class model extends \mvc\model
 
 	public function post_win()
 	{
+		sleep (20);
 		$myid = utility::post('id');
 		$qry  = $this->sql()->tableGames()->setGame_status('win')
 																				->setGame_endtime(date('Y-m-d H:i:s'))
