@@ -77,7 +77,7 @@ class model extends \mvc\model
 
 	public function post_start()
 	{
-		sleep (20);
+		// sleep (20);
 		$myid = utility::post('id');
 		$qry  = $this->sql()->tableGames()->setGame_status('start')
 																				->setGame_starttime(date('Y-m-d H:i:s'))
@@ -89,7 +89,7 @@ class model extends \mvc\model
 
 	public function post_win()
 	{
-		sleep (20);
+		// sleep (20);
 		$myid = utility::post('id');
 		$qry  = $this->sql()->tableGames()->setGame_status('win')
 																				->setGame_endtime(date('Y-m-d H:i:s'))
