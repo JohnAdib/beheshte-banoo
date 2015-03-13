@@ -21,6 +21,7 @@ html{
 body.ltr{font-family:'Roboto Slab',serif;direction:ltr;}
 body.rtl{font-family:'IRANSans',serif;direction:rtl;}
 body {
+  overflow-x: hidden;
   margin: 0;
 }
 *{outline:0}

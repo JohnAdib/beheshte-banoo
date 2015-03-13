@@ -60,13 +60,10 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 .loading-form #webcambox #my_camera_result{opacity:1}
 
 
-body#game {
-  overflow-x: hidden;
-}
 
 
 
-.list-cards{list-style: none;position: relative;padding:0;margin:0}
+.list-cards{list-style: none;position: relative;padding:0;margin:0;overflow:hidden;}
 .list-cards li{height: 45px;width: 96%;padding:0 2%;margin: 1em auto;line-height: 45px;position: relative;border:none;background-color: #eee;color:#000;opacity: 0.9;border-radius: 3px;transition: all .1s ease;}
 .list-cards li:hover{background-color:#fff;}
 
@@ -164,4 +161,12 @@ body#game {
 @media only screen and (max-width: 330px){
 	body{display:none;}
 	html::before{content:"!";position:absolute;left: 35%;font-size:100vw;}
+}
+
+input{
+-webkit-user-select: none; 
+-khtml-user-select: none; 
+-moz-user-select: none; 
+-o-user-select: none; 
+user-select: none;
 }

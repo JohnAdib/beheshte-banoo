@@ -6,7 +6,9 @@
 <div class="center" data-xhr="center">
  <div class="content">
   <p id="description">{%trans%}Scan your barcode and see your points{%endtrans%}</p>
-  <form class="ajx form row form-barcode" method="post" id="form-point">{{forms.make(form['barcode'])}}</form>
+  <form class="ajx form row form-barcode" method="post" id="form-point" data-delay='3000' data-clear>
+{{forms.make(form['barcode'])}}
+  </form>
  </div>
  <div id="person-card" class="row">
   <div id="person-data" class="span8">

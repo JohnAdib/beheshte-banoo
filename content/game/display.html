@@ -6,7 +6,9 @@
 <div class="center" data-xhr="center">
  <div class="content">
  <p id="description">{%trans%}Scan barcode for going to queue.{%endtrans%} {%trans%}If child absent click on absent button.{%endtrans%} {%trans%}For start game click on Start.{%endtrans%} {%trans%}After starting game you can set winner and looser for gain points.{%endtrans%}</p>
-  <form class="ajx form row form-barcode" method="post" id="form-game">{{forms.make(form['barcode'])}}</form>
+  <form class="ajx form row form-barcode" method="post" id="form-game" data-clear>
+{{forms.make(form['barcode'])}}
+  </form>
 
   <ul class="list-cards" data-xhr="list-cards">
 {% for i in list %}

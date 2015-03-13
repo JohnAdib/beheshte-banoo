@@ -9,7 +9,7 @@ class barcode extends \lib\form
 						// ->type("number")->min(10000)->max(99999)
 						->type("tel")
 						->value(\lib\utility::get('barcode'))
-						->pattern('.{5,}')->class('row')
+						->pattern('.{1,5}')->class('row')
 						->tabindex(1)->autofocus()->pl(T_('Please Scan or enter barcode'));
 
 

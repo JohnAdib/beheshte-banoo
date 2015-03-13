@@ -6,10 +6,10 @@
 <div class="center" data-xhr="center">
  <div class="content">
  <p id="description">{%trans%}You can manage kids in this page.{%endtrans%} {%trans%}Enter barcode then set color and number for register kids.{%endtrans%} {%trans%}If parent want they child, click on Call button and call them.{%endtrans%} {%trans%}After delivery click on Delivery.{%endtrans%}</p>
-  <form class="ajx form row auto" method="post" id="form-kid">
+  <form class="ajx form row auto" method="post" id="form-kid" data-clear>
    <div class="field barcode span4 required">
     <label>{%trans "barcode"%}</label>
-    <input type="number" name="barcode" required="" min="10000" max="99999" value="" class="row" autofocus="" placeholder='{%trans "barcode"%}' id="barcode" >
+    <input type="number" name="barcode" required="" min="1" max="99999" value="" class="row" autofocus="" placeholder='{%trans "barcode"%}' id="barcode" >
    </div>
 {{forms.make(form['kids'])}}
   </form>

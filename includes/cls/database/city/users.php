@@ -128,7 +128,7 @@ class users
 	}
 	public function user_barcode() 
 	{
-		$this->form("text")->name("barcode")->min(10000)->max(99999)->required()->type('number');
+		$this->form("text")->name("barcode")->min(1)->max(99999)->required()->type('number');
 	}
 	public function user_enterdatetime() 
 	{

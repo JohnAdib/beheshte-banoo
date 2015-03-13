@@ -53,7 +53,7 @@
 
 {% macro select(array) %}
  {%if array.label %}<label>{{array.label}}</label>{%endif%}
- <select {% for attr,value in array.attr if attr in ['id','class','name']%}{{attr}}="{{value}}" {% endfor %}>
+ <select {% for attr,value in array.attr if attr in ['id','class','name']%}{{attr}}="{{value}}" {% endfor %} data-unclear>
   <option value="" disabled="disabled">{%trans "Select"%} {{array.label}}</option>
   {% for child in array.child%}
   <option {% for attr,value in child.attr if attr in ['value','selected']%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
