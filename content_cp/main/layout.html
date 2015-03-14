@@ -47,7 +47,7 @@
      <tr>
       <th class="column_row"></th>
 {%for value in columns if value.table%}
-      <th>{{value.name}}</th>
+      <th>{%set fieldname = value.name |lower%}{%trans fieldname%}</th>
 {%endfor%}
       <th class="column_actions">{%trans "Actions"%}</th>
      </tr>
