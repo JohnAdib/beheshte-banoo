@@ -42,7 +42,7 @@ class model extends \mvc\model
 		{
 			// copy one image as default image for each user
 			$to   = root.'public_html/s-up/' . ceil($id/1000)*1000 . '/'.$id.'-thumb.jpg';
-			$from = root.'public_html/static/images/face/'.utility::post('gender').'-'.mt_rand(1,8).'.jpg';
+			$from = root.'public_html/static/images/face/'.utility::post('gender').'-'.mt_rand(1,5).'.jpg';
 			$a    = File::copy($from , $to);
 			// var_dump($a);
 			debug::true(T_("register successfully"));
