@@ -4,10 +4,10 @@ class usermetas
 {
 	public $id              = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@6',                        );
 	public $user_id         = array('null' =>'NO',  'show' =>'NO',  'label'=>'user',          'type' => 'int@6',                             'foreign'=>'users@id!user_nickname');
-	public $usermeta_cat    = array('null' =>'NO',  'show' =>'YES', 'label'=>'cat',           'type' => 'varchar@50',                        );
-	public $usermeta_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'name',          'type' => 'varchar@100',                       );
-	public $usermeta_value  = array('null' =>'YES', 'show' =>'YES', 'label'=>'value',         'type' => 'varchar@500',                       );
-	public $usermeta_extra  = array('null' =>'YES', 'show' =>'YES', 'label'=>'extra',         'type' => 'varchar@500',                       );
+	public $usermeta_cat    = array('null' =>'NO',  'show' =>'NO',  'label'=>'cat',           'type' => 'varchar@50',                        );
+	public $usermeta_name   = array('null' =>'NO',  'show' =>'NO',  'label'=>'name',          'type' => 'varchar@100',                       );
+	public $usermeta_value  = array('null' =>'YES', 'show' =>'NO',  'label'=>'value',         'type' => 'varchar@500',                       );
+	public $usermeta_extra  = array('null' =>'YES', 'show' =>'NO',  'label'=>'extra',         'type' => 'varchar@500',                       );
 	public $usermeta_status = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@enable,disable,expire!enable', );
 	public $date_modified   = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                        );
 

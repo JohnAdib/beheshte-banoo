@@ -3,7 +3,7 @@ namespace database\city;
 class permissiondetails 
 {
 	public $id                      = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5',      );
-	public $permissiondetail_module = array('null' =>'NO',  'show' =>'YES', 'label'=>'module',        'type' => 'varchar@50',      );
+	public $permissiondetail_module = array('null' =>'NO',  'show' =>'NO',  'label'=>'module',        'type' => 'varchar@50',      );
 	public $permissiondetail_view   = array('null' =>'NO',  'show' =>'YES', 'label'=>'view',          'type' => 'enum@yes,no!yes', );
 	public $permissiondetail_add    = array('null' =>'NO',  'show' =>'YES', 'label'=>'add',           'type' => 'enum@yes,no!no',  );
 	public $permissiondetail_edit   = array('null' =>'NO',  'show' =>'YES', 'label'=>'edit',          'type' => 'enum@yes,no!no',  );

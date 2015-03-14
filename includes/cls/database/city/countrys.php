@@ -3,9 +3,9 @@ namespace database\city;
 class countrys 
 {
 	public $id             = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@3',  );
-	public $country_code   = array('null' =>'NO',  'show' =>'YES', 'label'=>'code',          'type' => 'char@2',      );
-	public $country_name   = array('null' =>'NO',  'show' =>'YES', 'label'=>'name',          'type' => 'varchar@100', );
-	public $country_namefa = array('null' =>'YES', 'show' =>'YES', 'label'=>'namefa',        'type' => 'varchar@100', );
+	public $country_code   = array('null' =>'NO',  'show' =>'NO',  'label'=>'code',          'type' => 'char@2',      );
+	public $country_name   = array('null' =>'NO',  'show' =>'NO',  'label'=>'name',          'type' => 'varchar@100', );
+	public $country_namefa = array('null' =>'YES', 'show' =>'NO',  'label'=>'namefa',        'type' => 'varchar@100', );
 
 
 	//------------------------------------------------------------------ id

@@ -4,7 +4,7 @@ class provinces
 {
 	public $id            = array('null' =>'NO',  'show' =>'NO',  'label'=>'id',            'type' => 'smallint@5', );
 	public $country_id    = array('null' =>'NO',  'show' =>'YES', 'label'=>'country',       'type' => 'smallint@3', 'foreign'=>'countrys@id!country_namefa');
-	public $province_name = array('null' =>'NO',  'show' =>'YES', 'label'=>'name',          'type' => 'varchar@32', );
+	public $province_name = array('null' =>'NO',  'show' =>'NO',  'label'=>'name',          'type' => 'varchar@32', );
 
 
 	//------------------------------------------------------------------ id

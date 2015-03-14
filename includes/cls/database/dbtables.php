@@ -350,6 +350,7 @@ while ($row = $qTables->fetch_object())
 
 		else
 		{
+			$myfield_show = 'NO';
 			$property = $property.$property_type;
 			$fn      .= $txtstart. '$this->form("text")->name("'. $myname.'")'.$property.';';
 
