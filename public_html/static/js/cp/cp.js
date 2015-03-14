@@ -12,11 +12,10 @@ route('*', function() {
   hideFields();
 
   $(".fields-toggle", this).change(function () {
-    var box = $("."+this.value);
-    box.toggleClass('disappear');
+    var box = $("."+$(this).attr("name"));
+    box.toggleClass('hide');
   });
   $("#options-link", this).click(function () {
-    console.log('clicked');
     $("#options-meta").toggleClass('disappear');
   });
 
@@ -76,11 +75,11 @@ route('*', function() {
 
 function hideFields()
 {
-  $("input:checkbox", document).each(function()
+  $("#options-meta input:checkbox").each(function(item, item2)
   {
     if( !$(this).is(":checked") )
     {
-      $("."+$(this).val()).addClass('disappear');
+      $("."+$(this).attr("name")).addClass('hide');
     }
   }
   );}

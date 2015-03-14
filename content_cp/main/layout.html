@@ -14,12 +14,12 @@
 <div data-xhr="content_def" class="content_def">
 
 {% set fieldcounter = 0%}
-{% for key, value in field_list if value.form%}{% set fieldcounter = (fieldcounter+1) %}{% endfor %}
+{% for value in field_list if value.form%}{% set fieldcounter = (fieldcounter+1) %}{% endfor %}
 {%if child and fieldcounter >0%}
  <div id="options" class="unselectable">
   <div id="options-meta" class="disappear">
-{% for key, value in field_list if value.form%}
-   <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{key}}" value="{{value.value}}" {%if value.show%}checked="checked"{%endif%}><span>{%set fieldname = value.name |lower%}{%trans fieldname%}</span></label>
+{% for key, attr in field_list if attr.form%}
+   <label class="label-custom"><input class="fields-toggle" type="checkbox" name="{{attr.value}}" {%if attr.show%}checked="checked"{%endif%}><span>{{attr.label}}</span></label>
 {% endfor %}
   </div>
   <a id="options-link" href="javascript: void(0)">{%trans%}Options{%endtrans%}</a>
@@ -47,7 +47,7 @@
      <tr>
       <th class="column_row"></th>
 {%for value in columns if value.table%}
-      <th>{%set fieldname = value.name |lower%}{%trans fieldname%}</th>
+      <th>{{value.label}}</th>
 {%endfor%}
       <th class="column_actions">{%trans "Actions"%}</th>
      </tr>
