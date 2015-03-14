@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 06, 2015 at 09:59 AM
+-- Generation Time: Mar 14, 2015 at 11:18 AM
 -- Server version: 5.5.41-0ubuntu0.14.04.1
 -- PHP Version: 5.6.6-1+deb.sury.org~trusty+1
 
@@ -38,16 +38,14 @@ CREATE TABLE IF NOT EXISTS `booths` (
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `booths_sections_id` (`section_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
 
 --
 -- Dumping data for table `booths`
 --
 
 INSERT INTO `booths` (`id`, `booth_title`, `booth_winpoint`, `booth_loosepoint`, `booth_maxplayer`, `booth_gametime`, `section_id`, `booth_status`, `date_modified`) VALUES
-(1, 'غرفه طناب کشی', 10, 1, 10, '00:00:00', 1, 'enable', '2015-02-08 15:08:24'),
-(2, 'تیراندازی', 15, 2, 3, '00:01:00', 5, 'enable', '2015-03-05 14:55:55'),
-(3, 'اسب سواری', 18, 3, 2, '00:01:00', 5, 'enable', NULL);
+(1, 'غرفه تست', 3, 1, 10, '00:00:00', 7, 'enable', NULL);
 
 -- --------------------------------------------------------
 
@@ -637,7 +635,7 @@ INSERT INTO `countrys` (`id`, `country_code`, `country_name`, `country_namefa`) 
 (98, 'IS', 'Iceland', 'ایسلند'),
 (99, 'IN', 'India', 'هندوستان'),
 (100, 'ID', 'Indonesia', 'اندونزی'),
-(101, 'IR', 'Iran (Islamic Republic of)', 'ایران، جمهوری اسلامی'),
+(101, 'IR', 'Iran (Islamic Republic of)', 'جمهوری اسلامی ایران'),
 (102, 'IQ', 'Iraq', 'عراق'),
 (103, 'IE', 'Ireland', 'ایرلند'),
 (105, 'IT', 'Italy', 'ایتالیا'),
@@ -799,67 +797,7 @@ CREATE TABLE IF NOT EXISTS `games` (
   PRIMARY KEY (`id`),
   KEY `users_games_id` (`user_id`),
   KEY `booths_games_id` (`booth_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=213 ;
-
---
--- Dumping data for table `games`
---
-
-INSERT INTO `games` (`id`, `user_id`, `booth_id`, `game_prize`, `game_date`, `game_regtime`, `game_starttime`, `game_endtime`, `game_status`, `date_modified`) VALUES
-(159, 8, 2, 0, '2015-03-06', '2015-03-02 01:04:30', '2015-03-04 15:56:17', '2015-03-04 15:56:18', 'time', '2015-03-05 15:39:54'),
-(160, 9, 2, 10, '2015-03-06', '2015-03-01 01:04:33', '2015-03-04 16:34:21', '2015-03-05 18:53:55', 'win', '2015-03-05 15:38:48'),
-(161, 10, 2, 1, '2015-03-04', '2015-03-01 01:04:35', '2015-03-04 16:34:20', '2015-03-04 16:34:22', 'loose', '2015-03-05 15:12:19'),
-(162, 11, 2, 1, '2015-03-04', '2015-03-01 01:04:37', '2015-03-04 16:34:20', '2015-03-04 16:34:24', 'loose', '2015-03-05 15:12:34'),
-(163, 12, 1, 0, '2015-03-03', '2015-03-01 01:12:12', '2015-03-04 16:33:22', '2015-03-04 16:33:58', 'time', '2015-03-05 15:30:24'),
-(164, 8, 1, 10, '2015-03-04', '2015-03-01 01:12:22', '2015-03-04 10:24:40', '2015-03-03 03:59:17', 'win', '2015-03-05 15:30:00'),
-(165, 10, 2, 0, '2015-03-04', '2015-03-01 01:12:36', '2015-03-04 10:21:23', '2015-03-01 01:13:37', 'time', '2015-03-05 15:30:18'),
-(166, 11, 2, 0, '2015-03-03', '2015-03-01 01:12:38', '2015-03-04 15:56:44', '2015-03-04 15:56:57', 'absent', '2015-03-05 15:30:11'),
-(167, 13, 2, 0, '2015-03-03', '2015-03-03 03:37:41', NULL, NULL, 'time', '2015-03-05 15:28:00'),
-(168, 86, 2, 1, '2015-03-05', '2015-03-05 18:52:16', '2015-03-05 18:53:54', '2015-03-05 18:53:59', 'loose', '2015-03-05 15:28:02'),
-(169, 87, 2, 0, '2015-03-05', '2015-03-05 18:52:18', NULL, NULL, 'absent', '2015-03-05 15:27:52'),
-(170, 88, 2, 10, '2015-03-07', '2015-03-05 18:52:21', '2015-03-05 18:53:57', '2015-03-05 18:54:00', 'win', '2015-03-05 15:39:52'),
-(171, 70, 2, 1, '2015-03-06', '2015-03-05 18:52:44', '2015-03-05 18:53:57', '2015-03-05 18:54:02', 'loose', '2015-03-05 15:39:56'),
-(172, 71, 1, 10, '2015-03-05', '2015-03-05 18:52:46', '2015-03-05 18:53:59', '2015-03-05 18:54:01', 'win', '2015-03-05 15:24:01'),
-(173, 72, 1, 1, '2015-03-05', '2015-03-05 18:52:47', '2015-03-05 18:53:57', '2015-03-05 18:54:00', 'loose', '2015-03-05 15:24:00'),
-(174, 73, 1, 10, '2015-03-07', '2015-03-05 18:52:49', '2015-03-05 18:53:58', '2015-03-05 18:54:01', 'win', '2015-03-05 15:38:20'),
-(175, 74, 1, 10, '2015-03-05', '2015-03-05 18:52:50', '2015-03-05 18:53:58', '2015-03-05 18:54:06', 'win', '2015-03-05 15:24:06'),
-(176, 75, 1, 1, '2015-03-07', '2015-03-05 18:52:52', '2015-03-05 18:54:03', '2015-03-05 18:54:06', 'loose', '2015-03-05 15:38:28'),
-(177, 76, 1, 10, '2015-03-05', '2015-03-05 18:52:54', '2015-03-05 18:54:04', '2015-03-05 18:54:08', 'win', '2015-03-05 15:24:08'),
-(178, 77, 1, 10, '2015-03-05', '2015-03-05 18:52:55', '2015-03-05 18:54:04', '2015-03-05 18:54:07', 'win', '2015-03-05 15:24:07'),
-(179, 78, 1, 10, '2015-03-07', '2015-03-05 18:52:57', '2015-03-05 18:54:05', '2015-03-05 18:54:08', 'win', '2015-03-05 15:38:23'),
-(180, 61, 1, 10, '2015-03-05', '2015-03-05 18:53:04', '2015-03-05 18:54:05', '2015-03-05 18:54:08', 'win', '2015-03-05 15:24:08'),
-(181, 63, 2, 10, '2015-03-05', '2015-03-05 18:53:08', '2015-03-05 18:54:05', '2015-03-05 18:54:07', 'win', '2015-03-05 15:28:08'),
-(182, 61, 2, 10, '2015-03-05', '2015-03-05 18:54:45', '2015-03-05 18:55:08', '2015-03-05 18:55:12', 'win', '2015-03-05 15:27:54'),
-(183, 63, 1, 10, '2015-03-06', '2015-03-04 18:54:47', '2015-03-05 18:55:08', '2015-03-05 18:55:12', 'win', '2015-03-05 15:39:16'),
-(184, 65, 1, 10, '2015-03-08', '2015-03-04 18:54:49', '2015-03-05 18:55:09', '2015-03-05 18:55:14', 'win', '2015-03-05 15:39:24'),
-(185, 66, 1, 10, '2015-03-05', '2015-03-05 18:54:51', '2015-03-05 18:55:09', '2015-03-05 18:55:12', 'win', '2015-03-05 15:25:12'),
-(186, 70, 1, 10, '2015-03-05', '2015-03-05 18:54:54', '2015-03-05 18:55:09', '2015-03-05 18:55:14', 'win', '2015-03-05 15:25:14'),
-(187, 71, 1, 10, '2015-03-05', '2015-03-05 18:54:55', '2015-03-05 18:55:10', '2015-03-05 18:55:14', 'win', '2015-03-05 15:25:14'),
-(188, 72, 1, 10, '2015-03-05', '2015-03-05 18:54:56', '2015-03-05 18:55:10', '2015-03-05 18:55:13', 'win', '2015-03-05 15:25:13'),
-(189, 73, 1, 10, '2015-03-05', '2015-03-05 18:54:57', '2015-03-05 18:55:11', '2015-03-05 18:55:13', 'win', '2015-03-05 15:25:13'),
-(190, 74, 1, 10, '2015-03-05', '2015-03-05 18:54:58', '2015-03-05 18:55:11', '2015-03-05 18:55:18', 'win', '2015-03-05 15:25:18'),
-(191, 75, 1, 1, '2015-03-05', '2015-03-05 18:55:00', '2015-03-05 18:55:15', '2015-03-05 18:55:18', 'loose', '2015-03-05 15:25:18'),
-(192, 76, 1, 10, '2015-03-05', '2015-03-05 18:55:01', '2015-03-05 18:55:16', '2015-03-05 18:55:17', 'win', '2015-03-05 15:25:17'),
-(193, 77, 1, 1, '2015-03-05', '2015-03-05 18:55:03', '2015-03-05 18:55:16', '2015-03-05 18:55:17', 'loose', '2015-03-05 15:25:17'),
-(194, 78, 1, 10, '2015-03-05', '2015-03-05 18:55:05', '2015-03-05 18:55:17', '2015-03-05 18:55:19', 'win', '2015-03-05 15:25:19'),
-(195, 70, 1, 10, '2015-03-05', '2015-03-05 18:55:40', '2015-03-05 18:55:53', '2015-03-05 18:55:55', 'win', '2015-03-05 15:25:55'),
-(196, 71, 1, 10, '2015-03-05', '2015-03-05 18:55:41', '2015-03-05 18:55:54', '2015-03-05 18:55:56', 'win', '2015-03-05 15:25:56'),
-(197, 72, 1, 10, '2015-03-05', '2015-03-05 18:55:42', '2015-03-05 18:55:56', '2015-03-05 18:55:57', 'win', '2015-03-05 15:25:57'),
-(198, 73, 2, 10, '2015-03-05', '2015-03-05 18:55:44', '2015-03-05 18:55:54', '2015-03-05 18:55:57', 'win', '2015-03-05 15:27:49'),
-(199, 74, 1, 10, '2015-03-05', '2015-03-05 18:55:45', '2015-03-05 18:55:58', '2015-03-05 18:55:58', 'win', '2015-03-05 15:25:58'),
-(200, 75, 1, 10, '2015-03-05', '2015-03-05 18:55:46', '2015-03-05 18:55:59', '2015-03-05 18:55:59', 'win', '2015-03-05 15:25:59'),
-(201, 76, 1, 10, '2015-03-05', '2015-03-05 18:55:47', '2015-03-05 18:55:59', '2015-03-05 18:56:01', 'win', '2015-03-05 15:26:01'),
-(202, 77, 1, 10, '2015-03-05', '2015-03-05 18:55:48', '2015-03-05 18:56:00', '2015-03-05 18:56:02', 'win', '2015-03-05 15:26:02'),
-(203, 78, 1, 1, '2015-03-05', '2015-03-05 18:55:50', '2015-03-05 18:56:00', '2015-03-05 18:56:01', 'loose', '2015-03-05 15:26:01'),
-(204, 61, 1, 10, '2015-03-05', '2015-03-05 19:12:16', '2015-03-05 19:12:30', '2015-03-05 19:12:32', 'win', '2015-03-05 15:42:32'),
-(205, 63, 1, 10, '2015-03-05', '2015-03-05 19:12:20', '2015-03-05 19:12:31', '2015-03-05 19:12:32', 'win', '2015-03-05 15:42:32'),
-(206, 65, 1, 10, '2015-03-05', '2015-03-05 19:12:23', '2015-03-05 19:12:31', '2015-03-05 19:12:33', 'win', '2015-03-05 15:42:33'),
-(207, 61, 3, 18, '2015-03-05', '2015-03-05 19:13:26', '2015-03-05 19:13:30', '2015-03-05 19:13:31', 'win', '2015-03-05 15:43:31'),
-(208, 63, 3, 18, '2015-03-05', '2015-03-05 19:13:29', '2015-03-05 19:13:30', '2015-03-05 19:13:31', 'win', '2015-03-05 15:43:31'),
-(209, 61, 3, 18, '2015-03-05', '2015-03-05 19:14:06', '2015-03-05 19:14:13', '2015-03-05 19:14:13', 'win', '2015-03-05 15:44:13'),
-(210, 61, 3, 18, '2015-03-05', '2015-03-05 19:14:19', '2015-03-05 19:14:51', '2015-03-05 19:14:51', 'win', '2015-03-05 15:44:51'),
-(211, 61, 3, 3, '2015-03-05', '2015-03-05 19:15:28', '2015-03-05 19:15:58', '2015-03-05 19:15:59', 'loose', '2015-03-05 15:45:59'),
-(212, 61, 3, 0, '2015-03-05', '2015-03-05 19:20:58', '2015-03-05 21:12:26', NULL, 'start', '2015-03-05 17:42:26');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- Triggers `games`
@@ -904,32 +842,7 @@ CREATE TABLE IF NOT EXISTS `kids` (
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `kindergartens_users_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=47 ;
-
---
--- Dumping data for table `kids`
---
-
-INSERT INTO `kids` (`id`, `user_id`, `kid_color`, `kid_number`, `kid_date`, `kid_regtime`, `kid_returntime`, `kid_endtime`, `kid_status`, `date_modified`) VALUES
-(28, 5, 'red', 1, '2015-03-03', '2015-03-03 05:38:30', '2015-03-03 05:56:50', '2015-03-03 05:56:50', 'out', '2015-03-03 02:26:50'),
-(29, 8, 'green', 2, '2015-03-03', '2015-03-03 05:38:41', '2015-03-03 05:56:34', '2015-03-03 05:56:35', 'out', '2015-03-03 02:26:35'),
-(30, 11, 'red', 2, '2015-03-03', '2015-03-03 05:39:02', '2015-03-03 06:01:27', '2015-03-03 06:06:13', 'out', '2015-03-03 02:36:13'),
-(31, 13, 'red', 3, '2015-03-03', '2015-03-03 05:40:32', NULL, NULL, 'in', NULL),
-(32, 8, 'blue', 1, '2015-03-03', '2015-03-03 05:56:40', '2015-03-03 06:06:12', NULL, 'awaiting', '2015-03-03 02:36:12'),
-(33, 5, 'black', 1, '2015-03-03', '2015-03-03 05:56:52', NULL, NULL, 'in', NULL),
-(34, 11, 'purple', 1, '2015-03-03', '2015-03-03 06:06:27', NULL, NULL, 'in', NULL),
-(35, 5, 'purple', 1, '2015-03-04', '2015-03-04 10:37:03', '2015-03-04 10:38:45', '2015-03-04 10:38:47', 'out', '2015-03-04 07:08:47'),
-(36, 10, 'yellow', 1, '2015-03-04', '2015-03-04 10:37:10', '2015-03-04 16:20:10', '2015-03-04 16:20:12', 'out', '2015-03-04 12:50:12'),
-(37, 11, 'white', 1, '2015-03-04', '2015-03-04 10:37:15', '2015-03-04 10:38:44', NULL, 'awaiting', '2015-03-04 07:08:44'),
-(38, 8, 'black', 1, '2015-03-04', '2015-03-04 10:37:48', NULL, NULL, 'in', NULL),
-(39, 9, 'blue', 1, '2015-03-04', '2015-03-04 10:37:52', NULL, NULL, 'in', NULL),
-(40, 12, 'green', 1, '2015-03-04', '2015-03-04 10:38:00', NULL, NULL, 'in', NULL),
-(41, 6, 'red', 1, '2015-03-04', '2015-03-04 10:38:04', NULL, NULL, 'in', NULL),
-(42, 13, 'purple', 4, '2015-03-04', '2015-03-04 10:38:38', NULL, NULL, 'in', NULL),
-(43, 86, 'red', 1, '2015-03-05', '2015-03-05 20:56:39', '2015-03-05 20:58:18', NULL, 'awaiting', '2015-03-05 17:28:18'),
-(44, 87, 'green', 1, '2015-03-05', '2015-03-05 20:56:42', NULL, NULL, 'in', NULL),
-(45, 88, 'black', 1, '2015-03-05', '2015-03-05 20:56:49', NULL, NULL, 'in', NULL),
-(46, 100, 'white', 1, '2015-03-05', '2015-03-05 20:57:08', NULL, NULL, 'in', NULL);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -948,7 +861,7 @@ CREATE TABLE IF NOT EXISTS `options` (
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `options_users_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `options`
@@ -956,7 +869,10 @@ CREATE TABLE IF NOT EXISTS `options` (
 
 INSERT INTO `options` (`id`, `option_cat`, `option_name`, `option_value`, `option_extra`, `option_status`, `user_id`, `date_modified`) VALUES
 (1, 'kindergarten_limit', 'limit', '100', NULL, 'enable', NULL, NULL),
-(2, 'change', '', '300', NULL, 'enable', NULL, NULL);
+(2, 'change', 'changerate', '300', NULL, 'enable', NULL, NULL),
+(3, 'game', 'gold', '5', NULL, 'enable', NULL, NULL),
+(4, 'game', 'silver', '3', NULL, 'enable', NULL, NULL),
+(5, 'game', 'bronze', '0', NULL, 'enable', NULL, '2015-03-14 07:39:19');
 
 -- --------------------------------------------------------
 
@@ -999,7 +915,7 @@ INSERT INTO `permissions` (`id`, `permission_title`, `permission_status`, `date_
 (2, 'Registerer', 'enable', NULL),
 (3, 'Boother ', 'enable', NULL),
 (4, 'Visitor', 'enable', NULL),
-(5, 'Kindergarten', 'enable', '2015-03-03 06:10:29');
+(5, 'Kindergarten', 'enable', NULL);
 
 -- --------------------------------------------------------
 
@@ -1066,7 +982,7 @@ CREATE TABLE IF NOT EXISTS `sections` (
   `section_status` enum('enable','disable','expire') NOT NULL DEFAULT 'enable',
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `sections`
@@ -1078,7 +994,8 @@ INSERT INTO `sections` (`id`, `section_title`, `section_maxpoint`, `section_stat
 (3, 'پسران جوان', 10, 'enable', NULL),
 (4, 'دختران جوان', 10, 'enable', NULL),
 (5, 'خردسالان', 10, 'enable', NULL),
-(6, 'والدین', 10, 'enable', NULL);
+(6, 'والدین', 10, 'enable', NULL),
+(7, 'تست', 10, 'enable', NULL);
 
 -- --------------------------------------------------------
 
@@ -1099,42 +1016,7 @@ CREATE TABLE IF NOT EXISTS `userlogs` (
   `date_modified` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `userlogs_users_id` (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
-
---
--- Dumping data for table `userlogs`
---
-
-INSERT INTO `userlogs` (`id`, `userlog_type`, `userlog_module`, `userlog_value`, `userlog_priority`, `userlog_ip`, `userlog_time`, `user_id`, `userlog_status`, `date_modified`) VALUES
-(1, 'login', 'login', NULL, 'low', 2130706433, '2015-03-04 13:29:20', 8, 'enable', NULL),
-(2, 'login', 'login', NULL, 'low', 2130706433, '2015-03-04 15:39:04', 8, 'enable', NULL),
-(3, 'login', 'login', NULL, 'low', 2130706433, '2015-03-04 18:14:51', 8, 'enable', NULL),
-(4, 'login', 'login', NULL, 'low', 2130706433, '2015-03-04 18:15:26', 8, 'enable', NULL),
-(5, 'login', 'login', NULL, 'low', 2130706433, '2015-03-04 18:15:35', 8, 'enable', NULL),
-(6, 'login', 'login', NULL, 'low', 2130706433, '2015-03-04 18:15:42', 8, 'enable', NULL),
-(7, 'login', 'login', NULL, 'low', 2130706433, '2015-03-04 18:16:50', 8, 'enable', NULL),
-(8, 'login', 'login', NULL, 'low', 2130706433, '2015-03-05 09:38:04', 8, 'enable', NULL),
-(9, 'access', 'register', NULL, 'medium', 2130706433, '2015-03-05 12:58:37', NULL, 'enable', NULL),
-(10, 'login', 'login', NULL, 'low', 2130706433, '2015-03-05 12:58:43', 8, 'enable', NULL),
-(11, 'access', 'register', NULL, 'medium', 2130706433, '2015-03-05 17:45:53', NULL, 'enable', NULL),
-(12, 'login', 'login', NULL, 'low', 2130706433, '2015-03-05 17:46:12', 8, 'enable', NULL),
-(13, 'login', 'login', NULL, 'low', 2130706433, '2015-03-05 18:55:34', 8, 'enable', NULL),
-(14, 'login', 'login', NULL, 'low', 2130706433, '2015-03-05 19:11:41', 8, 'enable', NULL),
-(15, 'login', 'login', NULL, 'low', 2130706433, '2015-03-05 19:11:47', 9, 'enable', NULL),
-(16, 'login', 'login', NULL, 'low', 2130706433, '2015-03-05 19:12:02', 10, 'enable', NULL),
-(17, 'access', 'home', NULL, 'medium', 2130706433, '2015-03-05 19:12:27', 10, 'enable', NULL),
-(18, 'access', 'favicon.ico', NULL, 'medium', 2130706433, '2015-03-05 19:12:28', 10, 'enable', NULL),
-(19, 'login', 'login', NULL, 'low', 2130706433, '2015-03-05 19:13:09', 10, 'enable', NULL),
-(20, 'access', 'date', NULL, 'medium', 2130706433, '2015-03-05 19:16:00', 10, 'enable', NULL),
-(21, 'access', 'favicon.ico', NULL, 'medium', 2130706433, '2015-03-05 19:16:00', 10, 'enable', NULL),
-(22, 'login', 'login', NULL, 'low', 2130706433, '2015-03-05 19:34:54', 12, 'enable', NULL),
-(23, 'login', 'login', NULL, 'low', 2130706433, '2015-03-05 19:35:09', 11, 'enable', NULL),
-(24, 'login', 'login', NULL, 'low', 2130706433, '2015-03-05 19:37:39', 11, 'enable', NULL),
-(25, 'login', 'login', NULL, 'low', 2130706433, '2015-03-05 19:38:01', 12, 'enable', NULL),
-(26, 'login', 'login', NULL, 'low', 2130706433, '2015-03-05 19:38:17', 8, 'enable', NULL),
-(27, 'access', 'register', NULL, 'medium', 2130706433, '2015-03-06 09:59:07', NULL, 'enable', NULL),
-(28, 'access', 'favicon.ico', NULL, 'medium', 2130706433, '2015-03-06 09:59:07', NULL, 'enable', NULL),
-(29, 'login', 'login', NULL, 'low', 2130706433, '2015-03-06 09:59:12', 8, 'enable', NULL);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -1191,108 +1073,20 @@ CREATE TABLE IF NOT EXISTS `users` (
   KEY `users_booths_id` (`booth_id`),
   KEY `users_permissions_id` (`permission_id`),
   KEY `users_countrys_id` (`country_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=105 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=132 ;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `user_gender`, `user_firstname`, `user_lastname`, `user_mobile`, `user_mobile2`, `user_password`, `user_birthyear`, `user_degree`, `country_id`, `user_province`, `user_nationalcode`, `user_passport`, `user_imageaddr`, `user_logincounter`, `user_refinecounter`, `user_parent`, `permission_id`, `user_feedback`, `user_status`, `user_barcode`, `user_enterdatetime`, `user_exitdatetime`, `booth_id`, `date_modified`) VALUES
-(5, 'male', 'جواد', 'عوض زاده', '989357629759', NULL, '$2y$07$x889MdhsRxGcGshcrqdEc.mcx0e1o2PeIjJPKx0VdxK4LQ1xDnZUS', 2005, NULL, NULL, '10', NULL, NULL, NULL, 0, NULL, NULL, 1, NULL, 'active', 10000, '2015-03-03 16:34:15', NULL, 2, '2015-03-05 15:24:39'),
-(6, 'female', 'رضا', 'محیطی', '989109610612', NULL, '$2y$07$8YHQXcb0TblkqgdtG/dAseC//MUscFTM5fSsga8.qJJSNog27CSMC', 1990, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 2, NULL, 'active', 10006, '2015-03-01 16:34:15', NULL, 1, '2015-03-05 12:06:35'),
-(8, 'male', 'کاربر', 'سطح ۱', '989120001111', NULL, '$2y$07$Lfmh5iKdHVRLA5iresYl1.TIw7UxIRKviWymBf8.6LZYe4Ta.tjbq', 2005, NULL, 101, '10', 123, NULL, NULL, 47, NULL, NULL, 1, NULL, 'active', 10001, '2015-03-04 16:34:15', NULL, 3, '2015-03-06 06:29:11'),
-(9, 'male', 'کاربر', 'سطح ۲', '989120002222', NULL, '$2y$07$Pb/d4KwCCjs75Xmw9jFYJe6NtfQTvQECQrrakpvs/t5cJnGH1O0Ce', 2003, NULL, 101, '10', NULL, NULL, NULL, 2, NULL, NULL, 2, NULL, 'active', 10002, '2015-03-02 16:34:15', NULL, 1, '2015-03-05 15:41:46'),
-(10, 'male', 'کاربر', 'سطح ۳', '989120003333', NULL, '$2y$07$unk4DSpJZIQI3ojbcFptPeydtIM/BJvIV2JXsHIKB2DKublolvk86', 2005, NULL, 101, '10', 345, NULL, NULL, 2, NULL, NULL, 3, NULL, 'active', 10003, '2015-03-01 16:34:15', NULL, 3, '2015-03-05 15:43:08'),
-(11, 'male', 'کاربر', 'سطح ۴', '989120004444', NULL, '$2y$07$PFcSFRbDiDfyD3xQIOZ6hOK1N.gbHG4dsUfzMAL5eHBxX29Q0dSky', 2004, NULL, 101, '18', NULL, NULL, NULL, 2, NULL, NULL, 4, NULL, 'active', 10004, '2015-03-03 16:34:15', NULL, 1, '2015-03-05 16:07:38'),
-(12, 'female', 'کاربر', 'سطح ۵', '989120005555', NULL, '$2y$07$e1gyYa0mZJ7YWLwCm8xn2OsA.ljlhd5mFQOshOx0TtkRoA.PkvjOa', 2003, NULL, 101, '10', 123, NULL, NULL, 10, NULL, NULL, 5, NULL, 'active', 10005, '2015-03-02 16:34:15', NULL, 1, '2015-03-05 16:08:00'),
-(13, 'male', 'جواد', 'عوض زاده', '09357269759', NULL, NULL, 2005, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10008, '2015-03-04 03:37:34', NULL, NULL, '2015-03-05 06:20:18'),
-(14, 'male', 'سارا', 'ترکمنی', '09357239876', NULL, NULL, 2005, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10028, '2015-03-03 23:18:27', NULL, NULL, '2015-03-05 06:24:46'),
-(16, 'male', 'جواد', 'عوض زاده', '09119835682', NULL, NULL, 2003, NULL, 101, NULL, NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10016, '2015-03-04 07:29:50', NULL, NULL, '2015-03-05 06:27:12'),
-(20, 'female', 'تست خانم', 'اول', '09111941061', NULL, NULL, 2005, NULL, 101, '18', 2190053995, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10031, '2015-03-04 18:39:26', NULL, NULL, '2015-03-05 06:25:08'),
-(21, 'male', 'تست خانم', 'اول', '09111941061', NULL, NULL, 2005, NULL, 101, '10', 2190053995, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10032, '2015-03-02 18:39:28', NULL, NULL, '2015-03-05 06:20:50'),
-(22, 'male', 'تست خانم', 'اول', '09111941061', NULL, NULL, 2005, NULL, 101, '18', 2190053995, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10033, '2015-03-05 18:44:54', NULL, NULL, '2015-03-05 06:22:24'),
-(23, 'male', 'تست خانم', 'اول', '09111941061', NULL, NULL, 2005, NULL, 101, '10', 2190053995, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10034, '2015-03-04 18:49:57', NULL, NULL, '2015-03-05 06:24:49'),
-(24, 'female', 'تست خانم', 'اول', '09111941061', NULL, NULL, 2005, NULL, 101, '10', 2190053994, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10035, '2015-03-06 18:55:25', NULL, NULL, '2015-03-05 06:21:02'),
-(25, 'male', 'تست خانم', 'اول', '09111941061', NULL, NULL, 2005, NULL, 101, '10', 2190053994, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10036, '2015-03-04 18:56:08', NULL, NULL, '2015-03-05 06:24:52'),
-(26, 'female', 'تست خانم', 'اول', '09111941061', NULL, NULL, 2005, NULL, 101, '10', 2190053994, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10037, '2015-03-04 18:56:45', NULL, NULL, '2015-03-05 06:24:18'),
-(27, 'female', 'تست خانم', 'اول', '09111941061', NULL, NULL, 2004, NULL, 101, '10', 2190053994, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10038, '2015-03-06 18:57:03', NULL, NULL, '2015-03-05 06:26:25'),
-(28, 'male', 'تست', 'مرد اول', '09111941061', NULL, NULL, 2004, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10039, '2015-03-04 19:09:57', NULL, NULL, '2015-03-05 06:26:22'),
-(29, 'male', 'تست', 'مرد اول', '09111941061', NULL, NULL, 2005, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10040, '2015-03-06 19:10:02', NULL, NULL, '2015-03-05 06:26:29'),
-(30, 'male', 'تست', 'مرد اول', '09111941061', NULL, NULL, 2005, NULL, 101, '18', 2190053994, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10041, '2015-03-04 19:10:13', NULL, NULL, '2015-03-05 06:20:59'),
-(31, 'female', 'تست', 'مرد سوم', '1238513297324', NULL, NULL, 1990, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10040, '2015-03-05 13:24:30', NULL, NULL, '2015-03-05 12:06:24'),
-(32, 'male', 'تست', 'مرد چهارم', '091287343245', NULL, NULL, 1990, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10041, '2015-03-05 13:26:18', NULL, NULL, '2015-03-05 12:06:26'),
-(33, 'female', 'تست', 'مرد چهارم', '091287343245', NULL, NULL, 2004, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10042, '2015-03-05 13:26:20', NULL, NULL, '2015-03-05 12:05:55'),
-(34, 'male', 'تست', 'مرد چهارم', '091287343245', NULL, NULL, 2004, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10043, '2015-03-05 13:26:24', NULL, NULL, '2015-03-05 12:05:58'),
-(35, 'male', 'تست', 'مرد چهارم', '091287343245', NULL, NULL, 2005, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10044, '2015-03-03 13:26:30', NULL, NULL, '2015-03-05 12:06:07'),
-(36, 'female', 'تست', 'مرد چهارم', '091287343245', NULL, NULL, 2004, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10045, '2015-03-03 13:29:28', NULL, NULL, '2015-03-05 12:05:56'),
-(37, 'male', 'تست', 'مرد چهارم', '091287343245', NULL, NULL, 1990, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10046, '2015-03-03 13:30:05', NULL, NULL, '2015-03-05 12:06:21'),
-(38, 'male', 'تست', 'مرد چهارم', '091287343245', NULL, NULL, 2005, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10047, '2015-03-02 13:30:44', NULL, NULL, '2015-03-05 12:06:04'),
-(39, 'female', 'تست', 'مرد چهارم', '091287343245', NULL, NULL, 2005, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10048, '2015-03-02 13:31:03', NULL, NULL, '2015-03-05 12:06:05'),
-(40, 'male', 'تست', 'مرد پنجم', '9281365612', NULL, NULL, 1990, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10049, '2015-03-03 14:22:46', NULL, NULL, '2015-03-05 12:08:12'),
-(41, 'male', 'تست', 'مرد پنجم', '9281365612', NULL, NULL, 2005, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10050, '2015-03-05 14:22:57', NULL, NULL, '2015-03-05 14:50:37'),
-(42, 'male', 'تست', 'مرد پنجم', '9281365612', NULL, NULL, 1990, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10051, '2015-03-03 14:24:44', NULL, NULL, '2015-03-05 12:08:10'),
-(43, 'female', 'تست', 'مرد پنجم', '9281365612', NULL, NULL, 2005, NULL, 101, NULL, NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10052, '2015-03-03 14:30:10', NULL, NULL, '2015-03-05 12:08:02'),
-(44, 'male', 'تست', 'مرد پنجم', '9281365612', NULL, NULL, 2005, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10053, '2015-03-05 14:31:08', NULL, NULL, '2015-03-05 12:07:26'),
-(45, 'male', 'تست', 'مرد پنجم', '9281365612', NULL, NULL, 2005, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10054, '2015-03-03 14:33:38', NULL, NULL, '2015-03-05 12:08:01'),
-(46, 'male', 'تست', 'مرد پنجم', '9281365612', NULL, NULL, 2005, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10055, '2015-03-01 14:33:53', NULL, NULL, '2015-03-05 12:08:17'),
-(47, 'female', 'تست', 'خانم سوم', '09125689375', NULL, NULL, 1990, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10060, '2015-03-05 14:34:40', NULL, NULL, '2015-03-05 12:07:05'),
-(48, 'male', '', '', NULL, NULL, NULL, 2004, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 00000, '2015-03-05 15:03:13', NULL, NULL, '2015-03-05 12:07:24'),
-(49, 'female', '', '', NULL, NULL, NULL, 2005, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 00000, '2015-03-05 15:03:25', NULL, NULL, '2015-03-05 12:07:47'),
-(50, 'male', '', '', NULL, NULL, NULL, 2000, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 00000, '2015-03-05 15:04:21', NULL, NULL, '2015-03-05 14:50:54'),
-(51, 'female', '', '', NULL, NULL, NULL, 2000, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 00000, '2015-03-05 15:06:50', NULL, NULL, '2015-03-05 14:50:40'),
-(52, 'male', '', '', NULL, NULL, NULL, 1990, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 00000, '2015-03-05 15:07:17', NULL, NULL, '2015-03-05 12:09:00'),
-(53, 'male', '', '', NULL, NULL, NULL, 2005, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 00000, '2015-03-04 15:07:48', NULL, NULL, '2015-03-05 12:09:08'),
-(54, 'male', '', '', NULL, NULL, NULL, 1990, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 00000, '2015-03-04 15:13:23', NULL, NULL, '2015-03-05 12:09:06'),
-(55, 'male', '', '', NULL, NULL, NULL, 1990, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 00000, '2015-03-01 15:14:11', NULL, NULL, '2015-03-05 12:08:57'),
-(56, 'male', '', '', NULL, NULL, NULL, 1990, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 00000, '2015-03-04 15:17:00', NULL, NULL, '2015-03-05 12:08:46'),
-(57, 'female', 'تست', 'خانم سوم', '09125689375', NULL, NULL, 2005, NULL, 101, '10', 2190053994, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10062, '2015-03-05 15:17:04', NULL, NULL, '2015-03-05 12:07:15'),
-(58, 'male', 'آقای', 'تست ششم', '124823756213', NULL, NULL, 2005, NULL, 101, '18', 2190053994, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10065, '2015-03-01 15:27:19', NULL, NULL, '2015-03-05 12:08:18'),
-(59, 'male', 'آقای', 'تست ششم', '124823756213', NULL, NULL, 2005, NULL, 101, '18', 2190053994, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10066, '2015-03-05 15:27:27', NULL, NULL, '2015-03-05 12:07:14'),
-(60, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 2000, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10070, '2015-03-03 16:13:25', NULL, NULL, '2015-03-05 14:51:35'),
-(61, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 1990, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10071, '2015-03-05 16:15:05', NULL, NULL, '2015-03-05 14:50:49'),
-(62, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 2000, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10072, '2015-03-04 16:15:32', NULL, NULL, '2015-03-05 14:51:33'),
-(63, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 1990, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10073, '2015-03-05 16:18:26', NULL, NULL, '2015-03-05 14:50:47'),
-(64, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 2000, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10074, '2015-03-04 16:18:49', NULL, NULL, '2015-03-05 14:51:32'),
-(65, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 1990, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10075, '2015-03-05 16:19:42', NULL, NULL, '2015-03-05 14:51:22'),
-(66, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 2000, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10076, '2015-03-05 16:21:27', NULL, NULL, NULL),
-(67, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 1990, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10077, '2015-03-02 16:21:40', NULL, NULL, '2015-03-05 14:51:44'),
-(68, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 2000, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10078, '2015-03-03 16:21:52', NULL, NULL, '2015-03-05 14:51:41'),
-(69, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 1990, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10079, '2015-03-02 16:22:08', NULL, NULL, '2015-03-05 14:51:39'),
-(70, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 2000, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10080, '2015-03-05 16:22:16', NULL, NULL, NULL),
-(71, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 2000, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10081, '2015-03-05 16:23:24', NULL, NULL, NULL),
-(72, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 2000, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10082, '2015-03-05 16:23:40', NULL, NULL, NULL),
-(73, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 2000, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10083, '2015-03-05 16:24:19', NULL, NULL, NULL),
-(74, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 2000, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10084, '2015-03-05 16:24:39', NULL, NULL, NULL),
-(75, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 2000, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10085, '2015-03-05 16:26:00', NULL, NULL, NULL),
-(76, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, 2000, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10086, '2015-03-05 16:26:26', NULL, NULL, NULL),
-(77, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, NULL, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10087, '2015-03-05 16:26:37', NULL, NULL, NULL),
-(78, 'male', 'تست', 'هفتم', '09124723855293', NULL, NULL, NULL, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10088, '2015-03-05 16:29:00', NULL, NULL, NULL),
-(79, 'female', 'تست خانم', 'هشتم', '1287541293712', NULL, NULL, 1990, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10091, '2015-03-05 17:50:58', NULL, NULL, '2015-03-05 14:49:23'),
-(80, 'male', '21351325132', '15232135', '23523514312', NULL, NULL, 1991, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10095, '2015-03-05 17:55:18', NULL, NULL, NULL),
-(81, 'male', '21351325132', '15232135', '23523514312', NULL, NULL, 1991, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10096, '2015-03-05 17:56:13', NULL, NULL, NULL),
-(82, 'male', '21351325132', '15232135', '23523514312', NULL, NULL, 0000, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10097, '2015-03-05 17:56:24', NULL, NULL, NULL),
-(83, 'male', '21351325132', '15232135', '23523514312', NULL, NULL, 1991, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10098, '2015-03-05 17:57:01', NULL, NULL, NULL),
-(84, 'male', '21351325132', '15232135', '23523514312', NULL, NULL, 1995, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10099, '2015-03-05 17:57:17', NULL, NULL, NULL),
-(85, 'male', 'تست', 'بعدی!', '8732513275', NULL, NULL, 2015, NULL, 101, NULL, NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10000, '2015-03-05 18:33:28', NULL, NULL, NULL),
-(86, 'male', 'تست', 'بعدی!', '8732513275', NULL, NULL, 2015, NULL, 101, NULL, NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10001, '2015-03-05 18:33:46', NULL, NULL, NULL),
-(87, 'male', 'تست', 'بعدی!', '8732513275', NULL, NULL, 2015, NULL, 101, NULL, NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10002, '2015-03-05 18:35:02', NULL, NULL, NULL),
-(88, 'male', 'تست', 'بعدی!', '8732513275', NULL, NULL, 2015, NULL, 102, NULL, NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10003, '2015-03-05 18:37:23', NULL, NULL, NULL),
-(89, 'male', 'تست', 'بعدی!', '8732513275', NULL, NULL, 2005, NULL, 101, NULL, NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10004, '2015-03-04 18:44:55', NULL, NULL, '2015-03-05 15:21:14'),
-(90, 'male', 'تست', 'بعدی!', '8732513275', NULL, NULL, 2005, NULL, 101, NULL, NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10005, '2015-03-03 18:45:14', NULL, NULL, '2015-03-05 15:21:09'),
-(91, 'male', 'تست', 'بعدی!', '8732513275', NULL, NULL, 2005, NULL, 101, NULL, NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10006, '2015-03-02 18:45:22', NULL, NULL, '2015-03-05 15:21:07'),
-(92, 'male', 'تست', 'بعدی!', '8732513275', NULL, NULL, 2015, NULL, 101, NULL, NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10007, '2015-03-04 18:45:26', NULL, NULL, '2015-03-05 15:20:59'),
-(93, 'male', 'تست', 'استان و کشور', '8732513275', NULL, NULL, 2005, NULL, 101, NULL, NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10008, '2015-03-01 18:46:04', NULL, NULL, '2015-03-05 15:20:48'),
-(94, 'male', 'تست', 'استان و کشور', '8732513275', NULL, NULL, 2015, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10009, '2015-03-02 18:46:25', NULL, NULL, '2015-03-05 15:21:02'),
-(95, 'male', 'تست', 'استان و کشور', '8732513275', NULL, NULL, 2015, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10010, '2015-03-04 18:46:41', NULL, NULL, '2015-03-05 15:20:46'),
-(96, 'male', 'تست', 'استان و کشور', '8732513275', NULL, NULL, 2005, NULL, 101, NULL, NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10011, '2015-03-04 18:46:54', NULL, NULL, '2015-03-05 15:21:04'),
-(97, 'male', 'تست', 'استان و کشور', '8732513275', NULL, NULL, 2005, NULL, 101, NULL, NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10012, '2015-03-01 18:47:19', NULL, NULL, '2015-03-05 15:20:50'),
-(98, 'male', 'تست', 'استان و کشور', '8732513275', NULL, NULL, 2005, NULL, 88, NULL, NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10013, '2015-03-03 18:47:54', NULL, NULL, '2015-03-05 15:20:55'),
-(99, 'male', 'تست', 'استان و کشور', '8732513275', NULL, NULL, 2005, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10014, '2015-03-02 18:48:07', NULL, NULL, '2015-03-05 15:20:53'),
-(100, 'male', 'تست', 'استان و کشور', '8732513275', NULL, NULL, 2005, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10015, '2015-03-05 18:48:19', NULL, NULL, '2015-03-05 15:20:09'),
-(101, 'male', 'تست', 'استان و کشور', '8732513275', NULL, NULL, 2005, NULL, 99, NULL, NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10016, '2015-03-05 18:48:36', NULL, NULL, '2015-03-05 15:20:12'),
-(102, 'male', 'تست', 'استان و کشور', '8732513275', NULL, NULL, 2004, NULL, 99, NULL, NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10017, '2015-03-05 18:49:49', NULL, NULL, NULL),
-(103, 'male', 'تست', 'استان و کشور', '8732513275', NULL, NULL, 2004, NULL, 101, '18', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10018, '2015-03-05 18:49:53', NULL, NULL, NULL),
-(104, 'male', 'تست', 'استان و کشور', '8732513275', NULL, NULL, 2004, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10019, '2015-03-05 18:49:57', NULL, NULL, NULL);
+(5, 'male', 'جواد', 'عوض زاده', '989357629759', NULL, '$2y$07$x889MdhsRxGcGshcrqdEc.mcx0e1o2PeIjJPKx0VdxK4LQ1xDnZUS', 1990, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 1, NULL, 'active', 10000, '2015-03-16 16:34:15', NULL, 1, NULL),
+(6, 'male', 'رضا', 'محیطی', '989109610612', NULL, '$2y$07$8YHQXcb0TblkqgdtG/dAseC//MUscFTM5fSsga8.qJJSNog27CSMC', 1990, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 1, NULL, 'active', 10006, '2015-03-16 16:34:15', NULL, 1, NULL),
+(8, 'male', 'کاربر', 'سطح ۱', '989120001111', NULL, '$2y$07$Lfmh5iKdHVRLA5iresYl1.TIw7UxIRKviWymBf8.6LZYe4Ta.tjbq', 1990, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 1, NULL, 'active', 10001, '2015-03-16 16:34:15', NULL, 1, NULL),
+(9, 'male', 'کاربر', 'سطح ۲', '989120002222', NULL, '$2y$07$Pb/d4KwCCjs75Xmw9jFYJe6NtfQTvQECQrrakpvs/t5cJnGH1O0Ce', 1990, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 2, NULL, 'active', 10002, '2015-03-16 16:34:15', NULL, 1, NULL),
+(10, 'male', 'کاربر', 'سطح ۳', '989120003333', NULL, '$2y$07$unk4DSpJZIQI3ojbcFptPeydtIM/BJvIV2JXsHIKB2DKublolvk86', 1990, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 3, NULL, 'active', 10003, '2015-03-16 16:34:15', NULL, 1, NULL),
+(11, 'male', 'کاربر', 'سطح ۴', '989120004444', NULL, '$2y$07$PFcSFRbDiDfyD3xQIOZ6hOK1N.gbHG4dsUfzMAL5eHBxX29Q0dSky', 1990, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 4, NULL, 'active', 10004, '2015-03-16 16:34:15', NULL, 1, NULL),
+(12, 'male', 'کاربر', 'سطح ۵', '989120005555', NULL, '$2y$07$e1gyYa0mZJ7YWLwCm8xn2OsA.ljlhd5mFQOshOx0TtkRoA.PkvjOa', 1990, NULL, 101, '10', NULL, NULL, NULL, 0, NULL, NULL, 5, NULL, 'active', 10005, '2015-03-16 16:34:15', NULL, 1, NULL);
 
 --
 -- Constraints for dumped tables

@@ -24,7 +24,16 @@ class model extends \mvc\model
 			// $qry = $qry->field('#user_enterdatetime as date','#count(*) as value');
 			$qry = $qry->groupbyUser_enterdatetime('@DAY');
 		}
-		if($mychild)
+		if($mychild === 'country')
+		{
+			$qry          = $qry->groupbyCountry_id();
+
+			$qry = $qry->field("#date_format(user_enterdatetime,'%Y-%m-%d') as date",
+													'#count(*) as value',
+													"#$mychild"."_id as $mychild"
+												);
+		}
+		elseif($mychild)
 		{
 			$groupbychild = 'groupbyUser_'.$mychild;
 			$qry          = $qry->$groupbychild();
@@ -50,6 +59,13 @@ class model extends \mvc\model
 	{
 		$qry = $this->sql()->tableUsers()->groupbyUser_enterdatetime('@DAY')->select();
 		return $qry->num();
+	}
+
+	// return the name of province
+	public function mycountryName($id)
+	{
+		$qry = $this->sql()->tableCountrys()->whereId($id)->select();
+		return $qry->assoc('country_namefa');
 	}
 
 	// return the name of province

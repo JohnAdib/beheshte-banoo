@@ -59,6 +59,9 @@ class view extends \mvc\view
 							$myname   = date("Y") - $from .' '.T_('years old');
 						}
 					}
+					// return the name of country
+					elseif($mychild === 'country')
+						$myname = $this->model()->mycountryName($value[$mychild]);
 					// return the name of provinces
 					elseif($mychild === 'province')
 						$myname = $this->model()->myprovinceName($value[$mychild]);
