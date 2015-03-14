@@ -54,6 +54,9 @@ function transtext()
 	echo T_('point');
 	echo T_('report');
 	echo T_('change');
+	echo T_('gold');
+	echo T_('silver');
+	echo T_('bronze');
 
 
 

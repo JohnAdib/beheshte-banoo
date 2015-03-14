@@ -126,27 +126,28 @@ bindBarcode();
 
 // ***************************************************** points
 function bindPoint() {
+  $('#person-avatar').hide();
   $('#form-point').on('ajaxify:success', function(e, data) {
     if(data.status == 1)
     {
       var mymsg = data.msg;
-      console.log(mymsg);
-
 
       $("#person-avatar").animate({opacity: 1.0}, 3000);
-
       $("#person-avatar").attr("src","s-up/1000/"+mymsg.code+"-thumb.jpg");
-
-      document.getElementById('person-name').innerHTML = mymsg.name;
-      document.getElementById('person-games').innerHTML = mymsg.games;
-      document.getElementById('person-points').innerHTML = mymsg.points;
+      $("#person-medal").attr("src","static/images/medal_"+mymsg.medal+".png");
+      document.getElementById('person-name').innerHTML  = mymsg.name;
+      document.getElementById('person-game').innerHTML  = mymsg.game;
+      document.getElementById('person-prize').innerHTML = mymsg.prize;
+      $('#person-avatar').show();
 
       setTimeout(function()
       {
         $("#person-avatar").attr("src","static/images/face.png");
-        document.getElementById('person-name').innerHTML = '';
-        document.getElementById('person-games').innerHTML = '';
-        document.getElementById('person-points').innerHTML = '';
+        $("#person-medal").attr("src","static/images/medal.png");
+        document.getElementById('person-name').innerHTML  = '';
+        document.getElementById('person-game').innerHTML  = '';
+        document.getElementById('person-prize').innerHTML = '';
+        $('#person-avatar').hide();
 
       }, 5000);
     }
@@ -168,27 +169,27 @@ function bindchange() {
     if(data.status == 1)
     {
       var mymsg = data.msg;
-      console.log(mymsg);
-
 
       $("#person-avatar").animate({opacity: 1.0}, 3000);
-
       $("#person-avatar").attr("src","s-up/1000/"+mymsg.code+"-thumb.jpg");
+      $("#person-medal").attr("src","static/images/medal_"+mymsg.medal+".png");
+      document.getElementById('person-name').innerHTML  = mymsg.name;
+      document.getElementById('person-game').innerHTML  = mymsg.game;
+      document.getElementById('person-prize').innerHTML = mymsg.prize;
+      $('#person-avatar').show();
 
-      document.getElementById('person-name').innerHTML = mymsg.name;
-      document.getElementById('person-games').innerHTML = mymsg.games;
-      document.getElementById('person-points').innerHTML = mymsg.points;
-      document.getElementById('person-prizes').innerHTML = mymsg.prizes;
 
       setTimeout(function()
       {
         $("#person-avatar").attr("src","static/images/face.png");
-        document.getElementById('person-name').innerHTML = '';
-        document.getElementById('person-games').innerHTML = '';
-        document.getElementById('person-points').innerHTML = '';
-        document.getElementById('person-prizes').innerHTML = '';
+        $("#person-medal").attr("src","static/images/medal.png");
+        document.getElementById('person-name').innerHTML  = '';
+        document.getElementById('person-game').innerHTML  = '';
+        document.getElementById('person-prize').innerHTML = '';
+        document.getElementById('person-medal').innerHTML = '';
+        $('#person-avatar').hide();
 
-      }, 10000);
+      }, 20000);
     }
   });
 }

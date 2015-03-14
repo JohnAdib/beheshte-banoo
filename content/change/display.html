@@ -6,19 +6,19 @@
 <div class="center" data-xhr="center">
  <div class="content">
   <p id="description">{%trans%}Scan your barcode and change your points to money!{%endtrans%}</p>
-  <form class="ajx form row form-barcode" method="post" id="form-change" data-clear>
+  <form class="ajx form row form-barcode" method="post" id="form-change" data-clear data-delay=3000>
 {{forms.make(form['barcode'])}}
   </form>
  </div>
  <div id="person-card" class="row">
   <div id="person-data" class="span8">
    <div id="person-name"></div>
-   <div id="person-games"></div>
-   <div id="person-points"></div>
-   <div id="person-prizes"></div>
+   <div id="person-game"></div>
+   <div id="person-prize"></div>
   </div>
   <div class="span4">
-   <img id="person-avatar" src="{{url.static}}images/face.png" alt='avatar' />
+   <img id="person-avatar" src="{{url.static}}images/face.png" alt='avatar'/>
+   <img id="person-medal" src="{{url.static}}images/medal.png" alt='medal'/>
   </div>
  </div>
 </div>

@@ -6,12 +6,13 @@ function transtext()
 	echo T_("summary reports");                                                       // Line 93
 	echo T_("popular booths");                                                        // Line 94
 	echo T_("show all visitors groupby date");                                        // Line 95
-	echo T_("by");                                                                    // Line 98
+	echo T_("by");                                                                    // Line 99
 	echo T_("birthyear");                                                             // Line 96
-	echo T_("province");                                                              // Line 97
-	echo T_("gender");                                                                // Line 98
-	echo T_("Person who visit");                                                      // Line 40
-	echo T_("Person");                                                                // Line 43
+	echo T_("country");                                                               // Line 97
+	echo T_("province");                                                              // Line 98
+	echo T_("gender");                                                                // Line 99
+	echo T_("Person who visit");                                                      // Line 41
+	echo T_("Person");                                                                // Line 44
 
 	//---------------------------------------------content_report/summary/display.html
 	echo T_("Total Admin User");                                                      // Line 19
@@ -64,10 +65,10 @@ function transtext()
 	echo T_("If child absent click on absent button.");                               // Line 8 Seperate
 	echo T_("For start game click on Start.");                                        // Line 8 Seperate
 	echo T_("After starting game you can set winner and looser for gain points.");    // Line 8 Seperate
-	echo T_("Winner");                                                                // Line 22
-	echo T_("Looser");                                                                // Line 23
-	echo T_("Start");                                                                 // Line 21
-	echo T_("Absent");                                                                // Line 24
+	echo T_("Winner");                                                                // Line 24
+	echo T_("Looser");                                                                // Line 25
+	echo T_("Start");                                                                 // Line 23
+	echo T_("Absent");                                                                // Line 26
 
 	//--------------------------------------------------------content/kid/display.html
 	echo T_("You can manage kids in this page.");                                     // Line 8 Seperate

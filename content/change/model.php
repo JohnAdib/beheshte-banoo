@@ -19,34 +19,36 @@ class model extends \mvc\model
 
 		$qry        = $this->sql()->tableGames()->whereUser_id($id)->select();
 		$datatable  = $qry->allassoc();
+		$usertable  = $this->sql()->tableUsers()->whereId($id)->select()->assoc();
 		$totalpoint = 0;
+		$finalprize = null;
 
 		foreach ($datatable as $key => $value)
-		{
 			$totalpoint += $value['game_prize'];
-		}
-		
-		$changevalue  = $this->sql()->tableOptions()
-											->whereOption_cat('change')
-											->select()->assoc('option_value');
-		if(!$changevalue)
-			$changevalue = 100;
+
+		$prizetable  = $this->sql()->tableOptions()->whereOption_cat('game')->select()->allassoc();
+		$prizelist   = array();
+		foreach ($prizetable as $row)
+			$prizelist[$row['option_value']] = $row['option_name'];
+
+		ksort($prizelist);
+		foreach ($prizelist as $key => $value)
+			if($totalpoint >= $key)
+				$finalprize = $value;
 
 
-		$qry2       = $this->sql()->tableUsers()->whereId($id)->select();
-		$usertable  = $qry2->assoc();
-
-		debug::msg('code', $id);
-		debug::msg('name', $usertable['user_firstname'].' '.$usertable['user_lastname']);
-		debug::msg('games', T_("no of games")  .' '. $qry->num());
-		debug::msg('points', T_("total points").' '. $totalpoint);
-		debug::msg('prizes', T_("Total of Cash").' '.$totalpoint*$changevalue.' '.T_("Toman"));
+		debug::msg('code',  $id);
+		debug::msg('name',  $usertable['user_firstname'].' '.$usertable['user_lastname']);
+		debug::msg('game',  T_("no of games")  .' '. $qry->num());
+		debug::msg('prize', T_("your prize is bon").' <b>'.T_($finalprize).'</b>');
+		debug::msg('medal', $finalprize);
 
 
 		$qry  = $this->sql()->tableUsers()
 						->setUser_status('deactive')
 						->setUser_exitdatetime(date('Y-m-d H:i:s'))
-						->whereId($id)->update();
+						// ->whereId($id)->update();
+						->whereId($id);
 
 		$this->commit(function()   { debug::true(T_("We hope see you again!")); });
 		$this->rollback(function() { debug::title(T_("Change to money failed!"));     });
