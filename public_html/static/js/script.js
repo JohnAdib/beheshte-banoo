@@ -197,7 +197,9 @@ $(window).on('statechange', function() {
   if(history.state && history.state.url.indexOf('change') > -1 && !history.state.replace) {
     bindchange();
   }
-  Webcam.reset();
+  if(history.state.id !== 'camera' && typeof Webcam !== 'undefined'){
+    Webcam.reset();
+  }
 });
 bindchange();
 
