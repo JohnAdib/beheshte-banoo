@@ -50,11 +50,9 @@ function transtext()
 	**/
 	echo T_('Boother');
 	echo T_('Registerer');	
-	echo T_('Camera');
-	echo T_('Game');
-	echo T_('Point');
-	echo T_('Report');
-	echo T_('Kid');
+	echo T_('camera');
+	echo T_('point');
+	echo T_('report');
 	echo T_('change');
 
 

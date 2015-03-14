@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-03-08 22:57+0330\n"
-"PO-Revision-Date: 2015-03-08 22:57+0330\n"
+"POT-Creation-Date: 2015-03-14 12:14+0330\n"
+"PO-Revision-Date: 2015-03-14 12:14+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -45,12 +45,12 @@ msgstr "بدون مقدار"
 msgid "years old"
 msgstr "ساله"
 
-#: ../../../.././content_report/home/view.php:68
+#: ../../../.././content_report/home/view.php:71
 #: ../../../.././includes/languages/twig_translation.php:7
 msgid "popular booths"
 msgstr "پرطرفدارترین غرفه ها"
 
-#: ../../../.././content_report/home/view.php:75
+#: ../../../.././content_report/home/view.php:78
 msgid "Visitors"
 msgstr "بازدیدکنندگان"
 
@@ -1006,26 +1006,19 @@ msgid "Registerer"
 msgstr "مسئول ثبت نام"
 
 #: ../../../.././includes/languages/static_translation.php:53
-msgid "Camera"
+msgid "camera"
 msgstr "ثبت تصویر"
 
 #: ../../../.././includes/languages/static_translation.php:54
-msgid "Game"
-msgstr "بازی"
+#: ../../../.././includes/languages/twig_translation.php:30
+msgid "point"
+msgstr "امتیاز"
 
 #: ../../../.././includes/languages/static_translation.php:55
-msgid "Point"
-msgstr "بررسی امتیاز"
-
-#: ../../../.././includes/languages/static_translation.php:56
-msgid "Report"
+msgid "report"
 msgstr "گزارش"
 
-#: ../../../.././includes/languages/static_translation.php:57
-msgid "Kid"
-msgstr "کودکستان"
-
-#: ../../../.././includes/languages/static_translation.php:58
+#: ../../../.././includes/languages/static_translation.php:56
 msgid "change"
 msgstr "تبدیل"
 
@@ -1096,10 +1089,6 @@ msgstr "برترین بازیکن"
 #: ../../../.././includes/languages/twig_translation.php:29
 msgid "with"
 msgstr "با"
-
-#: ../../../.././includes/languages/twig_translation.php:30
-msgid "point"
-msgstr "امتیاز"
 
 #: ../../../.././includes/languages/twig_translation.php:31
 msgid "Total visitors"
@@ -1359,6 +1348,15 @@ msgstr "بهشت بانو برای کودکان"
 #: ../../../.././includes/mvc/view.php:14
 msgid "Behsht Banoo is good"
 msgstr "بهشت بانو خوب است!"
+
+#~ msgid "Game"
+#~ msgstr "بازی"
+
+#~ msgid "Point"
+#~ msgstr "بررسی امتیاز"
+
+#~ msgid "Kid"
+#~ msgstr "کودکستان"
 
 #~ msgid "No of games"
 #~ msgstr "تعداد بازی ها"
