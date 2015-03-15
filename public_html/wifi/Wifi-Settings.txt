@@ -1,21 +1,32 @@
------------------------------------------------ Max Addresses
-AccessPoint1 			80:1F:02:DD:93:B7
-AccessPoint2 			80:1F:02:DD:92:C1
-AccessPoint3 			80:1F:02:DD:92:B4
-AccessPoint4 			
+---------------------------------------------------------------------------------- Max Addresses
+Device 					MAC ADDRESS 			IP STATIC
+AccessPoint1 			80:1F:02:DD:93:B7 		192.168.7.11
+AccessPoint2 			80:1F:02:DD:92:C1 		192.168.7.12
+AccessPoint3 			80:1F:02:DD:92:B4 		192.168.7.13
+AccessPoint4 			80:1F:02:DD:94:1F 		192.168.7.14
+
+Server 					14:cc:20:18:69:e4 		192.168.7.20
+
+Other1 					80:1f:02:85:5e:ba
+Other2 					98:0d:2e:fe:28:b9	
+Other3 					14:cc:20:18:69:e4	
 
 
------------------------------------------------ PassCodes
-AccessPoint1			QuranHadith1
-AccessPoint2			QuranHadith2
-AccessPoint3			QuranHadith3
-AccessPoint4			QuranHadith4
-controlPanel 		 	edimax
-password 				BeheshteBanoo1233
+---------------------------------------------------------------------------------- Main AccessPoint Settings
+ID 						SSID 				IP 					VLAN ID			DHCP
 
+AccessPoint1			QuranHadith1		192.168.7.11		11 				50 -100
+AccessPoint2			QuranHadith2		192.168.7.12		12 				100-150
+AccessPoint3			QuranHadith3		192.168.7.13		13 				150-200
+AccessPoint4			QuranHadith4		192.168.7.14		14 				200-250
+edimxapanel user 		edimax
+Password 				BeheshteBanoo1233
 
------------------------------------------------ Clinet Passwords
-BeheshteBanoo1 			Banoo123
-BeheshteBanoo2 			Banoo123
-BeheshteBanoo3 			Banoo123
-BeheshteBanoo4 			Banoo123
+---------------------------------------------------------------------------------- Clinet Passwords
+SSID  					VLAN ID 				VLAN ID
+AccessPoint1			BeheshteBanoo1 			110
+AccessPoint2			BeheshteBanoo2 			120
+AccessPoint3			BeheshteBanoo3 			130
+AccessPoint4			BeheshteBanoo4 			140
+
+Password 				Banoo123
