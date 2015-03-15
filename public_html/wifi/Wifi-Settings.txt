@@ -1,0 +1,21 @@
+----------------------------------------------- Max Addresses
+AccessPoint1 			80:1F:02:DD:93:B7
+AccessPoint2 			80:1F:02:DD:92:C1
+AccessPoint3 			80:1F:02:DD:92:B4
+AccessPoint4 			
+
+
+----------------------------------------------- PassCodes
+AccessPoint1			QuranHadith1
+AccessPoint2			QuranHadith2
+AccessPoint3			QuranHadith3
+AccessPoint4			QuranHadith4
+controlPanel 		 	edimax
+password 				BeheshteBanoo1233
+
+
+----------------------------------------------- Clinet Passwords
+BeheshteBanoo1 			Banoo123
+BeheshteBanoo2 			Banoo123
+BeheshteBanoo3 			Banoo123
+BeheshteBanoo4 			Banoo123
