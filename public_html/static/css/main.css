@@ -883,7 +883,7 @@ ul.list li a{padding:0.3em 0.5em;}
   width: 1.2857em;
   height: 1.2857em;
   border-radius: 500rem;
-  border: 0.2em solid rgba(0, 0, 0, 0.15);
+  border: 0.2em solid #000;
 }
 .loading.button:after, .loading-form .button:after {
   position: absolute;
@@ -902,6 +902,8 @@ ul.list li a{padding:0.3em 0.5em;}
   border-style: solid;
   border-width: 0.2em;
   box-shadow: 0px 0px 0px 1px transparent;
+  z-index:10001;
+  cursor: wait;
 }
 .labeled.icon.loading.button .icon, .loading-form .labeled.icon.button .icon {
   background-color: transparent;
@@ -1259,71 +1261,23 @@ input:focus,select:focus,textarea:focus,button:focus{outline:none;}
   color: transparent !important;
   -webkit-transition: all 0s linear;
           transition: all 0s linear;
-  z-index: 1000;
 }
 .loading-form form:before {
-  position: absolute;
+  position: fixed;
   display: block;
   content: '';
   top:0;
   bottom:0;
   left:0;
   right:0;
-  border-radius:5px;
-  opacity: 0.1;
+  opacity: 0.3;
   width: 100%;
   height: 100%;
-  z-index: 100;
+  z-index: 1000;
   cursor: wait;
+  background-color:#fff;
 }
-.loading-form .form:after {
-  cursor: none;
-  position: absolute;
-  content: '';
-  top: 50%;
-  left: 50%;
-  margin: -1.5em 0em 0em -1.5em;
-  width: 3em;
-  height: 3em;
-  -webkit-animation: form-spin 0.6s linear;
-          animation: form-spin 0.6s linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  border-radius: 500rem;
-  border-color: #aaaaaa rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1);
-  border-style: solid;
-  border-width: 0.2em;
-  box-shadow: 0px 0px 0px 1px transparent;
-  visibility: visible;
-  z-index: 101;
 
-  border-right: 4px solid #333;
-  border-left: 4px solid #333;
-  border-top: 4px solid #f1c40f;
-  border-bottom: 32px solid #f1c40f;
-}
-@-webkit-keyframes form-spin {
-
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-@keyframes form-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
 
 
 
