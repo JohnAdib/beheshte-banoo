@@ -9,6 +9,9 @@ class view extends \mvc\view
 		$this->data->bodyclass = 'fixed';
 		$this->include->css    = false;
 		$this->include->js     = false;
+
+		if (locale_emulation())
+			$this->include->locale_emulation = true;
 	}
 
 	function view_datatable()

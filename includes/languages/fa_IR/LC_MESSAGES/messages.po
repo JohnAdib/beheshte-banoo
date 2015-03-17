@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ermile\n"
-"POT-Creation-Date: 2015-03-14 15:17+0330\n"
-"PO-Revision-Date: 2015-03-14 15:17+0330\n"
+"POT-Creation-Date: 2015-03-17 05:26+0330\n"
+"PO-Revision-Date: 2015-03-17 05:27+0330\n"
 "Last-Translator: Javad Evazzadeh <J.Evazzadeh@gmail.com>\n"
 "Language-Team: Ermile\n"
 "Language: fa_IR\n"
@@ -196,20 +196,21 @@ msgstr "این اطلاعات اشتباه است"
 msgid "This card number does not exist"
 msgstr "این کد در سیستم وجود ندارد!"
 
-#: ../../../.././content/change/model.php:48
-#: ../../../.././content/point/model.php:34
+#: ../../../.././content/change/model.php:42
+#: ../../../.././content/point/model.php:42
 msgid "no of games"
 msgstr "تعداد بازی ها"
 
-#: ../../../.././content/change/model.php:50
+#: ../../../.././content/change/model.php:43
+#: ../../../.././content/point/model.php:43
 msgid "your prize is bon"
 msgstr "جایزه شما:  بن"
 
-#: ../../../.././content/change/model.php:59
+#: ../../../.././content/change/model.php:53
 msgid "We hope see you again!"
 msgstr "امیدواریم دوباره شما را ملاقات کنیم!"
 
-#: ../../../.././content/change/model.php:60
+#: ../../../.././content/change/model.php:54
 msgid "Change to money failed!"
 msgstr "نقد کردن امتیازات ناموفق بود!"
 
@@ -262,10 +263,6 @@ msgstr "عکس شما با موفقیت ثبت شد"
 #: ../../../.././content/camera/model.php:68
 msgid "Error on write webcam picture to server"
 msgstr "خطا در هنگام ذخیره عکس در سرور"
-
-#: ../../../.././content/point/model.php:35
-msgid "total points"
-msgstr "جمع امتیازات"
 
 #: ../../../.././content_cp/home/controller.php:24
 msgid "Not found!"
@@ -1284,63 +1281,71 @@ msgstr "لطفا در مرکز کادر قرار گرفته و لبخند بزن
 msgid "Scan your barcode and see your points"
 msgstr "با اسکن کردن بارکد، امتیاز خود را مشاهده کنید"
 
-#: ../../../.././includes/languages/twig_translation.php:110
+#: ../../../.././includes/languages/twig_translation.php:108
+msgid "now we using php class for translation."
+msgstr "در حال حاضر ما از کلاس پی اچ پی برای ترجمه استفاده می کنیم."
+
+#: ../../../.././includes/languages/twig_translation.php:109
+msgid "Please fix a apache gettext dll problem for improve performance."
+msgstr "لطفا برای افزایش کارایی و سرعت مشکل دی ال ال سرویس آپاچی را حل کنید."
+
+#: ../../../.././includes/languages/twig_translation.php:112
 msgid "Options"
 msgstr "تنظیمات"
 
-#: ../../../.././includes/languages/twig_translation.php:111
+#: ../../../.././includes/languages/twig_translation.php:113
 msgid "Go to"
 msgstr "برو به"
 
-#: ../../../.././includes/languages/twig_translation.php:112
+#: ../../../.././includes/languages/twig_translation.php:114
 msgid "Add New Record"
 msgstr "افزودن رکورد جدید"
 
-#: ../../../.././includes/languages/twig_translation.php:113
+#: ../../../.././includes/languages/twig_translation.php:115
 msgid "Actions"
 msgstr "عملیات"
 
-#: ../../../.././includes/languages/twig_translation.php:114
+#: ../../../.././includes/languages/twig_translation.php:116
 msgid "Edit this record"
 msgstr "ویرایش این رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:115
+#: ../../../.././includes/languages/twig_translation.php:117
 msgid "Edit"
 msgstr "ویرایش"
 
-#: ../../../.././includes/languages/twig_translation.php:116
+#: ../../../.././includes/languages/twig_translation.php:118
 msgid "Delete this record"
 msgstr "حذف این رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:117
+#: ../../../.././includes/languages/twig_translation.php:119
 msgid "Delete"
 msgstr "حذف"
 
-#: ../../../.././includes/languages/twig_translation.php:118
+#: ../../../.././includes/languages/twig_translation.php:120
 msgid "delete record"
 msgstr "حذف رکورد"
 
-#: ../../../.././includes/languages/twig_translation.php:119
+#: ../../../.././includes/languages/twig_translation.php:121
 msgid "seriously, are you sure? There's no coming back."
 msgstr "مطمئنید؟ بازگشتی وجود ندارد"
 
-#: ../../../.././includes/languages/twig_translation.php:120
+#: ../../../.././includes/languages/twig_translation.php:122
 msgid "Cancel"
 msgstr "انصراف"
 
-#: ../../../.././includes/languages/twig_translation.php:121
+#: ../../../.././includes/languages/twig_translation.php:123
 msgid "or"
 msgstr "یا"
 
-#: ../../../.././includes/languages/twig_translation.php:124
+#: ../../../.././includes/languages/twig_translation.php:126
 msgid "Select"
 msgstr "انتخاب"
 
-#: ../../../.././includes/languages/twig_translation.php:127
+#: ../../../.././includes/languages/twig_translation.php:129
 msgid "Home Page"
 msgstr "صفحه نخست"
 
-#: ../../../.././includes/languages/twig_translation.php:128
+#: ../../../.././includes/languages/twig_translation.php:130
 msgid "Experience our service in your language"
 msgstr "سرویس ما را با زبان مادری خودتان تجربه کنید"
 
@@ -1356,6 +1361,9 @@ msgstr "بهشت بانو برای کودکان"
 #: ../../../.././includes/mvc/view.php:14
 msgid "Behsht Banoo is good"
 msgstr "بهشت بانو خوب است!"
+
+#~ msgid "total points"
+#~ msgstr "جمع امتیازات"
 
 #~ msgid "Total of Cash"
 #~ msgstr "جمع مبلغ کسب شده"

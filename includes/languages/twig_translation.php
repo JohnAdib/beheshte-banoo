@@ -105,6 +105,8 @@ function transtext()
 
 	//----------------------------------------------------content_cp/home/display.html
 	echo T_("Home");                                                                  // Line 40
+	echo T_("now we using php class for translation.");                               // Line 19
+	echo T_("Please fix a apache gettext dll problem for improve performance.");      // Line 19
 
 	//-----------------------------------------------------content_cp/main/layout.html
 	echo T_("Options");                                                               // Line 25 Seperate
