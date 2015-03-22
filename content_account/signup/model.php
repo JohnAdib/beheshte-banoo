@@ -10,6 +10,7 @@ class model extends \mvc\model
 		// get parameters and set to local variables
 		$mymobile   = utility::post('mobile', 'filter');
 		$mypass     = utility::post('password', 'hash');
+		$mybooth    = utility::post('booth_');
 		// check for mobile exist
 		$tmp_result = $this->sql()->tableUsers()->whereUser_mobile($mymobile)->select();
 
@@ -22,8 +23,9 @@ class model extends \mvc\model
 		{
 			$qry      = $this->sql()->tableUsers ()
 							->setUser_mobile         ($mymobile)
-							->setPermission_id       (4)
+							->setPermission_id       (3)
 							->setUser_password       ($mypass)
+							->setBooth_id            ($mybooth)
 							->setUser_enterdatetime  (date('Y-m-d H:i:s'));
 			$sql      = $qry->insert();
 			
@@ -39,7 +41,7 @@ class model extends \mvc\model
 				debug::true(T_("register successfully"));
 
 				// $this->redirector()->set_url('verification?from=signup&mobile='.$_mobile.'&referer='.$myreferer);
-				$this->redirector()->set_url('login?from=signup&mobile='.$_mobile);
+				// $this->redirector()->set_url('login?from=signup&mobile='.$_mobile);
 			}, $mymobile);
 
 			// if a query has error or any error occour in any part of codes, run roolback
@@ -49,6 +51,11 @@ class model extends \mvc\model
 		// if mobile exist more than 2 times!
 		else
 			debug::error(T_("please forward this message to administrator"));
+	}
+	public function get_booths()
+	{
+		$tmp_result = $this->sql()->tableBooths()->whereBooth_status('enable')->select()->allassoc();
+		return $tmp_result;
 	}
 }
 ?>

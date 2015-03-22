@@ -24,7 +24,7 @@ class symbol extends \lib\form
 		else
 		{
 			$this->mobile 	= $this->make("mobile")->name('mobile')->type("tel")->label(T_("Mobile"))->pl(T_("Mobile"))
-								->required()->maxlength(17)->pattern(".{10,}")->autocomplete('off');
+								->maxlength(17)->pattern(".{10,}")->autocomplete('off');
 		}
 
 		$this->pass =

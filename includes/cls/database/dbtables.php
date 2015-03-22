@@ -105,7 +105,10 @@ function setproperty($_arg)
 			elseif( substr($type, strlen($type)-8) == "unsigned")
 				array_push($tmp, "->min(0)");
 
-			array_push($tmp, "->max(".str_repeat("9",$mylen).")");
+			if($field === 'kid_number')
+				array_push($tmp, "->max(15)");
+			else
+				array_push($tmp, "->max(".str_repeat("9",$mylen).")");
 			return $tmp;
 			break;
 

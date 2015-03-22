@@ -55,6 +55,7 @@ function transtext()
 	echo T_("white");               // Enum white
 	echo T_("yellow");              // Enum yellow
 	echo T_("purple");              // Enum purple
+	echo T_("pink");                // Enum pink
 	echo T_("in");                  // Enum in
 	echo T_("out");                 // Enum out
 	echo T_("babylost");            // Enum babylost

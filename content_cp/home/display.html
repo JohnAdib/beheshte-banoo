@@ -14,5 +14,9 @@
 			</li>
 	    {% endfor %}
 	</ul>
+
+{%if include.locale_emulation%}
+	<p class="alert alert-block alert-error">{%trans "now we using php class for translation."%} {%trans "Please fix a apache gettext dll problem for improve performance."%}</p>
+{%endif%}
 </div>
 {%endblock%}

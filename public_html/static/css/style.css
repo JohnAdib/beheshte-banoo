@@ -20,7 +20,7 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 .account button:after{font-family:FontAwesome;content: "\f0a9";padding:0 5px;position:absolute;top:0;right:5px;font-size:25px;line-height:40px}
 .account button:hover{background-color:#2E73E2}
 .account button:active, .account button:focus{background-color:#094BB6}
-.account input{background-color:#fff;border-radius:3px;border:none;width:90%;min-height: 25px; margin:2px 5%;padding: 10px 5%;}
+.account input, .account select{background-color:#fff;border-radius:3px;border:none;width:90%;min-height: 25px; margin:2px 5%;padding: 10px 5%;}
 .field span{width:100%;}
 
 #point .content{min-height:148px}

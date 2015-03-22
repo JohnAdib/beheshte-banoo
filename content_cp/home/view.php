@@ -9,6 +9,9 @@ class view extends \mvc\view
 		$this->data->bodyclass = 'fixed';
 		$this->include->css    = false;
 		$this->include->js     = false;
+
+		if (locale_emulation())
+			$this->include->locale_emulation = true;
 	}
 
 	function view_datatable()
@@ -23,6 +26,16 @@ class view extends \mvc\view
 			// get all fields of table and filter fields name for show in datatable, access from columns variable
 			$this->include->datatable = true;
 			$this->data->columns      = \lib\sql\getTable::get($this->data->module);
+			if($this->module() === 'users')
+			{
+				$this->data->columns['user_mobile']['table']   = true;
+				$this->data->columns['booth_id']['table']      = true;
+				$this->data->columns['permission_id']['table'] = true;
+				$this->data->columns['user_barcode']['table']  = true;
+
+				$this->data->columns['user_enterdatetime']['table']  = false;
+				$this->data->columns['user_enterdatetime']['table']  = false;
+			}
 		}
 	}
 

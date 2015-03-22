@@ -47,8 +47,8 @@ class model extends \mvc\model
 		$qry  = $this->sql()->tableUsers()
 						->setUser_status('deactive')
 						->setUser_exitdatetime(date('Y-m-d H:i:s'))
-						// ->whereId($id)->update();
-						->whereId($id);
+						->whereId($id)->update();
+						// ->whereId($id);
 
 		$this->commit(function()   { debug::true(T_("We hope see you again!")); });
 		$this->rollback(function() { debug::title(T_("Change to money failed!"));     });
