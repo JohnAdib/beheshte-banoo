@@ -37,7 +37,7 @@
  <div class="radio">
  {% for child in array.child %}
   <div class="element {{child.attr.value}}">
-   <input type="radio" name="{{array.attr.name}}" {% for attr,value in child.attr if attr in ['value','checked', 'id']%}{{attr}}="{{value}}" {% endfor %}>
+   <input type="radio" name="{{array.attr.name}}" data-unclear {% for attr,value in child.attr if attr in ['value','checked', 'id']%}{{attr}}="{{value}}" {% endfor %}>
    <label for="{{child.attr.id}}" class="label-radio">{{child.label}}</label>
   </div>
  {% endfor %}
