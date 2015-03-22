@@ -81,7 +81,7 @@ class users
 	public function user_province() 
 	{
 		$this->form("select")->name("province")->type("select")->maxlength(50)->validate();
-		$this->setChild('provinces@id!province_name', '18');
+		$this->setChild('provinces@id!province_name');
 	}
 	public function user_nationalcode() 
 	{
@@ -128,7 +128,7 @@ class users
 	}
 	public function user_barcode() 
 	{
-		$this->form("text")->name("barcode")->min(1)->max(99999)->required()->type('number');
+		$this->form("text")->name("barcode")->min(1)->max(99999)->type('number');
 	}
 	public function user_enterdatetime() 
 	{
