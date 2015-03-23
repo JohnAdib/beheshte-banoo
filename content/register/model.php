@@ -33,15 +33,21 @@ class model extends \mvc\model
 
 			$qry     = $qry->$tmp_set($post);
 		}
-		$qry    = $qry->setPermission_id(4)->setUser_enterdatetime(date('Y-m-d H:i:s'));
-		$qry    = $qry->insert();
-		$id   = $qry->LAST_INSERT_ID();
+		$regid = $this->login('id');
+		$qry   = $qry->setPermission_id(4)->setUser_enterdatetime(date('Y-m-d H:i:s'));
+		$qry   = $qry->insert();
+		$id    = $qry->LAST_INSERT_ID();
 
 
 		$this->commit(function($id)
 		{
+			$folder = root.'public_html/s-up/' . ceil($id/1000)*1000;
+			if(!File::exists($folder))
+			{
+				File::makeDir($folder);
+			}
 			// copy one image as default image for each user
-			$to   = root.'public_html/s-up/' . ceil($id/1000)*1000 . '/'.$id.'-thumb.jpg';
+			$to   = $folder . '/'.$id.'-thumb.jpg';
 			$from = root.'public_html/static/images/face/'.utility::post('gender').'-'.mt_rand(1,5).'.jpg';
 			$a    = File::copy($from , $to);
 			// var_dump($a);

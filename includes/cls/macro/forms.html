@@ -37,7 +37,7 @@
  <div class="radio">
  {% for child in array.child %}
   <div class="element {{child.attr.value}}">
-   <input type="radio" name="{{array.attr.name}}" {% for attr,value in child.attr if attr in ['value','checked', 'id']%}{{attr}}="{{value}}" {% endfor %}>
+   <input type="radio" name="{{array.attr.name}}" data-unclear {% for attr,value in child.attr if attr in ['value','checked', 'id']%}{{attr}}="{{value}}" {% endfor %}>
    <label for="{{child.attr.id}}" class="label-radio">{{child.label}}</label>
   </div>
  {% endfor %}
@@ -54,9 +54,9 @@
 {% macro select(array) %}
  {%if array.label %}<label>{{array.label}}</label>{%endif%}
  <select {% for attr,value in array.attr if attr in ['id','class','name']%}{{attr}}="{{value}}" {% endfor %} data-unclear>
-  <option value="" disabled="disabled">{%trans "Select"%} {{array.label}}</option>
+  <option value="" data-unclear>{%trans "Select"%} {{array.label}}</option>
   {% for child in array.child%}
-  <option {% for attr,value in child.attr if attr in ['value','selected']%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
+  <option data-unclear {% for attr,value in child.attr if attr in ['value','selected']%}{{attr}}="{{value}}" {% endfor %}>{{child.label}}</option>
   {% endfor %}
  </select>
 {% endmacro %}

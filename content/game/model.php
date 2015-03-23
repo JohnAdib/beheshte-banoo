@@ -49,7 +49,8 @@ class model extends \mvc\model
 
 	public function get_list()
 	{
-		$qry = $this->sql()->tableGames()->whereGame_date(date('Y-m-d'))->groupOpen('start')
+		$booth_id  = $this->login('booth_id');
+		$qry = $this->sql()->tableGames()->whereGame_date(date('Y-m-d'))->andBooth_id($booth_id)->groupOpen('start')
 									->andGame_status('start')->orGame_status('time')->groupClose('close')
 									->orderGame_regtime('Asc');
 

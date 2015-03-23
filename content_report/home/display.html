@@ -41,7 +41,7 @@
       yAxis: { title: {text: '{%trans "Person who visit"%}'},floor: 0, allowDecimals: false,},
       tooltip: { crosshairs: true, shared: true, useHTML: true,
         headerFormat: '<small>{point.key}</small><table style="direction:rtl;text-align:right">',
-        pointFormat: '<tr><td style="color: {series.color}">{series.name}: </td>' + '<td><b>{point.y} {%trans "Person"%}</b></td></tr>',
+        pointFormat: '<tr><td style="color: {series.color}">{series.name}: </td>' + '<td><b>{point.y:0.0f} {%trans "Person"%}</b></td></tr>',
         footerFormat: '</table>',
       },
 

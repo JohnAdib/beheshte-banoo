@@ -50,6 +50,7 @@ class model extends \mvc\model
  												);
 		}
 		$qry = $qry->select();
+		// var_dump($qry->string());
 
 		return $qry->allassoc();
 	}
