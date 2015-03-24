@@ -67,7 +67,8 @@ class model extends \mvc\model
 		$qry = $this->sql()->tableKids()->whereKid_date(date('Y-m-d'))
 									->groupOpen('start')
 									->andKid_status('in')->orKid_status('awaiting')->groupClose('close')
-									->orderKid_regtime('Asc');
+									->orderKid_status('Desc');
+									// ->orderKid_regtime('Asc');
 
 		$qry->joinUsers()->whereId('#kids.user_id')
 								->fieldUser_firstname("firstname")

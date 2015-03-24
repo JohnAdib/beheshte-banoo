@@ -19,9 +19,9 @@ class controller extends \mvc\controller
 		if(!$this->login() || $this->login('permission_id') !== '1')
 		{
 			$this->model()->logger('access');
-			$this->model()->_processor();
-			\lib\error::access();
 			$this->redirector()->set_domain()->set_url();
+			$this->model()->_processor();
+			// \lib\error::access();
 		}
 	}
 }
