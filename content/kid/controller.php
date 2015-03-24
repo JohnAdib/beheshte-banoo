@@ -21,9 +21,9 @@ class controller extends \content\home\controller
 		if(!$this->login() && $this->module() !=='home' || $this->login('permission_id') !== '5')
 		{
 			$this->model()->logger('access');
-			$this->model()->_processor();
-			\lib\error::access();
 			$this->redirector()->set_domain()->set_url();
+			\lib\debug::error('eee');
+			$this->model()->_processor(array('force_stop' => true));
 		}
 	}
 }
