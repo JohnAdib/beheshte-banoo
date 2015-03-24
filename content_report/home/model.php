@@ -42,6 +42,14 @@ class model extends \mvc\model
 													'#count(*) as value',
 													"#user_$mychild as $mychild"
 												);
+			if($mychild === 'birthyear')
+			{
+				$qry = $qry->whereUser_birthyear("IS", "#not null");
+			}
+			elseif($mychild === 'province')
+			{
+				$qry = $qry->whereUser_province("IS", "#not null");
+			}
 		}
 		else
 		{
