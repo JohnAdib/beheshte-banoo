@@ -72,6 +72,7 @@ class model extends \mvc\model
 		$qry->joinUsers()->whereId('#kids.user_id')
 								->fieldUser_firstname("firstname")
 								->fieldUser_lastname("lastname")
+								->fieldUser_mobile("mobile")
 								->fieldUser_barcode("barcode");
 		$qry = $qry->select();
 		// var_dump($qry->string());

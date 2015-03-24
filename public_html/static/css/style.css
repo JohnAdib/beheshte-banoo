@@ -1,6 +1,7 @@
 body {color:#eee;background-color: #E0E0E0;background-image: url('../images/bg.jpg');background-attachment: fixed;background-position: center center;background-repeat: no-repeat;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;min-height: 100%;min-width: 100%;width:100%;height:auto;-webkit-transition: background-image 0.2s ease-in-out;transition: background-image 0.2s ease-in-out;}
 a{color:#9DD7FA}
 .center{position: relative;min-width:280px;max-width:500px;width:450px;margin: 0 auto;}
+#kid .center{max-width:600px;width:550px;}
 .center.report{max-width:90%;width:90%;margin:0 5%;}
 .content{margin: 0 auto;padding: 20px 2%;-webkit-border-radius: 7px;-moz-border-radius: 7px;-ms-border-radius: 7px;-o-border-radius: 7px;border-radius: 7px;background: url('../images/bg-white-lock.png') repeat;margin-bottom:50px;}
 h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;font-weight: 700;margin:0;margin-bottom: 20px}
@@ -71,14 +72,19 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 .list-cards li:hover{background-color:#fff;}
 
 .list-cards li .c-avatar{float:left;margin-top:-3px;margin-left:-8px; width:50px;height:50px;overflow:hidden;border-radius:50%}
-.rtl .list-cards li .c-avatar{float:right;margin-right:-8px;margin-left:0;}
 .list-cards li .c-avatar img{width:100%;height:100%;}
 .list-cards li .c-name{float:left;margin-left:10px;width:130px;}
-.rtl .list-cards li .c-name{float:right;margin-right:10px;margin-left:0;}
 .list-cards li .c-code{float:right;width:30px}
-.rtl .list-cards li .c-code{float:left;}
 .list-cards li .c-token{float:right;margin-right:10px;width:40px;text-align:center;font-size:2em;font-family:sans-serif;color:#fff;box-shadow:inset 0 0 25px #000;}
+.list-cards li .c-mobile{}
+
+.rtl .list-cards li .c-avatar{float:right;margin-right:-8px;margin-left:0;}
+.rtl .list-cards li .c-name{float:right;margin-right:10px;margin-left:0;}
+.rtl#kid .list-cards li .c-name{width: 150px;}
+.rtl .list-cards li .c-code{float:left;}
 .rtl .list-cards li .c-token{float:left;margin-left:10px;margin-right:0;}
+.rtl .list-cards li .c-mobile{}
+
 .list-cards li .c-token.red{background-color:#F03333}
 .list-cards li .c-token.green{background-color:#8BEC23}
 .list-cards li .c-token.blue{background-color:#2B8CEA}
