@@ -1,20 +1,38 @@
 /** in The name of Allah **/
 Proudly made in IRAN, powered by Saloos.
 
-/* MAIN */
-Back-End Programmer:
-	Mohammad Hasan Salehi HajiAbadi   | itb.baravak@gmail.com
-	Javad Evazzadeh Kakroudi          | Javad@Evazzadeh.com
+/** TEAM */
+	Javad Evazzadeh Kakroudi
+	Site: http://evazzadeh.com
+	Contact: J.Evazzadeh [at] live.com
+	Twitter: @evazzadeh
+	Location: Iran
 
 
-Front-End Programmer:
-	Mahdi Dibaiee | mdibaiee@aol.com
+/* THANKS */
+	Mohammad Hasan Salehi HajiAbadi
+	Contact: itb.Baravak [at] gmail.com
+	Twitter: @baravak
+	Location: Qom, Iran
 
-Usability: Ermile Business Solutions
-website: http://Ermile.com
+	Mahdi Dibaiee
+	Site: http://dibaiee.ir
+	Contact: mdibaiee [at] aol.com
+	Twitter: @mdibaiee
+	Location: Qom, Iran
+
+	Mohammad Sadegh Salehi HajiAbadi
+	Contact: sahelekaj@ [at] gmail.com
+	Location: Qom, Iran
+
+	Reza Mohiti
+	Contact: rm.biqarar [at] gmail.com
+	Location: Qom, Iran
+
 
 /* SITE */
-Last update: 25/1/2015
-Version: 3.0.0
-Doctype: HTML5
-IDE: Sublime!
+	Last update: 24/3/2015
+	Version: 3.0.0
+	Language: Farsi / English
+	Doctype: HTML5
+	IDE: Sublime!
