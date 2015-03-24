@@ -22,7 +22,7 @@ class controller extends \content\home\controller
 		{
 			$this->model()->logger('access');
 			$this->redirector()->set_domain()->set_url();
-			\lib\debug::error('eee');
+			\lib\debug::error('access denied');
 			$this->model()->_processor(array('force_stop' => true));
 		}
 	}

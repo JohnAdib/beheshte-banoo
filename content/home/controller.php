@@ -28,8 +28,6 @@ class controller extends \mvc\controller
 			$this->redirector()->set_domain()->set_url();
 			\lib\debug::error('access denied');
 			$this->model()->_processor(array('force_stop' => true));
-			// $this->model()->_processor();
-			// \lib\error::access();
 		}
 	}
 }

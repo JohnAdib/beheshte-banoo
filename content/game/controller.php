@@ -23,7 +23,6 @@ class controller extends \content\home\controller
 		if(!$this->login() && $this->module() !=='home' || $this->login('permission_id') !== '3')
 		{
 			$this->model()->logger('access');
-			// \lib\error::access();
 			$this->redirector()->set_domain()->set_url();
 			\lib\debug::error('access denied');
 			$this->model()->_processor(array('force_stop' => true));
