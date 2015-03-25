@@ -13,6 +13,8 @@ class view extends \mvc\view
 
 		if($mychild === 'booth')
 			$mylist             = $this->model()->mylist_booths();
+		elseif($mychild === 'kid')
+			$mylist             = $this->model()->mylist_kids();
 		else
 			$mylist             = $this->model()->mylist_users();
 
@@ -66,6 +68,9 @@ class view extends \mvc\view
 					// return the name of provinces
 					elseif($mychild === 'province')
 						$myname = $this->model()->myprovinceName($value[$mychild]);
+					// return the name of user
+					elseif($mychild === 'regid')
+						$myname = $this->model()->myuserName($value[$mychild]);
 					elseif($mychild === 'booth')
 					{
 						$myname = $this->model()->myboothName($value[$mychild]);
@@ -81,7 +86,10 @@ class view extends \mvc\view
 			// if type not exits add it to array and fill with zero
 			if(!array_key_exists($myname, $chart_series))
 			{
-				$chart_series[$myname] = array_fill(1, $mydateCount, 'null');
+				if($mychild === 'kid' || $mychild === 'regid')
+					$chart_series[$myname] = array_fill(1, count($mylist), 'null');
+				else
+					$chart_series[$myname] = array_fill(1, $mydateCount, 'null');
 			}
 
 			// push value of series in array
@@ -90,6 +98,10 @@ class view extends \mvc\view
 		// var_dump($mylist);
 		// var_dump($chart_labels);
 		// var_dump($chart_series);
+		if($mychild === 'kid')
+		{
+			$this->global->title  = T_('kids');
+		}
 
 		$this->data->chart_labels = $chart_labels;
 		$this->data->chart_series = $chart_series;
@@ -99,7 +111,7 @@ class view extends \mvc\view
 		{
 			if($mymodule === 'date' && $mychild === null)
 				$this->data->chart_type = 'column';
-			elseif($mymodule === 'date' && $mychild === 'gender')
+			elseif($mymodule === 'date' && ($mychild === 'gender' || $mychild === 'kid' ))
 				$this->data->chart_type = 'area';
 			else
 				$this->data->chart_type = 'line';

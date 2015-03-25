@@ -123,7 +123,7 @@ h1{color: #eee;text-shadow: 0px 2px 3px #555;text-align: center;font-size: 3em;f
 .statistics>.statistic{max-width:50%;width:22%;}
 #chart-error{color:#000;font-size:2em;text-align:center;margin-top:100px;position:absolute;width:96%;opacity:0.5;background-color:#eee}
 #report-nav{background-color:#bbb;}
-#report-nav a{color:#000;padding:2px 10px;margin-left:5px;}
+#report-nav a{color:#000;padding:2px 8px;margin-left:0px;}
 #report-nav a:hover{background-color:#eee}
 #report-summary{min-height:450px}
 #chart-type{position: absolute;top:30px;left:50px;}

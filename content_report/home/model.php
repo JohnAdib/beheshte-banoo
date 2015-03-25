@@ -24,6 +24,7 @@ class model extends \mvc\model
 			// $qry = $qry->field('#user_enterdatetime as date','#count(*) as value');
 			$qry = $qry->groupbyUser_enterdatetime('@DAY');
 		}
+
 		if($mychild === 'country')
 		{
 			$qry          = $qry->groupbyCountry_id();
@@ -50,12 +51,18 @@ class model extends \mvc\model
 			{
 				$qry = $qry->whereUser_province("IS", "#not null");
 			}
+			elseif($mychild === 'status')
+			{
+				$qry = $qry->whereUser_barcode("IS", "#not null");
+			}
+			elseif($mychild === 'regid')
+			{
+				$qry = $qry->whereUser_regid("IS", "#not null");
+			}
 		}
 		else
 		{
- 			$qry = $qry->field("#date_format(user_enterdatetime,'%Y-%m-%d') as date",
- 													'#count(*) as value'
- 												);
+			$qry = $qry->field("#date_format(user_enterdatetime,'%Y-%m-%d') as date",'#count(*) as value');
 		}
 		$qry = $qry->select();
 		// var_dump($qry->string());
@@ -68,6 +75,16 @@ class model extends \mvc\model
 	{
 		$qry = $this->sql()->tableUsers()->groupbyUser_enterdatetime('@DAY')->select();
 		return $qry->num();
+	}
+
+	// return the name of user
+	public function myuserName($id)
+	{
+		$qry = $this->sql()->tableUsers()->whereId($id)->select();
+		$datarow = $qry->assoc();
+		
+		// $fullname = $qry->assoc('user_firstname') . " ". $qry->assoc('user_lastname');
+		return $datarow['user_firstname'].' '.$datarow['user_lastname'];
 	}
 
 	// return the name of province
@@ -86,10 +103,8 @@ class model extends \mvc\model
 
 	public function mylist_booths()
 	{
-		$mymodule  = $this->module();
-		$mychild   = $this->child();
 		$qry       = $this->sql()->tableGames()
-								->field("#game_date as date",'#count(*) as value',"#".$mychild."_id as $mychild")
+								->field("#game_date as date",'#count(*) as value',"#booth_id as booth")
 								->groupbyGame_date()->groupbyBooth_id()->select();
 
 		// var_dump($qry->string());
@@ -101,6 +116,17 @@ class model extends \mvc\model
 	{
 		$qry = $this->sql()->tableBooths()->whereId($id)->select();
 		return $qry->assoc('booth_title');
+	}
+
+	public function mylist_kids()
+	{
+		$qry       = $this->sql()->tableKids()
+								->field("#kid_date as date",'#count(*) as value')
+								->groupbyKid_date()->select();
+
+		// var_dump($qry->string());
+		// var_dump($qry->num());
+		return $qry->allassoc();
 	}
 }
 ?>
