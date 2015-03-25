@@ -20,6 +20,11 @@
    <a href="/date/province">{%trans "by"%} {%trans "province"%}</a>
    <a href="/date/gender">{%trans "by"%} {%trans "gender"%}</a><span> }</span>
   </div>
+  <div id="chart-type">
+   <a href="{{url.path}}?type=column">{%trans "column"%}</a> |
+   <a href="{{url.path}}?type=line">{%trans "line"%}</a> |
+   <a href="{{url.path}}?type=area">{%trans "area"%}</a>
+  </div>
  </div>
 </div>
 {%endblock%}
@@ -35,7 +40,7 @@
  <script type="text/javascript">
   $(function () { 
     $('#chart').highcharts({
-      chart: { type: 'line' },
+      chart: { type: '{{chart_type}}' },
       title: { text: '{{global.title}}' },
       xAxis: { categories: [{%for date in chart_labels%}'{{date|jdate}}', {%endfor%}] },
       yAxis: { title: {text: '{%trans "Person who visit"%}'},floor: 0, allowDecimals: false,},

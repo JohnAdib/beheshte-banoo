@@ -8,6 +8,7 @@ class view extends \mvc\view
 		$this->include->chart    = true;
 		// $this->include->chartexp = true;
 		
+		$mymodule             = $this->module();
 		$mychild              = $this->child();
 
 		if($mychild === 'booth')
@@ -92,6 +93,17 @@ class view extends \mvc\view
 
 		$this->data->chart_labels = $chart_labels;
 		$this->data->chart_series = $chart_series;
+		$this->data->chart_type   = \lib\utility::get('type');
+		
+		if(!$this->data->chart_type)
+		{
+			if($mymodule === 'date' && $mychild === null)
+				$this->data->chart_type = 'column';
+			elseif($mymodule === 'date' && $mychild === 'gender')
+				$this->data->chart_type = 'area';
+			else
+				$this->data->chart_type = 'line';
+		}
 	}
 }
 ?>
