@@ -11,8 +11,7 @@ class view extends \mvc\view
 
 		$this->include->barcode = true;
 		$myform                 = $this->createform('@'.db_name.'.users','add', $submit_value);
-		$myform->white("user_gender, user_firstname, user_lastname, user_mobile, user_birthyear, country_id, user_province, user_nationalcode, user_passport, user_barcode, submit");
-		// $myform->before()
+		$myform->white("user_gender, user_firstname, user_lastname, user_mobile, user_barcode, user_birthyear, country_id, user_province, user_nationalcode, user_passport, submit");
 	}
 }
 ?>
