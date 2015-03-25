@@ -10,6 +10,8 @@ class model extends \lib\mvc\model
 
 	public function logger($_type, $_module = null, $_value = null, $_priority = null)
 	{
+		$_module = $_module === null? $this->module(): $_module;
+
 		if($_module ==='favicon.ico'){
 			// var_dump(11111111);
 			return;
@@ -42,7 +44,7 @@ class model extends \lib\mvc\model
 			}
 		}
 
-		$_module = $_module === null? $this->module(): $_module;
+		
 		$myid    = $this->login('id');
 
 		$qry		= $this->sql()->tableUserlogs ()
