@@ -56,6 +56,8 @@ function transtext()
 	echo T_("yellow");              // Enum yellow
 	echo T_("purple");              // Enum purple
 	echo T_("pink");                // Enum pink
+	echo T_("maroon");              // Enum maroon
+	echo T_("orange");              // Enum orange
 	echo T_("in");                  // Enum in
 	echo T_("out");                 // Enum out
 	echo T_("babylost");            // Enum babylost
@@ -162,6 +164,8 @@ function transtext()
 	echo T_("mobile");              // user_mobile
 	echo T_("mobile2");             // user_mobile2
 	echo T_("password");            // user_password
+	echo T_("barcode");             // user_barcode
+	echo T_("regid");               // user_regid
 	echo T_("birthyear");           // user_birthyear
 	echo T_("degree");              // user_degree
 	echo T_("province");            // user_province
@@ -173,7 +177,6 @@ function transtext()
 	echo T_("parent");              // user_parent
 	echo T_("feedback");            // user_feedback
 	echo T_("status");              // user_status
-	echo T_("barcode");             // user_barcode
 	echo T_("enterdatetime");       // user_enterdatetime
 	echo T_("exitdatetime");        // user_exitdatetime
 

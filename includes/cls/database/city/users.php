@@ -9,6 +9,10 @@ class users
 	public $user_mobile        = array('null' =>'YES', 'show' =>'YES', 'label'=>'mobile',        'type' => 'varchar@15',                                               );
 	public $user_mobile2       = array('null' =>'YES', 'show' =>'NO',  'label'=>'mobile2',       'type' => 'varchar@15',                                               );
 	public $user_password      = array('null' =>'YES', 'show' =>'NO',  'label'=>'password',      'type' => 'varchar@64',                                               );
+	public $permission_id      = array('null' =>'NO',  'show' =>'YES', 'label'=>'permission',    'type' => 'smallint@5',                                               'foreign'=>'permissions@id!permission_title');
+	public $booth_id           = array('null' =>'YES', 'show' =>'YES', 'label'=>'booth',         'type' => 'smallint@3',                                               'foreign'=>'booths@id!booth_title');
+	public $user_barcode       = array('null' =>'YES', 'show' =>'NO',  'label'=>'barcode',       'type' => 'int@5',                                                    );
+	public $user_regid         = array('null' =>'YES', 'show' =>'NO',  'label'=>'regid',         'type' => 'int@6',                                                    );
 	public $user_birthyear     = array('null' =>'YES', 'show' =>'NO',  'label'=>'birthyear',     'type' => 'year@4',                                                   );
 	public $user_degree        = array('null' =>'YES', 'show' =>'NO',  'label'=>'degree',        'type' => 'varchar@50',                                               );
 	public $country_id         = array('null' =>'YES', 'show' =>'YES', 'label'=>'country',       'type' => 'smallint@3!101',                                           'foreign'=>'countrys@id!country_namefa');
@@ -19,13 +23,10 @@ class users
 	public $user_logincounter  = array('null' =>'NO',  'show' =>'NO',  'label'=>'logincounter',  'type' => 'smallint@3',                                               );
 	public $user_refinecounter = array('null' =>'YES', 'show' =>'NO',  'label'=>'refinecounter', 'type' => 'smallint@2',                                               );
 	public $user_parent        = array('null' =>'YES', 'show' =>'NO',  'label'=>'parent',        'type' => 'int@6',                                                    );
-	public $permission_id      = array('null' =>'NO',  'show' =>'YES', 'label'=>'permission',    'type' => 'smallint@5',                                               'foreign'=>'permissions@id!permission_title');
 	public $user_feedback      = array('null' =>'YES', 'show' =>'NO',  'label'=>'feedback',      'type' => 'tinyint@3',                                                );
 	public $user_status        = array('null' =>'NO',  'show' =>'YES', 'label'=>'status',        'type' => 'enum@active,awaiting,deactive,removed,filter,exit!active', );
-	public $user_barcode       = array('null' =>'NO',  'show' =>'NO',  'label'=>'barcode',       'type' => 'int@5',                                                    );
 	public $user_enterdatetime = array('null' =>'NO',  'show' =>'NO',  'label'=>'enterdatetime', 'type' => 'datetime@',                                                );
 	public $user_exitdatetime  = array('null' =>'YES', 'show' =>'NO',  'label'=>'exitdatetime',  'type' => 'datetime@',                                                );
-	public $booth_id           = array('null' =>'YES', 'show' =>'YES', 'label'=>'booth',         'type' => 'smallint@3',                                               'foreign'=>'booths@id!booth_title');
 	public $date_modified      = array('null' =>'YES', 'show' =>'NO',  'label'=>'modified',      'type' => 'timestamp@',                                               );
 
 
@@ -60,6 +61,28 @@ class users
 	{
 		$this->form("text")->name("password")->maxlength(64)->type('password');
 	}
+
+	//------------------------------------------------------------------ id - foreign key
+	public function permission_id() 
+	{
+		$this->form("select")->name("permission_")->min(0)->max(99999)->required()->type("select")->validate()->id();
+		$this->setChild();
+	}
+
+	//------------------------------------------------------------------ id - foreign key
+	public function booth_id() 
+	{
+		$this->form("select")->name("booth_")->min(0)->max(999)->type("select")->validate()->id();
+		$this->setChild();
+	}
+	public function user_barcode() 
+	{
+		$this->form("text")->name("barcode")->min(1)->max(99999)->type('number');
+	}
+	public function user_regid() 
+	{
+		$this->form("text")->name("regid")->min(0)->max(999999)->type('number');
+	}
 	public function user_birthyear() 
 	{
 		$this->form("text")->name("birthyear")->min(0)->max(9999)->type('number');
@@ -81,7 +104,7 @@ class users
 	public function user_province() 
 	{
 		$this->form("select")->name("province")->type("select")->maxlength(50)->validate();
-		$this->setChild('provinces@id!province_name');
+		$this->setChild('provinces@id!province_name', '18');
 	}
 	public function user_nationalcode() 
 	{
@@ -108,13 +131,6 @@ class users
 	{
 		$this->form("text")->name("parent")->min(0)->max(999999)->type('number');
 	}
-
-	//------------------------------------------------------------------ id - foreign key
-	public function permission_id() 
-	{
-		$this->form("select")->name("permission_")->min(0)->max(99999)->required()->type("select")->validate()->id();
-		$this->setChild();
-	}
 	public function user_feedback() 
 	{
 		$this->form("text")->name("feedback")->min(0)->max(999)->type('number');
@@ -126,10 +142,6 @@ class users
 		$this->form("select")->name("status")->type("select")->required()->validate();
 		$this->setChild();
 	}
-	public function user_barcode() 
-	{
-		$this->form("text")->name("barcode")->min(1)->max(99999)->type('number');
-	}
 	public function user_enterdatetime() 
 	{
 		$this->form("text")->name("enterdatetime")->required();
@@ -137,13 +149,6 @@ class users
 	public function user_exitdatetime() 
 	{
 		$this->form("text")->name("exitdatetime");
-	}
-
-	//------------------------------------------------------------------ id - foreign key
-	public function booth_id() 
-	{
-		$this->form("select")->name("booth_")->min(0)->max(999)->type("select")->validate()->id();
-		$this->setChild();
 	}
 	public function date_modified() {}
 }
