@@ -15,13 +15,13 @@ class controller extends \mvc\controller
 		}
 
 		$mymodule = $this->module();
-		$mychild	 = $this->child();
+		$mychild  = $this->child();
 
 		// Restrict unwanted child
 		if($mychild && !($mychild=='add' || $mychild=='edit' || $mychild=='delete' || $mychild=='options')
 			 || !$this->cpModlueList()
 			)
-			\lib\error::page(T_("Not found!"));
+			\lib\error::page("Not found!");
 
 
 		if( is_file(root.'content_cp/'.$mymodule.'/display.html') )

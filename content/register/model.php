@@ -34,7 +34,7 @@ class model extends \mvc\model
 			$qry     = $qry->$tmp_set($post);
 		}
 		$regid = $this->login('id');
-		$qry   = $qry->setPermission_id(4)->setUser_enterdatetime(date('Y-m-d H:i:s'));
+		$qry   = $qry->setPermission_id(4)->setUser_enterdatetime(date('Y-m-d H:i:s'))->setUser_regid($regid);
 		$qry   = $qry->insert();
 		$id    = $qry->LAST_INSERT_ID();
 
