@@ -64,10 +64,6 @@
      <div class="value">{{(game.prizes / user.days) |round(1)}}</div>
      <div class="label">{%trans "Point per days (Average)"%}</div>
     </div>
-    <div class="statistic purple txt">
-     <div class="value">{{game.maxpoint.firstname}} {{game.maxpoint.lastname}}</div>
-     <div class="label">{%trans "Top Player"%} {%trans "with"%} <b>{{game.maxpoint.prizes}} {%trans "point"%}</b></div>
-    </div>
    </div>
 
    <hr/>
@@ -92,10 +88,13 @@
   <div id="report-nav">
    <a href="/summary">{%trans "summary reports"%}</a><span> |</span>
    <a href="/date/booth">{%trans "popular booths"%}</a><span> |</span>
+   <a href="/date/kid">{%trans "kids"%}</a><span> |</span>
    <a href="/date">{%trans "show all visitors groupby date"%}</a><span> {</span>
    <a href="/date/birthyear">{%trans "by"%} {%trans "birthyear"%}</a>
    <a href="/date/country">{%trans "by"%} {%trans "country"%}</a>
    <a href="/date/province">{%trans "by"%} {%trans "province"%}</a>
+   <a href="/date/regid">{%trans "by"%} {%trans "Registerer"%}</a>
+   <a href="/date/status">{%trans "by"%} {%trans "status"%}</a>
    <a href="/date/gender">{%trans "by"%} {%trans "gender"%}</a><span> }</span>
   </div>
  </div>

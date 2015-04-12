@@ -23,6 +23,7 @@ class view extends \mvc\view
 		$this->global->title  = T_('Visitor report').$chartby;
 		$chart_labels         = array();
 		$chart_series         = array();
+		$chart_nulls          = array();
 		$counter              = 0;
 
 
@@ -86,10 +87,11 @@ class view extends \mvc\view
 			// if type not exits add it to array and fill with zero
 			if(!array_key_exists($myname, $chart_series))
 			{
-				if($mychild === 'kid' || $mychild === 'regid')
-					$chart_series[$myname] = array_fill(1, count($mylist), 'null');
-				else
-					$chart_series[$myname] = array_fill(1, $mydateCount, 'null');
+				// if($mychild === 'kid' || $mychild === 'regid')
+				// 	$chart_series[$myname] = array_fill(1, count($mylist), 'null');
+				// else
+				// 	// $chart_series[$myname] = array_fill(1, count($mylist), 'null');
+				// 	$chart_series[$myname] = array_fill(1, $mydateCount, 'null');
 			}
 
 			// push value of series in array
@@ -102,6 +104,7 @@ class view extends \mvc\view
 		{
 			$this->global->title  = T_('kids');
 		}
+
 
 		$this->data->chart_labels = $chart_labels;
 		$this->data->chart_series = $chart_series;

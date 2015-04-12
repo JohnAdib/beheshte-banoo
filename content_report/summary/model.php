@@ -41,14 +41,16 @@ class model extends \mvc\model
 		// SELECT sum(`game_prize`) as prizes, `user_id` FROM `games` group by `user_id`
 		$qry = $this->sql()->tableGames()
 							->field('#sum(game_prize) as prizes', 'user_id')
-							->groupbyUser_id();
+							->groupbyUser_id()->orderGame_prize('asc');
 
 		$qry->joinUsers()->whereId        ('#games.user_id')
 								->fieldUser_firstname ("firstname")
 								->fieldUser_lastname  ("lastname")
 								->fieldUser_barcode   ("barcode");
 
-		return $qry->select()->assoc();
+		$sql = $qry->select();
+		// var_dump($sql->string());
+		return $sql->assoc();
 	}
 
 }

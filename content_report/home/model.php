@@ -64,7 +64,7 @@ class model extends \mvc\model
 		{
 			$qry = $qry->field("#date_format(user_enterdatetime,'%Y-%m-%d') as date",'#count(*) as value');
 		}
-		$qry = $qry->select();
+		$qry = $qry->orderUser_enterdatetime('asc')->select();
 		// var_dump($qry->string());
 
 		return $qry->allassoc();
@@ -84,7 +84,9 @@ class model extends \mvc\model
 		$datarow = $qry->assoc();
 		
 		// $fullname = $qry->assoc('user_firstname') . " ". $qry->assoc('user_lastname');
-		return $datarow['user_firstname'].' '.$datarow['user_lastname'];
+		$fullname = $datarow['user_firstname'].' '.$datarow['user_lastname'];
+
+		return $fullname!==" "? $fullname: $id.'-'.$datarow['user_mobile'];
 	}
 
 	// return the name of province
